@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
+import node from '@astrojs/node';
 
 export default defineConfig({
-  site: 'https://bwwd.com', // Replace with your real domain
-  integrations: [keystatic()]
+  integrations: [react(), markdoc(), keystatic()],
+  adapter: node({ mode: 'standalone' }),
 });
