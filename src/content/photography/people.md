@@ -19,7 +19,7 @@ photoCount: 10
 
 <figure style="--ar:1.5005"><img src="/photography/people/people-edbfa171.jpg" data-full="/photography/people/people-edbfa171-full.jpg" width="1400" height="933" alt="Bearded man looking up, greenery behind" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
-<div class="split"><figure style="--ar:0.5621"><img src="/photography/people/people-fab16b97.jpg" data-full="/photography/people/people-fab16b97-full.jpg" width="787" height="1400" alt="Man in a blue robe and head wrap sitting by the river" loading="lazy" decoding="async"><figcaption>2021</figcaption></figure><div class="split-text"><p>By the river, 2021.</p></div></div>
+<div class="split"><figure style="--ar:0.5621"><img src="/photography/people/people-fab16b97.jpg" data-full="/photography/people/people-fab16b97-full.jpg" width="787" height="1400" alt="Man in a blue robe and head wrap sitting by the French Broad River in Marshall, North Carolina" loading="lazy" decoding="async"><figcaption>Marshall, NC, 2021</figcaption></figure><div class="split-text"><p>Marshall, North Carolina, 2021. A small river town on the French Broad, about half an hour north of Asheville.</p></div></div>
 
 <figure style="--ar:1.5005"><img src="/photography/people/people-050569d4.jpg" data-full="/photography/people/people-050569d4-full.jpg" width="1400" height="933" alt="Man looking upward in warm interior light" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
