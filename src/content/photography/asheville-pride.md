@@ -43,6 +43,7 @@ photoCount: 24
 </ul>
 <h3>Bringing this to your event</h3>
 <p>This role grew my event photography and showed me the difference between watching an event and being part of it. As the official photographer, I had better access and made more meaningful photographs of the community. If you're planning a festival, parade, fundraiser or community event in Asheville or Western North Carolina, I'd bring the same approach to yours.</p>
+<p><strong>Get in touch:</strong> <a href="mailto:garycrossey@irishguy.us?subject=Event%20photography">garycrossey@irishguy.us</a></p>
 
 <div class="photos photos-2"><figure style="--ar:1.1935"><img src="/photography/asheville-pride/asheville-pride-ad16b3e9.jpg" data-full="/photography/asheville-pride/asheville-pride-ad16b3e9-full.jpg" width="1400" height="1173" alt="Marcher in a red wig waving to the crowd" loading="lazy" decoding="async"></figure><figure style="--ar:1.0108"><img src="/photography/asheville-pride/asheville-pride-bae7d549.jpg" data-full="/photography/asheville-pride/asheville-pride-bae7d549-full.jpg" width="1400" height="1385" alt="Marcher in a white Elvis jumpsuit" loading="lazy" decoding="async"></figure></div>
 
