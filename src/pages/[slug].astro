@@ -1,0 +1,104 @@
+---
+// Photo stories live at the root (e.g. /asheville-rugby/) to keep their original WordPress URLs.
+import Layout from '../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const stories = (await getCollection('photography')).sort((a, b) =>
+    b.data.pubDate.localeCompare(a.data.pubDate)
+  );
+  return stories.map((story, i) => ({
+    params: { slug: story.id },
+    props: { story, newer: stories[i - 1], older: stories[i + 1] },
+  }));
+}
+
+const { story, newer, older } = Astro.props;
+const { Content } = await render(story);
+const { title, description, pubDate, cover, photoCount } = story.data;
+const dateLabel = new Date(pubDate + 'T12:00:00').toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric',
+});
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: cover,
+  datePublished: pubDate,
+  url: `https://betterworldwithdesign.com/${story.id}/`,
+  author: { '@type': 'Person', name: 'Gary Crossey' },
+  isPartOf: { '@type': 'CollectionPage', name: 'Photography', url: 'https://betterworldwithdesign.com/photography/' },
+};
+---
+<Layout title={`${title} — Photography — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
+  <main>
+    <header class="story-head">
+      <a class="back" href="/photography/">← Photography</a>
+      <h1>{title}</h1>
+      <p class="meta">Gary Crossey · {dateLabel} · {photoCount} {photoCount === 1 ? 'photograph' : 'photographs'}</p>
+    </header>
+
+    <article class="story">
+      <Content />
+    </article>
+
+    <nav class="pager" aria-label="More photo stories">
+      {newer ? <a href={`/${newer.id}/`}><span>Newer</span>{newer.data.title}</a> : <span />}
+      {older ? <a class="older" href={`/${older.id}/`}><span>Older</span>{older.data.title}</a> : <span />}
+    </nav>
+  </main>
+</Layout>
+
+<style>
+  main { max-width: var(--wide); margin: 0 auto; padding: 0 16px; }
+  .story-head { max-width: var(--text); margin: 0 auto; padding: 3.5rem 0 2.5rem; }
+  .back { font-size: 0.9rem; text-decoration: none; }
+  .story-head h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin: 1rem 0 0.75rem; }
+  .meta { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+
+  .story :global(p),
+  .story :global(h2),
+  .story :global(h3),
+  .story :global(h4),
+  .story :global(ul),
+  .story :global(ol) { max-width: var(--text); margin-left: auto; margin-right: auto; }
+  .story :global(p) { margin-top: 0; margin-bottom: 1.25em; }
+  .story :global(h2) { font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  .story :global(h3) { font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+  .story :global(li) { margin-bottom: 0.4em; }
+
+  .story :global(figure) { margin: 2.5rem auto; max-width: 1000px; }
+  .story :global(figure img) { width: 100%; }
+  .story :global(.photos) {
+    display: grid;
+    gap: 12px;
+    margin: 2.5rem auto;
+    align-items: start;
+  }
+  .story :global(.photos-2) { grid-template-columns: repeat(2, 1fr); max-width: 1000px; }
+  .story :global(.photos-3) { grid-template-columns: repeat(3, 1fr); }
+  .story :global(.photos figure) { margin: 0; }
+  .story :global(.embed-link a) { font-weight: 600; }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-top: 1px solid var(--rule);
+    margin-top: 4rem;
+    padding-top: 2rem;
+  }
+  .pager a { font-family: var(--font-display); font-size: 1.25rem; text-decoration: none; color: var(--ink); }
+  .pager a:hover { color: var(--brass); }
+  .pager span { display: block; font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); }
+  .pager .older { text-align: right; }
+
+  @media (max-width: 700px) {
+    .story :global(.photos-3) { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .story :global(.photos-2), .story :global(.photos-3) { grid-template-columns: 1fr; }
+  }
+</style>
