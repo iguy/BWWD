@@ -49,7 +49,69 @@ const jsonLd = {
       {older ? <a class="older" href={`/${older.id}/`}><span>Older</span>{older.data.title}</a> : <span />}
     </nav>
   </main>
+
+  <dialog class="lightbox" aria-label="Photo viewer">
+    <img class="lb-img" alt="" />
+    <p class="lb-count" aria-live="polite"></p>
+    <button class="lb-btn lb-close" type="button" aria-label="Close">✕</button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">‹</button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">›</button>
+  </dialog>
 </Layout>
+
+<script>
+  const photos = Array.from(document.querySelectorAll<HTMLImageElement>('.story figure img'));
+  const box = document.querySelector<HTMLDialogElement>('.lightbox')!;
+  const img = box.querySelector<HTMLImageElement>('.lb-img')!;
+  const count = box.querySelector<HTMLElement>('.lb-count')!;
+  let index = 0;
+
+  // WordPress resized files end in -1024x683.jpg; the original drops that suffix.
+  const fullSize = (src: string) => src.replace(/-\d+x\d+(\.\w+)$/, '$1');
+
+  function show(i: number) {
+    index = (i + photos.length) % photos.length;
+    const small = photos[index].currentSrc || photos[index].src;
+    img.onerror = () => { img.onerror = null; img.src = small; };
+    img.src = fullSize(small);
+    img.alt = photos[index].alt;
+    count.textContent = `${index + 1} / ${photos.length}`;
+    // Preload neighbours so next/previous feel instant.
+    [index + 1, index - 1].forEach((n) => {
+      const p = photos[(n + photos.length) % photos.length];
+      if (p) new Image().src = fullSize(p.currentSrc || p.src);
+    });
+  }
+
+  photos.forEach((p, i) => {
+    p.tabIndex = 0;
+    p.setAttribute('role', 'button');
+    p.setAttribute('aria-label', `Enlarge photo ${i + 1} of ${photos.length}`);
+    const open = () => { show(i); box.showModal(); };
+    p.addEventListener('click', open);
+    p.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+
+  box.querySelector('.lb-close')!.addEventListener('click', () => box.close());
+  box.querySelector('.lb-prev')!.addEventListener('click', () => show(index - 1));
+  box.querySelector('.lb-next')!.addEventListener('click', () => show(index + 1));
+  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+  box.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') show(index + 1);
+    if (e.key === 'ArrowLeft') show(index - 1);
+  });
+
+  let touchX: number | null = null;
+  box.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', (e) => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+
+  if (photos.length < 2) box.querySelectorAll('.lb-prev, .lb-next, .lb-count').forEach((el) => el.remove());
+</script>
 
 <style>
   main { max-width: var(--wide); margin: 0 auto; padding: 0 16px; }
@@ -81,6 +143,51 @@ const jsonLd = {
   .story :global(.photos-3) { grid-template-columns: repeat(3, 1fr); }
   .story :global(.photos figure) { margin: 0; }
   .story :global(.embed-link a) { font-weight: 600; }
+  .story :global(figure img) { cursor: zoom-in; transition: opacity 0.2s; }
+  .story :global(figure img:hover) { opacity: 0.92; }
+  .story :global(figure img:focus-visible) { outline: 3px solid var(--brass); outline-offset: 3px; }
+
+  .lightbox {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(16, 14, 12, 0.96);
+    color: #ece4d2;
+  }
+  .lightbox[open] { display: flex; align-items: center; justify-content: center; }
+  .lightbox::backdrop { background: rgba(16, 14, 12, 0.96); }
+  .lb-img { max-width: calc(100vw - 32px); max-height: calc(100vh - 96px); width: auto; height: auto; object-fit: contain; }
+  .lb-count {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+  .lb-btn {
+    position: absolute;
+    background: none;
+    border: 0;
+    color: inherit;
+    font-size: 2.5rem;
+    line-height: 1;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .lb-btn:hover, .lb-btn:focus-visible { opacity: 1; }
+  .lb-close { top: 0.5rem; right: 0.5rem; font-size: 1.75rem; }
+  .lb-prev { left: 0.25rem; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 0.25rem; top: 50%; transform: translateY(-50%); }
+  @media (max-width: 600px) {
+    .lb-prev, .lb-next { top: auto; bottom: 0.25rem; transform: none; }
+  }
 
   .pager {
     display: grid;
