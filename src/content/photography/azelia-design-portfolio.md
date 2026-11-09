@@ -2,7 +2,7 @@
 title: "Azelia Design Portfolio"
 description: "Gothic Victorian Fashion"
 pubDate: "2023-06-14"
-cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/06/logo-Azelia-Design.png"
+cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/06/Fashion-1024x683.jpg"
 tags: []
 legacy: true
 photoCount: 11

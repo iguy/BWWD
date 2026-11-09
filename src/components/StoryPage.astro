@@ -152,6 +152,23 @@ const jsonLd = {
   }
   .story :global(.embed-link a) { font-weight: 600; }
 
+  /* Split: a tall photo beside its text, so it isn't blown up to full width */
+  .story :global(.split) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 2.5rem auto;
+  }
+  .story :global(.split figure) { margin: 0; }
+  .story :global(.split-right figure) { order: 2; }
+  .story :global(.split-text p) { max-width: none; margin: 0 0 1em; }
+  @media (max-width: 700px) {
+    .story :global(.split) { grid-template-columns: 1fr; gap: 1.25rem; }
+    .story :global(.split-right figure) { order: 0; }
+  }
+
   /* Phone screenshots: shown as phone screens in a centred grid, big enough to read */
   .story :global(.screens) {
     display: flex;

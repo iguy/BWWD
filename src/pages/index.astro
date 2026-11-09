@@ -1,12 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { sortedStories, storyPath, absolute } from '../lib/stories';
+import { sortedStories, storyPath, absolute, type Story } from '../lib/stories';
 
-const stories = await sortedStories();
-const [lead, ...rest] = stories;
-const totalPhotos = stories.reduce((n, s) => n + s.data.photoCount, 0);
-const years = stories.map((s) => s.data.pubDate.slice(0, 4)).sort();
-const yearSpan = `${years[0]}–${years[years.length - 1]}`;
+const all = await sortedStories();
+const bySlug = new Map(all.map((s) => [s.id, s]));
+
+// The hub is grouped so the work reads with a focus, events first (the work people hire for).
+const groups: { title: string; note: string; slugs: string[] }[] = [
+  {
+    title: 'Events',
+    note: 'Festivals, parades and match days, shot close to the action.',
+    slugs: [
+      'asheville-pride',
+      'asheville-rugby-september-2026',
+      'asheville-rugby-september-19-2026',
+      'columbia-rhinos-september-2026',
+      'beer-city-7s-rugby-tournament',
+      'asheville-rugby',
+    ],
+  },
+  {
+    title: 'People',
+    note: 'Portraits from the street, the stage and the studio.',
+    slugs: ['people', 'azelia-design-portfolio'],
+  },
+  {
+    title: 'Places & studies',
+    note: 'Cities, structure, pattern and light.',
+    slugs: [
+      'chicago-architecture',
+      'new-york-2023',
+      'smoke-photography',
+      'animals-we-live-with',
+      'sandy-mush-community-center',
+      'two-up-photography',
+    ],
+  },
+];
+const sections = groups.map((g) => ({ ...g, stories: g.slugs.map((s) => bySlug.get(s)).filter(Boolean) as Story[] }));
+const shown = sections.flatMap((s) => s.stories);
+const totalPhotos = shown.reduce((n, s) => n + s.data.photoCount, 0);
+const hero = bySlug.get('asheville-pride') ?? all[0];
 
 const description =
   'Photography by Gary Crossey: architecture, street, events and portraits. Pattern, structure, light, and people. Based near Asheville, NC; available for event and portrait photography.';
@@ -18,7 +52,7 @@ const jsonLd = {
   url: 'https://photography.betterworldwithdesign.com/',
   description,
   author: { '@type': 'Person', name: 'Gary Crossey' },
-  hasPart: stories.map((s) => ({
+  hasPart: shown.map((s) => ({
     '@type': 'Article',
     headline: s.data.title,
     url: absolute(storyPath(s)),
@@ -27,48 +61,53 @@ const jsonLd = {
   })),
 };
 ---
-<Layout title="Photography — Better World With Design" description={description} image={absolute(lead.data.cover)} jsonLd={jsonLd}>
+<Layout title="Photography — Better World With Design" description={description} image={absolute(hero.data.cover)} jsonLd={jsonLd}>
   <main>
     <section class="intro">
-      <p class="eyebrow">Photography</p>
+      <p class="eyebrow">Photography · Gary Crossey</p>
       <h1>Pattern, structure, light, and people.</h1>
       <div class="statement">
         <p>I photograph the things most people walk past: a row of balconies that repeats until it becomes a pattern, shadows thrown through a bridge deck, a face in the middle of a moment.</p>
         <p>For me, photography is about noticing. I look for structure first: the line, the grid, the repetition. Then I look for the one thing that breaks it. In buildings, that's light. In people, it's expression.</p>
         <p>I work in two ways. In a city on my own, I slow down and look up. At events like Pride, rugby and community festivals, I stay close to the action, because the people are the story and the moment doesn't come twice.</p>
         <p>What I want from a photograph is simple: that you see something you would have missed, and feel something about it.</p>
-        <p class="contact">Based near Asheville, North Carolina. Available for event and portrait photography: <a href="mailto:garycrossey@irishguy.us?subject=Photography">garycrossey@irishguy.us</a></p>
       </div>
-      <p class="meta">{stories.length} photo stories · {totalPhotos} photographs · {yearSpan}</p>
+      <p class="contact">
+        Based near Asheville, North Carolina. Available for event and portrait photography:
+        <a href="mailto:garycrossey@irishguy.us?subject=Photography">garycrossey@irishguy.us</a>
+      </p>
+      <nav class="jump" aria-label="Sections">
+        {sections.map((s) => <a href={`#${s.title.toLowerCase().replace(/[^a-z]+/g, '-')}`}>{s.title}</a>)}
+        <span>{shown.length} stories · {totalPhotos} photographs</span>
+      </nav>
     </section>
 
-    <a class="lead" href={storyPath(lead)}>
-      <img src={lead.data.cover} alt={lead.data.title} />
-      <div class="lead-text">
-        <p class="card-meta">{lead.data.pubDate.slice(0, 4)} · {lead.data.photoCount} photos</p>
-        <h2>{lead.data.title}</h2>
-        <p>{lead.data.description}</p>
-      </div>
-    </a>
-
-    <ul class="grid">
-      {rest.map((s) => (
-        <li>
-          <a class="card" href={storyPath(s)}>
-            <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
-            <p class="card-meta">{s.data.pubDate.slice(0, 4)} · {s.data.photoCount} {s.data.photoCount === 1 ? 'photo' : 'photos'}</p>
-            <h2>{s.data.title}</h2>
-            <p class="card-desc">{s.data.description}</p>
-          </a>
-        </li>
-      ))}
-    </ul>
+    {sections.map((section) => (
+      <section class="group" id={section.title.toLowerCase().replace(/[^a-z]+/g, '-')}>
+        <header class="group-head">
+          <h2>{section.title}</h2>
+          <p>{section.note}</p>
+        </header>
+        <ul class="grid">
+          {section.stories.map((s) => (
+            <li>
+              <a class="card" href={storyPath(s)}>
+                <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
+                <h3>{s.data.title}</h3>
+                <p class="card-meta">{s.data.pubDate.slice(0, 4)} · {s.data.photoCount} {s.data.photoCount === 1 ? 'photo' : 'photos'}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
   </main>
 </Layout>
 
 <style>
   main { max-width: var(--wide); margin: 0 auto; padding: 0 16px; }
-  .intro { padding: 4rem 0 2.5rem; max-width: 820px; }
+
+  .intro { padding: 4.5rem 0 1rem; }
   .eyebrow {
     margin: 0 0 1rem;
     font-size: 0.8rem;
@@ -77,64 +116,58 @@ const jsonLd = {
     color: var(--brass);
     font-weight: 600;
   }
-  .intro h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); margin: 0 0 1.25rem; font-weight: 400; }
-  .meta { margin: 0; color: var(--ink-soft); font-size: 1rem; }
-  .statement { max-width: 640px; margin: 0 0 2rem; }
-  .statement p { margin: 0 0 1em; }
-  .statement .contact { font-style: italic; color: var(--ink-soft); font-size: 1rem; }
-
-  .lead {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 2.5rem;
-    align-items: end;
-    text-decoration: none;
-    color: inherit;
-    padding: 2.5rem 0;
+  .intro h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); margin: 0 0 2rem; font-weight: 400; max-width: 900px; }
+  /* Statement reads as two columns on wide screens instead of one long block */
+  .statement { columns: 2 22rem; column-gap: 3rem; max-width: 1000px; }
+  .statement p { margin: 0 0 1em; break-inside: avoid; }
+  .contact { margin: 0.5rem 0 0; font-style: italic; color: var(--ink-soft); font-size: 1rem; }
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    align-items: baseline;
+    margin-top: 2.5rem;
+    padding: 1rem 0;
     border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
-  .lead img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-  .lead h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin: 0.25rem 0 0.75rem; }
-  .lead p { margin: 0; color: var(--ink-soft); }
-  .lead:hover h2, .card:hover h2 { color: var(--brass); }
+  .jump a { text-decoration: none; font-weight: 600; }
+  .jump span { margin-left: auto; color: var(--ink-soft); letter-spacing: 0.05em; text-transform: none; font-size: 0.9rem; }
+
+  .group { padding-top: 3.5rem; scroll-margin-top: 1rem; }
+  .group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem; margin-bottom: 1.75rem; }
+  .group-head h2 { font-size: 2rem; margin: 0; }
+  .group-head p { margin: 0; color: var(--ink-soft); font-style: italic; }
 
   .grid {
     list-style: none;
-    margin: 3rem 0 0;
+    margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem 2rem;
+    gap: 2.5rem 2rem;
   }
   .card { display: block; text-decoration: none; color: inherit; }
   .frame { overflow: hidden; background: var(--paper-deep); }
-  .frame img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.5s ease; }
+  .frame img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.5s ease; }
   .card:hover .frame img { transform: scale(1.03); }
+  .card h3 { font-size: 1.3rem; margin: 0.9rem 0 0.3rem; transition: color 0.2s; }
+  .card:hover h3 { color: var(--brass); }
   .card-meta {
-    margin: 1rem 0 0.25rem;
-    font-size: 0.8rem;
+    margin: 0;
+    font-size: 0.78rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--brass);
-  }
-  .card h2 { font-size: 1.4rem; margin: 0 0 0.5rem; transition: color 0.2s; }
-  .card-desc {
-    margin: 0;
-    font-size: 0.98rem;
     color: var(--ink-soft);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
-  @media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }
-    .lead { grid-template-columns: 1fr; gap: 1.25rem; }
-  }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) {
     .grid { grid-template-columns: 1fr; }
     .intro { padding-top: 2.5rem; }
+    .jump span { margin-left: 0; width: 100%; }
   }
 </style>
