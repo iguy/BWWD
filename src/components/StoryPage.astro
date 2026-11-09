@@ -142,6 +142,13 @@ const jsonLd = {
   .story :global(.photos-2) { grid-template-columns: repeat(2, 1fr); max-width: 1000px; }
   .story :global(.photos-3) { grid-template-columns: repeat(3, 1fr); max-width: 1000px; }
   .story :global(.photos figure) { margin: 0; }
+  .story :global(figcaption) {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
   .story :global(.embed-link a) { font-weight: 600; }
   .story :global(figure img) { cursor: zoom-in; transition: opacity 0.2s; }
   .story :global(figure img:hover) { opacity: 0.92; }
