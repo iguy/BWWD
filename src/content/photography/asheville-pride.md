@@ -1,18 +1,18 @@
 ---
 title: "Asheville Pride"
-description: "Asheville Pride 2022 from the official photographer: the procession, the Brass Your Heart band, the Sisters, the Blue Ridge Rollergirls, the vendors and the community in Pack Square."
+description: "Asheville Pride 2022 by its official photographer, Gary Crossey: festival, parade, vendors and community coverage, with a team of volunteer photographers."
 pubDate: "2022-07-26"
 cover: "/photography/asheville-pride/asheville-pride-731b701e.jpg"
 tags: ["2022", "Asheville", "Pride"]
 legacy: true
-photoCount: 25
+photoCount: 24
 ---
 
 <figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-731b701e.jpg" data-full="/photography/asheville-pride/asheville-pride-731b701e-full.jpg" width="1400" height="933" alt="Vendor spreading rainbow butterfly wings" loading="lazy" decoding="async"></figure>
 
-<h2>Pride Photography Documentation</h2>
-<p>As the Photography/Videography Lead for Asheville Pride, I served as the official photographer documenting the event and managing other photography volunteers. This role fulfilled my goal of being asked to photograph an event rather than simply showing up as an outside observer.</p>
-
+<h2>Official photographer, Asheville Pride 2022</h2>
+<p>I was Photography/Videography Lead for Asheville Pride, the event's official photographer. I covered the festival from start to finish and managed the team of volunteer photographers working alongside me.</p>
+<p>Being asked to document an event, rather than showing up as an outside observer, was a goal of mine. It changes the work: you get access, people trust you with their moment, and the coverage tells the whole story of the day.</p>
 
 <figure style="--ar:1.4989"><img src="/photography/asheville-pride/asheville-pride-5b88918f.jpg" data-full="/photography/asheville-pride/asheville-pride-5b88918f-full.jpg" width="1400" height="934" alt="Smiling marcher in a giant pink flower headdress beside copper horns" loading="lazy" decoding="async"></figure>
 
@@ -20,31 +20,29 @@ photoCount: 25
 
 <figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-734fa7f7.jpg" data-full="/photography/asheville-pride/asheville-pride-734fa7f7-full.jpg" width="1400" height="933" alt="Welcoming WNC Procession sign: All are welcome" loading="lazy" decoding="async"></figure>
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2025/12/DSC_6886-scaled.jpg" alt="Asheville Pride 2022" loading="lazy" decoding="async"></figure>
-
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-1c8368d8.jpg" data-full="/photography/asheville-pride/asheville-pride-1c8368d8-full.jpg" width="1400" height="933" alt="Sisters in white veils and feather boas" loading="lazy" decoding="async"></figure><figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-79528e33.jpg" data-full="/photography/asheville-pride/asheville-pride-79528e33-full.jpg" width="1400" height="933" alt="Marcher riding an inflatable rainbow chicken" loading="lazy" decoding="async"></figure></div>
 
 <div class="photos photos-2"><figure style="--ar:1.7241"><img src="/photography/asheville-pride/asheville-pride-c3b27025.jpg" data-full="/photography/asheville-pride/asheville-pride-c3b27025-full.jpg" width="1400" height="812" alt="You Are Loved banner" loading="lazy" decoding="async"></figure><figure style="--ar:0.96"><img src="/photography/asheville-pride/asheville-pride-5e6879d4.jpg" data-full="/photography/asheville-pride/asheville-pride-5e6879d4-full.jpg" width="1344" height="1400" alt="Progress Pride flag held high" loading="lazy" decoding="async"></figure></div>
 
 <div class="photos photos-2"><figure style="--ar:1.1146"><img src="/photography/asheville-pride/asheville-pride-c7d508c8.jpg" data-full="/photography/asheville-pride/asheville-pride-c7d508c8-full.jpg" width="1400" height="1256" alt="Dancer with golden wings" loading="lazy" decoding="async"></figure><figure style="--ar:1.5385"><img src="/photography/asheville-pride/asheville-pride-e263f4a0.jpg" data-full="/photography/asheville-pride/asheville-pride-e263f4a0-full.jpg" width="1400" height="910" alt="Giant puppets in the procession" loading="lazy" decoding="async"></figure></div>
 
-<h3>Role &amp; Responsibilities</h3>
+<h3>What I covered</h3>
 <ul>
-<li><strong>Official Event Documentation:</strong> Captured comprehensive coverage of the Pride festival, including vendor interactions, parade procession, and festival activities.</li>
-<li><strong>Team Leadership:</strong> Coordinated photography volunteers and managed media coverage throughout the event.</li>
-<li><strong>Pre-Event Coverage:</strong> Documented events during Pride week leading up to the main festival, including gatherings at Wicked Weed and the Loft.</li>
+<li><strong>Official event documentation:</strong> the Pride festival, vendor interactions, the parade procession and festival activities.</li>
+<li><strong>Team leadership:</strong> coordinating volunteer photographers and managing media coverage throughout the event.</li>
+<li><strong>Pre-event coverage:</strong> events during Pride week leading up to the main festival, including gatherings at Wicked Weed and the Loft.</li>
 </ul>
-<h3>Photography Approach</h3>
-<p>The photography focused on capturing authentic moments of celebration and community connection. I photographed Pride vendors with a pleasant and polite approach, then documented the parade procession—capturing banners held high, wide smiles, and the diverse groups completing the parade circuit.</p>
-<h3>Coverage Highlights</h3>
+<h3>How I work</h3>
+<p>At an event like this, the people are the story. I approached vendors with a friendly, polite ask, so their portraits feel relaxed rather than staged. Then I documented the parade procession: banners held high, wide smiles, and every group completing the parade circuit.</p>
+<h3>What the coverage includes</h3>
 <ul>
 <li>Parade participants and community groups.</li>
 <li>Vendor interactions and festival atmosphere.</li>
-<li>Performance documentation at the main stage.</li>
-<li>Community celebration moments throughout the event.</li>
+<li>Performances on the main stage.</li>
+<li>Moments of community celebration throughout the event.</li>
 </ul>
-<h3>Professional Growth</h3>
-<p>This volunteer role provided valuable experience in event photography and expanded my photography craft. Working as the official photographer rather than an outside observer created opportunities for better access and more meaningful documentation of the community celebration.</p>
+<h3>Bringing this to your event</h3>
+<p>This role grew my event photography and showed me the difference between watching an event and being part of it. As the official photographer, I had better access and made more meaningful photographs of the community. If you're planning a festival, parade, fundraiser or community event in Asheville or Western North Carolina, I'd bring the same approach to yours.</p>
 
 <div class="photos photos-2"><figure style="--ar:1.1935"><img src="/photography/asheville-pride/asheville-pride-ad16b3e9.jpg" data-full="/photography/asheville-pride/asheville-pride-ad16b3e9-full.jpg" width="1400" height="1173" alt="Marcher in a red wig waving to the crowd" loading="lazy" decoding="async"></figure><figure style="--ar:1.0108"><img src="/photography/asheville-pride/asheville-pride-bae7d549.jpg" data-full="/photography/asheville-pride/asheville-pride-bae7d549-full.jpg" width="1400" height="1385" alt="Marcher in a white Elvis jumpsuit" loading="lazy" decoding="async"></figure></div>
 
