@@ -1,14 +1,30 @@
 ---
 title: "Spring Fling 2023"
-description: "I'm excited to share my experience at Sandy Mush Community Center Spring Fling 2023. It all started when I first met the SMCC Events Community on November…"
+description: "Spring Fling 2023 at the Sandy Mush Community Center: over 250 neighbors, a plant exchange, food and music. I designed the event and photographed the day."
 pubDate: "2023-05-20"
 cover: "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58-1024x683.jpg"
 tags: []
 legacy: true
+theme: "dark"
+coverLayout: "grid"
+coverSet: ["https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-20-1-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-13-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-5-1024x683.jpg"]
 photoCount: 57
 ---
 
-<div class="split"><figure style="--ar:0.706"><img src="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/Poster-smcc-2023-723x1024.png" alt="Spring Fling 2023 poster" loading="lazy" decoding="async"><figcaption>Event poster</figcaption></figure><div class="split-text"><p>I'm excited to share my experience at Sandy Mush Community Center Spring Fling 2023. It all started when I first met the SMCC Events Community on November 1st, 2022, to begin planning for this incredible event. As the person responsible for designing and distribution of event poster, flyers, signage, social media, and capturing the photography, I had a blast collaborating with the SMCC Events Team to bring <a href="https://sandymushcommunitycenter.org/2023-spring-fling/" rel="noopener">Spring Fling 2023</a> to life. The event was a huge success - hope you are enjoy the photography.</p></div></div>
+<p class="lede">Spring Fling is the Sandy Mush Community Center's spring celebration, and in May 2023 more than 250 neighbors came out for it: food, activities, a plant exchange stocked by local growers, and an afternoon of catching up.</p>
+
+<div class="split"><figure style="--ar:0.706"><img src="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/Poster-smcc-2023-723x1024.png" alt="Spring Fling 2023 poster designed by Gary Crossey" loading="lazy" decoding="async"><figcaption>The poster I designed for the event</figcaption></figure><div class="split-text">
+<p class="stat">250+</p>
+<p>people came through the doors on the day.</p>
+<h3>From the poster to the photographs</h3>
+<p>I worked on this one from start to finish. I joined the SMCC Events Team on November 1, 2022, to plan the day, then designed the poster, flyers, signage and social media that brought people in. On the day, I photographed it.</p>
+</div></div>
+
+<h2>What I look for at a community event</h2>
+<p>At an event like this, the photographs are for the people who were there and for the ones who'll come next year. I look for the moments that make up the day: neighbors catching up, kids in the middle of something, the volunteers who made it happen, and the small details that show the effort behind it.</p>
+<p>The aim is a record the community recognizes as its own, and pictures the center can use to bring people back the following spring.</p>
+
+<h2>The day</h2>
 
 <figure style="--ar:1.4993"><img src="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58-1024x683.jpg" data-full="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58.jpg" alt="Sandy Mush Community Center Spring Fling 2023" loading="lazy" decoding="async"></figure>
 
@@ -79,3 +95,5 @@ photoCount: 57
 <figure style="--ar:1.4993"><img src="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-51-1024x683.jpg" data-full="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-51.jpg" alt="Sandy Mush Community Center Spring Fling 2023" loading="lazy" decoding="async"></figure>
 
 <figure style="--ar:1.3801"><img src="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-48-1024x742.jpg" data-full="https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-48.jpg" alt="Sandy Mush Community Center Spring Fling 2023" loading="lazy" decoding="async"></figure>
+
+<p>The full gallery is on the <a href="https://sandymushcommunitycenter.org/2023-spring-fling/" rel="noopener">Sandy Mush Community Center website</a>.</p>

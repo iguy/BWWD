@@ -31,7 +31,7 @@ const jsonLd = {
   isPartOf: { '@type': 'CollectionPage', name: 'Photography', url: 'https://photography.betterworldwithdesign.com/' },
 };
 ---
-<Layout title={`${title} — Photography — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
+<Layout title={`${title} — Photography — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd} theme={story.data.theme}>
   <main>
     <header class="story-head">
       <a class="back" href="/">← Photography</a>
@@ -132,6 +132,8 @@ const jsonLd = {
   .story :global(li) { margin-bottom: 0.4em; }
 
   .story :global(figure) { margin: 2.5rem auto; max-width: 1000px; }
+  .story :global(.lede) { font-size: 1.3rem; line-height: 1.55; }
+  .story :global(.stat) { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; color: var(--brass); margin: 0 0 0.35rem; }
   .story :global(figure img) { width: 100%; }
   /* Rows: each photo's width follows its aspect ratio, so every photo in a row is the same height. */
   .story :global(.photos) {
@@ -142,6 +144,10 @@ const jsonLd = {
   }
   .story :global(.photos figure) { flex: var(--ar, 1) 1 0; min-width: 0; }
   .story :global(.photos figure img) { width: 100%; height: auto; }
+  /* Large galleries: uniform three-column grid of 3:2 tiles (click opens the full photo) */
+  .story :global(.photos-grid) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .story :global(.photos-grid figure img) { aspect-ratio: 3 / 2; object-fit: cover; height: 100%; }
+  @media (max-width: 700px) { .story :global(.photos-grid) { grid-template-columns: repeat(2, 1fr); } }
   .story :global(.photos figure) { margin: 0; }
   .story :global(figcaption) {
     margin-top: 0.6rem;
@@ -248,6 +254,6 @@ const jsonLd = {
   .pager .older { text-align: right; }
 
   @media (max-width: 560px) {
-    .story :global(.photos) { flex-direction: column; }
+    .story :global(.photos:not(.photos-grid)) { flex-direction: column; }
   }
 </style>
