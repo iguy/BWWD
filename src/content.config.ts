@@ -8,6 +8,7 @@ const photography = defineCollection({
     description: z.string(),
     pubDate: z.string(),
     cover: z.string(),
+    coverSet: z.array(z.string()).optional(), // several tall images shown side by side as the thumbnail
     tags: z.array(z.string()).default([]),
     photoCount: z.number(),
     legacy: z.boolean().default(false),

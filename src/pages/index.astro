@@ -13,7 +13,7 @@ const mosaic = [
   { src: '/photography/asheville-pride/asheville-pride-5b88918f.jpg', alt: 'Marcher in a giant pink flower headdress, Asheville Pride', href: '/asheville-pride/' },
   { src: '/photography/chicago-architecture/chicago-architecture-d6274776.jpg', alt: "Marina City's scalloped balconies, Chicago", href: '/chicago-architecture/' },
   { src: '/photography/asheville-rugby-september-2026/asheville-rugby-09.jpg', alt: 'A hard tackle, Asheville Rugby', href: '/asheville-rugby-september-2026/' },
-  { src: '/photography/people/people-fab16b97.jpg', alt: 'Portrait by the river, Marshall, North Carolina', href: '/people/' },
+  { src: '/photography/people/people-35e2cca1.jpg', alt: 'Boy George on stage, London', href: '/people/' },
   { src: '/photography/chicago-architecture/chicago-architecture-0690b944.jpg', alt: 'The Tiffany dome, Chicago Cultural Center', href: '/chicago-architecture/' },
 ];
 
@@ -83,7 +83,13 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
       {rest.map((s) => (
         <li>
           <a class="card" href={storyPath(s)}>
-            <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
+            {s.data.coverSet ? (
+              <div class="frame frame-set">
+                {s.data.coverSet.map((src) => <img src={src} alt="" loading="lazy" decoding="async" />)}
+              </div>
+            ) : (
+              <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
+            )}
             <p class="card-meta">{s.data.pubDate.slice(0, 4)} · {s.data.photoCount} {s.data.photoCount === 1 ? 'photo' : 'photos'}</p>
             <h3>{s.data.title}</h3>
             <p class="card-desc">{s.data.description}</p>
@@ -214,6 +220,9 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
   .frame { overflow: hidden; background: var(--paper-deep); }
   .frame img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.5s ease; }
   .card:hover .frame img { transform: scale(1.03); }
+  /* Tall phone screenshots: three side by side instead of one cropped through the middle */
+  .frame-set { display: flex; gap: 6px; aspect-ratio: 4 / 3; padding: 10px; background: #1c1a17; }
+  .frame-set img { flex: 1; min-width: 0; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: top; border-radius: 6px; }
   .card-meta {
     margin: 1rem 0 0.25rem;
     font-size: 0.78rem;

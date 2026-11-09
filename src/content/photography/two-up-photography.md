@@ -2,7 +2,8 @@
 title: "AI Two Up Photography"
 description: "I find AI Design to be something so interesting. And especially passive AI design - I find to be the most interesting."
 pubDate: "2022-10-27"
-cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey1.png"
+cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey4-473x1024.png"
+coverSet: ["https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey4-473x1024.png", "https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey7-473x1024.png", "https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey6-473x1024.png"]
 tags: []
 legacy: true
 photoCount: 7

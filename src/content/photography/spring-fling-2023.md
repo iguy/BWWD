@@ -2,7 +2,7 @@
 title: "Spring Fling 2023"
 description: "I'm excited to share my experience at Sandy Mush Community Center Spring Fling 2023. It all started when I first met the SMCC Events Community on November…"
 pubDate: "2023-05-20"
-cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/05/SMCC-Spring-Fling-Poster-e1711209288213.png"
+cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/08/sandy-mush-community-center-Edit-1024x545-1.jpeg"
 tags: []
 legacy: true
 photoCount: 1
