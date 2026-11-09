@@ -6,6 +6,7 @@ export default defineConfig({
   site: 'https://photography.betterworldwithdesign.com',
   output: 'static',
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  // Inline all CSS so a page can never load with a stale or missing stylesheet mid-deploy.
+  build: { format: 'directory', inlineStylesheets: 'always' },
   integrations: [sitemap()],
 });
