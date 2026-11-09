@@ -1,7 +1,7 @@
 ---
-// Legacy photo stories at the root — original WordPress URLs.
+// Every photo story lives at /<slug>/ on photography.betterworldwithdesign.com.
 import StoryPage from '../components/StoryPage.astro';
 import { storyPaths } from '../lib/stories';
-export const getStaticPaths = () => storyPaths(true);
+export const getStaticPaths = () => storyPaths();
 ---
 <StoryPage {...Astro.props} />

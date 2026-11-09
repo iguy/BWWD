@@ -28,13 +28,13 @@ const jsonLd = {
   datePublished: pubDate,
   url: absolute(storyPath(story)),
   author: { '@type': 'Person', name: 'Gary Crossey' },
-  isPartOf: { '@type': 'CollectionPage', name: 'Photography', url: 'https://betterworldwithdesign.com/photography/' },
+  isPartOf: { '@type': 'CollectionPage', name: 'Photography', url: 'https://photography.betterworldwithdesign.com/' },
 };
 ---
 <Layout title={`${title} — Photography — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
   <main>
     <header class="story-head">
-      <a class="back" href="/photography/">← Photography</a>
+      <a class="back" href="/">← Photography</a>
       <h1>{title}</h1>
       <p class="meta">Gary Crossey · {dateLabel} · {photoCount} {photoCount === 1 ? 'photograph' : 'photographs'}</p>
     </header>

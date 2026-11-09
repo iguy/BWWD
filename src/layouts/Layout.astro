@@ -93,7 +93,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
   <header class="site-header">
     <a class="brand" href="https://betterworldwithdesign.com/">Better World With Design</a>
     <nav class="site-nav" aria-label="Main">
-      <a href="/photography/" aria-current={Astro.url.pathname.startsWith('/photography') ? 'page' : undefined}>Photography</a>
+      <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Photography</a>
       <a href="https://podcast.betterworldwithdesign.com/">Podcast</a>
     </nav>
   </header>
