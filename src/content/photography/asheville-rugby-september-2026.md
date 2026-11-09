@@ -1,5 +1,5 @@
 ---
-title: "Asheville Rugby — September 2026"
+title: "Asheville Rugby — Sept 26, 2026"
 description: "Asheville Rugby at home on September 26, 2026: tackles, lineouts, rucks and the team photo, shot on the sideline with a Nikon D500."
 pubDate: "2026-09-26"
 cover: "/photography/asheville-rugby-september-2026/asheville-rugby-09.jpg"
