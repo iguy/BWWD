@@ -2,7 +2,7 @@
 title: "People"
 description: "An ongoing series of portraits from the street and the places I travel. Updated as new work comes in."
 pubDate: "2026-11-09"
-cover: "/photography/people/people-9aede771.jpg"
+cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
 photoCount: 6
 ---
