@@ -5,7 +5,7 @@ pubDate: "2022-07-26"
 cover: "/photography/asheville-pride/asheville-pride-731b701e.jpg"
 tags: ["2022", "Asheville", "Pride"]
 legacy: true
-photoCount: 24
+photoCount: 25
 ---
 
 <figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-731b701e.jpg" data-full="/photography/asheville-pride/asheville-pride-731b701e-full.jpg" width="1400" height="933" alt="Vendor spreading rainbow butterfly wings" loading="lazy" decoding="async"></figure>
@@ -14,11 +14,13 @@ photoCount: 24
 <p>As the Photography/Videography Lead for Asheville Pride, I served as the official photographer documenting the event and managing other photography volunteers. This role fulfilled my goal of being asked to photograph an event rather than simply showing up as an outside observer.</p>
 
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2025/12/DSC_6886-scaled.jpg" alt="Asheville Pride 2022" loading="lazy" decoding="async"></figure>
+<figure style="--ar:1.4989"><img src="/photography/asheville-pride/asheville-pride-5b88918f.jpg" data-full="/photography/asheville-pride/asheville-pride-5b88918f-full.jpg" width="1400" height="934" alt="Smiling marcher in a giant pink flower headdress beside copper horns" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-ff949acc.jpg" data-full="/photography/asheville-pride/asheville-pride-ff949acc-full.jpg" width="1400" height="933" alt="Brass Your Heart bass drum in the procession" loading="lazy" decoding="async"></figure><figure style="--ar:1.2433"><img src="/photography/asheville-pride/asheville-pride-b58958fa.jpg" data-full="/photography/asheville-pride/asheville-pride-b58958fa-full.jpg" width="1400" height="1126" alt="Marcher in a rainbow superhero costume" loading="lazy" decoding="async"></figure></div>
 
 <figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-734fa7f7.jpg" data-full="/photography/asheville-pride/asheville-pride-734fa7f7-full.jpg" width="1400" height="933" alt="Welcoming WNC Procession sign: All are welcome" loading="lazy" decoding="async"></figure>
+
+<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2025/12/DSC_6886-scaled.jpg" alt="Asheville Pride 2022" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-1c8368d8.jpg" data-full="/photography/asheville-pride/asheville-pride-1c8368d8-full.jpg" width="1400" height="933" alt="Sisters in white veils and feather boas" loading="lazy" decoding="async"></figure><figure style="--ar:1.5005"><img src="/photography/asheville-pride/asheville-pride-79528e33.jpg" data-full="/photography/asheville-pride/asheville-pride-79528e33-full.jpg" width="1400" height="933" alt="Marcher riding an inflatable rainbow chicken" loading="lazy" decoding="async"></figure></div>
 
