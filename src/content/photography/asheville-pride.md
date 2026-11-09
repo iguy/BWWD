@@ -4,6 +4,7 @@ description: "Explore the highlights of Asheville Pride 2022 and celebrate diver
 pubDate: "2022-07-26"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2025/12/2022-pride-gary-crossey-43-scaled.jpg"
 tags: ["2022", "Asheville", "Pride"]
+legacy: true
 photoCount: 1
 ---
 

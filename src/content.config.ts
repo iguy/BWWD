@@ -7,9 +7,10 @@ const photography = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.string(),
-    cover: z.string().url(),
+    cover: z.string(),
     tags: z.array(z.string()).default([]),
     photoCount: z.number(),
+    legacy: z.boolean().default(false),
   }),
 });
 

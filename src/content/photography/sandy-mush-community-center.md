@@ -4,6 +4,7 @@ description: "Sandy Mush Community Center (Leicester NC) Exterior photograph by 
 pubDate: "2022-08-06"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/08/sandy-mush-community-center-Edit-1024x545-1.jpeg"
 tags: []
+legacy: true
 photoCount: 2
 ---
 

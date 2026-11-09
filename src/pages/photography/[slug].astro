@@ -1,0 +1,7 @@
+---
+// New photo stories under /photography/<slug>/.
+import StoryPage from '../../components/StoryPage.astro';
+import { storyPaths } from '../../lib/stories';
+export const getStaticPaths = () => storyPaths(false);
+---
+<StoryPage {...Astro.props} />

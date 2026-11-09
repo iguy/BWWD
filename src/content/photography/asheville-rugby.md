@@ -4,6 +4,7 @@ description: "No one can resist getting pumped up for the Beer City 7's Rugby To
 pubDate: "2023-06-02"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/06/action-shoot.jpeg"
 tags: []
+legacy: true
 photoCount: 21
 ---
 

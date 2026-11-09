@@ -4,6 +4,7 @@ description: "Beer City 7's Rugby Tournament"
 pubDate: "2023-07-16"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/07/rugby-asheville-2023-gary-crossey-138.jpg"
 tags: []
+legacy: true
 photoCount: 86
 ---
 

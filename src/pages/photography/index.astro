@@ -1,10 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { sortedStories, storyPath, absolute } from '../../lib/stories';
 
-const stories = (await getCollection('photography')).sort((a, b) =>
-  b.data.pubDate.localeCompare(a.data.pubDate)
-);
+const stories = await sortedStories();
 const [lead, ...rest] = stories;
 const totalPhotos = stories.reduce((n, s) => n + s.data.photoCount, 0);
 const years = stories.map((s) => s.data.pubDate.slice(0, 4)).sort();
@@ -23,13 +21,13 @@ const jsonLd = {
   hasPart: stories.map((s) => ({
     '@type': 'Article',
     headline: s.data.title,
-    url: `https://betterworldwithdesign.com/${s.id}/`,
+    url: absolute(storyPath(s)),
     datePublished: s.data.pubDate,
-    image: s.data.cover,
+    image: absolute(s.data.cover),
   })),
 };
 ---
-<Layout title="Photography — Better World With Design" description={description} image={lead.data.cover} jsonLd={jsonLd}>
+<Layout title="Photography — Better World With Design" description={description} image={absolute(lead.data.cover)} jsonLd={jsonLd}>
   <main>
     <section class="intro">
       <p class="eyebrow">Photography</p>
@@ -37,7 +35,7 @@ const jsonLd = {
       <p class="meta">{stories.length} photo stories · {totalPhotos} photographs · {yearSpan}</p>
     </section>
 
-    <a class="lead" href={`/${lead.id}/`}>
+    <a class="lead" href={storyPath(lead)}>
       <img src={lead.data.cover} alt={lead.data.title} />
       <div class="lead-text">
         <p class="card-meta">{lead.data.pubDate.slice(0, 4)} · {lead.data.photoCount} photos</p>
@@ -49,7 +47,7 @@ const jsonLd = {
     <ul class="grid">
       {rest.map((s) => (
         <li>
-          <a class="card" href={`/${s.id}/`}>
+          <a class="card" href={storyPath(s)}>
             <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
             <p class="card-meta">{s.data.pubDate.slice(0, 4)} · {s.data.photoCount} {s.data.photoCount === 1 ? 'photo' : 'photos'}</p>
             <h2>{s.data.title}</h2>

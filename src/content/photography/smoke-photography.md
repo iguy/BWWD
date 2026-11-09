@@ -4,6 +4,7 @@ description: "I love smoke photography. It's a interesting  way to capture the p
 pubDate: "2023-04-02"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-2.jpg"
 tags: []
+legacy: true
 photoCount: 6
 ---
 

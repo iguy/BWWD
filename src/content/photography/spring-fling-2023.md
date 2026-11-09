@@ -4,6 +4,7 @@ description: "I'm excited to share my experience at Sandy Mush Community Center 
 pubDate: "2023-05-20"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/05/SMCC-Spring-Fling-Poster-e1711209288213.png"
 tags: []
+legacy: true
 photoCount: 1
 ---
 

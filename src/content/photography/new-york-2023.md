@@ -4,6 +4,7 @@ description: "Photographing New York City is a unique art form that allows the p
 pubDate: "2023-01-28"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/01/new-york-2023.jpg"
 tags: []
+legacy: true
 photoCount: 26
 ---
 

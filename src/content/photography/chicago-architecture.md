@@ -4,6 +4,7 @@ description: "Chicago Architecture"
 pubDate: "2025-07-18"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2025/08/photography-chicago-architecture-gary-crossey1.jpg"
 tags: ["Architecture"]
+legacy: true
 photoCount: 3
 ---
 

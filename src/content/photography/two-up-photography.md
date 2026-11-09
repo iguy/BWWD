@@ -4,6 +4,7 @@ description: "I find AI Design to be something so interesting. And especially pa
 pubDate: "2022-10-27"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/10/two-Up_photography-gary-crossey1.png"
 tags: []
+legacy: true
 photoCount: 7
 ---
 

@@ -4,6 +4,7 @@ description: "I have photographed all of these animals within a few feet of my f
 pubDate: "2023-06-05"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/12/gary-crossey-texture-header-scaled.jpeg"
 tags: []
+legacy: true
 photoCount: 16
 ---
 
