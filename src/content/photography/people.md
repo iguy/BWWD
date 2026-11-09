@@ -2,12 +2,14 @@
 title: "People"
 description: "An ongoing series of portraits from the street and the places I travel. Updated as new work comes in."
 pubDate: "2026-11-09"
-cover: "/photography/people/people-6c4b6b00.jpg"
+cover: "/photography/people/people-9aede771.jpg"
 tags: ["People", "Portraits"]
-photoCount: 5
+photoCount: 6
 ---
 
 <p>An ongoing series. Portraits from the street and the places I travel, added as I go.</p>
+
+<figure style="--ar:1.4815"><img src="/photography/people/people-9aede771.jpg" data-full="/photography/people/people-9aede771-full.jpg" width="1000" height="675" alt="Portrait of a woman with close-cropped hair, a sculpted bust behind her" loading="lazy" decoding="async"></figure>
 
 <figure style="--ar:1.5005"><img src="/photography/people/people-6c4b6b00.jpg" data-full="/photography/people/people-6c4b6b00-full.jpg" width="1400" height="933" alt="Man in blue mirrored sunglasses with a waxed mustache, flowers behind" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
