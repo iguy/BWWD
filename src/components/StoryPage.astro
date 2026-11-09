@@ -133,14 +133,15 @@ const jsonLd = {
 
   .story :global(figure) { margin: 2.5rem auto; max-width: 1000px; }
   .story :global(figure img) { width: 100%; }
+  /* Rows: each photo's width follows its aspect ratio, so every photo in a row is the same height. */
   .story :global(.photos) {
-    display: grid;
+    display: flex;
     gap: 12px;
     margin: 2.5rem auto;
-    align-items: start;
+    max-width: 1000px;
   }
-  .story :global(.photos-2) { grid-template-columns: repeat(2, 1fr); max-width: 1000px; }
-  .story :global(.photos-3) { grid-template-columns: repeat(3, 1fr); max-width: 1000px; }
+  .story :global(.photos figure) { flex: var(--ar, 1) 1 0; min-width: 0; }
+  .story :global(.photos figure img) { width: 100%; height: auto; }
   .story :global(.photos figure) { margin: 0; }
   .story :global(figcaption) {
     margin-top: 0.6rem;
@@ -209,10 +210,7 @@ const jsonLd = {
   .pager span { display: block; font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); }
   .pager .older { text-align: right; }
 
-  @media (max-width: 700px) {
-    .story :global(.photos-3) { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 480px) {
-    .story :global(.photos-2), .story :global(.photos-3) { grid-template-columns: 1fr; }
+  @media (max-width: 560px) {
+    .story :global(.photos) { flex-direction: column; }
   }
 </style>
