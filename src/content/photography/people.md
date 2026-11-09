@@ -27,4 +27,4 @@ photoCount: 10
 
 <figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
-<figure style="--ar:1.5"><img src="/photography/people/people-35e2cca1.jpg" data-full="/photography/people/people-35e2cca1-full.jpg" width="1200" height="800" alt="Two performers in full makeup singing into microphones" loading="lazy" decoding="async"></figure>
+<figure style="--ar:1.5"><img src="/photography/people/people-35e2cca1.jpg" data-full="/photography/people/people-35e2cca1-full.jpg" width="1200" height="800" alt="Two performers in full makeup singing into microphones" loading="lazy" decoding="async"><figcaption>London</figcaption></figure>
