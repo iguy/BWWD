@@ -23,7 +23,7 @@ photoCount: 10
 
 <figure style="--ar:1.5005"><img src="/photography/people/people-050569d4.jpg" data-full="/photography/people/people-050569d4-full.jpg" width="1400" height="933" alt="Man looking upward in warm interior light" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
-<figure style="--ar:0.6886"><img src="/photography/people/people-e96dd186.jpg" data-full="/photography/people/people-e96dd186-full.jpg" width="964" height="1400" alt="Man in a yellow shirt in warm afternoon light" loading="lazy" decoding="async"><figcaption>2014</figcaption></figure>
+<figure style="--ar:0.6886"><img src="/photography/people/people-e96dd186.jpg" data-full="/photography/people/people-e96dd186-full.jpg" width="964" height="1400" alt="Man in a yellow shirt in warm afternoon light" loading="lazy" decoding="async"><figcaption>2000</figcaption></figure>
 
 <figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
