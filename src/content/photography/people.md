@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-01.jpg"
 tags: ["People", "Portraits"]
-photoCount: 6
+photoCount: 5
 ---
 
 <p>An ongoing series. Portraits from the street and the places I travel, added as I go.</p>
@@ -18,5 +18,3 @@ photoCount: 6
 <figure><img src="/photography/people/people-04.jpg" data-full="/photography/people/people-04-full.jpg" alt="Man looking upward in warm interior light" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
 <figure><img src="/photography/people/people-05.jpg" data-full="/photography/people/people-05-full.jpg" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
-
-<figure><img src="/photography/people/people-06.jpg" data-full="/photography/people/people-06-full.jpg" alt="Bearded man smiling in sunglasses" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
