@@ -9,7 +9,7 @@ const years = stories.map((s) => s.data.pubDate.slice(0, 4)).sort();
 const yearSpan = `${years[0]}–${years[years.length - 1]}`;
 
 const description =
-  'Photography by Gary Crossey — architecture, abstract, and street work exploring pattern, structure, and light.';
+  'Photography by Gary Crossey: architecture, street, events and portraits. Pattern, structure, light, and people. Based near Asheville, NC; available for event and portrait photography.';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -31,7 +31,14 @@ const jsonLd = {
   <main>
     <section class="intro">
       <p class="eyebrow">Photography</p>
-      <h1>Architecture, abstract, and street work — exploring pattern, structure, and light.</h1>
+      <h1>Pattern, structure, light, and people.</h1>
+      <div class="statement">
+        <p>I photograph the things most people walk past: a row of balconies that repeats until it becomes a pattern, shadows thrown through a bridge deck, a face in the middle of a moment.</p>
+        <p>For me, photography is about noticing. I look for structure first: the line, the grid, the repetition. Then I look for the one thing that breaks it. In buildings, that's light. In people, it's expression.</p>
+        <p>I work in two ways. In a city on my own, I slow down and look up. At events like Pride, rugby and community festivals, I stay close to the action, because the people are the story and the moment doesn't come twice.</p>
+        <p>What I want from a photograph is simple: that you see something you would have missed, and feel something about it.</p>
+        <p class="contact">Based near Asheville, North Carolina. Available for event and portrait photography: <a href="mailto:garycrossey@irishguy.us?subject=Photography">garycrossey@irishguy.us</a></p>
+      </div>
       <p class="meta">{stories.length} photo stories · {totalPhotos} photographs · {yearSpan}</p>
     </section>
 
@@ -72,6 +79,9 @@ const jsonLd = {
   }
   .intro h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); margin: 0 0 1.25rem; font-weight: 400; }
   .meta { margin: 0; color: var(--ink-soft); font-size: 1rem; }
+  .statement { max-width: 640px; margin: 0 0 2rem; }
+  .statement p { margin: 0 0 1em; }
+  .statement .contact { font-style: italic; color: var(--ink-soft); font-size: 1rem; }
 
   .lead {
     display: grid;
