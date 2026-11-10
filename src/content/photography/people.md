@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 24
+photoCount: 25
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -40,6 +40,8 @@ photoCount: 24
 <figure style="--ar:3.1818"><img src="/photography/people/people-fc6b3684.jpg" data-full="/photography/people/people-fc6b3684-full.jpg" width="1400" height="440" alt="A row of older people seated in chairs outside a brick and stone building" loading="lazy" decoding="async"></figure>
 
 <figure style="--ar:1.3333"><img src="/photography/people/people-6f72abed.jpg" data-full="/photography/people/people-6f72abed-full.jpg" width="1400" height="1050" alt="Man in a palm-print shirt sitting on the beach, watching the sunset" loading="lazy" decoding="async"></figure>
+
+<figure style="--ar:1.7766"><img src="/photography/people/people-a3160eca.jpg" data-full="/photography/people/people-a3160eca-full.jpg" width="1400" height="788" alt="Grey-bearded man in dark sunglasses grinning in front of sunflowers" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/people/people-b680d653.jpg" data-full="/photography/people/people-b680d653-full.jpg" width="1400" height="933" alt="Woman in a straw hat with her hand on an older man's shoulder, both smiling" loading="lazy" decoding="async"></figure><figure style="--ar:1.0907"><img src="/photography/people/people-987bb7af.jpg" data-full="/photography/people/people-987bb7af-full.jpg" width="1070" height="981" alt="Two women opening their arms for a hug in a sunny field" loading="lazy" decoding="async"></figure></div>
 
