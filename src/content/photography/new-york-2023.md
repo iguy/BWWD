@@ -37,11 +37,13 @@ photoCount: 24
 
 <h2>Light, colour, movement</h2>
 
-<p>Impressionism grew up alongside photography. Early photographs were slow and full of blur and distortion that photographers threw away. The Impressionists took exactly those imperfections and made art from them: light, colour and movement instead of precise detail.</p>
+<p>Early cameras were slow. Exposures took seconds, sometimes minutes, so anything that moved turned into a smear or vanished altogether. In Daguerre's 1838 view of a busy Paris boulevard, the street looks empty. The only person who stood still long enough to register was a man having his boots shined. Photographers treated blur as failure.</p>
 
-<p>Motion blur is the same idea turned back on the camera. A street full of people becomes streaks of colour. A string of bulbs becomes a pattern. The detail goes, and the feeling of the place stays.</p>
+<p>Painters saw something else. The first Impressionist exhibition, in 1874, was held in the former studio of the photographer Nadar on the Boulevard des Capucines. Monet showed a painting of that same boulevard, its crowds dissolved into quick dabs of paint, the way a slow camera would have caught them. The Impressionists took the camera's mistake, light and movement instead of detail, and turned it into a way of seeing.</p>
 
 <div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-10.jpg" width="1024" height="683" alt="Diagonal strings of glowing bulbs in the dark" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-13.jpg" width="1024" height="683" alt="Rows of warm bulbs hanging in the dark" loading="lazy" decoding="async"></figure></div>
+
+<p>A century and a half later, I'm doing the same thing in reverse. I let the camera move on purpose, so a street full of people turns to streaks and a string of bulbs becomes a rhythm. The photograph borrows back what the painters borrowed from it: not what the street looked like, but what it felt like to be in it.</p>
 
 <div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-11.jpg" width="1024" height="683" alt="Fire escape lit orange beside a glowing marquee sign" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-20.jpg" width="1024" height="683" alt="Crowd on a street blurred into streaks of colour" loading="lazy" decoding="async"></figure></div>
 
@@ -49,11 +51,19 @@ photoCount: 24
 
 <p>In 2023, climate scientists writing in the <a href="https://www.pnas.org/doi/10.1073/pnas.2219118120" rel="noopener">Proceedings of the National Academy of Sciences</a> found that the skies in Turner's and Monet's paintings grew hazier as air pollution rose during the Industrial Revolution. The painters weren't only being poetic. They were painting the air they actually breathed.</p>
 
+<figure class="wide" style="--ar:1.4692"><img src="/photography/new-york-2023/new-york-17.jpg" width="1024" height="697" alt="Bridge tower and smokestack silhouetted in grey haze" loading="lazy" decoding="async"></figure>
+
 <p>Standing under the Queensboro Bridge on a grey January afternoon, smokestacks still breathing over the East River, I understood that. The haze isn't a filter. It's the city.</p>
 
-<div class="photos photos-2"><figure style="--ar:1.4692"><img src="/photography/new-york-2023/new-york-17.jpg" width="1024" height="697" alt="Bridge tower and smokestack silhouetted in grey haze" loading="lazy" decoding="async"></figure><figure style="--ar:1.2488"><img src="/photography/new-york-2023/new-york-22.jpg" width="1024" height="820" alt="Tram cables and pylons leading to the bridge and smokestacks" loading="lazy" decoding="async"></figure></div>
+<figure class="narrow" style="--ar:0.7820"><img src="/photography/new-york-2023/new-york-18.jpg" width="782" height="1000" alt="Black and white view of tram pylons, the Queensboro Bridge and a smoking stack" loading="lazy" decoding="async"></figure>
 
-<div class="photos photos-2"><figure style="--ar:0.7820"><img src="/photography/new-york-2023/new-york-18.jpg" width="782" height="1000" alt="Black and white view of tram pylons, the Queensboro Bridge and a smoking stack" loading="lazy" decoding="async"></figure><figure style="--ar:0.6611"><img src="/photography/new-york-2023/new-york-19.jpg" width="677" height="1024" alt="Roosevelt Island tram car above the traffic" loading="lazy" decoding="async"></figure></div>
+<p>I pushed this one to hard black and white. Iron, cable and smoke: the same materials those painters were staring at, still holding the city together.</p>
+
+<figure class="wide" style="--ar:1.2488"><img src="/photography/new-york-2023/new-york-22.jpg" width="1024" height="820" alt="Tram cables and pylons leading to the bridge and smokestacks" loading="lazy" decoding="async"></figure>
+
+<p>And then a red tram car swings out over the traffic, and the whole scene comes back into colour.</p>
+
+<figure class="narrow" style="--ar:0.6611"><img src="/photography/new-york-2023/new-york-19.jpg" width="677" height="1024" alt="Roosevelt Island tram car above the traffic" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-21.jpg" width="1024" height="683" alt="View down a Manhattan avenue between brick towers" loading="lazy" decoding="async"></figure><figure style="--ar:0.6670"><img src="/photography/new-york-2023/new-york-23.jpg" width="683" height="1024" alt="Dark towers rising into a cloudy sky, a red traffic light below" loading="lazy" decoding="async"></figure></div>
 
