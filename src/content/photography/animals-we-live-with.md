@@ -1,6 +1,6 @@
 ---
 title: "Animals we live with"
-description: "Bald eagles, opossums, cottontails, goats, peafowl and guinea fowl, all photographed within a few feet of my front door in Western North Carolina."
+description: "A breeding pair of bald eagles, opossums, cottontails, goats, peafowl and guinea fowl, all photographed within a few feet of my front door in Western North Carolina."
 pubDate: "2023-06-05"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/04/eagles-1024x683.jpg"
 tags: []
@@ -12,9 +12,9 @@ photoCount: 15
 
 <p>No hides, no safari, no long lens trips. Just the animals that share this patch of Western North Carolina with us: some ours, some wild, a few that never quite decided which. Most of these were taken with whatever camera was closest when something happened.</p>
 
-<figure class="wide" style="--ar:1.5"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/eagles-1024x683.jpg" alt="Two bald eagles locking talons in mid-air against a pale sky" loading="lazy" decoding="async"><figcaption>Bald eagles</figcaption></figure>
+<figure class="wide" style="--ar:1.5"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/eagles-1024x683.jpg" alt="Breeding pair of bald eagles reaching for each other's talons in a courtship flight" loading="lazy" decoding="async"><figcaption>Bald eagles, a breeding pair</figcaption></figure>
 
-<p>Two bald eagles grappling overhead. Eagles lock talons in flight, sometimes as courtship and sometimes as a fight over territory, and occasionally tumble a long way before letting go.</p>
+<p>A breeding pair of bald eagles in their courtship flight. They climb high, lock talons and cartwheel down together, letting go only just before the ground. Pairs usually mate for life and return to the same nest year after year.</p>
 
 <h2>The wild neighbours</h2>
 
