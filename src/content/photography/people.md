@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 17
+photoCount: 21
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -32,6 +32,12 @@ photoCount: 17
 <div class="photos photos-2"><figure style="--ar:1.3397"><img src="/photography/people/people-c85e8fa0.jpg" data-full="/photography/people/people-c85e8fa0-full.jpg" width="1400" height="1045" alt="Grey-haired man mid-conversation with a woman fixing her hair, deep green woods behind" loading="lazy" decoding="async"></figure><figure style="--ar:0.6657"><img src="/photography/people/people-d996c771.jpg" data-full="/photography/people/people-d996c771-full.jpg" width="932" height="1400" alt="Man in a cap and tank top looking down at a toddler by a riverbank" loading="lazy" decoding="async"></figure></div>
 
 <div class="photos photos-2"><figure style="--ar:1.4846"><img src="/photography/people/people-30b6a6fd.jpg" data-full="/photography/people/people-30b6a6fd-full.jpg" width="1400" height="943" alt="Man with a top knot and sunglasses on his head in profile, a farm gate behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.5005"><img src="/photography/people/people-860a6ca2.jpg" data-full="/photography/people/people-860a6ca2-full.jpg" width="1400" height="933" alt="Bearded man in a patterned scarf looking down at a bouquet of wildflowers" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:1.9178"><img src="/photography/people/people-540bff94.jpg" data-full="/photography/people/people-540bff94-full.jpg" width="1400" height="730" alt="Older man in suspenders beside a red-haired woman smiling at him, fire engine behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.8592"><img src="/photography/people/people-bd092125.jpg" data-full="/photography/people/people-bd092125-full.jpg" width="1400" height="753" alt="EMT in a blue uniform shirt laughing with friends outside a brick station" loading="lazy" decoding="async"></figure></div>
+
+<figure style="--ar:3.1818"><img src="/photography/people/people-fc6b3684.jpg" data-full="/photography/people/people-fc6b3684-full.jpg" width="1400" height="440" alt="A row of older people seated in chairs outside a brick and stone building" loading="lazy" decoding="async"></figure>
+
+<figure style="--ar:1.3333"><img src="/photography/people/people-6f72abed.jpg" data-full="/photography/people/people-6f72abed-full.jpg" width="1400" height="1050" alt="Man in a palm-print shirt sitting on the beach, watching the sunset" loading="lazy" decoding="async"></figure>
 
 <p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
