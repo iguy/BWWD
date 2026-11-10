@@ -9,9 +9,9 @@ theme: "dark"
 photoCount: 6
 ---
 
-<p class="lede">When I was a kid in the 70s, the adults smoked while we watched super 8 home movies on the living room wall. The films were mostly poor. I watched the smoke instead, drifting through the projector beam, turning into shapes and then into nothing.</p>
+<p class="lede">When I was a kid in the 70s, the adults smoked while we watched super 8 home movies on the living room wall. The films were bad in every way: dull birthdays and beach trips, shot shaky and out of focus, heads cut off at the top of the frame, everything washed out or lost in shadow. Nobody behind the camera was looking at anything. So I watched the smoke instead, drifting through the projector beam, turning into shapes and then into nothing.</p>
 
-<p>I didn't know it then, but I was learning to look at something most people never notice: a form that exists for less than a second and can never happen the same way twice.</p>
+<p>The smoke was better composed than anything on the wall. I didn't know it then, but I was learning to look at something most people never notice: a form that exists for less than a second and can never happen the same way twice.</p>
 
 <figure class="wide" style="--ar:1.4993"><img src="/photography/smoke/smoke-3-Edit-1024x683.jpg" alt="White smoke folding into loops against warm amber and deep purple" loading="lazy" decoding="async"></figure>
 
