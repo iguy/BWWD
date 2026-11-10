@@ -1,21 +1,28 @@
 ---
 title: "Smoke Photography"
-description: "I love smoke photography. It's a interesting  way to capture the patterns and movements of smoke as it rises into the air. I use a micro lens and a fast…"
+description: "Smoke photography by Gary Crossey: macro studies of smoke in strong cross light, ephemeral shapes frozen with a fast shutter speed."
 pubDate: "2023-04-02"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-2.jpg"
 tags: []
 legacy: true
+theme: "dark"
 photoCount: 6
 ---
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-3-Edit-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure>
+<p class="lede">The patterns remind me of the 70s: a room full of adults smoking while a super 8 projector threw home movies on the wall. The movies were mostly poor. The smoke was always fascinating.</p>
 
-<p>I love smoke photography. It's a interesting  way to capture the patterns and movements of smoke as it rises into the air. I use a micro lens and a fast shutter speed to freeze the motion of the different layers of smoke and bring out their unique patterns and movements. Adjusting the focus to a specific area of the smoke allows me to capture the intricate details and textures of the smoke. In post-production, I use noise reduction techniques to create a clean and sharp image.</p>
+<figure class="wide" style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-3-Edit-1024x683.jpg" alt="Layers of smoke folding over each other in strong cross light" loading="lazy" decoding="async"></figure>
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-2-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure>
+<h2>How I shoot it</h2>
 
-<p>The way the smoke is captured in the light creates stunning patterns that remind me of the 70s. I remember when all the adults in the room smoked while watching super 8 projector movies. They were mostly poor home movies. Thankfully, the patterns of the smoke were always fascinating .</p>
+<p>I use a macro lens and a fast shutter speed to freeze the layers of smoke as they rise, then set the focus on one small area to pull out the detail and texture. In post-production, noise reduction keeps the image clean and sharp.</p>
 
-<p>When the layers of smoke are captured in the strong cross light the smoke create 3-dimensional forms and visual shapes that are often ephemeral and only exist for a brief moment in time. For me, capturing these fleeting moments is the art. The resulting images are not only visually interesting but also have a unique artistic value that captures the essence of the moment.</p>
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-1-1024x683.jpg" alt="Thin ribbon of smoke curling upward in cross light" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-7-1024x683.jpg" alt="Smoke spreading into soft, layered folds" loading="lazy" decoding="async"></figure></div>
 
-<div class="photos photos-grid"><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-1-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-7-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-6-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-11-1024x683.jpg" alt="Smoke Photography" loading="lazy" decoding="async"></figure></div>
+<h2>Shapes that only exist once</h2>
+
+<p>In strong cross light, the layers of smoke become three-dimensional forms, shapes that exist for a moment and then are gone. Catching them is the art for me. No two frames can ever be repeated.</p>
+
+<figure class="wide" style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-2-1024x683.jpg" alt="Smoke twisting into a sculptural, three-dimensional form" loading="lazy" decoding="async"></figure>
+
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-6-1024x683.jpg" alt="Wisps of smoke separating into fine strands" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/04/smoke-11-1024x683.jpg" alt="Dense curl of smoke lit from the side" loading="lazy" decoding="async"></figure></div>
