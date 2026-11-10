@@ -13,7 +13,7 @@ photoCount: 7
 
 <p>I have no idea how it picks the pairs. It might be software looking for matches, or it might be pure chance. Either way, some of the combinations are better than anything I'd have put together on purpose: colours that answer each other, a line in one picture that carries straight into the next, two places and two moments that suddenly belong together.</p>
 
-<p><a href="https://www.instagram.com/wmheninger/" rel="noreferrer noopener">Wendy H.</a> was the first person to talk to me about duo images, two photographs working as one. After that conversation I started noticing what my phone was doing, and whenever a pairing stopped me, I took a screenshot.</p>
+<p><a href="https://www.instagram.com/wmh987654/" rel="noreferrer noopener">Wendy H.</a> was the first person to talk to me about duo images, two photographs working as one. After that conversation I started noticing what my phone was doing, and whenever a pairing stopped me, I took a screenshot.</p>
 
 <p>It's the same thing I look for with a camera, two things lining up for a moment. Only this time I didn't make the alignment. I just had to be watching when it happened.</p>
 
