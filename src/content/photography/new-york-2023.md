@@ -1,6 +1,6 @@
 ---
 title: "New York January 2023"
-description: "New York at night in January 2023 by Gary Crossey: neon, lit windows, motion blur and haze. Street photography about the space between private and public life."
+description: "New York at night in January 2023 by Gary Crossey: a city photographed without people, through the traces they leave behind. Neon, lit windows, motion blur and a cloud posing as smoke."
 pubDate: "2023-01-28"
 cover: "/photography/new-york-2023/new-york-01.jpg"
 tags: []
@@ -9,9 +9,11 @@ theme: "dark"
 photoCount: 24
 ---
 
-<p class="lede">Photographing New York lets you look into other people's lives without ever stepping into their space.</p>
+<p class="lede">I went to New York and didn't photograph a single person.</p>
 
-<p>January 2023, mostly after dark. The city at night stops being a skyline and becomes a set of signals: a sign, a window, a string of bulbs, a single lit room fifty floors up. I wasn't trying to photograph New York. I was trying to photograph what it's like to walk through it with your eyes open.</p>
+<p>In the most performed city on earth, where everyone strikes a pose the second a camera comes out, I kept turning toward what people leave behind: lit windows, signs, marquees, a crosswalk seen from above, a tram full of commuters too far away to make out. Every frame is full of people. You just never see them perform.</p>
+
+<p>At night New York stops being a skyline and becomes a set of signals: a sign, a window, a string of bulbs, a single lit room high above the street. It lets you look into other people's lives without ever stepping into their space.</p>
 
 <figure class="wide" style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-01.jpg" width="1024" height="683" alt="Red neon New Yorker sign glowing against the night sky" loading="lazy" decoding="async"></figure>
 
@@ -53,11 +55,13 @@ photoCount: 24
 
 <figure class="wide" style="--ar:1.4692"><img src="/photography/new-york-2023/new-york-17.jpg" width="1024" height="697" alt="Bridge tower and smokestack silhouetted in grey haze" loading="lazy" decoding="async"></figure>
 
-<p>Standing under the Queensboro Bridge on a grey January afternoon, smokestacks still breathing over the East River, I understood that. The haze isn't a filter. It's the city.</p>
+<p>Standing under the Queensboro Bridge on a grey January afternoon, I wanted to photograph that same air.</p>
 
-<figure class="narrow" style="--ar:0.7820"><img src="/photography/new-york-2023/new-york-18.jpg" width="782" height="1000" alt="Black and white view of tram pylons, the Queensboro Bridge and a smoking stack" loading="lazy" decoding="async"></figure>
+<figure class="narrow" style="--ar:0.7820"><img src="/photography/new-york-2023/new-york-18.jpg" width="782" height="1000" alt="Black and white view of tram pylons and the Queensboro Bridge, a cloud resting on top of a smokestack like smoke" loading="lazy" decoding="async"></figure>
 
-<p>I pushed this one to hard black and white. Iron, cable and smoke: the same materials those painters were staring at, still holding the city together.</p>
+<p>There is no smoke in this photograph. That stack hasn't burned anything in years. I waited for a passing cloud to drift into place on top of it, pressed the shutter, and pushed the image to hard black and white. Iron, cable, a smoking chimney: the look of an industrial city that isn't there any more, built from a cloud and a choice.</p>
+
+<p>Look closer and the present gives it away: the delivery truck, the highway signs, the traffic heading for Queens. It's a modern city dressed as its own past. Every photograph edits the truth a little. This one admits it.</p>
 
 <figure class="wide" style="--ar:1.2488"><img src="/photography/new-york-2023/new-york-22.jpg" width="1024" height="820" alt="Tram cables and pylons leading to the bridge and smokestacks" loading="lazy" decoding="async"></figure>
 
