@@ -5,7 +5,6 @@ pubDate: "2023-01-28"
 cover: "/photography/new-york-2023/new-york-01.jpg"
 tags: []
 legacy: true
-theme: "dark"
 photoCount: 24
 ---
 
