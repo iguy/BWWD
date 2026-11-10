@@ -138,6 +138,7 @@ const jsonLd = {
   .story :global(.lede) { font-size: 1.3rem; line-height: 1.55; }
   .story :global(.stat) { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; color: var(--brass); margin: 0 0 0.35rem; }
   .story :global(figure img) { width: 100%; }
+  .story :global(figure.narrow) { max-width: 620px; }
   /* Rows: each photo's width follows its aspect ratio, so every photo in a row is the same height. */
   .story :global(.photos) {
     display: flex;
