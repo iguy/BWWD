@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 19
+photoCount: 20
 ---
 
 <p>Most of the people in these photographs aren't looking at me. They're looking at each other: mid-conversation, a hand on a shoulder, a glance down at a child. That's the moment I wait for, when attention leaves the camera and goes to someone else.</p>
@@ -25,7 +25,7 @@ photoCount: 19
 
 <figure style="--ar:1.3333"><img src="/photography/people/people-5c243203.jpg" data-full="/photography/people/people-5c243203-full.jpg" width="1400" height="1050" alt="Smiling man beside a wall of painted birds on a wire" loading="lazy" decoding="async"><figcaption>2018</figcaption></figure>
 
-<div class="photos photos-2"><figure style="--ar:1.3397"><img src="/photography/people/people-e4e0929a.jpg" data-full="/photography/people/people-e4e0929a-full.jpg" width="1400" height="1045" alt="Rugby player grinning on the sideline, crowd blurred behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure></div>
+<div class="photos photos-3"><figure style="--ar:1.3397"><img src="/photography/people/people-e4e0929a.jpg" data-full="/photography/people/people-e4e0929a-full.jpg" width="1400" height="1045" alt="Rugby player grinning on the sideline, crowd blurred behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.0870"><img src="/photography/people/people-bc7s50.jpg" data-full="/photography/beer-city-7s/beer-city-7s-50.jpg" width="750" height="690" alt="Rugby player in a grey and red kit walking back to her mark, eyes down, jaw set" loading="lazy" decoding="async"><figcaption>Beer City 7s, 2023</figcaption></figure><figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure></div>
 
 <h2>On their own</h2>
 
