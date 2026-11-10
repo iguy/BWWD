@@ -61,6 +61,8 @@ photoCount: 24
 
 <p>There is no smoke in this photograph. That stack hasn't burned anything in years. I waited for a passing cloud to drift into place on top of it, pressed the shutter, and pushed the image to hard black and white. Iron, cable, a smoking chimney: the look of an industrial city that isn't there any more, built from a cloud and a choice.</p>
 
+<p>Nothing in the frame is fake. The stack is real, the cloud is real, the bridge is real. The story is in the alignment: where I stood, and the few seconds when a cloud sat exactly where smoke used to be. I didn't find this photograph. I lined it up.</p>
+
 <p>Look closer and the present gives it away: the delivery truck, the highway signs, the traffic heading for Queens. It's a modern city dressed as its own past. Every photograph edits the truth a little. This one admits it.</p>
 
 <figure class="wide" style="--ar:1.2488"><img src="/photography/new-york-2023/new-york-22.jpg" width="1024" height="820" alt="Tram cables and pylons leading to the bridge and smokestacks" loading="lazy" decoding="async"></figure>
