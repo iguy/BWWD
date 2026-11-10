@@ -152,6 +152,10 @@ const jsonLd = {
   .story :global(.photos-grid) { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .story :global(.photos-grid figure img) { aspect-ratio: 3 / 2; object-fit: cover; height: 100%; }
   @media (max-width: 700px) { .story :global(.photos-grid) { grid-template-columns: repeat(2, 1fr); } }
+  /* Portfolio galleries: masonry columns, every photo at its own shape, never cropped */
+  .story :global(.photos-masonry) { display: block; columns: 3 280px; column-gap: 12px; }
+  .story :global(.photos-masonry figure) { break-inside: avoid; margin: 0 0 12px; }
+  .story :global(.photos-masonry figure img) { width: 100%; height: auto; }
   .story :global(.photos figure) { margin: 0; }
   .story :global(figcaption) {
     margin-top: 0.6rem;
