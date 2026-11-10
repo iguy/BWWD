@@ -41,4 +41,6 @@ photoCount: 20
 
 <p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
+<p>Even on stage, I'm not after a face put on for my camera. Performers like these are at home in front of a crowd. I photograph them in the act, not acting for me.</p>
+
 <figure style="--ar:1.5"><img src="/photography/people/people-35e2cca1.jpg" data-full="/photography/people/people-35e2cca1-full.jpg" width="1200" height="800" alt="Boy George singing on stage with another performer in London" loading="lazy" decoding="async"><figcaption>Boy George on stage, London</figcaption></figure>
