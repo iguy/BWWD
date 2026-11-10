@@ -77,6 +77,14 @@ const uses = [
       <button type="submit" class="submit">Send booking request</button>
       <p class="status" role="status" aria-live="polite"></p>
     </form>
+
+    <section id="book-done" class="done" tabindex="-1" hidden aria-live="polite">
+      <p class="done-mark" aria-hidden="true">✓</p>
+      <h2>Request sent. Thanks, <span class="done-name"></span>.</h2>
+      <p>Your booking request for <strong class="done-services"></strong> is in my inbox.</p>
+      <p>I'll reply to <strong class="done-email"></strong> within a couple of days with availability and a quote. If it's urgent, email me at <a href="mailto:garycrossey@irishguy.us">garycrossey@irishguy.us</a>.</p>
+      <p><a class="done-back" href="/">← Back to the photographs</a></p>
+    </section>
   </main>
 </Layout>
 
@@ -97,18 +105,29 @@ const uses = [
     const data: Record<string, string> = {};
     for (const k of new Set(fd.keys())) data[k] = fd.getAll(k).map(String).join(', ');
     const btn = form.querySelector<HTMLButtonElement>('.submit')!;
+    btn.disabled = true;
     btn.textContent = 'Sending…';
+    status.className = 'status';
+    status.textContent = '';
     try {
       const r = await fetch('https://formsubmit.co/ajax/garycrossey@irishguy.us', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
-      if (!r.ok) throw new Error();
-      form.reset();
-      status.textContent = "Thanks, your request is in. I'll be in touch within a couple of days.";
-      status.className = 'status ok';
+      const res = await r.json().catch(() => ({}));
+      if (!r.ok || !(res.success === true || res.success === 'true')) throw new Error(res.message || 'send failed');
+      const done = document.querySelector<HTMLElement>('#book-done')!;
+      done.querySelector('.done-name')!.textContent = String(fd.get('name')).trim().split(' ')[0];
+      done.querySelector('.done-email')!.textContent = email;
+      done.querySelector('.done-services')!.textContent = data['Services'];
+      form.hidden = true;
+      done.hidden = false;
+      done.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      done.focus();
     } catch {
-      status.innerHTML = 'That didn\'t send. Email me directly at <a href="mailto:garycrossey@irishguy.us">garycrossey@irishguy.us</a>.';
+      status.innerHTML = 'Your request didn\'t send, and nothing has been lost from the form. Try again, or email me directly at <a href="mailto:garycrossey@irishguy.us">garycrossey@irishguy.us</a>.';
       status.className = 'status bad';
+      status.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      btn.disabled = false;
+      btn.textContent = 'Send booking request';
     }
-    btn.textContent = 'Send booking request';
   });
 </script>
 
@@ -142,6 +161,13 @@ const uses = [
   .submit:hover { background: #2b241d; }
   .status { margin: 1.25rem 0 0; font-size: 1rem; }
   .status.ok { color: #2f5d1e; }
+  .submit:disabled { opacity: 0.7; cursor: wait; }
+  .done { background: #1a1714; color: #efe6d6; border-bottom: 4px solid #c8813a; padding: 2.25rem 2rem; outline: none; }
+  .done h2 { color: #efe6d6; font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0.25rem 0 1rem; }
+  .done p { margin: 0 0 0.9rem; color: #d6ccb6; }
+  .done strong { color: #efe6d6; }
+  .done a { color: #c8813a; }
+  .done-mark { font-size: 2.25rem; line-height: 1; color: #c8813a; margin: 0 !important; }
   .status.bad { color: #a3341f; }
   @media (max-width: 640px) { .choices, .fields { grid-template-columns: 1fr; } }
 </style>
