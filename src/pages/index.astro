@@ -67,7 +67,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
   <!-- 2. The work -->
   <main id="work">
     <a class="lead" href={storyPath(lead)}>
-      <img src={lead.data.cover} alt={lead.data.title} />
+      <img src={lead.data.cover} alt={lead.data.title} style={lead.data.coverPosition ? `object-position: ${lead.data.coverPosition}` : undefined} />
       <div class="lead-text">
         <p class="card-meta">Latest · {lead.data.pubDate.slice(0, 4)} · {lead.data.photoCount} photos</p>
         <h2>{lead.data.title}</h2>
@@ -89,7 +89,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
                 {s.data.coverSet.map((src) => <img src={src} alt="" loading="lazy" decoding="async" />)}
               </div>
             ) : (
-              <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" /></div>
+              <div class="frame"><img src={s.data.cover} alt={s.data.title} loading="lazy" decoding="async" style={s.data.coverPosition ? `object-position: ${s.data.coverPosition}` : undefined} /></div>
             )}
             <p class="card-meta">{s.data.pubDate.slice(0, 4)} · {s.data.photoCount} {s.data.photoCount === 1 ? 'photo' : 'photos'}</p>
             <h3>{s.data.title}</h3>

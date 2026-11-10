@@ -5,6 +5,7 @@ pubDate: "2026-11-10"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/05/fever-ray-karen.jpg"
 tags: []
 listLast: 2
+coverPosition: "top"
 photoCount: 2
 ---
 
