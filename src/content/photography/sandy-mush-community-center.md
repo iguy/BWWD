@@ -1,5 +1,5 @@
 ---
-title: "Sandy Mush Community Center ?"
+title: "Sandy Mush Community Center"
 description: "Sandy Mush Community Center (Leicester NC) Exterior photograph by Gary Crossey."
 pubDate: "2022-08-06"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/08/sandy-mush-community-center-Edit-1024x545-1.jpeg"
