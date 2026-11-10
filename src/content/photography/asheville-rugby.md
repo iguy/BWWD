@@ -26,7 +26,7 @@ photoCount: 18
 
 <div class="photos photos-2"><figure style="--ar:1.6713"><img src="/photography/asheville-rugby/asheville-rugby-21.jpg" width="1200" height="718" alt="Pass leaving the hands toward a teammate in green and gold" loading="lazy" decoding="async"></figure><figure style="--ar:1.6807"><img src="/photography/asheville-rugby/asheville-rugby-17.jpg" width="1200" height="714" alt="Player in a Middlebury shirt flinging his arms wide after a pass" loading="lazy" decoding="async"></figure></div>
 
-<h2>Faces</h2>
+<h2>Game face</h2>
 
 <div class="photos photos-3"><figure style="--ar:0.8000"><img src="/photography/asheville-rugby/asheville-rugby-06-face.jpg" data-full="/photography/asheville-rugby/asheville-rugby-06.jpg" width="400" height="500" alt="Head and shoulders of a player standing on the field, watching the drill" loading="lazy" decoding="async"></figure><figure style="--ar:0.8000"><img src="/photography/asheville-rugby/asheville-rugby-20-face.jpg" data-full="/photography/asheville-rugby/asheville-rugby-20.jpg" width="400" height="500" alt="Player running toward the camera, eyes fixed ahead" loading="lazy" decoding="async"></figure><figure style="--ar:0.8000"><img src="/photography/asheville-rugby/asheville-rugby-18-face.jpg" data-full="/photography/asheville-rugby/asheville-rugby-18.jpg" width="460" height="575" alt="Forward in a green and gold shirt, ball in hand, looking for the pass" loading="lazy" decoding="async"></figure></div>
 
