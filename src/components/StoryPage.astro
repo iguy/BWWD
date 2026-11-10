@@ -44,6 +44,11 @@ const jsonLd = {
       <Content />
     </article>
 
+    <aside class="cta">
+      <p>Want your event, team or performance photographed like this?</p>
+      <a href="/book/">Book a photo session →</a>
+    </aside>
+
     <nav class="pager" aria-label="More photo stories">
       {newer ? <a href={storyPath(newer)}><span>Newer</span>{newer.data.title}</a> : <span />}
       {older ? <a class="older" href={storyPath(older)}><span>Older</span>{older.data.title}</a> : <span />}
@@ -249,6 +254,10 @@ const jsonLd = {
     .lb-prev, .lb-next { top: auto; bottom: 0.25rem; transform: none; }
   }
 
+  .cta { max-width: var(--text); margin: 4rem auto 0; padding: 1.75rem 1.5rem; background: #1a1714; color: #efe6d6; border-bottom: 4px solid #c8813a; display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; align-items: center; justify-content: space-between; }
+  .cta p { margin: 0; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.3; }
+  .cta a { color: #c8813a; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .cta a:hover { color: #efe6d6; }
   .pager {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -57,6 +57,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
           <p>I photograph attention: the moment someone forgets the camera because they're locked onto something else. A ball in the air, a friend's face, a goat mid-leap. Mostly in the communities I belong to, around Asheville, North Carolina.</p>
           <div class="buttons">
             <a class="btn" href="#work">See the work</a>
+            <a class="btn btn-ghost" href="/book/">Book a session</a>
           </div>
         </div>
       </div>
@@ -117,6 +118,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
   <section class="contact-panel">
     <div class="wrap contact">
       <p>Gary Crossey · Based near Asheville, North Carolina</p>
+      <a class="btn-book" href="/book/">Book a photo session →</a>
       <a href={mail}>garycrossey@irishguy.us</a>
     </div>
   </section>
@@ -265,6 +267,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
   .contact p { margin: 0; color: #d6ccb6; }
   .contact a { color: var(--paper); }
   .contact a:hover { color: var(--brass-decorative, #c8a46a); }
+  .contact a.btn-book { color: #c8813a; font-weight: 600; text-decoration: none; }
 
   @media (max-width: 900px) {
     .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 300px 170px 170px; }

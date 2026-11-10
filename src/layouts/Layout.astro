@@ -91,6 +91,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     .site-nav { display: flex; gap: 1.4rem; font-size: 0.95rem; }
     .site-nav a { color: #d8cbb4; text-decoration: none; }
     .site-nav a:hover, .site-nav a.is-section { color: #c8813a; }
+    .site-nav a.nav-book { color: #1a1714; background: #c8813a; padding: 0.15rem 0.7rem; }
+    .site-nav a.nav-book:hover { background: #efe6d6; color: #1a1714; }
     /* Dark story pages: same layout, night palette */
     html:has(body.dark) { background: #16130f; }
     body.dark {
@@ -112,8 +114,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <header class="site-header">
       <a class="brand" href="https://betterworldwithdesign.com/">Better World With Design</a>
       <nav class="site-nav" aria-label="Main">
-        <a class="is-section" href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Photography</a>
+        <a class={Astro.url.pathname.startsWith('/book') ? undefined : 'is-section'} href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Photography</a>
         <a href="https://podcast.betterworldwithdesign.com/">Podcast</a>
+        <a class="nav-book" href="/book/">Book a session</a>
       </nav>
     </header>
     <slot name="masthead" />

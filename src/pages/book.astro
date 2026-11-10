@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+const services = [
+  ['Event coverage', 'Parties, festivals, community days, Pride'],
+  ['Sports and tournaments', 'Matches, tournaments, team days'],
+  ['Portraits', 'Individuals, couples, families'],
+  ['Headshots', 'Professional and creative headshots'],
+  ['Performers and stage', 'Drag, music, theatre, live shows'],
+  ['Small business and brand', 'People, places and products'],
+];
+const uses = [
+  ['Promoting the event beforehand', 'Posters, listings, ticket pages'],
+  ['Social media', 'Instagram, Facebook, TikTok'],
+  ['Website', 'Your site, galleries, about pages'],
+  ['Press and media', 'News, sponsors, partners'],
+  ['Print', 'Flyers, banners, programmes'],
+  ['Just to keep', 'A record of the day for you and your people'],
+];
+---
+<Layout title="Book a photo session — Photography — Better World With Design" description="Book Gary Crossey to photograph your event, team, performance or portrait session in and around Asheville, North Carolina.">
+  <header class="book-head" slot="masthead">
+    <a class="back" href="/">← Photography</a>
+    <h1>Book a photo session</h1>
+    <p class="meta">Events, sports, portraits and performers · Asheville, North Carolina and beyond</p>
+  </header>
+
+  <main class="book">
+    <p class="lede">Tell me what you're planning and what you need the photographs to do. I'll reply within a couple of days with availability and a quote.</p>
+
+    <form id="book-form" action="https://formsubmit.co/garycrossey@irishguy.us" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="New photo booking request" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <fieldset>
+        <legend>What would you like photographed?</legend>
+        <p class="hint">Pick as many as apply.</p>
+        <div class="choices">
+          {services.map(([label, sub]) => (
+            <label class="choice"><input type="checkbox" name="Services" value={label} /><span><strong>{label}</strong><small>{sub}</small></span></label>
+          ))}
+        </div>
+        <p class="error" data-for="services" hidden>Choose at least one service.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>What do you need the photos for?</legend>
+        <p class="hint">This shapes how I shoot: a poster needs different frames from a keepsake album.</p>
+        <div class="choices">
+          {uses.map(([label, sub]) => (
+            <label class="choice"><input type="checkbox" name="Photos needed for" value={label} /><span><strong>{label}</strong><small>{sub}</small></span></label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The event</legend>
+        <div class="fields">
+          <label>Event or session name<input type="text" name="Event name" placeholder="Beer City 7s, a 40th birthday, team headshots" /></label>
+          <label>Date<input type="date" name="Date" /></label>
+          <label>Location<input type="text" name="Location" placeholder="Venue and town" /></label>
+          <label>Rough length<select name="Length"><option value="">Choose one</option><option>Up to 2 hours</option><option>Half day</option><option>Full day</option><option>Not sure yet</option></select></label>
+        </div>
+        <label class="full">Anything else I should know?<textarea name="Details" rows="5" placeholder="Who'll be there, key moments you don't want missed, deadlines for the photos"></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="fields">
+          <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+          <label><span>Phone <span class="opt">(optional)</span></span><input type="tel" name="Phone" autocomplete="tel" /></label>
+        </div>
+        <p class="error" data-for="contact" hidden>Add your name and a valid email so I can reply.</p>
+      </fieldset>
+
+      <button type="submit" class="submit">Send booking request</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+</Layout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('#book-form')!;
+  const status = form.querySelector<HTMLElement>('.status')!;
+  const err = (k: string) => form.querySelector<HTMLElement>(`.error[data-for="${k}"]`)!;
+  form.addEventListener('change', () => { err('services').hidden = true; });
+  form.addEventListener('input', () => { err('contact').hidden = true; });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    let ok = true;
+    if (!fd.getAll('Services').length) { err('services').hidden = false; ok = false; }
+    const email = String(fd.get('email') || '');
+    if (!String(fd.get('name') || '').trim() || !/^\S+@\S+\.\S+$/.test(email)) { err('contact').hidden = false; ok = false; }
+    if (!ok) { form.querySelector<HTMLElement>('.error:not([hidden])')?.scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+    const data: Record<string, string> = {};
+    for (const k of new Set(fd.keys())) data[k] = fd.getAll(k).map(String).join(', ');
+    const btn = form.querySelector<HTMLButtonElement>('.submit')!;
+    btn.textContent = 'Sending…';
+    try {
+      const r = await fetch('https://formsubmit.co/ajax/garycrossey@irishguy.us', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+      if (!r.ok) throw new Error();
+      form.reset();
+      status.textContent = "Thanks, your request is in. I'll be in touch within a couple of days.";
+      status.className = 'status ok';
+    } catch {
+      status.innerHTML = 'That didn\'t send. Email me directly at <a href="mailto:garycrossey@irishguy.us">garycrossey@irishguy.us</a>.';
+      status.className = 'status bad';
+    }
+    btn.textContent = 'Send booking request';
+  });
+</script>
+
+<style>
+  .book-head { max-width: calc(var(--text) + 32px); margin: 0 auto; padding: 2.75rem 16px 3rem; }
+  .back { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: #c8813a; }
+  .back:hover { color: #efe6d6; }
+  .book-head h1 { font-size: clamp(2.5rem, 7vw, 4.25rem); line-height: 1; margin: 0.9rem 0; color: #efe6d6; }
+  .meta { margin: 0; color: #a8987f; font-size: 0.95rem; }
+  .book { max-width: calc(var(--text) + 32px); margin: 0 auto; padding: 2.75rem 16px 0; }
+  .lede { font-size: 1.3rem; line-height: 1.55; margin: 0 0 2.5rem; }
+  fieldset { border: 0; border-top: 1px solid var(--rule); margin: 0 0 2.25rem; padding: 1.5rem 0 0; }
+  legend { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; padding: 0; }
+  .hint { margin: 0.25rem 0 1rem; color: var(--ink-soft); font-size: 0.95rem; }
+  .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 1rem; }
+  .choice { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.9rem 1rem; border: 1px solid var(--rule); background: var(--paper-deep); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+  .choice:hover { border-color: var(--brass); }
+  .choice:has(input:checked) { border-color: #c8813a; background: #f3e6cf; }
+  .choice input { margin-top: 0.3rem; width: 18px; height: 18px; accent-color: #c8813a; flex: none; }
+  .choice strong { display: block; font-weight: 600; font-size: 1rem; }
+  .choice small { display: block; color: var(--ink-soft); font-size: 0.85rem; line-height: 1.4; }
+  .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; margin: 1rem 0; }
+  label:not(.choice) { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.95rem; font-weight: 600; }
+  .full { margin-top: 0.25rem; }
+  .opt { font-weight: 400; color: var(--ink-soft); }
+  input:not([type='checkbox']), select, textarea { font: inherit; font-weight: 400; font-size: 1rem; color: var(--ink); background: #faf5ea; border: 1px solid var(--rule); padding: 0.7rem 0.8rem; border-radius: 0; width: 100%; }
+  input:focus, select:focus, textarea:focus, .choice:focus-within { outline: 2px solid #c8813a; outline-offset: 1px; }
+  .hp { position: absolute; left: -9999px; }
+  .error { color: #a3341f; font-size: 0.9rem; margin: 0.75rem 0 0; }
+  .submit { font: inherit; font-weight: 600; font-size: 1.05rem; background: #1a1714; color: #efe6d6; border: 0; padding: 1rem 1.75rem; cursor: pointer; border-bottom: 3px solid #c8813a; }
+  .submit:hover { background: #2b241d; }
+  .status { margin: 1.25rem 0 0; font-size: 1rem; }
+  .status.ok { color: #2f5d1e; }
+  .status.bad { color: #a3341f; }
+  @media (max-width: 640px) { .choices, .fields { grid-template-columns: 1fr; } }
+</style>
