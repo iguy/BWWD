@@ -9,9 +9,13 @@ theme: "dark"
 photoCount: 6
 ---
 
-<p class="lede">When I was a kid in the 70s, the adults smoked while we watched super 8 home movies on the pull-out screen. The films were bad in every way: dull birthdays and beach trips, shot shaky and out of focus, heads cut off at the top of the frame, everything washed out or lost in shadow. Nobody behind the camera was looking at anything. So I watched the smoke instead, drifting through the projector beam, turning into shapes and then into nothing.</p>
+<p class="lede">When I was a kid in the 70s, the adults smoked while we watched super 8 home movies on the pull-out screen. The films were badly shot, shaky, out of focus, heads cut off at the top of the frame. But that wasn't what I hated about them.</p>
 
-<p>The smoke was better composed than anything on the screen. I didn't know it then, but I was learning to look at something most people never notice: a form that exists for less than a second and can never happen the same way twice.</p>
+<p>It was the people. The moment anyone stepped in front of the camera, they performed. They pulled funny faces, held a strange fixed smile, popped their eyes wide for the lens. Nobody was natural, because a home movie camera gave everyone time to get ready: time to pretend, time to act out. It all felt pretentious and unreal. Some of the places were genuinely interesting, and they were buried under all that mugging.</p>
+
+<p>So I watched the smoke instead, drifting through the projector beam, turning into shapes and then into nothing. It was the only thing in the room that wasn't putting on a show.</p>
+
+<p>Those evenings taught me more about photography than I realised, what to do and, mostly, what not to do. Nearly everything I photograph now is about people once they've stopped performing. Surrounded by performers and pretenders, I turned to what was real. Smoke is the purest version of that. It can't pose. It doesn't know you're there.</p>
 
 <figure class="wide" style="--ar:1.4993"><img src="/photography/smoke/smoke-3-Edit-1024x683.jpg" alt="White smoke folding into loops against warm amber and deep purple" loading="lazy" decoding="async"></figure>
 
