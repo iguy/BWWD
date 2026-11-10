@@ -39,7 +39,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
 ---
 <Layout title="Photography — Better World With Design" description={description} image={absolute(mosaic[0].src)} jsonLd={jsonLd}>
   <!-- 1. Photographs first -->
-  <section class="hero">
+  <section class="hero" slot="masthead">
     <div class="wrap">
       <div class="mosaic">
         {mosaic.map((m, i) => (
@@ -123,7 +123,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
 </Layout>
 
 <style>
-  :root { --night: #1c1a17; --night-soft: #2a2622; }
+  :root { --night: #1a1714; --night-soft: #2b241d; }
   .wrap { max-width: var(--wide); margin: 0 auto; padding: 0 16px; }
   main { max-width: var(--wide); margin: 0 auto; padding: 0 16px; scroll-margin-top: 1rem; }
   .eyebrow {
@@ -154,6 +154,7 @@ const mail = 'mailto:garycrossey@irishguy.us?subject=Photography';
 
   /* 1. Hero: dark band, photo mosaic, short headline */
   .hero { background: var(--night); color: var(--paper); padding: 2.5rem 0 3.5rem; }
+  .hero .eyebrow { color: #c8813a; }
   .mosaic {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
