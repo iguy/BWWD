@@ -32,12 +32,13 @@ const jsonLd = {
 };
 ---
 <Layout title={`${title} — Photography — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd} theme={story.data.theme}>
+  <header class="story-head" slot="masthead">
+    <a class="back" href="/">← Photography</a>
+    <h1>{title}</h1>
+    <p class="meta">Gary Crossey · {dateLabel} · {photoCount} {photoCount === 1 ? 'photograph' : 'photographs'}</p>
+  </header>
+
   <main>
-    <header class="story-head">
-      <a class="back" href="/">← Photography</a>
-      <h1>{title}</h1>
-      <p class="meta">Gary Crossey · {dateLabel} · {photoCount} {photoCount === 1 ? 'photograph' : 'photographs'}</p>
-    </header>
 
     <article class="story">
       <Content />
@@ -115,10 +116,12 @@ const jsonLd = {
 
 <style>
   main { max-width: var(--wide); margin: 0 auto; padding: 0 16px; }
-  .story-head { max-width: var(--text); margin: 0 auto; padding: 3.5rem 0 2.5rem; }
-  .back { font-size: 0.9rem; text-decoration: none; }
-  .story-head h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin: 1rem 0 0.75rem; }
-  .meta { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+  .story-head { max-width: calc(var(--text) + 32px); margin: 0 auto; padding: 2.75rem 16px 3rem; }
+  .back { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: #c8813a; }
+  .back:hover { color: #efe6d6; }
+  .story-head h1 { font-size: clamp(2.5rem, 7vw, 4.25rem); line-height: 1; margin: 0.9rem 0 0.9rem; color: #efe6d6; }
+  .meta { margin: 0; color: #a8987f; font-size: 0.95rem; }
+  .story { padding-top: 2.75rem; }
 
   .story :global(p),
   .story :global(h2),

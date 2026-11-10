@@ -83,11 +83,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       gap: 1rem;
       flex-wrap: wrap;
     }
-    .site-header { border-bottom: 1px solid var(--rule); }
-    .brand { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
-    .site-nav { display: flex; gap: 1.25rem; font-size: 0.95rem; }
-    .site-nav a { color: var(--ink-soft); text-decoration: none; }
-    .site-nav a:hover, .site-nav a[aria-current='page'] { color: var(--brass); }
+    /* Masthead: dark band holding the nav and (optionally) the page title */
+    .masthead { background: #1a1714; color: #efe6d6; border-bottom: 4px solid #c8813a; }
+    .masthead .site-header { border-bottom: 1px solid #3d2f22; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+    .brand { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: #efe6d6; text-decoration: none; }
+    .brand:hover { color: #c8813a; }
+    .site-nav { display: flex; gap: 1.4rem; font-size: 0.95rem; }
+    .site-nav a { color: #d8cbb4; text-decoration: none; }
+    .site-nav a:hover, .site-nav a.is-section { color: #c8813a; }
     /* Dark story pages: same layout, night palette */
     html:has(body.dark) { background: #16130f; }
     body.dark {
@@ -100,18 +103,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       background: var(--paper);
       color: var(--ink);
     }
-    body.dark h1, body.dark h2, body.dark h3, body.dark .brand { color: var(--ink); }
+    body.dark h1, body.dark h2, body.dark h3 { color: var(--ink); }
     .site-footer { border-top: 1px solid var(--rule); margin-top: 5rem; font-size: 0.9rem; color: var(--ink-soft); }
   </style>
 </head>
 <body class={theme === 'dark' ? 'dark' : undefined}>
-  <header class="site-header">
-    <a class="brand" href="https://betterworldwithdesign.com/">Better World With Design</a>
-    <nav class="site-nav" aria-label="Main">
-      <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Photography</a>
-      <a href="https://podcast.betterworldwithdesign.com/">Podcast</a>
-    </nav>
-  </header>
+  <div class="masthead">
+    <header class="site-header">
+      <a class="brand" href="https://betterworldwithdesign.com/">Better World With Design</a>
+      <nav class="site-nav" aria-label="Main">
+        <a class="is-section" href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Photography</a>
+        <a href="https://podcast.betterworldwithdesign.com/">Podcast</a>
+      </nav>
+    </header>
+    <slot name="masthead" />
+  </div>
   <slot />
   <footer class="site-footer">
     <span>© {new Date().getFullYear()} Gary Crossey</span>
