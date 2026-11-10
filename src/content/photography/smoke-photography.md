@@ -47,7 +47,7 @@ photoCount: 6
 
 <div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/smoke/smoke-6-1024x683.jpg" alt="Two ribbons of blue smoke crossing as they rise" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/smoke/smoke-11-1024x683.jpg" alt="Fine blue strands of smoke peeling away from a column" loading="lazy" decoding="async"></figure></div>
 
-<p>These last two remind me of x-rays: cold blue light on black, as if I'm seeing through something solid to the structure inside it. A spine, the curve of a rib, the ghost of a body. Smoke has no inside, yet in that light it looks like the inside of something.</p>
+<p>These last two remind me of x-rays: cold blue light on black, as if I'm seeing through something solid to the structure inside it. Long and pale, they look like leg bones on a lightbox. Smoke has no inside, yet in that light it looks like the inside of something.</p>
 
 <h2>How I shoot it</h2>
 
