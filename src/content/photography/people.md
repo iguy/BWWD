@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 13
+photoCount: 14
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -28,6 +28,8 @@ photoCount: 13
 <div class="photos photos-2"><figure style="--ar:0.6414"><img src="/photography/people/people-2afaa28c.jpg" data-full="/photography/people/people-2afaa28c-full.jpg" width="898" height="1400" alt="Woman with cat ears and blue glasses beside a man in an olive jacket, autumn trees behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.3397"><img src="/photography/people/people-e4e0929a.jpg" data-full="/photography/people/people-e4e0929a-full.jpg" width="1400" height="1045" alt="Rugby player grinning on the sideline, crowd blurred behind" loading="lazy" decoding="async"></figure></div>
 
 <figure style="--ar:1.5005"><img src="/photography/people/people-bd033544.jpg" data-full="/photography/people/people-bd033544-full.jpg" width="1400" height="933" alt="Rugby player in a black shirt driving forward with the ball tucked in" loading="lazy" decoding="async"></figure>
+
+<figure style="--ar:1.3397"><img src="/photography/people/people-c85e8fa0.jpg" data-full="/photography/people/people-c85e8fa0-full.jpg" width="1400" height="1045" alt="Grey-haired man mid-conversation with a woman fixing her hair, deep green woods behind" loading="lazy" decoding="async"></figure>
 
 <p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
