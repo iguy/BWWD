@@ -7,7 +7,7 @@ tags: []
 legacy: true
 theme: "dark"
 coverLayout: "grid"
-coverSet: ["https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-20-1-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-13-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-5-1024x683.jpg"]
+coverSet: ["https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-58-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-20-1-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-13-1024x683.jpg", "https://sandymushcommunitycenter.org/wp-content/uploads/2023/05/2023-smcc-spring-fling-5-1024x652.jpg"]
 photoCount: 57
 ---
 
