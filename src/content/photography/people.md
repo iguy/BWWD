@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 26
+photoCount: 22
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -23,8 +23,6 @@ photoCount: 26
 
 <div class="split split-right"><figure style="--ar:0.6886"><img src="/photography/people/people-e96dd186.jpg" data-full="/photography/people/people-e96dd186-full.jpg" width="964" height="1400" alt="Man in a yellow shirt in warm afternoon light" loading="lazy" decoding="async"><figcaption>Atlanta, 2000</figcaption></figure><div class="split-text"><p>Some portraits come from the street, some from a stage, some from a quiet afternoon. What links them is the same patience: waiting until the person stops performing for the camera.</p></div></div>
 
-<figure class="narrow" style="--ar:0.8929"><img src="/photography/people/people-c8de0af3.jpg" data-full="/photography/people/people-c8de0af3-full.jpg" width="1250" height="1400" alt="Silhouette of a person opening window blinds against bright sun" loading="lazy" decoding="async"></figure>
-
 <figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
 
 <div class="photos photos-2"><figure style="--ar:0.6414"><img src="/photography/people/people-2afaa28c.jpg" data-full="/photography/people/people-2afaa28c-full.jpg" width="898" height="1400" alt="Woman with cat ears and blue glasses beside a man in an olive jacket, autumn trees behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.3397"><img src="/photography/people/people-e4e0929a.jpg" data-full="/photography/people/people-e4e0929a-full.jpg" width="1400" height="1045" alt="Rugby player grinning on the sideline, crowd blurred behind" loading="lazy" decoding="async"></figure></div>
@@ -38,12 +36,6 @@ photoCount: 26
 <div class="photos photos-2"><figure style="--ar:1.9178"><img src="/photography/people/people-540bff94.jpg" data-full="/photography/people/people-540bff94-full.jpg" width="1400" height="730" alt="Older man in suspenders beside a red-haired woman smiling at him, fire engine behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.8592"><img src="/photography/people/people-bd092125.jpg" data-full="/photography/people/people-bd092125-full.jpg" width="1400" height="753" alt="EMT in a blue uniform shirt laughing with friends outside a brick station" loading="lazy" decoding="async"></figure></div>
 
 <figure style="--ar:3.1818"><img src="/photography/people/people-fc6b3684.jpg" data-full="/photography/people/people-fc6b3684-full.jpg" width="1400" height="440" alt="A row of older people seated in chairs outside a brick and stone building" loading="lazy" decoding="async"></figure>
-
-<figure style="--ar:1.3333"><img src="/photography/people/people-6f72abed.jpg" data-full="/photography/people/people-6f72abed-full.jpg" width="1400" height="1050" alt="Man in a palm-print shirt sitting on the beach, watching the sunset" loading="lazy" decoding="async"></figure>
-
-<figure style="--ar:1.7766"><img src="/photography/people/people-a3160eca.jpg" data-full="/photography/people/people-a3160eca-full.jpg" width="1400" height="788" alt="Grey-bearded man in dark sunglasses grinning in front of sunflowers" loading="lazy" decoding="async"></figure>
-
-<figure class="narrow" style="--ar:0.7500"><img src="/photography/people/people-6c8be643.jpg" data-full="/photography/people/people-6c8be643-full.jpg" width="1050" height="1400" alt="Man in a kitten-print shirt and orange trousers petting a sleeping tabby on a bench" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/people/people-b680d653.jpg" data-full="/photography/people/people-b680d653-full.jpg" width="1400" height="933" alt="Woman in a straw hat with her hand on an older man's shoulder, both smiling" loading="lazy" decoding="async"></figure><figure style="--ar:1.0907"><img src="/photography/people/people-987bb7af.jpg" data-full="/photography/people/people-987bb7af-full.jpg" width="1070" height="981" alt="Two women opening their arms for a hug in a sunny field" loading="lazy" decoding="async"></figure></div>
 
