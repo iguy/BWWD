@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 15
+photoCount: 17
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -30,6 +30,8 @@ photoCount: 15
 <figure style="--ar:1.5005"><img src="/photography/people/people-bd033544.jpg" data-full="/photography/people/people-bd033544-full.jpg" width="1400" height="933" alt="Rugby player in a black shirt driving forward with the ball tucked in" loading="lazy" decoding="async"></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.3397"><img src="/photography/people/people-c85e8fa0.jpg" data-full="/photography/people/people-c85e8fa0-full.jpg" width="1400" height="1045" alt="Grey-haired man mid-conversation with a woman fixing her hair, deep green woods behind" loading="lazy" decoding="async"></figure><figure style="--ar:0.6657"><img src="/photography/people/people-d996c771.jpg" data-full="/photography/people/people-d996c771-full.jpg" width="932" height="1400" alt="Man in a cap and tank top looking down at a toddler by a riverbank" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:1.4846"><img src="/photography/people/people-30b6a6fd.jpg" data-full="/photography/people/people-30b6a6fd-full.jpg" width="1400" height="943" alt="Man with a top knot and sunglasses on his head in profile, a farm gate behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.5005"><img src="/photography/people/people-860a6ca2.jpg" data-full="/photography/people/people-860a6ca2-full.jpg" width="1400" height="933" alt="Bearded man in a patterned scarf looking down at a bouquet of wildflowers" loading="lazy" decoding="async"></figure></div>
 
 <p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
