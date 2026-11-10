@@ -1,31 +1,62 @@
 ---
 title: "New York January 2023"
-description: "Photographing New York City is a unique art form that allows the photographer to peek into the lives of others without actually entering their space."
+description: "New York at night in January 2023 by Gary Crossey: neon, lit windows, motion blur and haze. Street photography about the space between private and public life."
 pubDate: "2023-01-28"
-cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/01/new-york-2023.jpg"
+cover: "/photography/new-york-2023/new-york-01.jpg"
 tags: []
 legacy: true
-photoCount: 26
+theme: "dark"
+photoCount: 24
 ---
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/new-york-2023-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure>
+<p class="lede">Photographing New York lets you look into other people's lives without ever stepping into their space.</p>
 
-<p>Photographing New York City is a unique art form that allows the photographer to peek into the lives of others without actually entering their space.  </p>
+<p>January 2023, mostly after dark. The city at night stops being a skyline and becomes a set of signals: a sign, a window, a string of bulbs, a single lit room fifty floors up. I wasn't trying to photograph New York. I was trying to photograph what it's like to walk through it with your eyes open.</p>
 
-<div class="photos photos-grid"><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc--1024x456.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-5-gary-crossey-1024x550.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-red-tower-2-gary-crossey-683x1024.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-3-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-4-gary-crossey.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-triangle-gary-crossey-1024x618.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-red-window-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure></div>
+<figure class="wide" style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-01.jpg" width="1024" height="683" alt="Red neon New Yorker sign glowing against the night sky" loading="lazy" decoding="async"></figure>
 
-<h3>What is that space between in and out?</h3>
+<h2>After dark</h2>
 
-<p>The space between private space and public space has become increasingly blurred. In New York City the boundaries between private and public space is always been questioned, while creating the space where both are possible. </p>
+<figure class="wide" style="--ar:2.2456"><img src="/photography/new-york-2023/new-york-02.jpg" width="1024" height="456" alt="Lit balcony railings wrapping a building corner at night, two illuminated number ones" loading="lazy" decoding="async"></figure>
 
-<p>By using Motion blur photography I am able to capture this unique in-between space - a few inches outside the window and a few inches within.  </p>
+<div class="photos photos-2"><figure style="--ar:1.8618"><img src="/photography/new-york-2023/new-york-03.jpg" width="1024" height="550" alt="Building edge striped with vertical lines of light at night" loading="lazy" decoding="async"></figure><figure style="--ar:1.6570"><img src="/photography/new-york-2023/new-york-07.jpg" width="1024" height="618" alt="Two rows of orange-lit windows meeting in a V on a dark facade" loading="lazy" decoding="async"></figure></div>
 
-<div class="photos photos-grid"><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-gary-crossey-1024x700.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-boardway-lights-2-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-lights-stairs-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-dancers-gary-crossey-1024x644.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-boardway-lights-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/NYC-loin-head-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/NCY-STEPS-GARY-CROSSEY-867x1024.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-2-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-chimmery-gary-crossey-1024x697.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-bridge-gary-crossey.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-cabel-car-gary-crossey-677x1024.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-impression-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure></div>
+<div class="photos photos-3"><figure style="--ar:0.6670"><img src="/photography/new-york-2023/new-york-04.jpg" width="683" height="1024" alt="Red-lit lattice spire against a black sky" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-05.jpg" width="1024" height="683" alt="Blue-lit skyscraper spire at night" loading="lazy" decoding="async"></figure><figure style="--ar:1.6238"><img src="/photography/new-york-2023/new-york-06.jpg" width="1200" height="739" alt="Grid of lit office windows at night" loading="lazy" decoding="async"></figure></div>
 
-<h2>Light<br>Color<br>Movement</h2>
+<h2>The space between in and out</h2>
 
-<p>The rise of Impressionism in the late 19th century marked a new era in art history. This artistic movement was heavily influenced by the newly established medium of photography. Impressionists focused on light, color, and movement, rather than precise details, similar to motion blur in photography. Early photography was a time-consuming process that often resulted in images with distortions and motion blur that the photographer would reject. However, the impressionists movement embraced these imperfections and used them to create art.</p>
+<p>In New York the line between private and public space is always blurred. Every lit window is a little stage, and the street is the audience. Nobody inside is performing for you. They're just living, a few inches of glass away from millions of strangers.</p>
 
-<p>A new study published by climate scientists in the journal&nbsp;<a rel="noreferrer noopener" href="https://www.pnas.org/doi/10.1073/pnas.2219118120" >Proceedings of the National Academy of Sciences</a> - suggests that many English artists during the span of the Industrial Revolution  a time of unprecedented growth in air pollution. </p>
+<p>That in-between space is what I was after: a few inches outside the window and a few inches within. Sometimes I let the camera move to blur it, so the glass, the light and the people inside run together.</p>
 
-<div class="photos photos-grid"><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-street-gary-crossey-1024x683.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-cab-gary-crossey-1024x820.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-streetlight-gary-crossey-1-683x1024.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/nyc-model-gary-crossey-1024x658.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/02/911-576x1024.jpeg" alt="New York January 2023" loading="lazy" decoding="async"></figure><figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2023/02/artformetted-1024x576.jpg" alt="New York January 2023" loading="lazy" decoding="async"></figure></div>
+<figure class="wide" style="--ar:1.5901"><img src="/photography/new-york-2023/new-york-12.jpg" width="1024" height="644" alt="Two people framed in a lit window, seen from the street at night" loading="lazy" decoding="async"></figure>
+
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-08.jpg" width="1024" height="683" alt="Orange window blurred by camera movement" loading="lazy" decoding="async"></figure><figure style="--ar:1.5562"><img src="/photography/new-york-2023/new-york-24.jpg" width="1024" height="658" alt="Mannequin standing in a dim shop window" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:0.8467"><img src="/photography/new-york-2023/new-york-15.jpg" width="867" height="1024" alt="Tower of lit windows at night, a few rooms glowing gold" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-16.jpg" width="1024" height="683" alt="Crosswalk seen from above at night, people crossing" loading="lazy" decoding="async"></figure></div>
+
+<h2>Light, colour, movement</h2>
+
+<p>Impressionism grew up alongside photography. Early photographs were slow and full of blur and distortion that photographers threw away. The Impressionists took exactly those imperfections and made art from them: light, colour and movement instead of precise detail.</p>
+
+<p>Motion blur is the same idea turned back on the camera. A street full of people becomes streaks of colour. A string of bulbs becomes a pattern. The detail goes, and the feeling of the place stays.</p>
+
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-10.jpg" width="1024" height="683" alt="Diagonal strings of glowing bulbs in the dark" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-13.jpg" width="1024" height="683" alt="Rows of warm bulbs hanging in the dark" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-11.jpg" width="1024" height="683" alt="Fire escape lit orange beside a glowing marquee sign" loading="lazy" decoding="async"></figure><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-20.jpg" width="1024" height="683" alt="Crowd on a street blurred into streaks of colour" loading="lazy" decoding="async"></figure></div>
+
+<h2>Haze</h2>
+
+<p>In 2023, climate scientists writing in the <a href="https://www.pnas.org/doi/10.1073/pnas.2219118120" rel="noopener">Proceedings of the National Academy of Sciences</a> found that the skies in Turner's and Monet's paintings grew hazier as air pollution rose during the Industrial Revolution. The painters weren't only being poetic. They were painting the air they actually breathed.</p>
+
+<p>Standing under the Queensboro Bridge on a grey January afternoon, smokestacks still breathing over the East River, I understood that. The haze isn't a filter. It's the city.</p>
+
+<div class="photos photos-2"><figure style="--ar:1.4692"><img src="/photography/new-york-2023/new-york-17.jpg" width="1024" height="697" alt="Bridge tower and smokestack silhouetted in grey haze" loading="lazy" decoding="async"></figure><figure style="--ar:1.2488"><img src="/photography/new-york-2023/new-york-22.jpg" width="1024" height="820" alt="Tram cables and pylons leading to the bridge and smokestacks" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:0.7820"><img src="/photography/new-york-2023/new-york-18.jpg" width="782" height="1000" alt="Black and white view of tram pylons, the Queensboro Bridge and a smoking stack" loading="lazy" decoding="async"></figure><figure style="--ar:0.6611"><img src="/photography/new-york-2023/new-york-19.jpg" width="677" height="1024" alt="Roosevelt Island tram car above the traffic" loading="lazy" decoding="async"></figure></div>
+
+<div class="photos photos-2"><figure style="--ar:1.4993"><img src="/photography/new-york-2023/new-york-21.jpg" width="1024" height="683" alt="View down a Manhattan avenue between brick towers" loading="lazy" decoding="async"></figure><figure style="--ar:0.6670"><img src="/photography/new-york-2023/new-york-23.jpg" width="683" height="1024" alt="Dark towers rising into a cloudy sky, a red traffic light below" loading="lazy" decoding="async"></figure></div>
+
+<h2>Curves</h2>
+
+<div class="photos photos-2"><figure style="--ar:0.5625"><img src="/photography/new-york-2023/new-york-25.jpg" width="576" height="1024" alt="White ribs of the Oculus rising in parallel curves" loading="lazy" decoding="async"></figure><figure style="--ar:1.7778"><img src="/photography/new-york-2023/new-york-26.jpg" width="1024" height="576" alt="Curved white facade of the Guggenheim with its lettering" loading="lazy" decoding="async"></figure></div>
