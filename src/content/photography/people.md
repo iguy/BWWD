@@ -9,6 +9,8 @@ photoCount: 10
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
 
+<p>I'd rather be in the room than on the sidelines. Blue Ridge Pride, a New York sidewalk, a place I've known for years: I go where people are already telling their own story, and I try to stay out of its way.</p>
+
 <figure style="--ar:1.4815"><img src="/photography/people/people-9aede771.jpg" data-full="/photography/people/people-9aede771-full.jpg" width="1000" height="675" alt="Portrait of a woman with close-cropped hair, a sculpted bust behind her" loading="lazy" decoding="async"><figcaption>Asheville</figcaption></figure>
 
 <div class="photos photos-2"><figure style="--ar:1.5005"><img src="/photography/people/people-6c4b6b00.jpg" data-full="/photography/people/people-6c4b6b00-full.jpg" width="1400" height="933" alt="Man in blue mirrored sunglasses with a waxed mustache, flowers behind" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure><figure style="--ar:1.5005"><img src="/photography/people/people-edbfa171.jpg" data-full="/photography/people/people-edbfa171-full.jpg" width="1400" height="933" alt="Bearded man looking up, greenery behind" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure></div>
@@ -22,5 +24,7 @@ photoCount: 10
 <div class="split split-right"><figure style="--ar:0.6886"><img src="/photography/people/people-e96dd186.jpg" data-full="/photography/people/people-e96dd186-full.jpg" width="964" height="1400" alt="Man in a yellow shirt in warm afternoon light" loading="lazy" decoding="async"><figcaption>Atlanta, 2000</figcaption></figure><div class="split-text"><p>Some portraits come from the street, some from a stage, some from a quiet afternoon. What links them is the same patience: waiting until the person stops performing for the camera.</p></div></div>
 
 <figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
+
+<p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
 <figure style="--ar:1.5"><img src="/photography/people/people-35e2cca1.jpg" data-full="/photography/people/people-35e2cca1-full.jpg" width="1200" height="800" alt="Boy George singing on stage with another performer in London" loading="lazy" decoding="async"><figcaption>Boy George on stage, London</figcaption></figure>
