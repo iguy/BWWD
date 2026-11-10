@@ -14,6 +14,7 @@ const photography = defineCollection({
     tags: z.array(z.string()).default([]),
     photoCount: z.number(),
     legacy: z.boolean().default(false),
+    listLast: z.number().optional(), // ongoing series listed after the dated stories (1, 2, 3...)
   }),
 });
 

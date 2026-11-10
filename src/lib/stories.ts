@@ -10,7 +10,12 @@ export const storyPath = (s: Story) => `/${s.id}/`;
 export const absolute = (u: string) => (u.startsWith('http') ? u : SITE + u);
 
 export async function sortedStories() {
-  return (await getCollection('photography')).sort((a, b) => b.data.pubDate.localeCompare(a.data.pubDate));
+  // Ongoing series (listLast) sit after the dated stories, in the order given by listLast.
+  return (await getCollection('photography')).sort((a, b) => {
+    const la = a.data.listLast ?? 0, lb = b.data.listLast ?? 0;
+    if (la !== lb) return la - lb;
+    return b.data.pubDate.localeCompare(a.data.pubDate);
+  });
 }
 
 /** One page per story, with newer/older links. */

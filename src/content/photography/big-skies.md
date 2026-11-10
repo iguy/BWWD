@@ -4,6 +4,7 @@ description: "Big Skies by Gary Crossey: one small figure against a huge sky. St
 pubDate: "2026-11-10"
 cover: "/photography/big-skies/big-skies-01.jpg"
 tags: []
+listLast: 1
 photoCount: 1
 ---
 

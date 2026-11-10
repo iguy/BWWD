@@ -4,6 +4,7 @@ description: "Colour studies by Gary Crossey: flowers and close details where co
 pubDate: "2026-11-10"
 cover: "https://betterworldwithdesign.com/wp-content/uploads/2023/04/flower-color.jpg"
 tags: []
+listLast: 3
 photoCount: 1
 ---
 
