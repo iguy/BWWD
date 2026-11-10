@@ -4,7 +4,7 @@ description: "An ongoing series of portraits from the street and the places I tr
 pubDate: "2026-11-09"
 cover: "/photography/people/people-6c4b6b00.jpg"
 tags: ["People", "Portraits"]
-photoCount: 10
+photoCount: 13
 ---
 
 <p>An ongoing series. Portraits from the street, the stage and the places I travel, added as I go.</p>
@@ -24,6 +24,10 @@ photoCount: 10
 <div class="split split-right"><figure style="--ar:0.6886"><img src="/photography/people/people-e96dd186.jpg" data-full="/photography/people/people-e96dd186-full.jpg" width="964" height="1400" alt="Man in a yellow shirt in warm afternoon light" loading="lazy" decoding="async"><figcaption>Atlanta, 2000</figcaption></figure><div class="split-text"><p>Some portraits come from the street, some from a stage, some from a quiet afternoon. What links them is the same patience: waiting until the person stops performing for the camera.</p></div></div>
 
 <figure style="--ar:1.3529"><img src="/photography/people/people-6bdca992.jpg" data-full="/photography/people/people-6bdca992-full.jpg" width="1242" height="918" alt="Man with a waxed mustache against a white wall" loading="lazy" decoding="async"><figcaption>Chicago, 2025</figcaption></figure>
+
+<div class="photos photos-2"><figure style="--ar:0.6414"><img src="/photography/people/people-2afaa28c.jpg" data-full="/photography/people/people-2afaa28c-full.jpg" width="898" height="1400" alt="Woman with cat ears and blue glasses beside a man in an olive jacket, autumn trees behind" loading="lazy" decoding="async"></figure><figure style="--ar:1.3397"><img src="/photography/people/people-e4e0929a.jpg" data-full="/photography/people/people-e4e0929a-full.jpg" width="1400" height="1045" alt="Rugby player grinning on the sideline, crowd blurred behind" loading="lazy" decoding="async"></figure></div>
+
+<figure style="--ar:1.5005"><img src="/photography/people/people-bd033544.jpg" data-full="/photography/people/people-bd033544-full.jpg" width="1400" height="933" alt="Rugby player in a black shirt driving forward with the ball tucked in" loading="lazy" decoding="async"></figure>
 
 <p>A lot of these come from community events: Pride, festival processions, a stage at the end of the night. I want them to honour the people who make those spaces, as they actually are. No staging, just the expression that was already there.</p>
 
