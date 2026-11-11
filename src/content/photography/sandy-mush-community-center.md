@@ -2,13 +2,13 @@
 title: "Sandy Mush Community Center"
 description: "Sandy Mush Community Center (Leicester NC) Exterior photograph by Gary Crossey."
 pubDate: "2022-08-06"
-cover: "https://betterworldwithdesign.com/wp-content/uploads/2022/08/sandy-mush-community-center-Edit-1024x545-1.jpeg"
+cover: "/photography/sandy-mush-community-center/sandy-mush-community-center-01.jpg"
 tags: []
 legacy: true
 photoCount: 2
 ---
 
-<figure><img src="https://betterworldwithdesign.com/wp-content/uploads/2022/08/sandy-mush-community-center-Edit-1024x545-1.jpeg" alt="Sandy Mush Community Center - Photography by Gary Crossey" loading="lazy" decoding="async"></figure>
+<figure><img src="/photography/sandy-mush-community-center/sandy-mush-community-center-01.jpg" alt="Sandy Mush Community Center - Photography by Gary Crossey" loading="lazy" decoding="async"></figure>
 
 <p>I have photographed the <a href="https://sandymushcommunitycenter.org/"  rel="noreferrer noopener">Sandy Mush Community Center</a> (Leicester NC) a few times. Each time there is always something new to see and capture.  </p>
 
