@@ -8,7 +8,7 @@ import path from 'node:path';
 
 const CONTENT = 'src/content/photography';
 const PUBLIC = 'public/photography';
-const WP = /https:\/\/(?:www\.)?betterworldwithdesign\.com\/wp-content\/uploads\/[^"')\s]+/g;
+const WP = /https:\/\/(?:www\.)?(?:betterworldwithdesign\.com|sandymushcommunitycenter\.org)\/wp-content\/uploads\/[^"')\s]+/g;
 
 const files = (await readdir(CONTENT)).filter((f) => f.endsWith('.md'));
 let total = 0;
