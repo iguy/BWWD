@@ -14,6 +14,6 @@ photoCount: 2
 
 <p>This time around I wanted to capture and showcase the buildings symmetry. An angle of the building that is not greatly seen or experienced. I am basically in the brushes taking this shot - not the most accessible place.  </p>
 
-<figure><img src="https://sandymushcommunitycenter.org/wp-content/uploads/sandy-mush-book-club-header.jpg" alt="Sandy Mush Community Center ?" loading="lazy" decoding="async"></figure>
+<figure><img src="/photography/sandy-mush-community-center/sandy-mush-book-club-header.jpg" alt="Sandy Mush Community Center ?" loading="lazy" decoding="async"></figure>
 
 <p class="embed-link"><a href="https://sandymushcommunitycenter.org/2023-spring-fling/" rel="noopener">sandymushcommunitycenter.org/2023-spring-fling →</a></p>
