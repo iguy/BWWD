@@ -27,7 +27,8 @@ for (const file of files) {
   for (const url of urls) {
     n += 1;
     const ext = (path.extname(new URL(url).pathname) || '.jpg').toLowerCase().replace('.jpeg', '.jpg');
-    const name = `${slug}-${String(n).padStart(2, '0')}${ext}`;
+    const base = path.basename(new URL(url).pathname, path.extname(new URL(url).pathname));
+    const name = `${base}${ext}`;
     const dest = path.join(dir, name);
     if (!existsSync(dest)) {
       const res = await fetch(url);
