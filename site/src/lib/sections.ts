@@ -91,3 +91,16 @@ export async function cardImage(a: Article): Promise<{ src: string; alt: string;
   const { art } = takeArt(cleanHtml(a.body ?? '', a.section, { title: a.data.title, plates: true, cover: cover.src }));
   return art ? { src: art.src, alt: art.alt || art.caption || a.data.title, fallback: cover.src || undefined } : cover;
 }
+
+// Plain-text paragraphs of a post (no headings, players or scripts).
+export function paragraphs(a: Article): string[] {
+  return [...(a.body ?? '').matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((m) => m[1].replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/&#8217;|&rsquo;/g, '’').replace(/&#8220;|&#8221;/g, '"').replace(/&amp;/g, '&').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim())
+    .filter((t) => t.length > 60);
+}
+
+// Short plain-text summary for cards: the description, else the opening of the post.
+export function excerpt(a: Article, max = 170): string {
+  const text = a.data.description || paragraphs(a).slice(0, 3).join(' ');
+  return text.length > max ? text.slice(0, max).replace(/\s+\S*$/, '') + '…' : text;
+}
