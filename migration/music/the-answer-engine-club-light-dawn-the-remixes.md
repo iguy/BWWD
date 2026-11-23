@@ -8,7 +8,7 @@ updated: "2026-04-07"
 description: ""
 cover: "./images/the-answer-engine-club-light-dawn-the-remixes/club-light-dawn-the-remixes.jpeg"
 coverAlt: "Club Light Dawn - The Remixes"
-categories: ["Media & Entertainment"]
+categories: ["Music Discovery & Reviews"]
 tags: []
 wpId: 7235
 status: "pulled"

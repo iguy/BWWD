@@ -2,6 +2,7 @@
 // Home: a kinetic Bauhaus poster. Chapters arrive and leave as you scroll;
 // navigation lives in a dial in the bottom-left corner.
 import Layout from '../layouts/Layout.astro';
+import podcast from '../data/podcast.json';
 import { SECTIONS, getArticles, cardImage, dateLabel, excerpt, paragraphs } from '../lib/sections';
 
 const articles = await getArticles();
@@ -19,6 +20,15 @@ const featQuote = feat
       .map((t) => t.trim()).filter((t) => t.length >= 50 && t.length <= 220)
       .find((t) => /\$\d|\d{2,}|never|nobody|found|broke|vanish/i.test(t)) ?? ''
   : '';
+// Books: every review as a spine on a shelf
+const books = (await withImg(bySection('books'))).slice(0, 18);
+const spineColours = ['red', 'ink', 'yellow', 'blue', 'paper', 'red', 'blue', 'ink', 'yellow'];
+
+// Podcast: latest episode leads, the next few follow
+const POD = 'https://podcast.betterworldwithdesign.com';
+const SPOTIFY_SHOW = 'https://open.spotify.com/show/4gzrOdC8LxmIBguCzoLjwM';
+const [latest, ...recent] = podcast.episodes;
+const moreEps = recent.slice(0, 6);
 const small = SECTIONS.filter((s) => s.nav === false).map((s) => ({ s, n: bySection(s.folder).length }));
 
 const PHOTO = 'https://photography.betterworldwithdesign.com';
@@ -32,7 +42,8 @@ const photos = [
 
 const dial = [
   { label: 'Art & Design', href: '/category/art-design-insights/', c: 'red' },
-  { label: 'Music', href: '/category/music-discovery-reviews/', c: 'blue' },
+  { label: 'Books', href: '/category/book-reviews-reading-lists/', c: 'blue' },
+  { label: 'Music', href: '/category/music-discovery-reviews/', c: 'red' },
   { label: 'Technology', href: '/category/technology-trends-tips/', c: 'yellow' },
   { label: 'Photography', href: '#photography', c: 'red' },
   { label: 'Podcast', href: '#podcast', c: 'blue' },
@@ -108,12 +119,33 @@ const dial = [
       </ul>
     </section>
 
-    <!-- 02 Music: the record spins; sleeves fan out when the section arrives -->
+    <!-- 02 Books: a shelf of spines; pull one out -->
+    <section class="ch ch--books" id="books">
+      <div class="ch__head" data-reveal="left">
+        <span class="ch__num">02</span>
+        <h2>books</h2>
+        <p>{bySection('books').length} reviews and reading lists. Pull one off the shelf.</p>
+        <a class="ch__all" href="/category/book-reviews-reading-lists/">All books →</a>
+      </div>
+      <ul class="shelf" data-reveal="up">
+        {books.map(({ a, img }, i) => (
+          <li class={`spine spine--${spineColours[i % spineColours.length]}`} style={`--h:${74 + ((i * 37) % 26)}%; --w:${Math.min(96, 46 + Math.round(a.data.title.length * 0.9))}px; --d:${i}`}>
+            <a href={`/${a.data.slug}/`}>
+              <span class="spine__title">{a.data.title.replace(/[‘’]/g, "'").replace(/[—–]+/g, " – ")}</span>
+              <span class="spine__year">{a.data.pubDate.slice(0, 4)}</span>
+              {img.src && <img class="spine__cover" src={img.src} alt="" loading="lazy" decoding="async" />}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- 03 Music: the record spins; sleeves fan out when the section arrives -->
     <section class="ch ch--music" id="music" data-scrub="pass">
       <div class="pin">
         <div class="vinyl" aria-hidden="true"><i></i></div>
         <div class="ch__head ch__head--light" data-reveal="right">
-          <span class="ch__num">02</span>
+          <span class="ch__num">03</span>
           <h2>Music</h2>
           <p>Reviews, playlists and records — plus my own acid house as Warehouse Sunrise.</p>
           <a class="ch__all" href="/category/music-discovery-reviews/">All music →</a>
@@ -131,11 +163,11 @@ const dial = [
       </div>
     </section>
 
-    <!-- 03 Technology: rows that expand -->
+    <!-- 04 Technology: rows that expand -->
     <section class="ch ch--tech" id="technology" data-scrub="pass">
       <div class="ch__word ch__word--right" aria-hidden="true">tech</div>
       <div class="ch__head" data-reveal="left">
-        <span class="ch__num">03</span>
+        <span class="ch__num">04</span>
         <h2>Technology</h2>
         <p>AI tools, WordPress, search, and building a tech hub in Sandy Mush.</p>
         <a class="ch__all" href="/category/technology-trends-tips/">All technology →</a>
@@ -159,7 +191,7 @@ const dial = [
       </ol>
     </section>
 
-    <!-- 04 Photography: photos under drifting colour shapes, with a text layer -->
+    <!-- 05 Photography: photos under drifting colour shapes, with a text layer -->
     <section class="ch ch--photo" id="photography">
       <div class="mosaic" data-reveal="left">
         {photos.map((src, k) => <img class={`m${k}`} src={src} alt="" loading="lazy" decoding="async" />)}
@@ -169,7 +201,7 @@ const dial = [
         <span class="blob blob--yellow" aria-hidden="true"></span>
       </div>
       <div class="photo-card" data-reveal="up">
-        <span class="ch__num">04</span>
+        <span class="ch__num">05</span>
         <h2>photography</h2>
         <p>Most of my photographs are of people once they've stopped performing for the camera.</p>
         <p>As a kid in the '70s I watched super 8 home movies where everyone mugged for the lens. I watched the smoke in the projector beam instead. Now I wait for things to line up, like a cloud resting on a disused smokestack.</p>
@@ -180,17 +212,35 @@ const dial = [
       </div>
     </section>
 
-    <!-- 05 Podcast: its own row -->
+    <!-- 06 Podcast: latest episode inside the rings, recent episodes alongside -->
     <section class="ch ch--pod" id="podcast">
       <div class="pod__text" data-reveal="left">
-        <span class="ch__num">05</span>
+        <span class="ch__num">06</span>
         <h2>podcast</h2>
-        <p>Better World With Design, out loud: episodes on books, art and the ideas around them. Every episode comes with a full transcript.</p>
-        <a class="ch__all" href="https://podcast.betterworldwithdesign.com/">Listen ↗</a>
+        <p class="pod__latest-label">Latest · Episode {latest.n} · {latest.mins} min</p>
+        <h3 class="pod__title"><a href={`${POD}/podcast/${latest.slug}/`}>{latest.title}</a></h3>
+        <p class="pod__summary">{latest.summary.replace(/\s+\S*$/, '')}…</p>
+        <div class="pod__actions">
+          <button class="pod__play" type="button" data-audio={latest.audio} aria-label={`Play episode ${latest.n}`}><span></span>Play</button>
+          <a class="ch__all" href={`${POD}/podcast/${latest.slug}/`}>Episode + transcript ↗</a>
+          <a class="ch__all" href={SPOTIFY_SHOW}>Spotify ↗</a>
+        </div>
       </div>
-      <a class="pod__rings" href="https://podcast.betterworldwithdesign.com/" aria-label="Listen to the podcast" data-reveal="right">
-        <span class="rings" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <a class="pod__rings" href={`${POD}/podcast/${latest.slug}/`} aria-label={`Episode ${latest.n}: ${latest.title}`} data-reveal="right">
+        <span class="rings" aria-hidden="true"><i></i><i></i><i></i><i></i><i><img src={latest.image} alt="" loading="lazy" decoding="async" /></i></span>
       </a>
+      <ol class="eps" data-reveal="up">
+        {moreEps.map((e, k) => (
+          <li style={`--d:${k}`}>
+            <a href={`${POD}/podcast/${e.slug}/`}>
+              <img src={e.image} alt="" loading="lazy" decoding="async" />
+              <span class="eps__n">Ep {e.n} · {e.mins} min</span>
+              <span class="eps__t">{e.title}</span>
+            </a>
+          </li>
+        ))}
+        <li class="eps__all"><a href={`${POD}/`}><span>All {podcast.episodes.length} episodes →</span></a></li>
+      </ol>
     </section>
 
     <!-- Archive: everything else, as a moving band -->
@@ -203,6 +253,7 @@ const dial = [
               {small.map(({ s, n }) => (
                 <a href={`/category/${s.wpCat}/`} tabindex={k === 1 ? -1 : undefined}>{s.name} <sup>{n}</sup></a>
               ))}
+              <a href="/category/book-reviews-reading-lists/" tabindex={k === 1 ? -1 : undefined}>Books <sup>{bySection('books').length}</sup></a>
               <a href="/category/art-design-insights/" tabindex={k === 1 ? -1 : undefined}>Art &amp; Design <sup>{bySection('art-design').length}</sup></a>
               <a href="/category/music-discovery-reviews/" tabindex={k === 1 ? -1 : undefined}>Music <sup>{bySection('music').length}</sup></a>
               <a href="/category/technology-trends-tips/" tabindex={k === 1 ? -1 : undefined}>Technology <sup>{bySection('technology').length}</sup></a>
@@ -245,6 +296,14 @@ const dial = [
         window.addEventListener('resize', update);
       }
       update();
+
+      // Podcast: play the latest episode right here
+      var playBtn = document.querySelector('.pod__play'), audio;
+      if (playBtn) playBtn.addEventListener('click', function () {
+        if (!audio) { audio = new Audio(playBtn.dataset.audio); audio.addEventListener('ended', function () { playBtn.classList.remove('is-playing'); }); }
+        if (audio.paused) { audio.play(); playBtn.classList.add('is-playing'); playBtn.lastChild.textContent = 'Pause'; document.querySelector('.ch--pod').classList.add('is-playing'); }
+        else { audio.pause(); playBtn.classList.remove('is-playing'); playBtn.lastChild.textContent = 'Play'; document.querySelector('.ch--pod').classList.remove('is-playing'); }
+      });
 
       // Dial menu
       var nav = document.querySelector('.dial'), btn = nav.querySelector('.dial__btn');
@@ -489,22 +548,70 @@ const dial = [
     .photo-card { margin: -4rem auto 0; }
   }
 
-  /* 05 Podcast */
-  .ch--pod { background: var(--ink); color: var(--paper); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding: 7rem 16px 7rem max(16px, 110px); overflow: hidden; }
-  .pod__text h2 { margin: 1rem 0 0.8rem; font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.88; letter-spacing: -0.045em; font-weight: 800; }
-  .pod__text p { margin: 0 0 1.6rem; max-width: 34ch; font-size: 1.15rem; color: #cfc8bb; }
+  /* 06 Podcast */
+  .ch--pod { background: var(--ink); color: var(--paper); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem 3rem; padding: 7rem 16px 6rem max(16px, 110px); overflow: hidden; }
+  .pod__text h2 { margin: 1rem 0 1.4rem; font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.88; letter-spacing: -0.045em; font-weight: 800; }
+  .pod__latest-label { margin: 0 0 0.6rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow); }
+  .pod__title { margin: 0 0 0.9rem; font-size: clamp(1.5rem, 2.8vw, 2.4rem); line-height: 1.05; letter-spacing: -0.02em; max-width: 22ch; }
+  .pod__title a { color: var(--paper); text-decoration: none; }
+  .pod__title a:hover { color: var(--yellow); }
+  .pod__summary { margin: 0 0 1.6rem; max-width: 46ch; color: #cfc8bb; font-size: 1.02rem; }
+  .pod__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.4rem; }
+  .pod__play { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.8rem 1.3rem 0.8rem 0.9rem; background: var(--red); color: var(--paper); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; }
+  .pod__play:hover, .pod__play:focus-visible { background: var(--yellow); color: var(--ink); }
+  .pod__play span { width: 0; height: 0; border-left: 12px solid currentColor; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+  .pod__play.is-playing span { width: 12px; height: 14px; border: 0; border-left: 4px solid currentColor; border-right: 4px solid currentColor; }
   .ch--pod .ch__num { background: var(--blue); }
   .ch--pod .ch__all { border-color: var(--yellow); }
   .ch--pod .ch__all:hover { color: var(--yellow); }
   .pod__rings { display: grid; place-items: center; }
-  .rings { position: relative; width: min(42vw, 460px); aspect-ratio: 1; }
+  .rings { position: relative; width: min(40vw, 460px); aspect-ratio: 1; }
   .rings i { position: absolute; inset: calc(var(--k) * 10%); border-radius: 50%; border: 3px solid var(--paper); animation: pulse 3.2s ease-out infinite; animation-delay: calc(var(--k) * -0.64s); }
   .rings i:nth-child(1) { --k: 0; } .rings i:nth-child(2) { --k: 1; } .rings i:nth-child(3) { --k: 2; } .rings i:nth-child(4) { --k: 3; }
-  .rings i:nth-child(5) { --k: 4; background: var(--yellow); border-color: var(--yellow); animation: none; transition: background .3s, border-color .3s; }
+  .rings i:nth-child(5) { --k: 2.6; overflow: hidden; border: 8px solid var(--yellow); animation: none; background: var(--yellow); transition: border-color .3s, transform .4s; }
+  .rings i:nth-child(5) img { width: 100%; height: 100%; object-fit: cover; }
+  .ch--pod.is-playing .rings i:nth-child(5) { animation: spin 12s linear infinite; border-color: var(--red); }
+  .ch--pod.is-playing .rings i:not(:nth-child(5)) { animation-duration: 1.4s; border-color: var(--yellow); }
   @keyframes pulse { 0% { opacity: 0; transform: scale(.6); } 30% { opacity: 1; } 100% { opacity: 0; transform: scale(1.15); } }
-  .pod__rings:hover .rings i:nth-child(5) { background: var(--red); border-color: var(--red); }
+  .pod__rings:hover .rings i:nth-child(5) { border-color: var(--red); transform: scale(1.04); }
+  .eps { grid-column: 1 / -1; list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 1rem; border-top: 6px solid var(--paper); padding-top: 1.6rem; }
+  .eps li { transition: transform .8s cubic-bezier(.2,.8,.2,1) calc(var(--d, 0) * 60ms), opacity .6s calc(var(--d, 0) * 60ms); }
+  .eps:not(.in) li { opacity: 0; transform: translateY(40px); }
+  .eps a { display: block; color: var(--paper); text-decoration: none; }
+  .eps img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 3px solid var(--paper); transition: transform .3s, box-shadow .3s; }
+  .eps a:hover img, .eps a:focus-visible img { transform: translate(-4px, -4px); box-shadow: 6px 6px 0 var(--red); }
+  .eps__n { display: block; margin-top: 0.6rem; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--yellow); }
+  .eps__t { display: block; margin-top: 0.25rem; font-weight: 600; font-size: 0.9rem; line-height: 1.2; }
+  .eps__all a { height: 100%; min-height: 120px; display: grid; place-items: center; text-align: center; padding: 1rem; background: var(--blue); font-weight: 800; font-size: 1.05rem; line-height: 1.1; }
+  .eps__all a:hover { background: var(--red); }
+  .ch--pod .ch__all, .eps { position: relative; }
   @media (prefers-reduced-motion: reduce) { .rings i { animation: none; opacity: 1; } }
-  @media (max-width: 900px) { .ch--pod { grid-template-columns: 1fr; padding-left: 16px; } .rings { width: 70vw; } }
+  @media (max-width: 1100px) { .eps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (max-width: 900px) { .ch--pod { grid-template-columns: 1fr; padding-left: 16px; } .rings { width: 70vw; } .eps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  /* 02 Books: shelf of spines */
+  .ch--books { padding: 8rem 16px 7rem max(16px, 110px); max-width: 1600px; margin: 0 auto; display: grid; grid-template-columns: minmax(15rem, 0.55fr) 2fr; gap: 3rem; align-items: end; }
+  .ch--books .ch__num { background: var(--blue); }
+  .shelf { list-style: none; margin: 0; padding: 0 0 0 4px; height: min(74vh, 660px); display: flex; align-items: flex-end; gap: 4px; border-bottom: 16px solid var(--ink); overflow-x: auto; overflow-y: visible; scrollbar-width: thin; padding-top: 250px; }
+  .spine { position: relative; flex: none; width: var(--w); height: var(--h); transition: transform .45s cubic-bezier(.2,.9,.2,1.15); }
+  .shelf:not(.in) .spine { transform: translateY(110%); }
+  .shelf .spine { transition-delay: calc(var(--d) * 35ms); }
+  .spine a { position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; padding: 0.9rem 0; text-decoration: none; border: 3px solid var(--ink); border-bottom: 0; }
+  .spine--red a { background: var(--red); color: var(--paper); }
+  .spine--ink a { background: var(--ink); color: var(--paper); border-color: #333; }
+  .spine--yellow a { background: var(--yellow); color: var(--ink); }
+  .spine--blue a { background: var(--blue); color: var(--paper); }
+  .spine--paper a { background: var(--paper-deep); color: var(--ink); }
+  .spine__title { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700; font-size: 0.92rem; line-height: 1.1; letter-spacing: 0.01em; max-height: calc(100% - 3rem); overflow: hidden; }
+  .spine__year { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; }
+  .spine__cover { position: absolute; left: 50%; bottom: 100%; width: 170px; max-width: none; aspect-ratio: 3 / 4; object-fit: cover; border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--red); transform: translate(-50%, 30px) rotate(-4deg) scale(.6); opacity: 0; pointer-events: none; transition: opacity .25s, transform .35s cubic-bezier(.2,.9,.2,1.2); z-index: 5; }
+  .spine:hover, .spine:focus-within { transform: translateY(-34px); z-index: 4; }
+  .spine:hover .spine__cover, .spine:focus-within .spine__cover { opacity: 1; transform: translate(-50%, -10px) rotate(-4deg) scale(1); }
+  @media (max-width: 900px) {
+    .ch--books { grid-template-columns: 1fr; padding-left: 16px; }
+    .shelf { height: 420px; }
+    .spine__cover { display: none; }
+  }
 
   /* Archive band */
   .ch--archive { padding: 8rem 0 2rem; }

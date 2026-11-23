@@ -19,6 +19,12 @@ export const SECTIONS: Section[] = [
     look: 'gallery',
   },
   {
+    folder: 'books',
+    name: 'Books',
+    wpCat: 'book-reviews-reading-lists',
+    blurb: 'Book reviews and reading lists — what I read, and what it did to me.',
+  },
+  {
     folder: 'technology',
     name: 'Technology',
     wpCat: 'technology-trends-tips',
@@ -43,13 +49,6 @@ export const SECTIONS: Section[] = [
     name: 'News',
     wpCat: 'news',
     blurb: 'Milestones and updates from Better World With Design.',
-    nav: false,
-  },
-  {
-    folder: 'media',
-    name: 'Media & Entertainment',
-    wpCat: 'media-entertainment',
-    blurb: 'Releases, remixes and other things worth hearing.',
     nav: false,
   },
   {

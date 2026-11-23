@@ -8,7 +8,7 @@ updated: "2026-04-07"
 description: ""
 cover: "./images/james-wake-my-foxy-lass/my-foxy-lass.jpg"
 coverAlt: "My Foxy Lass"
-categories: ["Media & Entertainment"]
+categories: ["Music Discovery & Reviews"]
 tags: []
 wpId: 7460
 status: "pulled"
