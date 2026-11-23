@@ -1,0 +1,110 @@
+---
+// Interactive site map: each section is a shape sized by how much is in it.
+// Click a shape and its contents open below in a colour wipe that grows out of the shape.
+interface Item { t: string; h: string }
+interface Group { id: string; name: string; href?: string; colour: string; items: Item[] }
+const { groups } = Astro.props as { groups: Group[] };
+const shapes = ['circle', 'square', 'triangle'];
+const size = (n: number) => Math.round(70 + Math.sqrt(n) * 17);
+---
+<section class="smap" aria-label="Site map">
+  <div class="smap__intro">
+    <h2>the map</h2>
+    <p>Every section as a shape, sized by what's inside. Tap one to open it.</p>
+  </div>
+  <div class="smap__stage">
+    {groups.map((g, i) => (
+      <button type="button" class={`smap__node smap__node--${g.colour}`} data-id={g.id} aria-expanded="false" aria-controls="smap-panel" style={`--s:${size(g.items.length)}px; --i:${i}`}>
+        <span class={`smap__shape smap__shape--${shapes[i % 3]}`} aria-hidden="true"></span>
+        <span class="smap__label">{g.name} <sup>{g.items.length}</sup></span>
+      </button>
+    ))}
+  </div>
+  <div class="smap__panel" id="smap-panel" hidden>
+    {groups.map((g) => (
+      <div class={`smap__set smap__set--${g.colour}`} data-set={g.id} hidden>
+        <div class="smap__set-head">
+          <h3>{g.href ? <a href={g.href}>{g.name} →</a> : g.name}</h3>
+          <button type="button" class="smap__close" aria-label="Close">×</button>
+        </div>
+        <ul>
+          {g.items.map((it, k) => <li style={`--k:${Math.min(k, 40)}`}><a href={it.h}>{it.t}</a></li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var root = document.querySelector('.smap'); if (!root) return;
+    var panel = root.querySelector('.smap__panel'), nodes = root.querySelectorAll('.smap__node'), open = null;
+    function close() {
+      if (!open) return;
+      open.setAttribute('aria-expanded', 'false'); open.classList.remove('is-open');
+      panel.classList.remove('is-in');
+      var was = open; open = null;
+      setTimeout(function () { if (!open) { panel.hidden = true; panel.querySelectorAll('.smap__set').forEach(function (s) { s.hidden = true; }); } }, 450);
+      was.focus({ preventScroll: true });
+    }
+    function show(btn) {
+      if (open === btn) return close();
+      if (open) { open.setAttribute('aria-expanded', 'false'); open.classList.remove('is-open'); }
+      open = btn; btn.setAttribute('aria-expanded', 'true'); btn.classList.add('is-open');
+      panel.querySelectorAll('.smap__set').forEach(function (s) { s.hidden = s.dataset.set !== btn.dataset.id; });
+      panel.hidden = false; panel.classList.remove('is-in');
+      // the colour grows out of the shape that was clicked
+      var b = btn.getBoundingClientRect(), p = panel.getBoundingClientRect();
+      panel.style.setProperty('--x', (b.left + b.width / 2 - p.left) + 'px');
+      panel.style.setProperty('--y', (b.top + b.height / 2 - p.top) + 'px');
+      void panel.offsetWidth; panel.classList.add('is-in');
+      if (p.top > innerHeight * 0.7) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+    nodes.forEach(function (n) { n.addEventListener('click', function () { show(n); }); });
+    panel.querySelectorAll('.smap__close').forEach(function (c) { c.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
+
+<style is:global>
+  .smap { max-width: 1100px; margin: 0 auto; padding: 3.5rem 16px 1rem; }
+  .smap__intro { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 6px solid var(--ink); padding-bottom: 0.8rem; }
+  .smap__intro h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.04em; font-weight: 800; }
+  .smap__intro p { margin: 0; font-size: 1rem; color: var(--ink-soft); }
+  .smap__stage { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; gap: 1.6rem 2.2rem; padding: 2.6rem 0 1.6rem; }
+  .smap__node { all: unset; cursor: pointer; display: grid; justify-items: center; gap: 0.7rem; --c: var(--ink); }
+  .smap__node--red { --c: var(--red); } .smap__node--blue { --c: var(--blue); } .smap__node--yellow { --c: var(--yellow); } .smap__node--ink { --c: var(--ink); }
+  .smap__shape { display: block; width: var(--s); height: var(--s); background: var(--c); transition: transform .6s cubic-bezier(.2,.9,.2,1.25), box-shadow .4s; animation: smap-float 5s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.7s); }
+  .smap__shape--circle { border-radius: 50%; }
+  .smap__shape--triangle { clip-path: polygon(50% 4%, 100% 96%, 0 96%); }
+  @keyframes smap-float { to { translate: 0 -8px; } }
+  .smap__node:hover .smap__shape, .smap__node:focus-visible .smap__shape { transform: scale(1.08) rotate(-6deg); }
+  .smap__node:focus-visible .smap__label { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .smap__node.is-open .smap__shape { transform: scale(1.16) rotate(45deg); box-shadow: 10px 10px 0 var(--ink); }
+  .smap__node.is-open .smap__shape--circle { transform: scale(1.16); }
+  .smap__node.is-open .smap__shape--triangle { transform: scale(1.16) rotate(180deg); }
+  .smap__label { font-weight: 800; font-size: 0.95rem; letter-spacing: -0.01em; text-transform: lowercase; border-bottom: 3px solid transparent; }
+  .smap__label sup { font-size: 0.65rem; color: var(--ink-soft); }
+  .smap__node.is-open .smap__label { border-color: var(--c); }
+
+  .smap__panel { position: relative; margin-bottom: 1rem; clip-path: circle(0 at var(--x, 50%) var(--y, 0)); transition: clip-path .7s cubic-bezier(.6,0,.2,1); }
+  .smap__panel.is-in { clip-path: circle(150% at var(--x, 50%) var(--y, 0)); }
+  .smap__set { padding: 1.8rem 2rem 2.2rem; color: var(--paper); background: var(--ink); }
+  .smap__set--red { background: var(--red); } .smap__set--blue { background: var(--blue); } .smap__set--yellow { background: var(--yellow); color: var(--ink); }
+  .smap__set-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .smap .smap__set h3 { margin: 0; font-size: clamp(1.6rem, 3.6vw, 2.6rem); letter-spacing: -0.03em; text-transform: lowercase; }
+  .smap .smap__set h3 a { color: inherit; font-size: inherit; text-decoration: none; }
+  .smap__set h3 a:hover { text-decoration: underline; }
+  .smap__close { all: unset; cursor: pointer; font-size: 2rem; line-height: 1; width: 2.4rem; height: 2.4rem; display: grid; place-items: center; border: 3px solid currentColor; }
+  .smap__close:hover { background: var(--paper); color: var(--ink); }
+  .smap__set ul { list-style: none; margin: 0; padding: 0; columns: 3 16rem; column-gap: 2rem; }
+  .smap__set li { break-inside: avoid; padding: 0.32rem 0; border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); opacity: 0; transform: translateY(10px); transition: opacity .35s, transform .35s; transition-delay: calc(0.25s + var(--k) * 18ms); }
+  .smap__panel.is-in li { opacity: 1; transform: none; }
+  .smap__set a { color: inherit; text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; }
+  .smap__set li a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    .smap__shape { animation: none; }
+    .smap__panel, .smap__panel.is-in { transition: none; clip-path: none; }
+    .smap__set li { transition: none; opacity: 1; transform: none; }
+  }
+</style>

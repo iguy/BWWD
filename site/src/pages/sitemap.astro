@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { SECTIONS, getArticles, dateLabel, excerpt } from '../lib/sections';
 import shelfData from '../data/book-shelves.json';
+import SiteMap from '../components/SiteMap.astro';
 
 const articles = await getArticles();
 const shelfOf = new Map<string, string>();
@@ -18,6 +19,10 @@ const elsewhere = [
 ];
 const total = articles.length + pages.length;
 const colours = ['red', 'blue', 'yellow', 'ink'];
+const mapGroups = [
+  { id: 'pages', name: 'Pages', colour: 'ink', items: [...pages.map((p) => ({ t: p.data.title, h: p.data.oldPath })), ...elsewhere.map((e) => ({ t: e.title + ' ↗', h: e.href }))] },
+  ...groups.map(({ s, items }, i) => ({ id: s.folder, name: s.name, href: `/category/${s.wpCat}/`, colour: colours[i % colours.length], items: items.map((a) => ({ t: a.data.title, h: `/${a.data.slug}/` })) })),
+];
 ---
 <Layout title="Index — Better World With Design" description="Everything on Better World With Design: every review, essay, playlist and page, searchable in one place.">
   <header class="hub-head idx-head" slot="masthead">
@@ -28,6 +33,8 @@ const colours = ['red', 'blue', 'yellow', 'ink'];
       <p class="hub-blurb">Everything on the site in one place. Type to find it.</p>
     </div>
   </header>
+
+  <SiteMap groups={mapGroups} />
 
   <main class="idx">
     <div class="idx-tools">
