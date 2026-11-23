@@ -24,6 +24,8 @@ async function oldImage(request, env, url) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // One address for everything: www goes to the main domain
+    if (url.hostname === 'www.betterworldwithdesign.com') { url.hostname = 'betterworldwithdesign.com'; return Response.redirect(url.toString(), 301); }
     if (WP_FILES.test(url.pathname)) return oldImage(request, env, url);
     if (WP_ADMIN.test(url.pathname)) return Response.redirect(WP_HOST + url.pathname + url.search, 302);
     // RSS at the old WordPress feed address
