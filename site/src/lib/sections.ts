@@ -15,6 +15,12 @@ export const SECTIONS: Section[] = [
     wpCat: 'art-design-insights',
     blurb: 'Artists, photographers and movements I keep coming back to.',
   },
+  {
+    folder: 'technology',
+    name: 'Technology',
+    wpCat: 'technology-trends-tips',
+    blurb: 'AI tools, WordPress, search and the Sandy Mush Tech Hub.',
+  },
 ];
 
 export type Article = CollectionEntry<'articles'> & { section: Section };

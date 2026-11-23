@@ -12,11 +12,28 @@ export function cleanHtml(html: string, section: Section): string {
     item.replaceWith(parse(`<details class="toggle"><summary>${title}</summary><div>${body}</div></details>`));
   }
 
+  // Divi number counters whose number was filled in by JavaScript: drop the empty number
+  for (const el of root.querySelectorAll('.et_pb_number_counter .percent')) if (!el.text.trim()) el.remove();
+
+  // Old WordPress menus placed inside posts
+  for (const el of root.querySelectorAll('nav.wp-block-navigation')) el.remove();
+
+  // WordPress/Divi inline styling (colours, spacing) — the new site's styles take over
+  for (const el of root.querySelectorAll('[style]')) {
+    if (el.tagName === 'IFRAME' || el.closest('.instagram-media')) continue;
+    el.removeAttribute('style');
+  }
+
   // Unwrap Divi layout wrappers, keep their contents
-  const unwrap = (sel: string) => {
-    for (const el of root.querySelectorAll(sel)) el.replaceWith(...(el.childNodes as HTMLElement[]));
-  };
-  for (let i = 0; i < 4; i++) unwrap('[class*="et_pb_"]');
+  // Old WordPress search forms
+  for (const el of root.querySelectorAll('form')) el.remove();
+
+  // Unwrap Divi layout wrappers (div/span only), keep their contents; headings etc. stay
+  for (let i = 0; i < 6; i++) {
+    for (const el of root.querySelectorAll('div[class*="et_pb_"], span[class*="et_pb_"]'))
+      el.replaceWith(...(el.childNodes as HTMLElement[]));
+  }
+  for (const el of root.querySelectorAll('[class*="et_pb_"]')) el.removeAttribute('class');
 
   // Images: local paths, lazy loading, no WordPress sizing attributes
   for (const img of root.querySelectorAll('img')) {

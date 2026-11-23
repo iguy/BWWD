@@ -110,6 +110,13 @@ const jsonLd = {
   .article .wp-has-aspect-ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
   .article .instagram-media { margin: 2rem auto !important; }
 
+  /* Buttons, separators, Divi counters */
+  .article .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.8rem 0; }
+  .article .wp-block-button__link { display: inline-block; background: #1a1714; color: #efe6d6; padding: 0.55rem 1.2rem; text-decoration: none; font-size: 0.95rem; }
+  .article .wp-block-button__link:hover { background: #c8813a; color: #1a1714; }
+  .article .wp-block-separator { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .article h3.title { font-size: 1.1rem; border-left: 3px solid #c8813a; padding-left: 0.8rem; }
+
   /* Transcript toggles (were Divi accordions) */
   .article details.toggle { border: 1px solid var(--rule); margin: 2rem 0; background: var(--paper-deep); }
   .article details.toggle summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
