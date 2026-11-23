@@ -203,9 +203,9 @@ const dial = [
               {small.map(({ s, n }) => (
                 <a href={`/category/${s.wpCat}/`} tabindex={k === 1 ? -1 : undefined}>{s.name} <sup>{n}</sup></a>
               ))}
-              <a href="/category/art-design-insights/" tabindex={k === 1 ? -1 : undefined}>Art &amp; Design</a>
-              <a href="/category/music-discovery-reviews/" tabindex={k === 1 ? -1 : undefined}>Music</a>
-              <a href="/category/technology-trends-tips/" tabindex={k === 1 ? -1 : undefined}>Technology</a>
+              <a href="/category/art-design-insights/" tabindex={k === 1 ? -1 : undefined}>Art &amp; Design <sup>{bySection('art-design').length}</sup></a>
+              <a href="/category/music-discovery-reviews/" tabindex={k === 1 ? -1 : undefined}>Music <sup>{bySection('music').length}</sup></a>
+              <a href="/category/technology-trends-tips/" tabindex={k === 1 ? -1 : undefined}>Technology <sup>{bySection('technology').length}</sup></a>
             </span>
           ))}
         </div>
