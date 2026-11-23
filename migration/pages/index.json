@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "thank-you-newsletter",
+    "title": "Thank You Newsletter",
+    "date": "2026-06-20",
+    "oldPath": "/thank-you-newsletter/",
+    "images": 0
+  },
+  {
+    "slug": "the-answer-engine",
+    "title": "The Answer Engine",
+    "date": "2026-02-05",
+    "oldPath": "/the-answer-engine/",
+    "images": 4
+  },
+  {
+    "slug": "montaigne-essays",
+    "title": "Montaigne Essays",
+    "date": "2025-06-21",
+    "oldPath": "/montaigne-essays/",
+    "images": 1
+  },
+  {
+    "slug": "about",
+    "title": "About",
+    "date": "2023-05-29",
+    "oldPath": "/about/",
+    "images": 3
+  },
+  {
+    "slug": "ai-prompts",
+    "title": "AI Prompts",
+    "date": "2023-05-19",
+    "oldPath": "/tech-tuesday/ai-prompts/",
+    "images": 2
+  },
+  {
+    "slug": "tech-tuesday",
+    "title": "Tech Tuesday",
+    "date": "2023-01-18",
+    "oldPath": "/tech-tuesday/",
+    "images": 7
+  },
+  {
+    "slug": "contact",
+    "title": "Contact",
+    "date": "2022-09-01",
+    "oldPath": "/contact/",
+    "images": 4
+  }
+]
