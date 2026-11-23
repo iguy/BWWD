@@ -8,6 +8,7 @@ interface Options {
   plates?: boolean; // gallery sections: every artwork image becomes a numbered plate
   cover?: string; // local cover path, shown in the header — removed from the body
   lede?: boolean; // mark the opening paragraph
+  keepForms?: boolean; // pages: keep sign-up forms (e.g. the newsletter on Contact)
   tracks?: boolean; // music: cover images that match a Spotify release become playable tiles
 }
 
@@ -47,7 +48,7 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
   for (const el of root.querySelectorAll('.et_pb_number_counter .percent')) if (!el.text.trim()) el.remove();
 
   // Old WordPress menus and search forms placed inside posts
-  for (const el of root.querySelectorAll('nav.wp-block-navigation, .wp-block-page-list, form')) el.remove();
+  for (const el of root.querySelectorAll(opts.keepForms ? 'nav.wp-block-navigation, .wp-block-page-list, form[role="search"], .et_pb_searchform' : 'nav.wp-block-navigation, .wp-block-page-list, form')) el.remove();
 
   // WordPress/Divi inline styling (colours, spacing) — the new site's styles take over
   for (const el of root.querySelectorAll('[style]')) {

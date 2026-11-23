@@ -1,3 +1,17 @@
 # Sections merged on the new site
 /category/media-entertainment/ /category/music-discovery-reviews/ 301
 /category/media-entertainment /category/music-discovery-reviews/ 301
+
+# WordPress pages whose content lives elsewhere now
+/photography/ https://photography.betterworldwithdesign.com/ 301
+/photography https://photography.betterworldwithdesign.com/ 301
+/bwwd-podcasts-reviews-social-commentary/ https://podcast.betterworldwithdesign.com/ 301
+/bwwd-podcasts-reviews-social-commentary https://podcast.betterworldwithdesign.com/ 301
+/home-2025-2/ / 301
+
+# Old WordPress leftovers, retired
+/my-account/ / 301
+/articles-timeline/ / 301
+/links/ / 301
+/links/sitemap/ /sitemap-index.xml 301
+/links/design-system/ / 301
