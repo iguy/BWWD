@@ -221,18 +221,18 @@ const photos = [
 
     <!-- Archive: everything else, as a moving band -->
     <section class="ch ch--archive" id="archive">
-      <p class="big-count" data-reveal="up"><strong>{articles.length}</strong> essays, reviews, playlists and experiments — and more arriving from the old site.</p>
+      <p class="big-count" data-reveal="up"><strong data-total={articles.length}>{articles.length}</strong> essays, reviews, playlists and experiments — and more arriving from the old site.</p>
       <div class="marquee" aria-label="More sections">
         <div class="marquee__track">
           {[0, 1].map((k) => (
             <span class="marquee__set" aria-hidden={k === 1 ? 'true' : undefined}>
               {small.map(({ s, n }) => (
-                <a href={`/category/${s.wpCat}/`} tabindex={k === 1 ? -1 : undefined}>{s.name} <sup>{n}</sup></a>
+                <a href={`/category/${s.wpCat}/`} data-n={n} tabindex={k === 1 ? -1 : undefined}>{s.name} <sup>{n}</sup></a>
               ))}
-              <a href="/category/book-reviews-reading-lists/" tabindex={k === 1 ? -1 : undefined}>Books <sup>{bySection('books').length}</sup></a>
-              <a href="/category/art-design-insights/" tabindex={k === 1 ? -1 : undefined}>Art &amp; Design <sup>{bySection('art-design').length}</sup></a>
-              <a href="/category/music-discovery-reviews/" tabindex={k === 1 ? -1 : undefined}>Music <sup>{bySection('music').length}</sup></a>
-              <a href="/category/technology-trends-tips/" tabindex={k === 1 ? -1 : undefined}>Technology <sup>{bySection('technology').length}</sup></a>
+              <a href="/category/book-reviews-reading-lists/" data-n={bySection('books').length} tabindex={k === 1 ? -1 : undefined}>Books <sup>{bySection('books').length}</sup></a>
+              <a href="/category/art-design-insights/" data-n={bySection('art-design').length} tabindex={k === 1 ? -1 : undefined}>Art &amp; Design <sup>{bySection('art-design').length}</sup></a>
+              <a href="/category/music-discovery-reviews/" data-n={bySection('music').length} tabindex={k === 1 ? -1 : undefined}>Music <sup>{bySection('music').length}</sup></a>
+              <a href="/category/technology-trends-tips/" data-n={bySection('technology').length} tabindex={k === 1 ? -1 : undefined}>Technology <sup>{bySection('technology').length}</sup></a>
             </span>
           ))}
         </div>
@@ -280,6 +280,25 @@ const photos = [
         if (audio.paused) { audio.play(); playBtn.classList.add('is-playing'); playBtn.lastChild.textContent = 'Pause'; document.querySelector('.ch--pod').classList.add('is-playing'); }
         else { audio.pause(); playBtn.classList.remove('is-playing'); playBtn.lastChild.textContent = 'Play'; document.querySelector('.ch--pod').classList.remove('is-playing'); }
       });
+
+      // Big number: shows the hovered topic's count in that topic's colour, back to the total on leave
+      var big = document.querySelector('.big-count strong');
+      if (big) {
+        var tones = ['var(--ink)', 'var(--yellow)', 'var(--blue)']; // red hover -> ink, yellow -> yellow, blue -> blue
+        function show(n, tone) {
+          if (big.textContent === String(n)) return;
+          big.classList.remove('is-swap'); void big.offsetWidth; big.classList.add('is-swap');
+          big.textContent = n; big.style.color = tone || '';
+        }
+        document.querySelectorAll('.marquee a[data-n]').forEach(function (a) {
+          var i = [].indexOf.call(a.parentNode.children, a);
+          var on = function () { show(a.dataset.n, tones[i % 3]); };
+          a.addEventListener('pointerenter', on); a.addEventListener('focus', on);
+        });
+        var reset = function () { show(big.dataset.total); };
+        document.querySelector('.marquee').addEventListener('pointerleave', reset);
+        document.querySelector('.marquee').addEventListener('focusout', reset);
+      }
 
       // Topic band: drifts on its own; the mouse steers it (left edge = left, right edge = right), and it can be dragged or swiped
       var band = document.querySelector('.marquee'), track = band && band.querySelector('.marquee__track');
@@ -568,6 +587,9 @@ const photos = [
   /* Archive band */
   .ch--archive { padding: 8rem 0 2rem; }
   .big-count { max-width: var(--wide); margin: 0 auto 3rem; padding: 0 16px 0 max(16px, 110px); font-size: clamp(1.4rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
+  .big-count strong { transition: color 0.25s; }
+  .big-count strong.is-swap { animation: count-swap 0.35s cubic-bezier(.2,.8,.2,1); }
+  @keyframes count-swap { from { transform: translateY(0.12em) scale(0.92); opacity: 0.2; } to { transform: none; opacity: 1; } }
   .big-count strong { display: block; font-size: clamp(6rem, 22vw, 18rem); line-height: 0.8; letter-spacing: -0.06em; color: var(--red); }
   .marquee { overflow: hidden; border-top: 10px solid var(--ink); border-bottom: 10px solid var(--ink); background: var(--paper-deep); }
   .marquee__track { display: flex; width: max-content; will-change: transform; }

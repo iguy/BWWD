@@ -37,15 +37,27 @@ const colours = ['red', 'blue', 'yellow', 'ink'];
       </label>
       <div class="idx-chips" role="group" aria-label="Show section">
         <button type="button" class="chip is-on" data-filter="all">All</button>
-        {groups.map(({ s }, i) => <button type="button" class={`chip chip--${colours[i % colours.length]}`} data-filter={s.folder}>{s.name} <sup>{SECTIONS.length && articles.filter((a) => a.section.folder === s.folder).length}</sup></button>)}
         <button type="button" class="chip" data-filter="pages">Pages <sup>{pages.length}</sup></button>
+        {groups.map(({ s }, i) => <button type="button" class={`chip chip--${colours[i % colours.length]}`} data-filter={s.folder}>{s.name} <sup>{SECTIONS.length && articles.filter((a) => a.section.folder === s.folder).length}</sup></button>)}
       </div>
       <p class="idx-status" aria-live="polite"></p>
     </div>
 
+    <section class="idx-group" data-group="pages">
+      <h2><span class="idx-num idx-num--ink">01</span>Pages <sup>{pages.length + elsewhere.length}</sup></h2>
+      <ul>
+        {pages.map((p) => (
+          <li data-text={`${p.data.title} page`.toLowerCase()}><a href={p.data.oldPath}>{p.data.title}</a><span class="idx-meta"><span class="idx-tags">Page</span></span></li>
+        ))}
+        {elsewhere.map((e) => (
+          <li data-text={`${e.title} ${e.note}`.toLowerCase()}><a href={e.href}>{e.title} ↗</a><span class="idx-meta"><span class="idx-tags">{e.note}</span></span></li>
+        ))}
+      </ul>
+    </section>
+
     {groups.map(({ s, items }, i) => (
       <section class="idx-group" data-group={s.folder}>
-        <h2><span class={`idx-num idx-num--${colours[i % colours.length]}`}>{String(i + 1).padStart(2, '0')}</span><a href={`/category/${s.wpCat}/`}>{s.name}</a> <sup>{items.length}</sup></h2>
+        <h2><span class={`idx-num idx-num--${colours[i % colours.length]}`}>{String(i + 2).padStart(2, '0')}</span><a href={`/category/${s.wpCat}/`}>{s.name}</a> <sup>{items.length}</sup></h2>
         <ul>
           {items.map((a) => {
             const shelf = shelfOf.get(a.data.slug);
@@ -61,17 +73,6 @@ const colours = ['red', 'blue', 'yellow', 'ink'];
       </section>
     ))}
 
-    <section class="idx-group" data-group="pages">
-      <h2><span class="idx-num idx-num--ink">{String(groups.length + 1).padStart(2, '0')}</span>Pages <sup>{pages.length + elsewhere.length}</sup></h2>
-      <ul>
-        {pages.map((p) => (
-          <li data-text={`${p.data.title} page`.toLowerCase()}><a href={p.data.oldPath}>{p.data.title}</a><span class="idx-meta"><span class="idx-tags">Page</span></span></li>
-        ))}
-        {elsewhere.map((e) => (
-          <li data-text={`${e.title} ${e.note}`.toLowerCase()}><a href={e.href}>{e.title} ↗</a><span class="idx-meta"><span class="idx-tags">{e.note}</span></span></li>
-        ))}
-      </ul>
-    </section>
 
     <p class="idx-empty" hidden>Nothing matches that. Try fewer words.</p>
   </main>
