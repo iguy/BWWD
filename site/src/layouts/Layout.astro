@@ -85,7 +85,8 @@ const path = Astro.url.pathname;
       --text: 680px;
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { background: var(--paper); }
+    html { background: var(--paper); overflow-x: clip; }
+    body { overflow-x: clip; }
     body {
       margin: 0;
       background: var(--paper);

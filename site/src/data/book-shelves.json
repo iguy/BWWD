@@ -1,0 +1,27 @@
+{
+  "_note": "Books page shelves. Each review (by slug) sits on one shelf; shelves show in this order. Edit freely.",
+  "shelves": [
+    { "id": "mind", "name": "Mind & Philosophy", "colour": "blue", "blurb": "Montaigne, Parfit, Laozi, Kahneman — how we think, and how to live with it.",
+      "books": ["thinking-fast-and-slow", "beyond-straight-lines", "book-review-reasons-and-persons", "dao-de-jing-by-laozi",
+        "montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution", "montaigne-chapter-30-of-cannibals", "montaigne-chapter-29-of-moderation",
+        "montaigne-chapter-27-of-friendship", "montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity",
+        "montaigne-chapter-25-of-the-education-of-children", "chapter-24-of-pedantry", "chapter-23-various-events-form-the-same-counsel"] },
+    { "id": "society", "name": "Justice & Society", "colour": "red", "blurb": "Who gets counted, who gets coded out, and who pays.",
+      "books": ["automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor", "race-after-technology-abolitionist-tools-for-the-new-jim-code",
+        "design-justice-community-led-practices-to-build-the-worlds-we-need", "the-intersection-of-technology-and-social-justice", "a-peoples-history-of-the-united-states",
+        "the-round-house-a-journey-through-justice-identity-and-native-american-rights", "book-club-review-the-round-house", "small-things-like-these-moral-courage-in-the-face-of-community-silence", "the-leavers-by-lisa-ko"] },
+    { "id": "fiction", "name": "Novels & Stories", "colour": "yellow", "blurb": "Fiction I couldn't put down — and a couple I wanted to throw.",
+      "books": ["the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance", "if-we-were-villains-by-m-l-rio", "is-tom-lake-a-shallow-comfort-read", "deep-dive-of-the-wax-child-by-olga-ravns",
+        "we-always-lived-in-the-castle", "a-tree-grows-in-brooklyn", "the-rosewood-casket", "my-take-james-joyce-the-sisters", "book-review-the-immoralists"] },
+    { "id": "futures", "name": "Science Fiction & Futures", "colour": "ink", "blurb": "Robots, empires, burning books and the futures we keep rehearsing.",
+      "books": ["foundation-by-isaac-asimov", "all-systems-red-martha-wells", "book-review-the-giver", "my-take-fahrenheit-451", "parable-of-the-sower-octavia-butler",
+        "review-doctor-who-twice-upon-a-time", "journey-to-the-center-of-the-earth"] },
+    { "id": "history", "name": "History & War", "colour": "red", "blurb": "Drugs, wars, crashes in the jungle and a librarian on horseback.",
+      "books": ["blitzed-drugs-in-the-third-reich", "killer-high-a-history-of-war-in-six-drugs-by-peter-andreas", "book-review-lost-in-shagri-la", "the-book-woman-of-troublesome-creek", "a-month-in-the-country"] },
+    { "id": "design", "name": "Design & Craft", "colour": "blue", "blurb": "Books about how things are made — crime scenes, stories, habits and machines.",
+      "books": ["the-art-of-crime-frances-glessner-lee-and-the-miniature-revolution-in-forensic-science", "scene-structure", "the-unconventional-playbook-creative-habits-of-the-worlds-most-brilliant-minds",
+        "summary-of-the-invention-of-hugo-cabret", "the-story-of-my-teeth"] },
+    { "id": "margins", "name": "Voices from the Margins", "colour": "yellow", "blurb": "Public-domain audiobooks by voices history tried to quiet.",
+      "books": ["voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition", "voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook"] }
+  ]
+}

@@ -3,6 +3,7 @@
 // navigation lives in a dial in the bottom-left corner.
 import Layout from '../layouts/Layout.astro';
 import podcast from '../data/podcast.json';
+import Shelf from '../components/Shelf.astro';
 import { SECTIONS, getArticles, cardImage, dateLabel, excerpt, paragraphs } from '../lib/sections';
 
 const articles = await getArticles();
@@ -22,7 +23,6 @@ const featQuote = feat
   : '';
 // Books: every review as a spine on a shelf
 const books = (await withImg(bySection('books'))).slice(0, 18);
-const spineColours = ['red', 'ink', 'yellow', 'blue', 'paper', 'red', 'blue', 'ink', 'yellow'];
 
 // Podcast: latest episode leads, the next few follow
 const POD = 'https://podcast.betterworldwithdesign.com';
@@ -127,17 +127,7 @@ const dial = [
         <p>{bySection('books').length} reviews and reading lists. Pull one off the shelf.</p>
         <a class="ch__all" href="/category/book-reviews-reading-lists/">All books →</a>
       </div>
-      <ul class="shelf" data-reveal="up">
-        {books.map(({ a, img }, i) => (
-          <li class={`spine spine--${spineColours[i % spineColours.length]}`} style={`--h:${74 + ((i * 37) % 26)}%; --w:${Math.min(96, 46 + Math.round(a.data.title.length * 0.9))}px; --d:${i}`}>
-            <a href={`/${a.data.slug}/`}>
-              <span class="spine__title">{a.data.title.replace(/[‘’]/g, "'").replace(/[—–]+/g, " – ")}</span>
-              <span class="spine__year">{a.data.pubDate.slice(0, 4)}</span>
-              {img.src && <img class="spine__cover" src={img.src} alt="" loading="lazy" decoding="async" />}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <Shelf items={books} />
     </section>
 
     <!-- 03 Music: the record spins; sleeves fan out when the section arrives -->
@@ -314,7 +304,7 @@ const dial = [
         band.addEventListener('pointermove', function (e) {
           if (drag) { var dx = e.clientX - drag.x; drag.x = e.clientX; x += dx; drag.v = dx; if (Math.abs(dx) > 2) band.classList.add('is-dragging'); return; }
           var r = band.getBoundingClientRect(), f = (e.clientX - r.left) / r.width - 0.5; // -0.5 .. 0.5
-          target = Math.abs(f) < 0.12 ? 0 : -f * 14; // centre holds still, edges move it
+          target = base - f * 18; // always drifting; towards an edge it speeds up in that direction
         });
         band.addEventListener('pointerleave', function () { if (!drag) target = base; });
         band.addEventListener('dragstart', function (e) { e.preventDefault(); }); // links would otherwise start a native drag
@@ -618,26 +608,7 @@ const dial = [
   /* 02 Books: shelf of spines */
   .ch--books { padding: 8rem 16px 7rem max(16px, 110px); max-width: 1600px; margin: 0 auto; display: grid; grid-template-columns: minmax(15rem, 0.55fr) 2fr; gap: 3rem; align-items: end; }
   .ch--books .ch__num { background: var(--blue); }
-  .shelf { list-style: none; margin: 0; padding: 0 0 0 4px; height: min(74vh, 660px); display: flex; align-items: flex-end; gap: 4px; border-bottom: 16px solid var(--ink); overflow-x: auto; overflow-y: visible; scrollbar-width: thin; padding-top: 250px; }
-  .spine { position: relative; flex: none; width: var(--w); height: var(--h); transition: transform .45s cubic-bezier(.2,.9,.2,1.15); }
-  .shelf:not(.in) .spine { transform: translateY(110%); }
-  .shelf .spine { transition-delay: calc(var(--d) * 35ms); }
-  .spine a { position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; padding: 0.9rem 0; text-decoration: none; border: 3px solid var(--ink); border-bottom: 0; }
-  .spine--red a { background: var(--red); color: var(--paper); }
-  .spine--ink a { background: var(--ink); color: var(--paper); border-color: #333; }
-  .spine--yellow a { background: var(--yellow); color: var(--ink); }
-  .spine--blue a { background: var(--blue); color: var(--paper); }
-  .spine--paper a { background: var(--paper-deep); color: var(--ink); }
-  .spine__title { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700; font-size: 0.92rem; line-height: 1.1; letter-spacing: 0.01em; max-height: calc(100% - 3rem); overflow: hidden; }
-  .spine__year { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; }
-  .spine__cover { position: absolute; left: 50%; bottom: 100%; width: 170px; max-width: none; aspect-ratio: 3 / 4; object-fit: cover; border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--red); transform: translate(-50%, 30px) rotate(-4deg) scale(.6); opacity: 0; pointer-events: none; transition: opacity .25s, transform .35s cubic-bezier(.2,.9,.2,1.2); z-index: 5; }
-  .spine:hover, .spine:focus-within { transform: translateY(-34px); z-index: 4; }
-  .spine:hover .spine__cover, .spine:focus-within .spine__cover { opacity: 1; transform: translate(-50%, -10px) rotate(-4deg) scale(1); }
-  @media (max-width: 900px) {
-    .ch--books { grid-template-columns: 1fr; padding-left: 16px; }
-    .shelf { height: 420px; }
-    .spine__cover { display: none; }
-  }
+  @media (max-width: 900px) { .ch--books { grid-template-columns: 1fr; padding-left: 16px; } }
 
   /* Archive band */
   .ch--archive { padding: 8rem 0 2rem; }
