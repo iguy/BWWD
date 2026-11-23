@@ -3,6 +3,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { SECTIONS, getArticles, cardImage, dateLabel, absolute, excerpt, type Section, type Article } from '../../lib/sections';
 import Shelf from '../../components/Shelf.astro';
+import Explore from '../../components/Explore.astro';
+import techThemes from '../../data/tech-themes.json';
 import shelfData from '../../data/book-shelves.json';
 
 export async function getStaticPaths() {
@@ -29,7 +31,22 @@ const shelves = isBooks
       return { ...sh, list };
     }).concat([{ id: 'more', name: 'More reviews', colour: 'ink', blurb: '', books: [], list: cards.filter((c) => !used.has(c.a.data.slug)) }]).filter((sh) => sh.list.length)
   : [];
-const pick = isBooks ? cards[0] : undefined;
+const pick = cards[0];
+
+// Technology: themed groups to explore (src/data/tech-themes.json)
+const isTech = section.folder === 'technology';
+const techGroups = isTech
+  ? (() => {
+      const seen = new Set<string>();
+      const gs = techThemes.groups.map((g) => {
+        const list = g.posts.map((p) => bySlug.get(p)).filter((x): x is (typeof cards)[number] => !!x);
+        list.forEach((x) => seen.add(x.a.data.slug));
+        return { id: g.id, name: g.name, colour: g.colour, blurb: g.blurb, list };
+      });
+      const rest = cards.filter((c) => !seen.has(c.a.data.slug));
+      return (rest.length ? gs.concat([{ id: 'more', name: 'More', colour: 'ink', blurb: '', list: rest }]) : gs).filter((g) => g.list.length);
+    })()
+  : [];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -48,7 +65,22 @@ const jsonLd = {
       <p class="hub-blurb">{section.blurb}</p>
     </div>
   </header>
-  {isBooks ? (
+  {isTech ? (
+  <main class="books">
+    {pick && (
+      <section class="latest" data-reveal="up">
+        {pick.img.src && <img src={pick.img.src} alt="" loading="eager" decoding="async" />}
+        <div>
+          <p class="latest__label">{isBooks ? 'Newest on the shelf' : 'Newest'} · {dateLabel(pick.a.data.pubDate)}</p>
+          <h2><a href={`/${pick.a.data.slug}/`}>{pick.a.data.title}</a></h2>
+          <p>{excerpt(pick.a, 260)}</p>
+          <a class="latest__go" href={`/${pick.a.data.slug}/`}>{isBooks ? 'Read the review →' : 'Read it →'}</a>
+        </div>
+      </section>
+    )}
+  </main>
+  <Explore groups={techGroups} total={cards.length} storageKey="technology" />
+  ) : isBooks ? (
   <main class="books">
     <nav class="shelf-index" aria-label="Shelves">
       {shelves.map((sh, i) => <a class={`chip chip--${sh.colour}`} href={`#${sh.id}`}><b>{String(i + 1).padStart(2, '0')}</b> {sh.name} <sup>{sh.list.length}</sup></a>)}
@@ -57,10 +89,10 @@ const jsonLd = {
       <section class="latest" data-reveal="up">
         {pick.img.src && <img src={pick.img.src} alt="" loading="eager" decoding="async" />}
         <div>
-          <p class="latest__label">Newest on the shelf · {dateLabel(pick.a.data.pubDate)}</p>
+          <p class="latest__label">{isBooks ? 'Newest on the shelf' : 'Newest'} · {dateLabel(pick.a.data.pubDate)}</p>
           <h2><a href={`/${pick.a.data.slug}/`}>{pick.a.data.title}</a></h2>
           <p>{excerpt(pick.a, 260)}</p>
-          <a class="latest__go" href={`/${pick.a.data.slug}/`}>Read the review →</a>
+          <a class="latest__go" href={`/${pick.a.data.slug}/`}>{isBooks ? 'Read the review →' : 'Read it →'}</a>
         </div>
       </section>
     )}

@@ -1,0 +1,17 @@
+{
+  "_note": "Technology page groups. Each post (by slug) sits in one group; groups show in this order. Edit freely.",
+  "groups": [
+    { "id": "ai", "name": "AI tools & prompts", "colour": "red", "blurb": "What I actually use, and the prompts that earn their keep.",
+      "posts": ["ai-apps", "ai-now-what", "unleashing-your-creativity-a-beginners-guide-to-using-ai-prompts-for-your-new-hobby", "speechify-text-to-speech-app", "password-mantra"] },
+    { "id": "search", "name": "Search & the web", "colour": "blue", "blurb": "How people find things now — keywords, traffic, domains and answer engines.",
+      "posts": ["the-new-frontier-of-keyword-research", "case-study-website-traffic", "generate-traffic-to-a-new-website", "the-decline-of-com", "content-on-the-internet"] },
+    { "id": "wordpress", "name": "WordPress", "colour": "yellow", "blurb": "Releases, plugins and the people keeping complex sites alive.",
+      "posts": ["insights-and-expectations-a-sneak-peek-into-the-upcoming-wordpress-6-5-release", "tech-tuesday-plugins-for-complex-wordpress-website", "sandy-mush-wordpress-meetup-group", "are-you-struggling-to-manage-complex-wordpress-websites"] },
+    { "id": "ethics", "name": "Ethics & society", "colour": "ink", "blurb": "Data, disinformation and what screens do to young brains.",
+      "posts": ["applied-data-ethics", "combating-disinformation-strategies-and-solutions", "the-impact-of-technology-on-child-development"] },
+    { "id": "hub", "name": "Sandy Mush Tech Hub", "colour": "red", "blurb": "Building a rural tech hub where the broadband runs out.",
+      "posts": ["why-a-rural-tech-hub-in-sandy-mush-can-benefit-our-local-community", "why-a-rural-tech-hub", "sandy-mush-tech-hub-mission"] },
+    { "id": "odd", "name": "Odd corners of the web", "colour": "blue", "blurb": "Sites worth getting lost in: every genre, live lightning, radio by decade.",
+      "posts": ["every-music-style", "lighting-map", "timemachine-radio-station", "read-books"] }
+  ]
+}

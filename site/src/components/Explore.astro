@@ -1,0 +1,168 @@
+---
+// Explore layout for a section: themed groups of flip cards, a surprise-me die,
+// "pick one for me" per group, and an explored-progress bar with read stamps (kept in this browser).
+import type { Article } from '../lib/sections';
+import { dateLabel, excerpt } from '../lib/sections';
+interface Group { id: string; name: string; colour: string; blurb: string; list: { a: Article; img: { src: string } }[] }
+interface Props { groups: Group[]; total: number; storageKey: string }
+const { groups, total, storageKey } = Astro.props;
+---
+<div class="explore" data-key={storageKey} data-total={total}>
+  <div class="ex-bar">
+    <nav class="ex-chips" aria-label="Groups">
+      {groups.map((g, i) => <a class={`chip chip--${g.colour}`} href={`#${g.id}`}><b>{String(i + 1).padStart(2, '0')}</b> {g.name} <sup>{g.list.length}</sup></a>)}
+    </nav>
+    <div class="ex-tools">
+      <div class="ex-progress" aria-live="polite">
+        <span class="ex-progress__label">Explored <b class="ex-n">0</b> of {total}</span>
+        <span class="ex-progress__track"><i class="ex-progress__fill"></i></span>
+      </div>
+      <button type="button" class="ex-die" aria-label="Surprise me with a random post"><span class="die" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> Surprise me</button>
+    </div>
+  </div>
+
+  {groups.map((g, gi) => (
+    <section class={`ex-group ex-group--${g.colour}${gi % 2 ? ' alt' : ''}`} id={g.id}>
+      <div class="ex-head" data-reveal="left">
+        <span class="ex-num">{String(gi + 1).padStart(2, '0')}</span>
+        <h2>{g.name}</h2>
+        <p>{g.blurb}</p>
+        <p class="ex-count">{g.list.length} {g.list.length === 1 ? 'post' : 'posts'}</p>
+        {g.list.length > 1 && <button type="button" class="ex-pick">Pick one for me ↻</button>}
+      </div>
+      <ul class="ex-cards">
+        {g.list.map(({ a, img }, i) => (
+          <li class="ex-card" data-slug={a.data.slug} data-reveal="up" style={`--d:${i}`}>
+            <div class="ex-card__inner">
+              <button type="button" class="ex-card__front" aria-label={`Show summary: ${a.data.title}`}>
+                {img.src ? <img src={img.src} alt="" loading="lazy" decoding="async" /> : <span class="ex-card__shape" aria-hidden="true"></span>}
+                <span class="ex-card__date">{dateLabel(a.data.pubDate)}</span>
+                <span class="ex-card__title">{a.data.title}</span>
+                <span class="ex-card__flip" aria-hidden="true">↻</span>
+              </button>
+              <div class="ex-card__back">
+                <p>{excerpt(a, 230)}</p>
+                <a class="ex-card__go" href={`/${a.data.slug}/`}>Read it →</a>
+                <button type="button" class="ex-card__unflip" aria-label="Flip back">↺</button>
+              </div>
+            </div>
+            <span class="ex-stamp" aria-hidden="true">Read</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</div>
+
+<style is:global>
+  .explore { max-width: 1400px; margin: 0 auto; padding: 0 16px; }
+  .ex-bar { position: sticky; top: 0; z-index: 20; background: var(--paper); padding: 1rem 0; border-bottom: 4px solid var(--ink); display: grid; gap: 0.9rem; }
+  .ex-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ex-chips .chip { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.8rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--paper); background: var(--ink); }
+  .ex-chips .chip--red { background: var(--red); } .ex-chips .chip--blue { background: var(--blue); } .ex-chips .chip--yellow { background: var(--yellow); color: var(--ink); }
+  .ex-chips .chip:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--ink); }
+  .ex-tools { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .ex-progress { display: flex; align-items: center; gap: 0.9rem; flex: 1; min-width: 240px; }
+  .ex-progress__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+  .ex-progress__label b { color: var(--red); font-size: 1rem; }
+  .ex-progress__track { flex: 1; max-width: 420px; height: 14px; border: 3px solid var(--ink); background: var(--paper-deep); }
+  .ex-progress__fill { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--red) 0 33.3%, var(--yellow) 33.3% 66.6%, var(--blue) 66.6% 100%); background-size: 60px 100%; transition: width .8s cubic-bezier(.2,.9,.2,1.2); }
+  .ex-progress.is-done .ex-progress__label::after { content: ' — every one. Well read.'; color: var(--blue); }
+  .ex-die { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 0.7rem; padding: 0.6rem 1rem; background: var(--ink); color: var(--paper); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .ex-die:hover, .ex-die:focus-visible { background: var(--red); }
+  .die { position: relative; width: 26px; height: 26px; background: var(--yellow); border-radius: 4px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); padding: 3px; }
+  .die i { width: 5px; height: 5px; border-radius: 50%; background: var(--ink); place-self: center; }
+  .die i:nth-child(1) { grid-area: 1 / 1; } .die i:nth-child(2) { grid-area: 1 / 3; } .die i:nth-child(3) { grid-area: 2 / 2; } .die i:nth-child(4) { grid-area: 3 / 1; } .die i:nth-child(5) { grid-area: 3 / 3; }
+  .ex-die.is-rolling .die { animation: roll .7s cubic-bezier(.3,.6,.3,1); }
+  @keyframes roll { 0% { transform: rotate(0) scale(1); } 50% { transform: rotate(400deg) scale(1.3); } 100% { transform: rotate(720deg) scale(1); } }
+
+  .ex-group { display: grid; grid-template-columns: minmax(15rem, 0.38fr) 1.6fr; gap: 2.5rem; align-items: start; padding: 5rem 0 1rem; scroll-margin-top: 120px; }
+  .ex-group.alt { grid-template-columns: 1.6fr minmax(15rem, 0.38fr); }
+  .ex-group.alt .ex-head { order: 2; text-align: right; }
+  .ex-group.alt .ex-head p { margin-left: auto; }
+  .ex-group.alt .ex-head:not(.in) { transform: translateX(8vw); }
+  .ex-head { position: sticky; top: 150px; transition: transform .9s cubic-bezier(.2,.8,.2,1), opacity .7s; }
+  .ex-head:not(.in) { opacity: 0; transform: translateX(-8vw); }
+  .ex-num { display: inline-grid; place-items: center; width: 3rem; height: 3rem; font-weight: 800; color: var(--paper); background: var(--ink); }
+  .ex-group--red .ex-num { background: var(--red); } .ex-group--blue .ex-num { background: var(--blue); } .ex-group--yellow .ex-num { background: var(--yellow); color: var(--ink); }
+  .ex-head h2 { margin: 0.8rem 0 0.7rem; font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 0.92; letter-spacing: -0.04em; font-weight: 800; text-transform: lowercase; }
+  .ex-head p { margin: 0 0 0.8rem; max-width: 30ch; }
+  .ex-count { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+  .ex-pick { all: unset; cursor: pointer; display: inline-block; margin-top: 0.4rem; padding: 0.5rem 0.9rem; border: 3px solid var(--ink); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .ex-pick:hover, .ex-pick:focus-visible { background: var(--ink); color: var(--paper); }
+
+  .ex-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.4rem; }
+  .ex-card { position: relative; perspective: 1200px; height: 360px; transition: transform .8s cubic-bezier(.2,.8,.2,1) calc(var(--d, 0) * 70ms), opacity .6s calc(var(--d, 0) * 70ms); }
+  .ex-card:not(.in) { opacity: 0; transform: translateY(60px) rotate(2deg); }
+  .ex-card__inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3,.9,.3,1.1); }
+  .ex-card.is-flipped .ex-card__inner { transform: rotateY(180deg); }
+  .ex-card__front, .ex-card__back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 4px solid var(--ink); background: var(--paper); }
+  .ex-card__front { all: unset; position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 4px solid var(--ink); background: var(--paper); cursor: pointer; display: flex; flex-direction: column; overflow: hidden; }
+  .ex-card__front:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+  .ex-card__front img, .ex-card__shape { width: 100%; height: 58%; object-fit: cover; border-bottom: 8px solid var(--ink); flex: none; }
+  .ex-group--red .ex-card__front img, .ex-group--red .ex-card__shape { border-bottom-color: var(--red); }
+  .ex-group--blue .ex-card__front img, .ex-group--blue .ex-card__shape { border-bottom-color: var(--blue); }
+  .ex-group--yellow .ex-card__front img, .ex-group--yellow .ex-card__shape { border-bottom-color: var(--yellow); }
+  .ex-card__shape { display: block; background: radial-gradient(circle at 35% 45%, var(--red) 0 22%, transparent 22.5%), linear-gradient(135deg, var(--yellow) 0 50%, var(--blue) 50%); }
+  .ex-card__date { padding: 0.8rem 0.9rem 0; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); }
+  .ex-card__title { padding: 0.3rem 0.9rem; font-weight: 700; font-size: 1.12rem; line-height: 1.15; }
+  .ex-card__flip { position: absolute; right: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 0.95rem; transition: transform .4s; }
+  .ex-card__front:hover .ex-card__flip { transform: rotate(180deg); background: var(--red); }
+  .ex-card__front:hover { box-shadow: 8px 8px 0 var(--ink); }
+  .ex-card__back { transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: space-between; padding: 1.2rem; background: var(--ink); color: var(--paper); }
+  .ex-group--red .ex-card__back { background: var(--red); } .ex-group--blue .ex-card__back { background: var(--blue); } .ex-group--yellow .ex-card__back { background: var(--yellow); color: var(--ink); }
+  .ex-card__back p { margin: 0; font-size: 0.98rem; line-height: 1.45; }
+  .ex-card__go { align-self: flex-start; padding: 0.6rem 1rem; background: var(--paper); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  .ex-card__go:hover { background: var(--ink); color: var(--paper); }
+  .ex-card__unflip { all: unset; cursor: pointer; position: absolute; right: 10px; top: 10px; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: rgba(0,0,0,.25); color: inherit; }
+  .ex-stamp { position: absolute; z-index: 3; top: -12px; right: -10px; width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: var(--paper); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; border: 3px solid var(--paper); transform: scale(0) rotate(-30deg); transition: transform .5s cubic-bezier(.2,1.6,.4,1); pointer-events: none; }
+  .ex-card.is-read .ex-stamp { transform: scale(1) rotate(-12deg); }
+  .ex-card.is-picked { z-index: 5; }
+  .ex-card.is-picked .ex-card__inner { animation: picked 1.2s cubic-bezier(.2,.9,.2,1); }
+  .ex-card.is-picked .ex-card__front { box-shadow: 12px 12px 0 var(--yellow); }
+  @keyframes picked { 0% { transform: scale(1); } 30% { transform: scale(1.08) rotate(-2deg); } 60% { transform: scale(1.04) rotate(1deg); } 100% { transform: scale(1); } }
+  @media (max-width: 900px) {
+    .ex-group { grid-template-columns: 1fr; padding-top: 3.5rem; }
+    .ex-head { position: static; }
+    .ex-group.alt { grid-template-columns: 1fr; }
+    .ex-group.alt .ex-head { order: 0; text-align: left; }
+    .ex-card { height: 330px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .ex-card__inner { transition: none; } }
+</style>
+
+<script is:inline>
+  (function () {
+    var root = document.querySelector('.explore'); if (!root) return;
+    var key = 'bwwd-read-' + root.dataset.key, total = +root.dataset.total, read = [];
+    try { read = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {}
+    var cards = [].slice.call(root.querySelectorAll('.ex-card'));
+    function paint() {
+      var n = 0;
+      cards.forEach(function (c) { var r = read.indexOf(c.dataset.slug) > -1; c.classList.toggle('is-read', r); if (r) n++; });
+      root.querySelector('.ex-n').textContent = n;
+      root.querySelector('.ex-progress__fill').style.width = (n / total * 100) + '%';
+      root.querySelector('.ex-progress').classList.toggle('is-done', n >= total);
+    }
+    function markRead(slug) { if (read.indexOf(slug) < 0) { read.push(slug); try { localStorage.setItem(key, JSON.stringify(read)); } catch (e) {} } }
+    root.addEventListener('click', function (e) {
+      var t = e.target;
+      var front = t.closest('.ex-card__front'), back = t.closest('.ex-card__unflip'), go = t.closest('.ex-card__go');
+      if (front) front.closest('.ex-card').classList.add('is-flipped');
+      if (back) back.closest('.ex-card').classList.remove('is-flipped');
+      if (go) markRead(go.closest('.ex-card').dataset.slug);
+      var pick = t.closest('.ex-pick');
+      if (pick) choose([].slice.call(pick.closest('.ex-group').querySelectorAll('.ex-card')));
+      if (t.closest('.ex-die')) { var d = t.closest('.ex-die'); d.classList.remove('is-rolling'); void d.offsetWidth; d.classList.add('is-rolling');
+        var unread = cards.filter(function (c) { return read.indexOf(c.dataset.slug) < 0; }); choose(unread.length ? unread : cards); }
+    });
+    function choose(list) {
+      var c = list[Math.floor(Math.random() * list.length)]; if (!c) return;
+      cards.forEach(function (x) { x.classList.remove('is-picked', 'is-flipped'); });
+      c.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function () { c.classList.add('is-picked', 'is-flipped'); }, 450);
+    }
+    paint();
+    window.addEventListener('pageshow', function () { try { read = JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) {} paint(); });
+  })();
+</script>

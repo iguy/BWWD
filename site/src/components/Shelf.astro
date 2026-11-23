@@ -52,14 +52,3 @@ function spine(raw: string): { main: string; sub: string } {
   .spine:hover .spine__cover, .spine:focus-within .spine__cover { opacity: 1; transform: translate(-50%, -10px) rotate(-4deg) scale(1); }
   @media (max-width: 900px) { .shelf { height: 420px; padding-top: 60px; } .spine__cover { display: none; } }
 </style>
-
-<script is:inline>
-  // Reveal: shared by every page that has [data-reveal] (runs once per page)
-  (function () {
-    if (window.__bwwdReveal) return; window.__bwwdReveal = true;
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var io = 'IntersectionObserver' in window && new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle('in', e.isIntersecting); }); }, { threshold: 0.18 });
-    function go() { document.querySelectorAll('[data-reveal]').forEach(function (el) { io ? io.observe(el) : el.classList.add('in'); }); }
-    document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', go) : go();
-  })();
-</script>

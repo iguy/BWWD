@@ -154,5 +154,13 @@ const path = Astro.url.pathname;
     <span>© {new Date().getFullYear()} Gary Crossey · <a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/sitemap/">Index</a></span>
     <a href="https://podcast.betterworldwithdesign.com/">Listen to the podcast →</a>
   </footer>
+  <script is:inline>
+    // Reveal: anything marked [data-reveal] arrives when it scrolls into view and leaves when it goes
+    (function () {
+      if (window.__bwwdReveal) return; window.__bwwdReveal = true;
+      var io = 'IntersectionObserver' in window && new IntersectionObserver(function (es) { es.forEach(function (e) { e.target.classList.toggle('in', e.isIntersecting); }); }, { threshold: 0.18 });
+      document.querySelectorAll('[data-reveal]').forEach(function (el) { io ? io.observe(el) : el.classList.add('in'); });
+    })();
+  </script>
 </body>
 </html>
