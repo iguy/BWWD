@@ -5,9 +5,19 @@ import Layout from '../layouts/Layout.astro';
 import podcast from '../data/podcast.json';
 import featured from '../data/featured.json';
 import Shelf from '../components/Shelf.astro';
+import montaigneData from '../data/montaigne.json';
 import { SECTIONS, getArticles, cardImage, dateLabel, excerpt, paragraphs } from '../lib/sections';
 
 const articles = await getArticles();
+// Montaigne highlight: each essay's chapter number and its one line
+const chapterOf = (t: string) => { const m = t.match(/chapter\s*(\d+)/i); return m ? +m[1] : 99; };
+const mQuotes = montaigneData.quotes as Record<string, { q: string; mark: string }>;
+const essays = articles.filter((a) => a.data.tags.includes('Montaigne') || /montaigne/i.test(a.data.title))
+  .sort((a, b) => chapterOf(a.data.title) - chapterOf(b.data.title))
+  .map((a) => ({ n: chapterOf(a.data.title), href: `/${a.data.slug}/`, q: mQuotes[a.data.slug]?.q || '', mark: mQuotes[a.data.slug]?.mark || '',
+    t: a.data.title.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\s*[–—-]+\s*/i, '').replace(/^Chapter\s*\d+\s*[–-]\s*/i, '').replace(/\s*\(&?\s*Podcast\)/i, '').replace(/\b([A-Z]{2,})\b/g, (w) => w[0] + w.slice(1).toLowerCase()) }))
+  .filter((e) => e.n < 99 && e.q);
+const markUp = (q: string, mark: string) => (mark ? q.replace(mark, `<mark>${mark}</mark>`) : q);
 const bySection = (folder: string) => articles.filter((a) => a.section.folder === folder);
 const withImg = async (items: typeof articles) => Promise.all(items.map(async (a) => ({ a, img: await cardImage(a) })));
 
@@ -221,6 +231,41 @@ const photos = [
     </section>
 
     <!-- Archive: everything else, as a moving band -->
+    <!-- 07 Montaigne: chapter numbers you can hover or tap; each swaps in a line from that essay -->
+    <section class="ch ch--mont" id="montaigne">
+      <svg class="mont__smoke" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><filter id="mont-smoke" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.012" numOctaves="3" seed="11" /><feDisplacementMap in="SourceGraphic" scale="130" xChannelSelector="R" yChannelSelector="G" /></filter></defs>
+        <g filter="url(#mont-smoke)" fill="none" stroke-linecap="round" opacity=".22">
+          <path d="M-100 220 C 300 80, 520 380, 900 240 S 1400 60, 1700 220" stroke="#a9503d" stroke-width="10" />
+          <path d="M-100 480 C 260 380, 560 640, 960 500 S 1400 360, 1700 500" stroke="#44596f" stroke-width="7" />
+          <path d="M200 620 C 500 520, 800 700, 1200 600" stroke="#c79d4f" stroke-width="5" />
+        </g>
+      </svg>
+      <div class="mont">
+        <div class="mont__head" data-reveal="left">
+          <span class="ch__num">07</span>
+          <h2>montaigne<br />essays</h2>
+          <p>A 16th-century philosopher read chapter by chapter, and asked what he'd make of now.</p>
+          <a class="ch__all" href="/montaigne-essays/">Read the series →</a>
+        </div>
+        <div class="mont__stage">
+          <img class="mont__faces" src="/media/pages/montaigne-essays/montaigne-two-faces.png" alt="" loading="lazy" decoding="async" />
+          <div class="mont__quotes" aria-live="polite">
+            {essays.map((e, i) => (
+              <a class={i === 0 ? 'mont__q is-on' : 'mont__q'} href={e.href} data-i={i}>
+                <span class="mont__t">Chapter {e.n} · {e.t}</span>
+                <span class="mont__line" set:html={`“${markUp(e.q, e.mark)}”`} />
+                <span class="mont__go">Read the essay →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="mont__nums" role="tablist" aria-label="Chapters">
+          {essays.map((e, i) => <button type="button" role="tab" class={i === 0 ? 'mont__n is-on' : 'mont__n'} data-i={i} aria-selected={i === 0 ? 'true' : 'false'} aria-label={`Chapter ${e.n}: ${e.t}`}>{e.n}</button>)}
+        </div>
+      </div>
+    </section>
+
     <section class="ch ch--archive" id="archive">
       <p class="big-count" data-reveal="up"><strong data-total={articles.length}>{articles.length}</strong> essays, reviews, playlists and experiments — and more arriving from the old site.</p>
       <div class="marquee" aria-label="More sections">
@@ -299,6 +344,31 @@ const photos = [
         var reset = function () { show(big.dataset.total); };
         document.querySelector('.marquee').addEventListener('pointerleave', reset);
         document.querySelector('.marquee').addEventListener('focusout', reset);
+      }
+
+      // Montaigne: numbers swap the line; cycles on its own until someone touches it
+      var mont = document.querySelector('.ch--mont');
+      if (mont) {
+        var qs = mont.querySelectorAll('.mont__q'), ns = mont.querySelectorAll('.mont__n'), cur = 0, timer = null;
+        function showQ(i) {
+          if (i === cur) return; cur = i;
+          qs.forEach(function (q, k) { q.classList.toggle('is-on', k === i); });
+          ns.forEach(function (n, k) { n.classList.toggle('is-on', k === i); n.setAttribute('aria-selected', k === i); });
+        }
+        function stop() { clearInterval(timer); timer = null; }
+        ns.forEach(function (n, k) {
+          n.addEventListener('pointerenter', function () { stop(); showQ(k); });
+          n.addEventListener('focus', function () { stop(); showQ(k); });
+          n.addEventListener('click', function () { stop(); if (cur === k) location.href = qs[k].href; else showQ(k); });
+        });
+        if (!reduce) {
+          var mio = new IntersectionObserver(function (es) { es.forEach(function (e) {
+            if (e.isIntersecting && !timer && !mont.dataset.touched) timer = setInterval(function () { showQ((cur + 1) % qs.length); }, 5200);
+            if (!e.isIntersecting) stop();
+          }); }, { threshold: 0.3 });
+          mio.observe(mont);
+          mont.addEventListener('pointerdown', function () { mont.dataset.touched = '1'; stop(); });
+        }
       }
 
       // Topic band: drifts on its own; the mouse steers it (left edge = left, right edge = right), and it can be dragged or swiped
@@ -577,6 +647,33 @@ const photos = [
   @media (max-width: 900px) { .ch--books { grid-template-columns: 1fr; padding-left: 16px; } }
 
   /* Archive band */
+  /* 07 Montaigne */
+  .ch--mont { position: relative; overflow: hidden; padding: 7rem 16px 6rem; border-top: 10px solid var(--ink); }
+  .mont__smoke { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; animation: mont-drift 26s ease-in-out infinite alternate; }
+  @keyframes mont-drift { from { transform: translateX(-3%) scale(1.05); } to { transform: translateX(3%) scale(1.12) rotate(1deg); } }
+  .mont { position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(15rem, .8fr) 2fr; gap: 3rem; align-items: center; }
+  .mont__head h2 { margin: .8rem 0 1rem; font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: .9; letter-spacing: -0.045em; font-weight: 800; }
+  .mont__head p { margin: 0 0 1.4rem; font-size: 1.1rem; max-width: 30ch; }
+  .mont__stage { position: relative; min-height: 340px; display: grid; align-items: center; }
+  .mont__faces { position: absolute; right: -4%; top: 50%; width: 78%; transform: translateY(-50%); mix-blend-mode: multiply; opacity: .6; pointer-events: none; -webkit-mask-image: radial-gradient(ellipse 60% 62% at 55% 50%, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse 60% 62% at 55% 50%, #000 55%, transparent 100%); }
+  .mont__quotes { position: relative; z-index: 1; display: grid; }
+  .mont__q { grid-area: 1 / 1; display: grid; gap: 1rem; max-width: 34ch; color: var(--ink); text-decoration: none; opacity: 0; transform: translateY(18px); transition: opacity .5s, transform .6s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
+  .mont__q.is-on { opacity: 1; transform: none; pointer-events: auto; }
+  .mont__t { font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--red); }
+  .mont__line { font-size: clamp(1.6rem, 3.2vw, 2.6rem); line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; }
+  .mont__line mark { color: inherit; background: linear-gradient(var(--yellow), var(--yellow)) no-repeat 0 85% / 0% .4em; transition: background-size 1s cubic-bezier(.7,0,.2,1) .35s; }
+  .mont__q.is-on .mont__line mark { background-size: 100% .4em; }
+  .mont__go { font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+  .mont__q:hover .mont__go { color: var(--red); }
+  .mont__nums { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; justify-content: space-between; border-top: 4px solid var(--ink); padding-top: 1.2rem; }
+  .mont__n { all: unset; cursor: pointer; font-weight: 800; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 2px var(--ink); transition: color .3s, -webkit-text-stroke-color .3s, transform .4s cubic-bezier(.2,.9,.2,1.3); }
+  .mont__n:nth-child(3n+1).is-on { color: var(--red); -webkit-text-stroke-color: var(--red); }
+  .mont__n:nth-child(3n+2).is-on { color: var(--blue); -webkit-text-stroke-color: var(--blue); }
+  .mont__n:nth-child(3n).is-on { color: var(--yellow); -webkit-text-stroke-color: var(--yellow); }
+  .mont__n.is-on { transform: translateY(-8px); }
+  .mont__n:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  @media (max-width: 860px) { .mont { grid-template-columns: 1fr; } .mont__faces { width: 100%; right: 0; opacity: .35; } .mont__nums { justify-content: flex-start; } }
+  @media (prefers-reduced-motion: reduce) { .mont__smoke { animation: none; } }
   .ch--archive { padding: 8rem 0 2rem; }
   .big-count { max-width: var(--wide); margin: 0 auto 3rem; padding: 0 16px 0 max(16px, 110px); font-size: clamp(1.4rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
   .big-count strong { transition: color 0.25s; }
