@@ -1,0 +1,154 @@
+---
+// Index: everything on the site in one place, searchable and filterable.
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { SECTIONS, getArticles, dateLabel, excerpt } from '../lib/sections';
+import shelfData from '../data/book-shelves.json';
+
+const articles = await getArticles();
+const shelfOf = new Map<string, string>();
+shelfData.shelves.forEach((sh) => sh.books.forEach((b) => shelfOf.set(b, sh.name)));
+const groups = SECTIONS.map((s) => ({ s, items: articles.filter((a) => a.section.folder === s.folder) })).filter((g) => g.items.length);
+const pages = (await getCollection('articles'))
+  .filter((e) => (e.filePath ?? '').includes('/pages/'))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const elsewhere = [
+  { title: 'Photography', href: 'https://photography.betterworldwithdesign.com/', note: 'Photo stories and bookings' },
+  { title: 'Podcast', href: 'https://podcast.betterworldwithdesign.com/', note: 'Episodes with full transcripts' },
+];
+const total = articles.length + pages.length;
+const colours = ['red', 'blue', 'yellow', 'ink'];
+---
+<Layout title="Index — Better World With Design" description="Everything on Better World With Design: every review, essay, playlist and page, searchable in one place.">
+  <header class="hub-head idx-head" slot="masthead">
+    <span class="hub-shape hub-shape--circle" aria-hidden="true"></span>
+    <div class="hub-head__inner">
+      <p class="hub-count"><strong>{total}</strong> pages in all</p>
+      <h1>index</h1>
+      <p class="hub-blurb">Everything on the site in one place. Type to find it.</p>
+    </div>
+  </header>
+
+  <main class="idx">
+    <div class="idx-tools">
+      <label class="idx-search">
+        <span class="sr">Search the site</span>
+        <input type="search" placeholder="Search titles, topics, years…" autocomplete="off" />
+      </label>
+      <div class="idx-chips" role="group" aria-label="Show section">
+        <button type="button" class="chip is-on" data-filter="all">All</button>
+        {groups.map(({ s }, i) => <button type="button" class={`chip chip--${colours[i % colours.length]}`} data-filter={s.folder}>{s.name} <sup>{SECTIONS.length && articles.filter((a) => a.section.folder === s.folder).length}</sup></button>)}
+        <button type="button" class="chip" data-filter="pages">Pages <sup>{pages.length}</sup></button>
+      </div>
+      <p class="idx-status" aria-live="polite"></p>
+    </div>
+
+    {groups.map(({ s, items }, i) => (
+      <section class="idx-group" data-group={s.folder}>
+        <h2><span class={`idx-num idx-num--${colours[i % colours.length]}`}>{String(i + 1).padStart(2, '0')}</span><a href={`/category/${s.wpCat}/`}>{s.name}</a> <sup>{items.length}</sup></h2>
+        <ul>
+          {items.map((a) => {
+            const shelf = shelfOf.get(a.data.slug);
+            const tags = [shelf, ...a.data.tags].filter(Boolean).slice(0, 3) as string[];
+            return (
+              <li data-text={`${a.data.title} ${s.name} ${tags.join(' ')} ${a.data.pubDate.slice(0, 4)} ${excerpt(a, 220)}`.toLowerCase()}>
+                <a href={`/${a.data.slug}/`}>{a.data.title}</a>
+                <span class="idx-meta">{tags.length > 0 && <span class="idx-tags">{tags.join(' · ')}</span>}<time datetime={a.data.pubDate}>{dateLabel(a.data.pubDate)}</time></span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+
+    <section class="idx-group" data-group="pages">
+      <h2><span class="idx-num idx-num--ink">{String(groups.length + 1).padStart(2, '0')}</span>Pages <sup>{pages.length + elsewhere.length}</sup></h2>
+      <ul>
+        {pages.map((p) => (
+          <li data-text={`${p.data.title} page`.toLowerCase()}><a href={p.data.oldPath}>{p.data.title}</a><span class="idx-meta"><span class="idx-tags">Page</span></span></li>
+        ))}
+        {elsewhere.map((e) => (
+          <li data-text={`${e.title} ${e.note}`.toLowerCase()}><a href={e.href}>{e.title} ↗</a><span class="idx-meta"><span class="idx-tags">{e.note}</span></span></li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="idx-empty" hidden>Nothing matches that. Try fewer words.</p>
+  </main>
+
+  <script is:inline>
+    (function () {
+      var input = document.querySelector('.idx-search input'), chips = document.querySelectorAll('.idx-chips .chip');
+      var groups = document.querySelectorAll('.idx-group'), status = document.querySelector('.idx-status'), empty = document.querySelector('.idx-empty');
+      var filter = 'all';
+      function run() {
+        var words = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean), shown = 0;
+        groups.forEach(function (g) {
+          var inGroup = filter === 'all' || g.dataset.group === filter, n = 0;
+          g.querySelectorAll('li').forEach(function (li) {
+            var ok = inGroup && words.every(function (w) { return li.dataset.text.indexOf(w) > -1; });
+            li.hidden = !ok; if (ok) n++;
+          });
+          g.hidden = n === 0; shown += n;
+        });
+        empty.hidden = shown > 0;
+        status.textContent = words.length || filter !== 'all' ? shown + (shown === 1 ? ' result' : ' results') : '';
+        var q = new URLSearchParams(location.search); input.value ? q.set('q', input.value) : q.delete('q');
+        history.replaceState(null, '', location.pathname + (q.toString() ? '?' + q : '') + location.hash);
+      }
+      chips.forEach(function (c) { c.addEventListener('click', function () {
+        filter = c.dataset.filter; chips.forEach(function (x) { x.classList.toggle('is-on', x === c); x.setAttribute('aria-pressed', x === c); }); run();
+      }); });
+      input.addEventListener('input', run);
+      var q = new URLSearchParams(location.search).get('q'); if (q) { input.value = q; run(); }
+      document.addEventListener('keydown', function (e) { if (e.key === '/' && document.activeElement !== input) { e.preventDefault(); input.focus(); } });
+    })();
+  </script>
+</Layout>
+
+<style is:global>
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .hub-head { position: relative; overflow: hidden; color: var(--paper); }
+  .hub-head__inner { position: relative; max-width: var(--wide); margin: 0 auto; padding: 3.2rem 16px 3.6rem; }
+  .hub-head h1 { font-size: clamp(3rem, 10vw, 8rem); line-height: 0.9; letter-spacing: -0.04em; margin: 0.4rem 0 1rem; font-weight: 800; }
+  .hub-count { margin: 0; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #cfc8bb; }
+  .hub-count strong { display: inline-grid; place-items: center; min-width: 2.2rem; height: 2.2rem; padding: 0 0.4rem; margin-right: 0.4rem; background: var(--red); color: var(--paper); font-size: 1rem; letter-spacing: 0; }
+  .hub-blurb { margin: 0; color: #cfc8bb; max-width: 44ch; font-size: 1.1rem; }
+  .hub-shape { position: absolute; pointer-events: none; }
+  .idx-head .hub-shape--circle { width: 300px; height: 300px; border-radius: 50%; background: var(--red); right: 8%; top: 50%; transform: translateY(-50%); box-shadow: -120px 60px 0 -60px var(--yellow); }
+  @media (max-width: 820px) { .idx-head .hub-shape--circle { width: 160px; height: 160px; right: -40px; top: 30px; transform: none; } }
+
+  .idx { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+  .idx-tools { position: sticky; top: 0; z-index: 20; background: var(--paper); padding: 1.4rem 0 1rem; border-bottom: 6px solid var(--ink); }
+  .idx-search input { width: 100%; padding: 1rem 1.1rem; font: inherit; font-size: 1.3rem; font-weight: 600; border: 4px solid var(--ink); background: #fff; color: var(--ink); }
+  .idx-search input:focus { outline: none; box-shadow: 8px 8px 0 var(--yellow); }
+  .idx-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .idx-chips .chip { all: unset; cursor: pointer; display: inline-flex; gap: 0.4rem; align-items: center; padding: 0.45rem 0.8rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); }
+  .idx-chips .chip sup { font-size: 0.6rem; }
+  .idx-chips .chip:hover, .idx-chips .chip:focus-visible { background: var(--ink); color: var(--paper); }
+  .idx-chips .chip.is-on { background: var(--ink); color: var(--paper); }
+  .idx-chips .chip--red.is-on { background: var(--red); border-color: var(--red); }
+  .idx-chips .chip--blue.is-on { background: var(--blue); border-color: var(--blue); }
+  .idx-chips .chip--yellow.is-on { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+  .idx-status { margin: 0.7rem 0 0; min-height: 1em; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); }
+
+  .idx-group { margin-top: 3.2rem; }
+  .idx-group h2 { display: flex; align-items: center; gap: 0.9rem; margin: 0 0 0.6rem; font-size: clamp(1.6rem, 3.4vw, 2.4rem); letter-spacing: -0.03em; text-transform: lowercase; }
+  .idx-group h2 a { color: var(--ink); text-decoration: none; }
+  .idx-group h2 a:hover { color: var(--red); }
+  .idx-group h2 sup { font-size: 0.8rem; letter-spacing: 0; }
+  .idx-num { display: inline-grid; place-items: center; width: 2.6rem; height: 2.6rem; font-size: 0.95rem; color: var(--paper); background: var(--ink); }
+  .idx-num--red { background: var(--red); } .idx-num--blue { background: var(--blue); } .idx-num--yellow { background: var(--yellow); color: var(--ink); }
+  .idx-group ul { list-style: none; margin: 0; padding: 0; border-top: 4px solid var(--ink); }
+  .idx-group li { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; padding: 0.7rem 0.4rem; border-bottom: 1px solid #cfc6b4; }
+  .idx-group li:hover { background: var(--paper-deep); }
+  .idx-group li a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 1.05rem; line-height: 1.25; }
+  .idx-group li a:hover { color: var(--red); }
+  .idx-meta { display: flex; gap: 1rem; align-items: baseline; white-space: nowrap; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .idx-tags { color: var(--blue); max-width: 22rem; overflow: hidden; text-overflow: ellipsis; }
+  .idx-empty { margin: 3rem 0; font-size: 1.3rem; font-weight: 600; }
+  @media (max-width: 700px) {
+    .idx-group li { grid-template-columns: 1fr; gap: 0.3rem; }
+    .idx-meta { white-space: normal; flex-wrap: wrap; }
+  }
+</style>

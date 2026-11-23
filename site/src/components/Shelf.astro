@@ -3,18 +3,35 @@
 import type { Article } from '../lib/sections';
 interface Props { items: { a: Article; img: { src: string } }[]; colours?: string[]; height?: string }
 const { items, colours = ['red', 'ink', 'yellow', 'blue', 'paper', 'red', 'blue', 'ink', 'yellow'], height } = Astro.props;
-const clean = (t: string) => t.replace(/[‘’]/g, "'").replace(/[—–]+/g, ' – ').replace(/^(BOOK REVIEW|Book Review|MY TAKE)\s*[–:-]\s*/i, '');
+// Spine text: the short title, with author / series as a small second line
+function spine(raw: string): { main: string; sub: string } {
+  let t = raw.replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[—–]+/g, ' – ').replace(/\s+/g, ' ').trim();
+  let sub = /^Book Club Review/i.test(t) ? 'Book club' : '';
+  t = t.replace(/^(BOOK REVIEW|Book Review|MY TAKE|Book Club Review|Summary of( the book)?|Deep Dive of)\s*[–:-]?\s*/i, '').replace(/\s+Deep Dive$/i, '').replace(/^OF\s/, 'Of ');
+  const mon = t.match(/^Montaigne\s*–\s*chapter\s*(\d+)\s*–\s*(.*)$/i);
+  if (mon) { t = mon[2].replace(/^OF\s/, 'Of '); sub = `Montaigne · Ch ${mon[1]}`; }
+  const vfm = t.match(/^Voices from the Margins:\s*(.*)$/i);
+  if (vfm) { t = vfm[1]; sub = 'Voices from the Margins'; }
+  t = t.replace(/\s*\((?:audiobook[^)]*|& podcast)\)/gi, '').replace(/"/g, '');
+  const head = t.split(/:\s| – /)[0].trim();
+  if (head.length >= 4) t = head;
+  const by = t.match(/^(.*?)\s+by\s+(.+)$/i);
+  if (by && by[1].length >= 3) { t = by[1]; sub = sub || by[2].replace(/'s$/, ''); }
+  t = t.replace(/\b[A-Z]{3,}\b/g, (w) => w[0] + w.slice(1).toLowerCase()); // SHOUTED words -> Title case
+  if (t.length > 34) t = t.slice(0, 32).replace(/\s+\S*$/, '') + '…';
+  return { main: t.replace(/\s*–\s*$/, ''), sub };
+}
 ---
 <ul class="shelf" data-reveal="up" style={height ? `--shelf-h:${height}` : undefined}>
-  {items.map(({ a, img }, i) => (
-    <li class={`spine spine--${colours[i % colours.length]}`} style={`--h:${74 + ((i * 37) % 26)}%; --w:${Math.min(96, 46 + Math.round(clean(a.data.title).length * 0.9))}px; --d:${i}`}>
-      <a href={`/${a.data.slug}/`}>
-        <span class="spine__title">{clean(a.data.title)}</span>
+  {items.map(({ a, img }, i) => { const sp = spine(a.data.title); return (
+    <li class={`spine spine--${colours[i % colours.length]}`} style={`--h:${74 + ((i * 37) % 26)}%; --w:${Math.min(84, 44 + Math.round(sp.main.length * 0.95) + (sp.sub ? 14 : 0))}px; --d:${i}`}>
+      <a href={`/${a.data.slug}/`} title={a.data.title}>
+        <span class="spine__title">{sp.main}{sp.sub && <small>{sp.sub}</small>}</span>
         <span class="spine__year">{a.data.pubDate.slice(0, 4)}</span>
         {img.src && <img class="spine__cover" src={img.src} alt="" loading="lazy" decoding="async" />}
       </a>
     </li>
-  ))}
+  ); })}
 </ul>
 
 <style is:global>
@@ -27,7 +44,8 @@ const clean = (t: string) => t.replace(/[‘’]/g, "'").replace(/[—–]+/g, '
   .spine--yellow a { background: var(--yellow); color: var(--ink); }
   .spine--blue a { background: var(--blue); color: var(--paper); }
   .spine--paper a { background: var(--paper-deep); color: var(--ink); }
-  .spine__title { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700; font-size: 0.92rem; line-height: 1.1; letter-spacing: 0.01em; max-height: calc(100% - 3rem); overflow: hidden; }
+  .spine__title { writing-mode: vertical-rl; transform: rotate(180deg); font-weight: 700; font-size: 1rem; line-height: 1.1; letter-spacing: 0.01em; max-height: calc(100% - 3rem); overflow: hidden; }
+  .spine__title small { display: block; margin-left: 0.3rem; font-size: 0.66rem; font-weight: 500; opacity: .85; letter-spacing: 0.02em; }
   .spine__year { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; }
   .spine__cover { position: absolute; left: 50%; bottom: 100%; width: 170px; max-width: none; aspect-ratio: 3 / 4; object-fit: cover; border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--red); transform: translate(-50%, 30px) rotate(-4deg) scale(.6); opacity: 0; pointer-events: none; transition: opacity .25s, transform .35s cubic-bezier(.2,.9,.2,1.2); z-index: 5; }
   .spine:hover, .spine:focus-within { transform: translateY(-34px); z-index: 4; transition-delay: 0s; }

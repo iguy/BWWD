@@ -13,5 +13,5 @@
 /my-account/ / 301
 /articles-timeline/ / 301
 /links/ / 301
-/links/sitemap/ /sitemap-index.xml 301
+/links/sitemap/ /sitemap/ 301
 /links/design-system/ / 301
