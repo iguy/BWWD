@@ -2,7 +2,7 @@
 // Every article keeps its WordPress URL: /<slug>/
 import Layout from '../layouts/Layout.astro';
 import { getArticles, mediaUrl, absolute, dateLabel, type Article } from '../lib/sections';
-import { cleanHtml } from '../lib/clean';
+import { cleanHtml, takeArt } from '../lib/clean';
 
 export async function getStaticPaths() {
   const articles = await getArticles();
@@ -23,14 +23,18 @@ const section = article.section;
 const gallery = section.look === 'gallery';
 const sleeve = section.look === 'sleeve';
 const coverPath = mediaUrl(article.data.cover, section);
-const html = cleanHtml(article.body ?? '', section, {
+const cleaned = cleanHtml(article.body ?? '', section, {
   title,
   plates: gallery,
   lede: sleeve,
   cover: (gallery || sleeve) && coverPath ? coverPath : undefined, // header shows it, so drop it from the body
 });
+// Art & Design: the artist's own work goes in the hero instead of the generated thumbnail
+const { html, art } = gallery ? takeArt(cleaned) : { html: cleaned, art: undefined };
+const heroSrc = art?.src || coverPath;
+const heroAlt = art ? art.alt || art.caption || title : article.data.coverAlt || title;
 const articleClass = ['article', gallery && 'article--gallery', sleeve && 'article--sleeve'].filter(Boolean).join(' ');
-const cover = absolute(coverPath);
+const cover = absolute(heroSrc);
 const hub = `/category/${section.wpCat}/`;
 
 const jsonLd = {
@@ -48,38 +52,50 @@ const jsonLd = {
 ---
 <Layout title={`${title} — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
   {gallery ? (
-    <header class="gallery-head" slot="masthead">
-      <div class="gallery-head__text">
-        <a class="back" href={hub}>← {section.name}</a>
-        <h1>{title}</h1>
-        <p class="meta">Gary Crossey · {dateLabel(pubDate)}</p>
+    <header class="hero hero--gallery" slot="masthead">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <a class="tag-block" href={hub}>{section.name}</a>
+          <h1>{title}</h1>
+          <p class="meta">Gary Crossey <b></b> {dateLabel(pubDate)}</p>
+        </div>
+        {heroSrc && (
+          <figure class="hero__art">
+            <span class="shape shape--circle" aria-hidden="true"></span>
+            <span class="shape shape--square" aria-hidden="true"></span>
+            <img src={heroSrc} alt={heroAlt} />
+            {art?.caption && <figcaption>{art.caption}</figcaption>}
+          </figure>
+        )}
       </div>
-      {coverPath && (
-        <figure class="gallery-head__plate">
-          <img src={coverPath} alt={article.data.coverAlt || title} />
-          <figcaption>Frontispiece</figcaption>
-        </figure>
-      )}
     </header>
   ) : sleeve ? (
-    <header class="sleeve-head" slot="masthead">
-      <div class="sleeve-head__art" aria-hidden={coverPath ? undefined : 'true'}>
-        <span class="sleeve-head__disc"><span /></span>
-        {coverPath
-          ? <img class="sleeve-head__sleeve" src={coverPath} alt={article.data.coverAlt || title} />
-          : <span class="sleeve-head__sleeve sleeve-head__sleeve--blank">{title}</span>}
-      </div>
-      <div class="sleeve-head__text">
-        <a class="back" href={hub}>← {section.name}</a>
-        <h1>{title}</h1>
-        <p class="meta">Liner notes by Gary Crossey · {dateLabel(pubDate)}</p>
+    <header class="hero hero--sleeve" slot="masthead">
+      <div class="hero__inner">
+        <div class="sleeve" aria-hidden={coverPath ? undefined : 'true'}>
+          <span class="sleeve__disc"><span /></span>
+          {coverPath
+            ? <img class="sleeve__cover" src={coverPath} alt={article.data.coverAlt || title} />
+            : <span class="sleeve__cover sleeve__cover--blank">{title}</span>}
+        </div>
+        <div class="hero__text">
+          <a class="tag-block" href={hub}>{section.name}</a>
+          <h1>{title}</h1>
+          <p class="meta">Liner notes <b></b> Gary Crossey <b></b> {dateLabel(pubDate)}</p>
+        </div>
       </div>
     </header>
   ) : (
-    <header class="article-head" slot="masthead">
-      <a class="back" href={hub}>← {section.name}</a>
-      <h1>{title}</h1>
-      <p class="meta">Gary Crossey · {dateLabel(pubDate)}</p>
+    <header class="hero hero--plain" slot="masthead">
+      <span class="shape shape--sun" aria-hidden="true"></span>
+      <span class="shape shape--bar" aria-hidden="true"></span>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <a class="tag-block" href={hub}>{section.name}</a>
+          <h1>{title}</h1>
+          <p class="meta">Gary Crossey <b></b> {dateLabel(pubDate)}</p>
+        </div>
+      </div>
     </header>
   )}
 
@@ -97,204 +113,193 @@ const jsonLd = {
   </main>
 </Layout>
 
-<style is:global>
-  .article-head { max-width: var(--text); margin: 0 auto; padding: 2.5rem 16px 2.75rem; }
-  .article-head .back { color: #c8813a; text-decoration: none; font-size: 0.95rem; }
-  .article-head .back:hover { color: #efe6d6; }
-  .article-head h1 { font-size: clamp(2rem, 5vw, 3.1rem); margin: 0.6rem 0 0.8rem; color: #efe6d6; }
-  .article-head .meta { margin: 0; color: #b9ae98; font-size: 0.95rem; }
 
+<style is:global>
+  /* ================= Heroes ================= */
+  .hero { position: relative; overflow: hidden; }
+  .hero__inner { position: relative; max-width: var(--wide); margin: 0 auto; padding: 3.4rem 16px 3.8rem; }
+  .hero h1 { font-size: clamp(2.3rem, 5.6vw, 4.6rem); line-height: 0.98; letter-spacing: -0.03em; font-weight: 700; margin: 1.1rem 0 1.3rem; }
+  .hero .meta { margin: 0; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
+  .hero .meta b { display: inline-block; width: 8px; height: 8px; background: var(--red); border-radius: 50%; }
+  .shape { position: absolute; display: block; pointer-events: none; }
+
+  /* Plain: black ground, a yellow sun rising off the edge, a blue bar */
+  .hero--plain { color: var(--paper); }
+  .hero--plain .hero__text { max-width: 820px; }
+  .hero--plain .meta { color: #cfc8bb; }
+  .hero--plain .shape--sun { width: 420px; height: 420px; border-radius: 50%; background: var(--yellow); right: -140px; top: -120px; }
+  .hero--plain .shape--bar { width: 34%; height: 18px; background: var(--blue); right: 0; bottom: 0; }
+  @media (max-width: 820px) { .hero--plain .shape--sun { width: 220px; height: 220px; right: -90px; top: -60px; } }
+
+  /* Gallery: paper ground (a printed page), art framed in black with primary shapes */
+  .hero--gallery { background: var(--paper); color: var(--ink); border-bottom: 10px solid var(--ink); }
+  .hero--gallery .hero__inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 4rem; align-items: center; }
+  .hero--gallery h1 { font-size: clamp(2.4rem, 5.4vw, 4.8rem); }
+  .hero--gallery .meta { color: var(--ink-soft); }
+  .hero__art { position: relative; margin: 0; }
+  .hero__art img { position: relative; z-index: 1; width: 100%; max-height: 560px; object-fit: contain; background: var(--paper-deep); border: 10px solid var(--ink); }
+  .hero__art figcaption { position: relative; z-index: 1; margin-top: 0.7rem; font-size: 0.82rem; font-weight: 500; }
+  .hero__art .shape--circle { width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--red); left: -16%; top: -12%; z-index: 0; }
+  .hero__art .shape--square { width: 34%; aspect-ratio: 1; background: var(--yellow); right: -7%; bottom: -9%; z-index: 0; }
+  @media (max-width: 820px) {
+    .hero--gallery .hero__inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero__art { margin: 0 8% 0 10%; }
+  }
+
+  /* Sleeve: blue ground, black disc, the cover as the sleeve */
+  .hero--sleeve { background: var(--blue); color: var(--paper); border-bottom: 10px solid var(--yellow); }
+  .hero--sleeve .hero__inner { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 4rem; align-items: center; }
+  .hero--sleeve .meta { color: #d9e2f2; }
+  .hero--sleeve .meta b { background: var(--yellow); }
+  .sleeve { position: relative; width: min(100%, 440px); aspect-ratio: 1; margin-right: 26%; }
+  .sleeve__disc {
+    position: absolute; inset: 3% -32% 3% 32%; border-radius: 50%;
+    background:
+      radial-gradient(circle, var(--red) 0 16%, var(--ink) 16.5% 18%, transparent 18.5%),
+      repeating-radial-gradient(circle, #0d0d0d 0 1.5px, #262626 1.7px 3.2px);
+    animation: spin 8s linear infinite paused;
+  }
+  .sleeve__disc span { position: absolute; inset: 47.6%; border-radius: 50%; background: var(--paper); }
+  .sleeve:hover .sleeve__disc { animation-play-state: running; }
+  @media (prefers-reduced-motion: reduce) { .sleeve__disc { animation: none; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .sleeve__cover { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; border: 6px solid var(--ink); }
+  .sleeve__cover--blank { display: flex; align-items: flex-end; padding: 1.5rem; background: var(--yellow); color: var(--ink); font-weight: 800; font-size: 2rem; line-height: 1; }
+  @media (max-width: 820px) {
+    .hero--sleeve .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sleeve { width: 68%; }
+  }
+
+  /* ================= Article body ================= */
   main { padding: 0 16px; }
-  .article { max-width: var(--text); margin: 3rem auto 0; overflow-wrap: break-word; }
+  .article { max-width: var(--text); margin: 3.4rem auto 0; overflow-wrap: break-word; }
   .article > :first-child { margin-top: 0; }
-  .article h2 { font-size: 1.75rem; margin: 2.6rem 0 0.8rem; }
-  .article h3 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
-  .article h4, .article h5 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+  .article h2 { font-size: 2rem; margin: 3.4rem 0 1rem; }
+  .article h3 { font-size: 1.45rem; margin: 2.6rem 0 0.7rem; }
+  .article h4, .article h5 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
   .article h2 strong, .article h3 strong { font-weight: inherit; }
-  .article blockquote:not(.instagram-media) { margin: 1.8rem 0; padding: 0.2rem 0 0.2rem 1.25rem; border-left: 3px solid var(--brass); font-style: italic; }
+  .article strong { font-weight: 600; }
   .article ul, .article ol { padding-left: 1.3rem; }
-  .article hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .article hr, .article .wp-block-separator { border: 0; height: 8px; background: var(--ink); margin: 3rem 0; }
   .article table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-  .article th, .article td { border-bottom: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .article th, .article td { border-bottom: 2px solid var(--ink); padding: 0.5rem; text-align: left; vertical-align: top; }
+  .article blockquote:not(.instagram-media) { margin: 2.6rem 0; padding: 0.2rem 0 0.2rem 1.5rem; border-left: 12px solid var(--yellow); font-size: 1.4rem; line-height: 1.4; font-weight: 500; }
+
+  /* Section headings: numbered in a primary-colour square */
+  .article { counter-reset: sec; }
+  .article > h2 { counter-increment: sec; display: grid; grid-template-columns: auto 1fr; gap: 0.9rem; align-items: start; }
+  .article > h2::before {
+    content: counter(sec, decimal-leading-zero); display: grid; place-items: center; width: 2.4rem; height: 2.4rem;
+    font-size: 0.95rem; font-weight: 700; letter-spacing: 0; background: var(--red); color: var(--paper); margin-top: 0.1rem;
+  }
+  .article > h2:nth-of-type(3n+2)::before { background: var(--yellow); color: var(--ink); }
+  .article > h2:nth-of-type(3n)::before { background: var(--blue); }
+
+  /* Opening paragraph: a big red letter, Bayer-style */
+  .article p.lede { font-size: 1.32rem; line-height: 1.55; font-weight: 500; }
+  .article p.lede::first-letter { float: left; font-weight: 800; font-size: 5.4rem; line-height: 0.78; padding: 0.4rem 0.7rem 0 0; color: var(--red); }
 
   /* WordPress blocks */
-  .article figure { margin: 2rem 0; }
+  .article figure { margin: 2.4rem 0; }
   .article .wp-block-image img, .article figure img { margin: 0 auto; }
   .article .aligncenter { margin-left: auto; margin-right: auto; text-align: center; }
   .article .alignleft { float: left; margin: 0.3rem 1.5rem 1rem 0; max-width: 50%; }
   .article .alignright { float: right; margin: 0.3rem 0 1rem 1.5rem; max-width: 50%; }
-  .article figcaption, .article .wp-element-caption { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.5rem; text-align: center; }
+  .article figcaption, .article .wp-element-caption { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.6rem; text-align: left; letter-spacing: 0.02em; }
   .article .has-text-align-center { text-align: center; }
   .article .has-large-font-size { font-size: 1.4rem; }
-  .article .has-background { background: var(--paper-deep); padding: 1.1rem 1.3rem; }
-  .article .wp-block-columns { display: flex; gap: 1.5rem; margin: 2rem 0; }
+  .article .has-background { background: var(--paper-deep); padding: 1.2rem 1.4rem; border-left: 8px solid var(--blue); }
+  .article .wp-block-columns { display: flex; gap: 1.5rem; margin: 2.4rem 0; }
   .article .wp-block-column { flex: 1 1 0; min-width: 0; }
   .article .wp-block-column > :first-child { margin-top: 0; }
-  .article .wp-block-group { margin: 2rem 0; }
+  .article .wp-block-group { margin: 2.4rem 0; }
   @media (max-width: 720px) {
     .article .wp-block-columns { flex-direction: column; gap: 0; }
     .article .alignleft, .article .alignright { float: none; max-width: 100%; margin: 1.5rem auto; }
   }
-  .article .wp-block-cover { position: relative; margin: 2rem 0; min-height: 280px; display: grid; place-items: center; overflow: hidden; }
+  .article .wp-block-cover { position: relative; margin: 2.4rem 0; min-height: 280px; display: grid; place-items: center; overflow: hidden; border: 8px solid var(--ink); }
   .article .wp-block-cover__image-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .article .wp-block-cover__background { position: absolute; inset: 0; background: #1a1714; opacity: 0.45; }
+  .article .wp-block-cover__background { position: absolute; inset: 0; background: var(--ink); opacity: 0.4; }
   .article .wp-block-cover__inner-container { position: relative; padding: 2rem 1.5rem; color: #fff; text-align: center; }
   .article .wp-block-cover__inner-container * { color: #fff; }
 
   /* Embeds */
   .article iframe { max-width: 100%; border: 0; }
-  .article .wp-block-embed { margin: 2rem 0; }
+  .article .wp-block-embed { margin: 2.4rem 0; }
   .article .wp-has-aspect-ratio .wp-block-embed__wrapper { position: relative; aspect-ratio: 16 / 9; }
   .article .wp-embed-aspect-4-3 .wp-block-embed__wrapper { aspect-ratio: 4 / 3; }
   .article .wp-has-aspect-ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .article .instagram-media { margin: 2rem auto !important; }
+  .article .instagram-media { margin: 2.4rem auto !important; }
 
-  /* Buttons, separators, Divi counters */
-  .article .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.8rem 0; }
-  .article .wp-block-button__link { display: inline-block; background: #1a1714; color: #efe6d6; padding: 0.55rem 1.2rem; text-decoration: none; font-size: 0.95rem; }
-  .article .wp-block-button__link:hover { background: #c8813a; color: #1a1714; }
-  .article .wp-block-separator { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-  .article h3.title { font-size: 1.1rem; border-left: 3px solid #c8813a; padding-left: 0.8rem; }
+  /* Buttons, Divi counter titles */
+  .article .wp-block-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 2rem 0; }
+  .article .wp-block-button__link { display: inline-block; background: var(--ink); color: var(--paper); padding: 0.7rem 1.3rem; text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .article .wp-block-button__link:hover { background: var(--red); color: var(--paper); }
+  .article h3.title { font-size: 1.1rem; border-left: 8px solid var(--red); padding-left: 0.8rem; }
 
-  /* Transcript toggles (were Divi accordions) */
-  .article details.toggle { border: 1px solid var(--rule); margin: 2rem 0; background: var(--paper-deep); }
-  .article details.toggle summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
-  .article details.toggle > div { padding: 0 1.2rem 1.2rem; }
-
-  /* ---------- Gallery look (Art & Design): a catalogue, not a blog ---------- */
-  .gallery-head {
-    max-width: var(--wide); margin: 0 auto; padding: 3rem 16px 3.5rem;
-    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 3.5rem; align-items: center;
-  }
-  .gallery-head .back { color: #c8813a; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; }
-  .gallery-head .back:hover { color: #efe6d6; }
-  .gallery-head h1 {
-    font-size: clamp(2.3rem, 5.4vw, 4.4rem); line-height: 1.02; letter-spacing: -0.025em;
-    margin: 1rem 0 1.2rem; color: #efe6d6; font-weight: 600; font-variation-settings: 'opsz' 144;
-  }
-  .gallery-head .meta { margin: 0; color: #b9ae98; font-size: 0.95rem; font-style: italic; }
-  .gallery-head__plate { margin: 0; background: #efe6d6; padding: 14px 14px 10px; box-shadow: 0 30px 60px -25px rgba(0,0,0,.7); transform: rotate(1.2deg); }
-  .gallery-head__plate img { width: 100%; max-height: 520px; object-fit: contain; background: #e2d8c1; }
-  .gallery-head__plate figcaption { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: #6d6253; text-align: center; padding-top: 0.6rem; }
-  @media (max-width: 820px) {
-    .gallery-head { grid-template-columns: 1fr; gap: 2rem; }
-    .gallery-head__plate { transform: none; }
-  }
-
-  .article--gallery { counter-reset: plate section; max-width: 700px; }
-  .article--gallery p.lede { font-size: 1.32rem; line-height: 1.55; }
-  .article--gallery p.lede::first-letter {
-    float: left; font-family: var(--font-display); font-weight: 800; font-size: 4.6rem; line-height: 0.82;
-    padding: 0.35rem 0.6rem 0 0; color: var(--brass);
-  }
-  .article--gallery h2, .article--gallery h3 { counter-increment: section; }
-  .article--gallery h2::before, .article--gallery h3::before {
-    content: counter(section, upper-roman); display: block; font-family: var(--font-body); font-weight: 400;
-    font-size: 0.78rem; letter-spacing: 0.3em; color: var(--brass); margin-bottom: 0.5rem;
-  }
-  .article--gallery h2 { font-size: 2.1rem; margin-top: 3.8rem; }
-  .article--gallery h3 { font-size: 1.6rem; margin-top: 3.2rem; }
-  .article--gallery h2 strong, .article--gallery h3 strong { font-weight: 600; }
-
-  /* Plates: each artwork matted on paper, numbered like a catalogue, wider than the text */
-  .article--gallery figure.plate {
-    counter-increment: plate;
-    margin: 3.2rem calc(50% - min(50vw - 16px, 470px));
-    background: var(--paper-deep); padding: clamp(14px, 3vw, 34px); text-align: center;
-    border: 1px solid var(--rule);
-  }
-  .article--gallery figure.plate img { display: inline-block; width: auto; max-width: 100%; max-height: 78vh; box-shadow: 0 18px 40px -22px rgba(28,43,51,.55); }
-  .article--gallery figure.plate a { display: inline-block; }
-  .article--gallery figure.plate figcaption { margin-top: 1rem; font-size: 0.9rem; font-style: italic; color: var(--ink-soft); text-align: center; }
-  .article--gallery figure.plate figcaption::before {
-    content: 'Plate ' counter(plate, upper-roman); display: block; font-style: normal;
-    font-size: 0.7rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.25rem;
-  }
-  /* Plates side by side in WordPress columns */
-  .article--gallery .wp-block-columns { margin: 3.2rem calc(50% - min(50vw - 16px, 470px)); align-items: stretch; }
-  .article--gallery .wp-block-column figure.plate { margin: 0; height: 100%; }
-  .article--gallery .wp-block-column > p:first-child:only-child { margin: 0; }
-  /* Embedded video/audio sit on the wider measure too */
-  .article--gallery .wp-block-embed, .article--gallery > iframe, .article--gallery > p > iframe:only-child {
-    margin-left: calc(50% - min(50vw - 16px, 470px)); margin-right: calc(50% - min(50vw - 16px, 470px));
-  }
-  .article--gallery > p > iframe:only-child { width: min(100vw - 32px, 940px); max-width: none; }
-  .article--gallery blockquote:not(.instagram-media) {
-    font-family: var(--font-display); font-size: 1.6rem; line-height: 1.3; font-style: italic;
-    border: 0; padding: 0; margin: 3rem 0; color: var(--ink);
-  }
-  .article--gallery blockquote:not(.instagram-media)::before { content: '“'; display: block; font-size: 4rem; line-height: 0.6; color: var(--brass); }
-
-  /* ---------- Sleeve look (Music): record sleeve + liner notes ---------- */
-  .sleeve-head {
-    max-width: var(--wide); margin: 0 auto; padding: 3.2rem 16px 3.6rem;
-    display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 4rem; align-items: center;
-  }
-  .sleeve-head__art { position: relative; width: min(100%, 460px); aspect-ratio: 1; justify-self: center; margin-right: 22%; }
-  .sleeve-head__disc {
-    position: absolute; inset: 4% -30% 4% 30%; border-radius: 50%;
-    background:
-      radial-gradient(circle, #c8813a 0 15%, #1a1714 15.5% 17%, transparent 17.5%),
-      conic-gradient(from 30deg, rgba(255,255,255,.0), rgba(255,255,255,.09), rgba(255,255,255,0) 18%, rgba(255,255,255,0) 50%, rgba(255,255,255,.07), rgba(255,255,255,0) 68%),
-      repeating-radial-gradient(circle, #161210 0 1.4px, #2e2722 1.6px 3px);
-    box-shadow: 0 20px 50px -18px rgba(0,0,0,.8);
-    animation: spin 9s linear infinite paused;
-  }
-  .sleeve-head__disc span { position: absolute; inset: 47.5%; border-radius: 50%; background: #1a1714; }
-  .sleeve-head__art:hover .sleeve-head__disc { animation-play-state: running; }
-  @media (prefers-reduced-motion: reduce) { .sleeve-head__disc { animation: none; } }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .sleeve-head__sleeve {
-    position: relative; width: 100%; height: 100%; object-fit: cover; display: block;
-    box-shadow: 0 30px 60px -25px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,255,255,.06);
-  }
-  .sleeve-head__sleeve--blank {
-    display: flex; align-items: flex-end; padding: 1.5rem; background: #c8813a; color: #1a1714;
-    font-family: var(--font-display); font-weight: 800; font-size: 2rem; line-height: 1;
-  }
-  .sleeve-head .back { color: #c8813a; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; }
-  .sleeve-head .back:hover { color: #efe6d6; }
-  .sleeve-head h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.02; letter-spacing: -0.02em; margin: 1rem 0 1.2rem; color: #efe6d6; }
-  .sleeve-head .meta { margin: 0; color: #b9ae98; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; }
-  @media (max-width: 820px) {
-    .sleeve-head { grid-template-columns: 1fr; gap: 2.2rem; }
-    .sleeve-head__art { width: 72%; margin-right: 18%; }
-  }
-
-  .article--sleeve { counter-reset: track; max-width: 680px; }
-  .article--sleeve p.lede { font-family: var(--font-display); font-size: 1.45rem; line-height: 1.45; font-weight: 400; }
-  .article--sleeve h2, .article--sleeve h3 { counter-increment: track; position: relative; }
-  .article--sleeve h2::before, .article--sleeve h3::before {
-    content: 'Track ' counter(track, decimal-leading-zero); display: block; font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.72rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.45rem;
-  }
-  .article--sleeve h2 { font-size: 2rem; margin-top: 3.4rem; }
-  .article--sleeve h3 { font-size: 1.5rem; margin-top: 2.8rem; }
-  /* Players and videos: a dark listening band, wider than the text */
+  /* Wider measure used by art, players and works */
+  .article--gallery figure.plate,
+  .article--gallery .works,
+  .article--gallery .wp-block-columns,
+  .article--gallery .wp-block-embed,
+  .article--gallery > p:has(> iframe),
   .article--sleeve .wp-block-embed,
-  .article--sleeve p:has(> iframe),
-  .article--sleeve > iframe {
-    margin: 2.6rem calc(50% - min(50vw - 16px, 450px)); padding: clamp(10px, 2.4vw, 22px);
-    background: #1a1714; border-top: 3px solid #c8813a;
+  .article--sleeve > p:has(> iframe),
+  .article--sleeve figure.wp-block-image,
+  .article--sleeve .wp-block-columns {
+    margin-left: calc(50% - min(50vw - 16px, 500px)); margin-right: calc(50% - min(50vw - 16px, 500px));
   }
-  .article--sleeve p:has(> iframe) iframe, .article--sleeve > iframe { display: block; width: 100%; }
-  /* Images: square-ish sleeves on the wider measure */
-  .article--sleeve figure.wp-block-image { margin: 2.6rem calc(50% - min(50vw - 16px, 450px)); text-align: center; }
-  .article--sleeve figure.wp-block-image img { display: inline-block; width: auto; max-width: 100%; max-height: 80vh; box-shadow: 0 18px 40px -22px rgba(0,0,0,.6); }
-  .article--sleeve .wp-block-columns { margin: 2.6rem calc(50% - min(50vw - 16px, 450px)); }
+  .article > p:has(> iframe) iframe { display: block; width: 100%; }
+
+  /* ================= Gallery (Art & Design) ================= */
+  .article--gallery { counter-reset: sec plate; }
+  .article--gallery figure.plate { counter-increment: plate; margin-top: 3rem; margin-bottom: 3rem; }
+  .article--gallery figure.plate img, .article--gallery figure.plate a { display: block; }
+  .article--gallery figure.plate img { width: 100%; height: auto; max-height: 82vh; object-fit: contain; background: var(--paper-deep); border-top: 10px solid var(--ink); }
+  .article--gallery figure.plate figcaption { display: flex; gap: 0.9rem; align-items: baseline; margin-top: 0.7rem; font-size: 0.9rem; color: var(--ink); }
+  .article--gallery figure.plate figcaption::before {
+    content: 'Plate ' counter(plate, decimal-leading-zero); flex: none; padding: 0.15rem 0.5rem; background: var(--red); color: var(--paper);
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .article--gallery .wp-block-column figure.plate { margin: 0; }
+
+  /* Works: the art leads the piece */
+  .article--gallery .works { display: grid; gap: 1.6rem; margin-top: 0; margin-bottom: 3.6rem; }
+  .article--gallery .works--2 { grid-template-columns: 1fr 1fr; }
+  .article--gallery .works--3 { grid-template-columns: repeat(3, 1fr); }
+  .article--gallery .works figure.plate { margin: 0; }
+  .article--gallery .works--2 figure.plate img, .article--gallery .works--3 figure.plate img { aspect-ratio: 1; object-fit: cover; }
+  @media (max-width: 720px) { .article--gallery .works--2, .article--gallery .works--3 { grid-template-columns: 1fr; } }
+
+  /* Players: a black band with a label */
+  .article--gallery .wp-block-embed, .article--gallery > p:has(> iframe),
+  .article--sleeve .wp-block-embed, .article--sleeve > p:has(> iframe) {
+    position: relative; background: var(--ink); padding: 2.4rem clamp(10px, 2.4vw, 22px) clamp(10px, 2.4vw, 22px);
+  }
+  .article--gallery .wp-block-embed::before, .article--gallery > p:has(> iframe)::before,
+  .article--sleeve .wp-block-embed::before, .article--sleeve > p:has(> iframe)::before {
+    content: 'Listen / Watch'; position: absolute; top: 0.7rem; left: clamp(10px, 2.4vw, 22px);
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow);
+  }
+
+  /* ================= Sleeve (Music) ================= */
+  .article--sleeve { counter-reset: sec li; }
+  .article--sleeve > h2::before { content: 'A' counter(sec); }
+  .article--sleeve figure.wp-block-image { text-align: center; }
+  .article--sleeve figure.wp-block-image img { display: inline-block; width: auto; max-width: 100%; max-height: 80vh; border: 6px solid var(--ink); }
   .article--sleeve .wp-block-column figure.wp-block-image { margin: 0 0 1rem; }
-  .article--sleeve ol, .article--sleeve ul { padding-left: 0; list-style: none; counter-reset: li; }
-  .article--sleeve ol > li { counter-increment: li; padding: 0.55rem 0 0.55rem 2.6rem; border-bottom: 1px solid var(--rule); position: relative; }
-  .article--sleeve ol > li::before { content: counter(li, decimal-leading-zero); position: absolute; left: 0; font-family: ui-monospace, Menlo, monospace; font-size: 0.8rem; color: var(--brass); top: 0.85rem; }
-  .article--sleeve ul > li { padding: 0.4rem 0 0.4rem 1.4rem; position: relative; }
-  .article--sleeve ul > li::before { content: '●'; position: absolute; left: 0; color: #c8813a; font-size: 0.6rem; top: 0.85rem; }
+  .article--sleeve ol, .article--sleeve ul { padding-left: 0; list-style: none; }
+  .article--sleeve ol > li { counter-increment: li; padding: 0.6rem 0 0.6rem 3rem; border-bottom: 2px solid var(--ink); position: relative; }
+  .article--sleeve ol > li::before { content: counter(li, decimal-leading-zero); position: absolute; left: 0; top: 0.6rem; width: 2rem; text-align: center; font-weight: 700; font-size: 0.85rem; background: var(--blue); color: var(--paper); }
+  .article--sleeve ul > li { padding: 0.35rem 0 0.35rem 1.6rem; position: relative; }
+  .article--sleeve ul > li::before { content: ''; position: absolute; left: 0; top: 0.85rem; width: 10px; height: 10px; border-radius: 50%; background: var(--red); }
 
-  .tags { max-width: var(--text); margin: 2.5rem auto 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; }
-  .tags span { border: 1px solid var(--rule); padding: 0.1rem 0.6rem; color: var(--ink-soft); }
-
-  .pager { max-width: var(--text); margin: 3.5rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; }
-  .pager a { text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; line-height: 1.3; }
-  .pager a:hover { color: var(--brass); }
-  .pager a span { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.2rem; }
+  /* ================= Tags + pager ================= */
+  .tags { max-width: var(--text); margin: 3rem auto 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tags span { border: 2px solid var(--ink); padding: 0.15rem 0.6rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .pager { max-width: var(--text); margin: 4rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 10px solid var(--ink); padding-top: 1.4rem; }
+  .pager a { text-decoration: none; color: var(--ink); font-weight: 700; font-size: 1.15rem; line-height: 1.2; }
+  .pager a:hover { color: var(--red); }
+  .pager a span { display: inline-block; margin-bottom: 0.5rem; padding: 0.15rem 0.5rem; background: var(--ink); color: var(--paper); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; }
   .pager .older { text-align: right; }
 </style>

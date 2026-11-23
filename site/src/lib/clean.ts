@@ -9,6 +9,26 @@ interface Options {
   lede?: boolean; // mark the opening paragraph
 }
 
+export interface Art { src: string; alt: string; caption: string }
+
+// Art & Design: the artist's own work leads, not the generated thumbnail.
+// Returns the first plate (the artwork) and removes it from the body.
+export function takeArt(html: string): { html: string; art?: Art } {
+  const root = parse(html, { comment: false });
+  const fig = root.querySelector('figure.plate');
+  const img = fig?.querySelector('img');
+  if (!fig || !img?.getAttribute('src')) return { html };
+  const art = {
+    src: img.getAttribute('src')!,
+    alt: img.getAttribute('alt') || '',
+    caption: fig.querySelector('figcaption')?.text.trim() || '',
+  };
+  const works = fig.closest('.works');
+  fig.remove();
+  if (works && !works.querySelector('figure')) works.remove();
+  return { html: root.toString(), art };
+}
+
 export function cleanHtml(html: string, section: Section, opts: Options = {}): string {
   const root = parse(html, { comment: false });
 
@@ -82,6 +102,19 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
         const label = alt && !/^image|^\d|\.(jpe?g|png)$/i.test(alt) ? alt : '';
         fig.appendChild(parse(`<figcaption>${label}</figcaption>`));
       }
+    }
+
+    // Art first: plates that trail after all the writing (e.g. after a transcript)
+    // move to a "Works" gallery at the top of the piece.
+    const all = root.querySelectorAll('*');
+    const isText = (el: HTMLElement) =>
+      ['P', 'H2', 'H3', 'H4', 'LI', 'BLOCKQUOTE'].includes(el.tagName) && el.text.trim().length > 40 && !el.closest('figure');
+    let lastText = -1;
+    all.forEach((el, i) => { if (isText(el)) lastText = i; });
+    const trailing = root.querySelectorAll('figure.plate').filter((f) => all.indexOf(f) > lastText);
+    if (trailing.length) {
+      const works = trailing.map((f) => { f.remove(); return f.toString(); }).join('');
+      root.insertAdjacentHTML('afterbegin', `<section class="works works--${Math.min(trailing.length, 3)}">${works}</section>`);
     }
   }
 
