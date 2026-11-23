@@ -8,6 +8,7 @@ import { getArticles, cardImage, mediaUrl, absolute, type Section } from '../lib
 import { cleanHtml } from '../lib/clean';
 import '../styles/article.css';
 import montaigneData from '../data/montaigne.json';
+import metaDescriptions from '../data/meta.json';
 import { paragraphs, excerpt } from '../lib/sections';
 
 function chapterOf(t: string) { const m = t.match(/chapter\s*(\d+)/i); return m ? +m[1] : 99; }
@@ -26,6 +27,21 @@ const html = cleanHtml(entry.body ?? '', PAGES, { title, keepForms: true, lede: 
 const cover = entry.data.cover ? absolute(mediaUrl(entry.data.cover, PAGES)) : undefined;
 
 // Montaigne Essays: the essays themselves, as a shelf
+const meta = (metaDescriptions as Record<string, string>)[slug] || description || undefined;
+const pageUrl = absolute(entry.data.oldPath || `/${slug}/`);
+const pageType = slug === 'about' ? 'AboutPage' : slug === 'contact' ? 'ContactPage' : slug === 'montaigne-essays' ? 'CollectionPage' : 'WebPage';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': pageType,
+  '@id': pageUrl,
+  name: title,
+  description: meta,
+  url: pageUrl,
+  image: cover,
+  inLanguage: 'en',
+  isPartOf: { '@id': absolute('/') + '#site' },
+  ...(slug === 'about' ? { mainEntity: { '@id': absolute('/about/') + '#gary' } } : {}),
+};
 const isMontaigne = slug === 'montaigne-essays';
 const montaigne = isMontaigne
   ? await Promise.all((await getArticles()).filter((a) => a.data.tags.includes('Montaigne') || /montaigne/i.test(a.data.title))
@@ -42,7 +58,7 @@ const quotes = montaigneData.quotes as Record<string, { q: string; mark: string 
 const markUp = (q: string, mark: string) => q.replace(mark, `<mark>${mark}</mark>`);
 const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\s*[–—-]+\s*/i, '').replace(/^Chapter\s*\d+\s*[–-]\s*/i, '').replace(/\s*\(&?\s*Podcast\)/i, '').replace(/\b([A-Z]{2,})\b/g, (w) => w[0] + w.slice(1).toLowerCase());
 ---
-<Layout title={`${title} — Better World With Design`} description={description || undefined} image={cover}>
+<Layout title={`${title} — Better World With Design`} description={meta} image={cover} jsonLd={jsonLd}>
   <header class="hero hero--plain" slot="masthead">
     <span class="shape shape--sun" aria-hidden="true"></span>
     <span class="shape shape--bar" aria-hidden="true"></span>

@@ -21,6 +21,17 @@ const {
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const path = Astro.url.pathname;
+const siteGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'WebSite', '@id': 'https://betterworldwithdesign.com/#site', name: 'Better World With Design', url: 'https://betterworldwithdesign.com/', inLanguage: 'en',
+      publisher: { '@id': 'https://betterworldwithdesign.com/about/#gary' },
+      potentialAction: { '@type': 'SearchAction', target: 'https://betterworldwithdesign.com/sitemap/?q={search_term_string}', 'query-input': 'required name=search_term_string' } },
+    { '@type': 'Person', '@id': 'https://betterworldwithdesign.com/about/#gary', name: 'Gary Crossey', url: 'https://betterworldwithdesign.com/about/',
+      jobTitle: 'Designer, web developer and SEO/AEO specialist',
+      sameAs: ['https://photography.betterworldwithdesign.com/', 'https://podcast.betterworldwithdesign.com/', 'https://aeodecoded.ai/', 'https://www.instagram.com/betterworldwithdesign/', 'https://open.spotify.com/artist/1Pw2y2UrnP0Hhe9ZOszNYu'] },
+  ],
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -39,6 +50,7 @@ const path = Astro.url.pathname;
   <meta property="og:url" content={canonical} />
   {image && <meta property="og:image" content={image} />}
   <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+  <script type="application/ld+json" set:html={JSON.stringify(siteGraph)} />
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

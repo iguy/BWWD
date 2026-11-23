@@ -5,6 +5,7 @@ import { getArticles, mediaUrl, absolute, dateLabel, type Article } from '../lib
 import SeriesBanner from '../components/SeriesBanner.astro';
 import { cleanHtml, takeArt } from '../lib/clean';
 import '../styles/article.css';
+import metaDescriptions from '../data/meta.json';
 
 export async function getStaticPaths() {
   const articles = await getArticles();
@@ -45,20 +46,40 @@ const articleClass = ['article', gallery && 'article--gallery', sleeve && 'artic
 const cover = absolute(heroSrc);
 const hub = `/category/${section.wpCat}/`;
 
+const meta = (metaDescriptions as Record<string, string>)[article.data.slug] || description;
+const url = absolute(`/${article.data.slug}/`);
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: title,
-  description: description || undefined,
-  image: cover,
-  datePublished: pubDate,
-  dateModified: updated || pubDate,
-  url: absolute(`/${article.data.slug}/`),
-  author: { '@type': 'Person', name: 'Gary Crossey' },
-  isPartOf: { '@type': 'CollectionPage', name: section.name, url: absolute(hub) },
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      '@id': url + '#article',
+      headline: title,
+      description: meta || undefined,
+      image: cover,
+      datePublished: pubDate,
+      dateModified: updated || pubDate,
+      url,
+      mainEntityOfPage: url,
+      inLanguage: 'en',
+      articleSection: section.name,
+      keywords: tags.length ? tags.join(', ') : undefined,
+      author: { '@id': absolute('/about/') + '#gary' },
+      publisher: { '@id': absolute('/') + '#site' },
+      isPartOf: { '@type': 'CollectionPage', name: section.name, url: absolute(hub) },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: absolute('/') },
+        { '@type': 'ListItem', position: 2, name: section.name, item: absolute(hub) },
+        { '@type': 'ListItem', position: 3, name: title, item: url },
+      ],
+    },
+  ],
 };
 ---
-<Layout title={`${title} — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
+<Layout title={`${title} — Better World With Design`} description={meta} image={cover} type="article" jsonLd={jsonLd}>
   {gallery ? (
     <header class="hero hero--gallery" slot="masthead">
       <div class="hero__inner">
