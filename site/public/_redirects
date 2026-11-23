@@ -15,3 +15,9 @@
 /links/ / 301
 /links/sitemap/ /sitemap/ 301
 /links/design-system/ / 301
+
+# Old WordPress tag pages
+/tag/montaigne/ /montaigne-essays/ 301
+/tag/book-review/ /category/book-reviews-reading-lists/ 301
+/tag/music/ /category/music-discovery-reviews/ 301
+/tag/* /sitemap/ 301

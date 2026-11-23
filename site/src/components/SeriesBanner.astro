@@ -1,0 +1,44 @@
+---
+// End-of-essay banner for the Montaigne series: every chapter as a chip, current one marked.
+import { getArticles } from '../lib/sections';
+interface Props { current: string }
+const { current } = Astro.props;
+const chapterOf = (t: string) => { const m = t.match(/chapter\s*(\d+)/i); return m ? +m[1] : 99; };
+const essays = (await getArticles())
+  .filter((a) => a.data.tags.includes('Montaigne') || /^Montaigne\s*[–-]/i.test(a.data.title))
+  .sort((a, b) => chapterOf(a.data.title) - chapterOf(b.data.title));
+const idx = essays.findIndex((a) => a.data.slug === current);
+const next = essays[idx + 1];
+---
+<aside class="series" data-reveal="up" aria-label="The Montaigne Project">
+  <div class="series__text">
+    <p class="series__label">The Montaigne Project · {essays.length} essays</p>
+    <a class="series__title" href="/montaigne-essays/">Read the series <b>→</b></a>
+    {next && <a class="series__next" href={`/${next.data.slug}/`}>Next: Chapter {chapterOf(next.data.title)}</a>}
+  </div>
+  <ol class="series__chips">
+    {essays.map((a) => (
+      <li><a class={a.data.slug === current ? 'is-here' : undefined} href={`/${a.data.slug}/`} aria-current={a.data.slug === current ? 'page' : undefined} title={a.data.title}>{chapterOf(a.data.title)}</a></li>
+    ))}
+  </ol>
+</aside>
+
+<style is:global>
+  .series { position: relative; overflow: hidden; max-width: 1000px; margin: 4rem auto 0; padding: clamp(1.6rem, 4vw, 2.6rem); background: var(--ink); color: var(--paper); display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .6s; }
+  .series:not(.in) { opacity: 0; transform: translateY(40px); }
+  .series::before { content: ''; position: absolute; width: 260px; aspect-ratio: 1; border-radius: 50%; background: var(--red); right: -90px; top: -120px; opacity: .9; }
+  .series__text, .series__chips { position: relative; }
+  .series__label { margin: 0 0 0.6rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--yellow); }
+  .series__title { display: inline-flex; align-items: center; gap: 0.8rem; color: var(--paper); text-decoration: none; font-weight: 800; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 0.95; letter-spacing: -0.04em; }
+  .series__title b { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--yellow); color: var(--ink); font-size: 1.2rem; transition: transform .3s; }
+  .series__title:hover b { transform: translateX(8px); }
+  .series__next { display: block; margin-top: 0.9rem; color: #cfc6b5; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; }
+  .series__next:hover { color: var(--yellow); }
+  .series__chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 3rem); gap: 0.5rem; }
+  .series__chips a { display: grid; place-items: center; height: 3rem; border: 2px solid var(--paper); color: var(--paper); text-decoration: none; font-weight: 800; transition: background .2s, transform .2s; }
+  .series__chips a:hover { background: var(--paper); color: var(--ink); transform: translateY(-3px); }
+  .series__chips a.is-here { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+  @media (max-width: 700px) { .series { grid-template-columns: 1fr; } .series__chips { grid-template-columns: repeat(8, 1fr); } }
+  .article .link-card a { display: block; padding: 1rem 1.2rem; border: 3px solid var(--ink); border-left-width: 12px; text-decoration: none; color: var(--ink); font-weight: 700; }
+  .article .link-card a:hover { border-color: var(--red); color: var(--red); }
+</style>

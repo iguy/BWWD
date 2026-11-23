@@ -2,6 +2,7 @@
 // Every article keeps its WordPress URL: /<slug>/
 import Layout from '../layouts/Layout.astro';
 import { getArticles, mediaUrl, absolute, dateLabel, type Article } from '../lib/sections';
+import SeriesBanner from '../components/SeriesBanner.astro';
 import { cleanHtml, takeArt } from '../lib/clean';
 import '../styles/article.css';
 
@@ -118,6 +119,8 @@ const jsonLd = {
     ) : (
       <article class={articleClass} set:html={html} />
     )}
+
+    {(tags.includes('Montaigne') || /^Montaigne\s*[–-]/i.test(title)) && <SeriesBanner current={article.data.slug} />}
 
     {tags.length > 0 && (
       <p class="tags">{tags.map((t) => <span>{t}</span>)}</p>

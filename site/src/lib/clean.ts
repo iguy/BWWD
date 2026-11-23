@@ -160,6 +160,28 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
   // Paragraphs that only held an empty &nbsp;
   for (const p of root.querySelectorAll('p')) if (!p.text.trim() && !p.querySelector('img,iframe')) p.remove();
 
+  // WordPress "embed" cards (an iframe loaded from the old site) -> a plain link card
+  for (const f of root.querySelectorAll('iframe.wp-embedded-content')) f.remove();
+  for (const bq of root.querySelectorAll('blockquote.wp-embedded-content')) {
+    const link = bq.querySelector('a');
+    if (!link) { bq.remove(); continue; }
+    bq.replaceWith(parse(`<p class="link-card"><a href="${link.getAttribute('href')}">${link.innerHTML}</a></p>`));
+  }
+  for (const fig of root.querySelectorAll('figure.wp-block-embed')) if (!fig.querySelector('iframe, a, blockquote')) fig.remove();
+
+  // The old "Read the series" link on Montaigne essays (the page now ends with a series banner)
+  for (const a of root.querySelectorAll('a[href*="/tag/montaigne"]')) {
+    const p = a.closest('p');
+    if (p && /read the series/i.test(p.text)) p.remove();
+  }
+
+  // Old WordPress tag pages -> the matching place on the new site
+  const TAGS: Record<string, string> = { montaigne: '/montaigne-essays/', 'book-review': '/category/book-reviews-reading-lists/', music: '/category/music-discovery-reviews/', 'community-tech': '/category/technology-trends-tips/#hub' };
+  for (const a of root.querySelectorAll('a[href*="betterworldwithdesign.com/tag/"]')) {
+    const tag = (a.getAttribute('href') ?? '').split('/tag/')[1]?.replace(/\/.*$/, '') ?? '';
+    a.setAttribute('href', TAGS[tag] ?? '/sitemap/');
+  }
+
   // Links back to the old site stay root-relative so they work on either host
   for (const a of root.querySelectorAll('a')) {
     const href = a.getAttribute('href');
