@@ -66,7 +66,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-video"><video height="1920" style="aspect-ratio: 1080 / 1920;" width="1080" autoplay controls loop muted src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/Valentines-day.-Instagram-story.-Happy-valentines-day.-post.mp4"></video></figure>
+<figure class="wp-block-video"><video height="1920" style="aspect-ratio: 1080 / 1920;" width="1080" autoplay controls loop muted src="./images/valentine-playlist/Valentines-day.-Instagram-story.-Happy-valentines-day.-post.mp4"></video></figure>
 
 
 

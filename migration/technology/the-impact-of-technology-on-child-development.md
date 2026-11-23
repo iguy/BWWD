@@ -22,7 +22,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-video alignfull"><video height="674" style="aspect-ratio: 1200 / 674;" width="1200" autoplay controls loop muted src="https://betterworldwithdesign.com/wp-content/uploads/2023/01/a-spinning-brain-2021-09-04-10-32-04-utc.mp4"></video></figure>
+<figure class="wp-block-video alignfull"><video height="674" style="aspect-ratio: 1200 / 674;" width="1200" autoplay controls loop muted src="./images/the-impact-of-technology-on-child-development/a-spinning-brain-2021-09-04-10-32-04-utc.mp4"></video></figure>
 
 
 

@@ -40,11 +40,11 @@ const small = SECTIONS.filter((s) => s.nav === false).map((s) => ({ s, n: bySect
 
 const PHOTO = 'https://photography.betterworldwithdesign.com';
 const photos = [
-  `${PHOTO}/photography/big-skies/big-skies-01.jpg`,
-  `${PHOTO}/photography/colour/flower-color.jpg`,
-  `${PHOTO}/photography/chicago-architecture/chicago-architecture-d6274776.jpg`,
-  `${PHOTO}/photography/asheville-pride/asheville-pride-731b701e.jpg`,
-  `${PHOTO}/photography/smoke/smoke-1-1024x683.jpg`,
+  { src: `${PHOTO}/photography/asheville-pride/asheville-pride-5b88918f.jpg`, set: 'asheville-pride', alt: 'Marcher in a giant pink flower headdress, Asheville Pride' },
+  { src: `${PHOTO}/photography/chicago-architecture/chicago-architecture-d6274776.jpg`, set: 'chicago-architecture', alt: "Marina City's scalloped balconies, Chicago" },
+  { src: `${PHOTO}/photography/asheville-rugby-september-2026/asheville-rugby-09.jpg`, set: 'asheville-rugby-september-2026', alt: 'A hard tackle, Asheville Rugby' },
+  { src: `${PHOTO}/photography/people/people-35e2cca1.jpg`, set: 'people', alt: 'Boy George on stage, London' },
+  { src: `${PHOTO}/photography/chicago-architecture/chicago-architecture-0690b944.jpg`, set: 'chicago-architecture', alt: 'The Tiffany dome, Chicago Cultural Center' },
 ];
 
 
@@ -167,23 +167,24 @@ const photos = [
       </ol>
     </section>
 
-    <!-- 05 Photography: photos under drifting colour shapes, with a text layer -->
+    <!-- 05 Photography: dressed like the photography site (dark, serif, full colour), every photo opens its collection -->
     <section class="ch ch--photo" id="photography">
-      <div class="mosaic" data-reveal="left">
-        {photos.map((src, k) => <img class={`m${k}`} src={src} alt="" loading="lazy" decoding="async" />)}
-        <span class="blob blob--red" aria-hidden="true"></span>
-        <span class="blob blob--red2" aria-hidden="true"></span>
-        <span class="blob blob--blue" aria-hidden="true"></span>
-        <span class="blob blob--yellow" aria-hidden="true"></span>
-      </div>
-      <div class="photo-card" data-reveal="up">
-        <span class="ch__num">05</span>
-        <h2>photography</h2>
-        <p>Most of my photographs are of people once they've stopped performing for the camera.</p>
-        <p>As a kid in the '70s I watched super 8 home movies where everyone mugged for the lens. I watched the smoke in the projector beam instead. Now I wait for things to line up, like a cloud resting on a disused smokestack.</p>
-        <div class="photo-card__links">
-          <a class="ch__all" href={PHOTO + '/'}>See the photography ↗</a>
-          <a class="ch__all" href={PHOTO + '/book/'}>Book a session ↗</a>
+      <div class="ph">
+        <div class="ph__grid" data-reveal="up">
+          {photos.map((p, k) => <a class={`ph__m ph__m${k}`} href={`${PHOTO}/${p.set}/`}><img src={p.src} alt={p.alt} loading="lazy" decoding="async" /><span class="ph__cap">{p.alt}</span></a>)}
+        </div>
+        <div class="ph__text">
+          <div>
+            <p class="ph__label">05 · Photography · Gary Crossey</p>
+            <h2>Pattern, structure, light, and people.</h2>
+          </div>
+          <div>
+            <p>I photograph attention: the moment someone forgets the camera because they're locked onto something else. A ball in the air, a friend's face, a goat mid-leap. Mostly in the communities I belong to, around Asheville, North Carolina.</p>
+            <div class="ph__btns">
+              <a class="ph__btn ph__btn--solid" href={PHOTO + '/#work'}>See the work</a>
+              <a class="ph__btn" href={PHOTO + '/book/'}>Book a session</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -504,38 +505,29 @@ const photos = [
     .row__inner { grid-template-columns: 1fr; }
   }
 
-  /* 04 Photography */
-  .ch--photo { position: relative; padding: 8rem 16px 7rem max(16px, 110px); max-width: 1600px; margin: 0 auto; }
-  .mosaic { position: relative; display: grid; grid-template-columns: 2fr 1fr 1.3fr; grid-template-rows: 300px 260px; gap: 8px; overflow: hidden; background: var(--ink); }
-  .mosaic img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15); transition: filter .8s, transform 1.4s cubic-bezier(.2,.8,.2,1); }
-  .mosaic .m0 { grid-row: span 2; }
-  .mosaic .m3 { grid-column: 2; }
-  .mosaic:hover img { filter: grayscale(.15); }
-  .mosaic img:hover { transform: scale(1.05); }
-  .blob { position: absolute; pointer-events: none; mix-blend-mode: multiply; transition: transform .9s cubic-bezier(.2,.9,.2,1.1); }
-  .blob--red { width: 38%; aspect-ratio: 1; border-radius: 50%; background: var(--red); left: 14%; top: -18%; animation: drift 8s ease-in-out infinite alternate; }
-  .blob--red2 { width: 20%; aspect-ratio: 1; border-radius: 50%; background: var(--red); right: 6%; bottom: -8%; animation: drift 6.5s ease-in-out infinite alternate-reverse; }
-  .blob--blue { width: 17%; aspect-ratio: 1; background: var(--blue); left: 74%; top: 6%; animation: drift3 7s ease-in-out infinite alternate; } /* sits on the building photo */
-  .blob--yellow { width: 16%; aspect-ratio: 1; border-radius: 50%; background: var(--yellow); left: -4%; bottom: 6%; animation: drift2 7.5s ease-in-out infinite alternate-reverse; }
-  .mosaic:hover .blob--red { transform: translate(70%, 45%) scale(1.4); }
-  .mosaic:hover .blob--red2 { transform: translate(-90%, -70%) scale(1.6); }
-  .mosaic:hover .blob--blue { transform: translate(-25%, 60%) rotate(90deg) scale(1.3); }
-  .mosaic:hover .blob--yellow { transform: translate(140%, -90%) scale(1.4); }
-  @keyframes drift { to { translate: 34% 26%; } }
-  @keyframes drift2 { to { translate: -30% -34%; rotate: 45deg; } }
-  @keyframes drift3 { to { translate: -22% 38%; rotate: -35deg; } }
-  .photo-card { position: relative; z-index: 2; width: min(560px, 92%); margin: -9rem 0 0 auto; margin-right: 6%; padding: 2rem 2.2rem 2.2rem; background: var(--paper); border: 6px solid var(--ink); box-shadow: 14px 14px 0 var(--red); }
-  .photo-card h2 { margin: 0.9rem 0 0.8rem; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 0.9; letter-spacing: -0.045em; font-weight: 800; }
-  .photo-card p { margin: 0 0 1rem; font-size: 1.05rem; }
-  .photo-card p:first-of-type { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
-  .photo-card__links { display: flex; gap: 1.6rem; flex-wrap: wrap; margin-top: 1.4rem; }
+  /* 05 Photography — same look as photography.betterworldwithdesign.com */
+  .ch--photo { background: #1a1714; color: #ece4d2; padding: 6rem 16px; }
+  .ph { max-width: 1148px; margin: 0 auto; font-family: 'Source Serif 4', Georgia, serif; }
+  .ph__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 240px 240px; gap: 8px; }
+  .ph__m0 { grid-row: span 2; }
+  .ph__m { position: relative; display: block; overflow: hidden; background: #000; }
+  .ph__m img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.8,.2,1), opacity .4s; }
+  .ph__m:hover img, .ph__m:focus-visible img { transform: scale(1.04); opacity: .85; }
+  .ph__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.6rem .9rem .7rem; font-size: .85rem; line-height: 1.3; color: #ece4d2; background: linear-gradient(transparent, rgba(0,0,0,.75)); opacity: 0; transform: translateY(6px); transition: opacity .35s, transform .35s; }
+  .ph__m:hover .ph__cap, .ph__m:focus-visible .ph__cap { opacity: 1; transform: none; }
+  .ph__text { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: end; margin-top: 2.6rem; }
+  .ph__label { margin: 0 0 1rem; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: #c8813a; }
+  .ph h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 400; font-size: clamp(2.4rem, 4.6vw, 3.6rem); line-height: 1.1; letter-spacing: -0.01em; color: #ece4d2; }
+  .ph__text p:not(.ph__label) { margin: 0 0 1.4rem; font-size: 1.1rem; line-height: 1.65; color: #d9d0bd; }
+  .ph__btns { display: flex; gap: .8rem; flex-wrap: wrap; }
+  .ph__btn { padding: .8rem 1.4rem; font-size: .95rem; font-weight: 600; text-decoration: none; color: #ece4d2; border: 1px solid #ece4d2; }
+  .ph__btn--solid { background: #ece4d2; color: #1a1714; }
+  .ph__btn:hover { background: #c8813a; border-color: #c8813a; color: #1a1714; }
   @media (max-width: 900px) {
-    .ch--photo { padding-left: 16px; }
-    .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 160px 160px; }
-    .mosaic .m0 { grid-column: span 2; grid-row: auto; }
-    .mosaic .m3 { grid-column: auto; }
-    .mosaic .m4 { display: none; }
-    .photo-card { margin: -4rem auto 0; }
+    .ph__grid { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 150px 150px; }
+    .ph__m0 { grid-column: span 2; grid-row: auto; }
+    .ph__m4 { display: none; }
+    .ph__text { grid-template-columns: 1fr; gap: 1.2rem; }
   }
 
   /* 06 Podcast */

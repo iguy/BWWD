@@ -30,7 +30,7 @@ status: "pulled"
 
 
 <div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-audio aligncenter"><audio controls src="https://betterworldwithdesign.com/wp-content/uploads/2025/05/MY-TAKE-–-Fahrenheit-45.wav"></audio><figcaption class="wp-element-caption">Podcast overview - Fahrenheit 451</figcaption></figure>
+<figure class="wp-block-audio aligncenter"><audio controls src="./images/my-take-fahrenheit-451/my-take-fahrenheit-451.mp3"></audio><figcaption class="wp-element-caption">Podcast overview - Fahrenheit 451</figcaption></figure>
 </div>
 </div>
 

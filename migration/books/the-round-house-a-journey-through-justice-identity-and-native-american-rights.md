@@ -18,7 +18,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-video"><video height="720" style="aspect-ratio: 1280 / 720;" width="1280" autoplay controls loop muted src="https://betterworldwithdesign.com/wp-content/uploads/2025/05/round-house.mp4"></video></figure>
+<figure class="wp-block-video"><video height="720" style="aspect-ratio: 1280 / 720;" width="1280" autoplay controls loop muted src="./images/the-round-house-a-journey-through-justice-identity-and-native-american-rights/round-house.mp4"></video></figure>
 
 
 

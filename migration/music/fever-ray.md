@@ -76,7 +76,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-video alignfull"><video height="528" style="aspect-ratio: 1020 / 528;" width="1020" autoplay controls loop muted src="https://betterworldwithdesign.com/wp-content/uploads/2023/05/karen.mp4"></video></figure>
+<figure class="wp-block-video alignfull"><video height="528" style="aspect-ratio: 1020 / 528;" width="1020" autoplay controls loop muted src="./images/fever-ray/karen.mp4"></video></figure>
 
 
 
