@@ -5,6 +5,7 @@ export interface Section {
   name: string;
   wpCat: string; // WordPress category slug; hub lives at /category/<wpCat>/ like WordPress
   blurb: string;
+  nav?: boolean; // show in the top menu (default true)
 }
 
 // Sections built on the new site. Add one here when its pages are ready.
@@ -20,6 +21,34 @@ export const SECTIONS: Section[] = [
     name: 'Technology',
     wpCat: 'technology-trends-tips',
     blurb: 'AI tools, WordPress, search and the Sandy Mush Tech Hub.',
+  },
+  {
+    folder: 'programming',
+    name: 'Programming',
+    wpCat: 'programming-development',
+    blurb: 'Code experiments, animation and Living Plates tutorials.',
+    nav: false,
+  },
+  {
+    folder: 'news',
+    name: 'News',
+    wpCat: 'news',
+    blurb: 'Milestones and updates from Better World With Design.',
+    nav: false,
+  },
+  {
+    folder: 'media',
+    name: 'Media & Entertainment',
+    wpCat: 'media-entertainment',
+    blurb: 'Releases, remixes and other things worth hearing.',
+    nav: false,
+  },
+  {
+    folder: 'aeo-decoded',
+    name: 'AEO Decoded',
+    wpCat: 'aeo-decoded',
+    blurb: 'Answer Engine Optimization, explained episode by episode.',
+    nav: false,
   },
 ];
 

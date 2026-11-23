@@ -106,7 +106,7 @@ const path = Astro.url.pathname;
     <header class="site-header">
       <a class="brand" href="/">Better World With Design</a>
       <nav class="site-nav" aria-label="Main">
-        {SECTIONS.map((s) => (
+        {SECTIONS.filter((s) => s.nav !== false).map((s) => (
           <a class={path.startsWith(`/category/${s.wpCat}/`) ? 'is-section' : undefined} href={`/category/${s.wpCat}/`}>{s.name}</a>
         ))}
         <a href="https://photography.betterworldwithdesign.com/">Photography</a>

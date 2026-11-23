@@ -9,6 +9,10 @@ export function cleanHtml(html: string, section: Section): string {
   for (const item of root.querySelectorAll('.et_pb_toggle')) {
     const title = item.querySelector('.et_pb_toggle_title')?.text.trim() || 'More';
     const body = item.querySelector('.et_pb_toggle_content')?.innerHTML ?? '';
+    if (!parse(body).text.trim()) {
+      item.remove(); // empty Divi toggle (e.g. a stray "Close" item)
+      continue;
+    }
     item.replaceWith(parse(`<details class="toggle"><summary>${title}</summary><div>${body}</div></details>`));
   }
 
