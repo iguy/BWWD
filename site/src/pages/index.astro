@@ -93,32 +93,10 @@ const photos = [
       </section>
     )}
 
-    <!-- 01 Art: vertical slats that open on hover -->
-    <section class="ch ch--art" id="art" data-scrub="pass">
-      <div class="ch__word" aria-hidden="true">art</div>
-      <div class="ch__head" data-reveal="left">
-        <span class="ch__num">01</span>
-        <h2>Art &amp; Design</h2>
-        <p>Artists, photographers and movements I keep coming back to. Open a panel.</p>
-        <a class="ch__all" href="/category/art-design-insights/">All art &amp; design →</a>
-      </div>
-      <ul class="slats">
-        {art.map(({ a, img }, i) => (
-          <li class="slat" data-reveal="up" style={`--d:${i}`}>
-            <a href={`/${a.data.slug}/`}>
-              <img src={img.src} data-fallback={img.fallback} alt={img.alt} loading="lazy" decoding="async" />
-              <span class="slat__n">{String(i + 1).padStart(2, '0')}</span>
-              <span class="slat__title">{a.data.title}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-
     <!-- 02 Books: a shelf of spines; pull one out -->
     <section class="ch ch--books" id="books">
       <div class="ch__head" data-reveal="left">
-        <span class="ch__num">02</span>
+        <span class="ch__num">01</span>
         <h2>books</h2>
         <p>{bySection('books').length} reviews and reading lists. Pull one off the shelf.</p>
         <a class="ch__all" href="/category/book-reviews-reading-lists/">All books →</a>
@@ -131,7 +109,7 @@ const photos = [
       <div class="pin">
         <div class="vinyl" aria-hidden="true"><i></i></div>
         <div class="ch__head ch__head--light" data-reveal="right">
-          <span class="ch__num">03</span>
+          <span class="ch__num">02</span>
           <h2>Music</h2>
           <p>Reviews, playlists and records — plus my own acid house as Warehouse Sunrise.</p>
           <a class="ch__all" href="/category/music-discovery-reviews/">All music →</a>
@@ -153,7 +131,7 @@ const photos = [
     <section class="ch ch--tech" id="technology" data-scrub="pass">
       <div class="ch__word ch__word--right" aria-hidden="true">tech</div>
       <div class="ch__head" data-reveal="left">
-        <span class="ch__num">04</span>
+        <span class="ch__num">03</span>
         <h2>Technology</h2>
         <p>AI tools, WordPress, search, and building a tech hub in Sandy Mush.</p>
         <a class="ch__all" href="/category/technology-trends-tips/">All technology →</a>
@@ -185,7 +163,7 @@ const photos = [
         </div>
         <div class="ph__text">
           <div>
-            <p class="ph__label">05 · Photography · Gary Crossey</p>
+            <p class="ph__label">04 · Photography · Gary Crossey</p>
             <h2>Pattern, structure, light, and people.</h2>
           </div>
           <div>
@@ -202,7 +180,7 @@ const photos = [
     <!-- 06 Podcast: latest episode inside the rings, recent episodes alongside -->
     <section class="ch ch--pod" id="podcast">
       <div class="pod__text" data-reveal="left">
-        <span class="ch__num">06</span>
+        <span class="ch__num">05</span>
         <h2>podcast</h2>
         <p class="pod__latest-label">Latest · Episode {latest.n} · {latest.mins} min</p>
         <h3 class="pod__title"><a href={`${POD}/podcast/${latest.slug}/`}>{latest.title}</a></h3>
@@ -243,7 +221,7 @@ const photos = [
       </svg>
       <div class="mont">
         <div class="mont__head" data-reveal="left">
-          <span class="ch__num">07</span>
+          <span class="ch__num">06</span>
           <h2>montaigne<br />essays</h2>
           <p>A 16th-century philosopher read chapter by chapter, and asked what he'd make of now.</p>
           <a class="ch__all" href="/montaigne-essays/">Read the series →</a>
@@ -264,6 +242,28 @@ const photos = [
           {essays.map((e, i) => <button type="button" role="tab" class={i === 0 ? 'mont__n is-on' : 'mont__n'} data-i={i} aria-selected={i === 0 ? 'true' : 'false'} aria-label={`Chapter ${e.n}: ${e.t}`}>{e.n}</button>)}
         </div>
       </div>
+    </section>
+
+    <!-- 01 Art: vertical slats that open on hover -->
+    <section class="ch ch--art" id="art" data-scrub="pass">
+      <div class="ch__word" aria-hidden="true">art</div>
+      <div class="ch__head" data-reveal="left">
+        <span class="ch__num">07</span>
+        <h2>Art &amp; Design</h2>
+        <p>Artists, photographers and movements I keep coming back to. Open a panel.</p>
+        <a class="ch__all" href="/category/art-design-insights/">All art &amp; design →</a>
+      </div>
+      <ul class="slats">
+        {art.map(({ a, img }, i) => (
+          <li class="slat" data-reveal="up" style={`--d:${i}`}>
+            <a href={`/${a.data.slug}/`}>
+              <img src={img.src} data-fallback={img.fallback} alt={img.alt} loading="lazy" decoding="async" />
+              <span class="slat__n">{String(i + 1).padStart(2, '0')}</span>
+              <span class="slat__title">{a.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <section class="ch ch--archive" id="archive">
