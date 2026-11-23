@@ -32,7 +32,7 @@ const rows = await Promise.all(
           {items.map(({ a, img }) => (
             <li>
               <a href={`/${a.data.slug}/`}>
-                {img.src && <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />}
+                {img.src && <img src={img.src} data-fallback={img.fallback} alt={img.alt} loading="lazy" decoding="async" />}
                 <span class="date">{dateLabel(a.data.pubDate)}</span>
                 <span class="title">{a.data.title}</span>
               </a>

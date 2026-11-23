@@ -54,6 +54,17 @@ const path = Astro.url.pathname;
     gtag('js', new Date());
     gtag('config', 'G-02EPG8KK2Y');
   </script>
+  <script is:inline>
+    // Artwork linked from other sites: if it fails to load, show our own image instead
+    document.addEventListener('error', function (e) {
+      var el = e.target;
+      if (el.tagName === 'IMG' && el.dataset.fallback && el.src.indexOf(el.dataset.fallback) === -1) {
+        el.src = el.dataset.fallback;
+        var cap = el.parentNode && el.parentNode.querySelector('figcaption');
+        if (cap) cap.remove();
+      }
+    }, true);
+  </script>
   <style is:global>
     :root {
       --paper: #f1ebdf;

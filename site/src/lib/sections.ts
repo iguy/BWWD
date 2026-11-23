@@ -84,10 +84,10 @@ export const dateLabel = (d: string) =>
   new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
 // Card/hero image for an article. Art & Design uses the artist's own work when the post has some.
-export async function cardImage(a: Article): Promise<{ src: string; alt: string }> {
+export async function cardImage(a: Article): Promise<{ src: string; alt: string; fallback?: string }> {
   const cover = { src: mediaUrl(a.data.cover, a.section), alt: a.data.coverAlt || a.data.title };
   if (a.section.look !== 'gallery') return cover;
   const { cleanHtml, takeArt } = await import('./clean');
   const { art } = takeArt(cleanHtml(a.body ?? '', a.section, { title: a.data.title, plates: true, cover: cover.src }));
-  return art ? { src: art.src, alt: art.alt || art.caption || a.data.title } : cover;
+  return art ? { src: art.src, alt: art.alt || art.caption || a.data.title, fallback: cover.src || undefined } : cover;
 }

@@ -39,7 +39,7 @@ const jsonLd = {
         <li class={i === 0 ? 'card card--lead' : 'card'}>
           <a href={`/${a.data.slug}/`}>
             {img.src
-              ? <img src={img.src} alt={img.alt} loading={i < 4 ? 'eager' : 'lazy'} decoding="async" />
+              ? <img src={img.src} data-fallback={img.fallback} alt={img.alt} loading={i < 4 ? 'eager' : 'lazy'} decoding="async" />
               : <span class="no-img" aria-hidden="true"><i></i></span>}
             <span class="date">{dateLabel(a.data.pubDate)}</span>
             <span class="title">{a.data.title}</span>

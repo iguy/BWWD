@@ -1,12 +1,14 @@
 // Turns WordPress/Divi HTML into clean markup for the new site.
 import { parse, type HTMLElement } from 'node-html-parser';
 import { mediaUrl, type Section } from './sections';
+import covers from '../data/spotify-covers.json';
 
 interface Options {
   title?: string; // page title: a heading repeating it inside the body is dropped
   plates?: boolean; // gallery sections: every artwork image becomes a numbered plate
   cover?: string; // local cover path, shown in the header — removed from the body
   lede?: boolean; // mark the opening paragraph
+  tracks?: boolean; // music: cover images that match a Spotify release become playable tiles
 }
 
 export interface Art { src: string; alt: string; caption: string }
@@ -122,6 +124,28 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
   if (opts.plates || opts.lede) {
     const lede = root.querySelectorAll('p').find((p) => p.text.trim().length > 80 && !p.closest('figure, .wp-block-column, .wp-block-cover'));
     lede?.classList.add('lede');
+  }
+
+  // Music: covers matched to Spotify releases become tiles that play in place
+  if (opts.tracks) {
+    const map = covers as Record<string, { title: string; album?: string }>;
+    const tileFor = (img: HTMLElement) => map[(img.getAttribute('src') ?? '').split('/').pop() ?? ''];
+    for (const gallery of root.querySelectorAll('figure.wp-block-gallery, .wp-block-columns')) {
+      const imgs = gallery.querySelectorAll('img');
+      if (imgs.length < 2 || !imgs.every((i) => tileFor(i))) continue;
+      const seen = new Set<string>();
+      const tiles = imgs.map((img) => {
+        const t = tileFor(img);
+        const key = t.album ?? t.title;
+        if (seen.has(key)) return '';
+        seen.add(key);
+        const pic = `<img src="${img.getAttribute('src')}" alt="${t.title} cover" loading="lazy" decoding="async">`;
+        return t.album
+          ? `<li class="track"><button type="button" class="track__btn" data-album="${t.album}" aria-label="Play ${t.title}">${pic}<span class="track__play" aria-hidden="true"></span></button><span class="track__title">${t.title}</span></li>`
+          : `<li class="track track--off">${pic}<span class="track__title">${t.title}<em>Not on Spotify yet</em></span></li>`;
+      }).join('');
+      gallery.replaceWith(parse(`<ul class="tracks">${tiles}</ul>`));
+    }
   }
 
   // Cover blocks use the image as a background
