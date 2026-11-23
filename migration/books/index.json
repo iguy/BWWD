@@ -1,0 +1,345 @@
+[
+  {
+    "slug": "thinking-fast-and-slow",
+    "title": "Thinking, Fast and Slow",
+    "date": "2026-04-30",
+    "oldPath": "/thinking-fast-and-slow/",
+    "images": 2
+  },
+  {
+    "slug": "deep-dive-of-the-wax-child-by-olga-ravns",
+    "title": "Deep Dive of The Wax Child by Olga Ravn’s",
+    "date": "2026-04-19",
+    "oldPath": "/deep-dive-of-the-wax-child-by-olga-ravns/",
+    "images": 2
+  },
+  {
+    "slug": "is-tom-lake-a-shallow-comfort-read",
+    "title": "Is Tom Lake a Shallow Comfort-Read?",
+    "date": "2026-04-15",
+    "oldPath": "/is-tom-lake-a-shallow-comfort-read/",
+    "images": 4
+  },
+  {
+    "slug": "voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition",
+    "title": "Voices From the Margins: The Canterville Ghost by Oscar Wilde (Audiobook Edition)",
+    "date": "2026-01-09",
+    "oldPath": "/voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition/",
+    "images": 2
+  },
+  {
+    "slug": "voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook",
+    "title": "Voices from the Margins: “The School Days of an Indian Girl” by Zitkala-Ša (Audiobook)",
+    "date": "2026-01-03",
+    "oldPath": "/voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook/",
+    "images": 1
+  },
+  {
+    "slug": "beyond-straight-lines",
+    "title": "Beyond Straight Lines: Sara Ahmed’s Queer Phenomenology and the Future of Inclusive Design",
+    "date": "2025-12-14",
+    "oldPath": "/beyond-straight-lines/",
+    "images": 1
+  },
+  {
+    "slug": "the-art-of-crime-frances-glessner-lee-and-the-miniature-revolution-in-forensic-science",
+    "title": "The Art of Crime: Frances Glessner Lee and the Miniature Revolution in Forensic Science",
+    "date": "2025-09-18",
+    "oldPath": "/the-art-of-crime-frances-glessner-lee-and-the-miniature-revolution-in-forensic-science/",
+    "images": 1
+  },
+  {
+    "slug": "small-things-like-these-moral-courage-in-the-face-of-community-silence",
+    "title": "Small Things Like These: Moral Courage in the Face of Community Silence",
+    "date": "2025-08-16",
+    "oldPath": "/small-things-like-these-moral-courage-in-the-face-of-community-silence/",
+    "images": 1
+  },
+  {
+    "slug": "montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution",
+    "title": "Montaigne – CHAPTER 31——Hazarding an Opinion on God’s Plans Demands Caution",
+    "date": "2025-06-12",
+    "oldPath": "/montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution/",
+    "images": 1
+  },
+  {
+    "slug": "montaigne-chapter-30-of-cannibals",
+    "title": "Montaigne – CHAPTER 30——OF CANNIBALS (& Podcast)",
+    "date": "2025-05-28",
+    "oldPath": "/montaigne-chapter-30-of-cannibals/",
+    "images": 1
+  },
+  {
+    "slug": "my-take-fahrenheit-451",
+    "title": "MY TAKE – Fahrenheit 451",
+    "date": "2025-05-25",
+    "oldPath": "/my-take-fahrenheit-451/",
+    "images": 11
+  },
+  {
+    "slug": "the-round-house-a-journey-through-justice-identity-and-native-american-rights",
+    "title": "The Round House – A Journey Through Justice, Identity, and Native American Rights",
+    "date": "2025-05-20",
+    "oldPath": "/the-round-house-a-journey-through-justice-identity-and-native-american-rights/",
+    "images": 3
+  },
+  {
+    "slug": "parable-of-the-sower-octavia-butler",
+    "title": "Parable of the Sower – Octavia Butler",
+    "date": "2025-04-30",
+    "oldPath": "/parable-of-the-sower-octavia-butler/",
+    "images": 4
+  },
+  {
+    "slug": "a-tree-grows-in-brooklyn",
+    "title": "A tree grows in Brooklyn",
+    "date": "2025-04-22",
+    "oldPath": "/a-tree-grows-in-brooklyn/",
+    "images": 1
+  },
+  {
+    "slug": "montaigne-chapter-25-of-the-education-of-children",
+    "title": "Montaigne – Chapter 25 – Of the Education of Children",
+    "date": "2025-03-23",
+    "oldPath": "/montaigne-chapter-25-of-the-education-of-children/",
+    "images": 1
+  },
+  {
+    "slug": "book-review-the-giver",
+    "title": "BOOK REVIEW – The Giver –",
+    "date": "2025-03-16",
+    "oldPath": "/book-review-the-giver/",
+    "images": 8
+  },
+  {
+    "slug": "montaigne-chapter-29-of-moderation",
+    "title": "Montaigne – Chapter 29 – Of Moderation",
+    "date": "2025-02-18",
+    "oldPath": "/montaigne-chapter-29-of-moderation/",
+    "images": 2
+  },
+  {
+    "slug": "the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance",
+    "title": "The Song of Achilles Deep Dive",
+    "date": "2025-02-03",
+    "oldPath": "/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/",
+    "images": 9
+  },
+  {
+    "slug": "montaigne-chapter-27-of-friendship",
+    "title": "Montaigne – Chapter 27 – Of Friendship",
+    "date": "2025-01-08",
+    "oldPath": "/montaigne-chapter-27-of-friendship/",
+    "images": 2
+  },
+  {
+    "slug": "the-unconventional-playbook-creative-habits-of-the-worlds-most-brilliant-minds",
+    "title": "The Unconventional Playbook: Creative Habits of the World’s Most Brilliant Minds",
+    "date": "2025-01-08",
+    "oldPath": "/the-unconventional-playbook-creative-habits-of-the-worlds-most-brilliant-minds/",
+    "images": 5
+  },
+  {
+    "slug": "my-take-james-joyce-the-sisters",
+    "title": "MY TAKE – James Joyce ~ The Sisters",
+    "date": "2024-12-23",
+    "oldPath": "/my-take-james-joyce-the-sisters/",
+    "images": 8
+  },
+  {
+    "slug": "montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity",
+    "title": "Montaigne – Chapter 26 – That It Is Folly To Measure Truth And Error By Our Own Capacity",
+    "date": "2024-12-06",
+    "oldPath": "/montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity/",
+    "images": 2
+  },
+  {
+    "slug": "chapter-24-of-pedantry",
+    "title": "Montaigne – Chapter 24 – OF Pedantry",
+    "date": "2024-11-14",
+    "oldPath": "/chapter-24-of-pedantry/",
+    "images": 1
+  },
+  {
+    "slug": "chapter-23-various-events-form-the-same-counsel",
+    "title": "Montaigne – Chapter 23 – Various events form the same counsel",
+    "date": "2024-10-26",
+    "oldPath": "/chapter-23-various-events-form-the-same-counsel/",
+    "images": 5
+  },
+  {
+    "slug": "book-club-review-the-round-house",
+    "title": "Book Club Review – The Round House",
+    "date": "2024-07-10",
+    "oldPath": "/book-club-review-the-round-house/",
+    "images": 2
+  },
+  {
+    "slug": "book-review-the-immoralists",
+    "title": "Book Review – The Immoralists",
+    "date": "2024-05-27",
+    "oldPath": "/book-review-the-immoralists/",
+    "images": 1
+  },
+  {
+    "slug": "review-doctor-who-twice-upon-a-time",
+    "title": "BOOK REVIEW – Doctor Who: Twice Upon a Time",
+    "date": "2024-04-21",
+    "oldPath": "/review-doctor-who-twice-upon-a-time/",
+    "images": 2
+  },
+  {
+    "slug": "all-systems-red-martha-wells",
+    "title": "All Systems Red – Martha Wells",
+    "date": "2024-04-13",
+    "oldPath": "/all-systems-red-martha-wells/",
+    "images": 3
+  },
+  {
+    "slug": "summary-of-the-invention-of-hugo-cabret",
+    "title": "Summary of The Invention of Hugo Cabret",
+    "date": "2023-09-24",
+    "oldPath": "/summary-of-the-invention-of-hugo-cabret/",
+    "images": 5
+  },
+  {
+    "slug": "book-review-lost-in-shagri-la",
+    "title": "BOOK REVIEW Lost in Shagri-la",
+    "date": "2023-09-06",
+    "oldPath": "/book-review-lost-in-shagri-la/",
+    "images": 8
+  },
+  {
+    "slug": "scene-structure",
+    "title": "Summary of the book Scene & Structure",
+    "date": "2023-09-02",
+    "oldPath": "/scene-structure/",
+    "images": 5
+  },
+  {
+    "slug": "the-intersection-of-technology-and-social-justice",
+    "title": "The Intersection of Technology and Social Justice",
+    "date": "2023-08-01",
+    "oldPath": "/the-intersection-of-technology-and-social-justice/",
+    "images": 2
+  },
+  {
+    "slug": "book-review-reasons-and-persons",
+    "title": "Reasons and Persons by Derek Parfit",
+    "date": "2023-06-30",
+    "oldPath": "/book-review-reasons-and-persons/",
+    "images": 5
+  },
+  {
+    "slug": "automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor",
+    "title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor",
+    "date": "2023-05-22",
+    "oldPath": "/automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor/",
+    "images": 2
+  },
+  {
+    "slug": "killer-high-a-history-of-war-in-six-drugs-by-peter-andreas",
+    "title": "Killer High: A History of War in Six Drugs by Peter Andreas",
+    "date": "2023-04-29",
+    "oldPath": "/killer-high-a-history-of-war-in-six-drugs-by-peter-andreas/",
+    "images": 10
+  },
+  {
+    "slug": "if-we-were-villains-by-m-l-rio",
+    "title": "BOOK REVIEW: If We Were Villains by M.L. Rio – Complete Analysis",
+    "date": "2023-04-28",
+    "oldPath": "/if-we-were-villains-by-m-l-rio/",
+    "images": 4
+  },
+  {
+    "slug": "we-always-lived-in-the-castle",
+    "title": "We always lived in the castle",
+    "date": "2023-04-05",
+    "oldPath": "/we-always-lived-in-the-castle/",
+    "images": 2
+  },
+  {
+    "slug": "a-peoples-history-of-the-united-states",
+    "title": "A People’s History of the United States",
+    "date": "2023-03-24",
+    "oldPath": "/a-peoples-history-of-the-united-states/",
+    "images": 15
+  },
+  {
+    "slug": "foundation-by-isaac-asimov",
+    "title": "Foundation by Isaac Asimov",
+    "date": "2023-03-16",
+    "oldPath": "/foundation-by-isaac-asimov/",
+    "images": 23
+  },
+  {
+    "slug": "the-rosewood-casket",
+    "title": "The Rosewood Casket",
+    "date": "2023-03-04",
+    "oldPath": "/the-rosewood-casket/",
+    "images": 1
+  },
+  {
+    "slug": "race-after-technology-abolitionist-tools-for-the-new-jim-code",
+    "title": "Race After Technology: Abolitionist Tools for the New Jim Code",
+    "date": "2023-02-28",
+    "oldPath": "/race-after-technology-abolitionist-tools-for-the-new-jim-code/",
+    "images": 3
+  },
+  {
+    "slug": "dao-de-jing-by-laozi",
+    "title": "Dao De Jing by Laozi",
+    "date": "2023-02-27",
+    "oldPath": "/dao-de-jing-by-laozi/",
+    "images": 3
+  },
+  {
+    "slug": "the-book-woman-of-troublesome-creek",
+    "title": "The Book Woman of Troublesome Creek",
+    "date": "2023-02-21",
+    "oldPath": "/the-book-woman-of-troublesome-creek/",
+    "images": 1
+  },
+  {
+    "slug": "the-story-of-my-teeth",
+    "title": "The Story of My Teeth",
+    "date": "2023-02-17",
+    "oldPath": "/the-story-of-my-teeth/",
+    "images": 3
+  },
+  {
+    "slug": "the-leavers-by-lisa-ko",
+    "title": "The Leavers by Lisa Ko",
+    "date": "2023-02-16",
+    "oldPath": "/the-leavers-by-lisa-ko/",
+    "images": 2
+  },
+  {
+    "slug": "journey-to-the-center-of-the-earth",
+    "title": "Journey to the Center of the Earth",
+    "date": "2023-02-14",
+    "oldPath": "/journey-to-the-center-of-the-earth/",
+    "images": 2
+  },
+  {
+    "slug": "design-justice-community-led-practices-to-build-the-worlds-we-need",
+    "title": "Design Justice",
+    "date": "2023-02-13",
+    "oldPath": "/design-justice-community-led-practices-to-build-the-worlds-we-need/",
+    "images": 2
+  },
+  {
+    "slug": "a-month-in-the-country",
+    "title": "A Month in the Country",
+    "date": "2022-12-14",
+    "oldPath": "/a-month-in-the-country/",
+    "images": 2
+  },
+  {
+    "slug": "blitzed-drugs-in-the-third-reich",
+    "title": "Blitzed: Drugs in the Third Reich",
+    "date": "2022-03-09",
+    "oldPath": "/blitzed-drugs-in-the-third-reich/",
+    "images": 1
+  }
+]
