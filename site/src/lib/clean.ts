@@ -141,7 +141,7 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
         const key = t.album ?? t.title;
         if (seen.has(key)) return '';
         seen.add(key);
-        const pic = `<img src="${img.getAttribute('src')}" alt="${t.title} cover" loading="lazy" decoding="async">`;
+        const pic = `<img src="${img.getAttribute('src')}" alt="${t.title} cover" decoding="async">`;
         return t.album
           ? `<li class="track"><button type="button" class="track__btn" data-album="${t.album}" aria-label="Play ${t.title}">${pic}<span class="track__play" aria-hidden="true"></span></button><span class="track__title">${t.title}</span></li>`
           : `<li class="track track--off">${pic}<span class="track__title">${t.title}<em>Not on Spotify yet</em></span></li>`;
