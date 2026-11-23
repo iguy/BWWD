@@ -67,18 +67,21 @@ status: "pulled"
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator --></p>
 <p><!-- wp:paragraph --></p>
-<p><a href="https://distrokid.com/hyperfollow/garycrossey/cookie-jam-acid-mix">https://distrokid.com/hyperfollow/garycrossey/cookie-jam-acid-mix</a></p>
+<p><iframe title="Cookie Jam (Acid Mix) on Spotify" src="https://open.spotify.com/embed/album/5GQsrjiw8AG0coMRTYUbsC?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+<p><a href="https://open.spotify.com/album/5GQsrjiw8AG0coMRTYUbsC">Listen to Cookie Jam (Acid Mix) on Spotify</a></p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
 <h2 class="wp-block-heading">The Remixes </h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p><a href="https://distrokid.com/hyperfollow/garycrossey/cookie-jam-the-remixes">https://distrokid.com/hyperfollow/garycrossey/cookie-jam-the-remixes</a></p>
+<p><iframe title="Cookie Jam: The Acid Remixes on Spotify" src="https://open.spotify.com/embed/album/78XhwKYT5ngVCDWa1gpcOC?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+<p><a href="https://open.spotify.com/album/78XhwKYT5ngVCDWa1gpcOC">Listen to Cookie Jam: The Acid Remixes on Spotify</a></p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
 <h2 class="wp-block-heading">909 Remix </h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p><a href="https://distrokid.com/hyperfollow/garycrossey/cookie-jam-acid-909-mix">https://distrokid.com/hyperfollow/garycrossey/cookie-jam-acid-909-mix</a></p>
+<p><iframe title="Cookie Jam (Acid 909 Mix) on Spotify" src="https://open.spotify.com/embed/album/6BzuoH1h9skmEhud6Rq9Gr?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+<p><a href="https://open.spotify.com/album/6BzuoH1h9skmEhud6Rq9Gr">Listen to Cookie Jam (Acid 909 Mix) on Spotify</a></p>
 <p><!-- /wp:paragraph --></p>
 </div></div></div></div></div>
