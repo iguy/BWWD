@@ -56,7 +56,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="https://www.moma.org/media/W1siZiIsIjI1NTc5NyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg?sha=3000a61a8801bb3d" alt=""/><figcaption class="wp-element-caption"><em>Canyon</em></figcaption></figure>
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="./images/robert-rauschenberg-and-his-revolutionary-artwork/w1siziisiji1ntc5nyjdlfsiccisimnvbnzlcnqilcitcxvhbgl0esa5mcatcmvzaxplidiwmdb4mtq0mfx1mdazzsjdxq.jpg" alt=""/><figcaption class="wp-element-caption"><em>Canyon</em></figcaption></figure>
 
 
 
@@ -68,7 +68,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="https://d7hftxdivxxvm.cloudfront.net/?quality=80&amp;resize_to=width&amp;src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FLbjI0GARgslOjkl7To5bVA%2Fnormalized.jpg&amp;width=910" alt=""/><figcaption class="wp-element-caption"><em>Bed</em> (1955)</figcaption></figure>
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="./images/robert-rauschenberg-and-his-revolutionary-artwork/.jpg" alt=""/><figcaption class="wp-element-caption"><em>Bed</em> (1955)</figcaption></figure>
 
 
 
@@ -80,7 +80,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="https://www.rauschenbergfoundation.org/sites/default/files/styles/767x/public/59.024.jpg?itok=woU6XeNT" alt=""/><figcaption class="wp-element-caption"><em>Monogram</em></figcaption></figure>
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="./images/robert-rauschenberg-and-his-revolutionary-artwork/59.024.jpg" alt=""/><figcaption class="wp-element-caption"><em>Monogram</em></figcaption></figure>
 
 
 
@@ -92,7 +92,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="https://www.moma.org/d/assets/W1siZiIsIjIwMTcvMDYvMjIvMTR4ZjAyanYwb18xNDk0NjkzMTE1XzgxNl9SZXRyb2FjdGl2ZV9JLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/1494693115_816_Retroactive-I.jpg?sha=4771322dcb406c77" alt=""/><figcaption class="wp-element-caption"><em><em>Retroactive I</em></em></figcaption></figure>
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="./images/robert-rauschenberg-and-his-revolutionary-artwork/1494693115_816_retroactive-i.jpg" alt=""/><figcaption class="wp-element-caption"><em><em>Retroactive I</em></em></figcaption></figure>
 
 
 

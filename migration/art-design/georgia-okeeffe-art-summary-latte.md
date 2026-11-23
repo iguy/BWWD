@@ -110,7 +110,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/489813/1010453/restricted" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/restricted.jpg" alt=""/></figure>
 </div>
 
 
@@ -128,7 +128,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://upload.wikimedia.org/wikipedia/en/7/72/Cows_Skull_Red_White_and_Blue.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/cows_skull_red_white_and_blue.jpg" alt=""/></figure>
 </div>
 
 
@@ -166,7 +166,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://d1lfxha3ugu3d4.cloudfront.net/images/opencollection/objects/size2/1992.11.28_PS11.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/1992.11.28_ps11.jpg" alt=""/></figure>
 </div>
 
 
@@ -184,7 +184,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://arthur.io/img/art/jpg/000017344ac9546be/georgia-okeeffe/lake-george-reflection/large/georgia-okeeffe--lake-george-reflection.webp" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/georgia-okeeffe--lake-george-reflection.webp" alt=""/></figure>
 </div>
 
 
@@ -220,7 +220,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.singulart.com/blog/wp-content/uploads/2019/08/okeeffe_skyaboveclouds-1.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/okeeffe_skyaboveclouds-1.jpg" alt=""/></figure>
 </div>
 
 
@@ -274,7 +274,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://vitruvius.museumseven.com/render/600-600@1/dp-458767-30.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/dp-458767-30.jpg" alt=""/></figure>
 </div>
 
 

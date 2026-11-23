@@ -14,7 +14,7 @@ wpId: 3554
 status: "pulled"
 ---
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.mca.com.au/files/images/1994.4_for_web.original.width-1900.jpegquality-70.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/photography-william-yang/1994.4_for_web.original.width-1900.jpegquality-70.jpg" alt=""/></figure>
 
 
 
@@ -26,7 +26,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://blog.qagoma.qld.gov.au/wp-content/media/web-BLOG13feature_YANGwilliam_Tamarama-Lifesavers-1981.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/photography-william-yang/web-blog13feature_yangwilliam_tamarama-lifesavers-1981.jpg" alt=""/></figure>
 
 
 
@@ -42,7 +42,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://i0.wp.com/talking-pictures.net.au/wp-content/uploads/2021/10/header-william-yang-photographing-matthew-mitcham-2-2009.jpg?fit=1024%2C633&amp;ssl=1" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/photography-william-yang/header-william-yang-photographing-matthew-mitcham-2-2009.jpg" alt=""/></figure>
 
 
 

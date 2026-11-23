@@ -50,7 +50,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://uploads1.wikiart.org/images/joan-mitchell/la-chatiere-1960.jpg" alt=""/><figcaption class="wp-element-caption">Chatiere (1960)</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/joni-mitchell-abstract-expressionist-and-feminist-painter/la-chatiere-1960.jpg" alt=""/><figcaption class="wp-element-caption">Chatiere (1960)</figcaption></figure>
 
 
 
@@ -58,7 +58,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.joanmitchellfoundation.org/uploads/artwork/mitchell/0306-1956-King_of_Spades-Joan-Mitchell.jpg" alt=""/><figcaption class="wp-element-caption">King of Spades (1956)</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/joni-mitchell-abstract-expressionist-and-feminist-painter/0306-1956-king_of_spades-joan-mitchell.jpg" alt=""/><figcaption class="wp-element-caption">King of Spades (1956)</figcaption></figure>
 
 
 
@@ -66,7 +66,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.joanmitchellfoundation.org/uploads/artwork/mitchell/0350-1957-Evenings_on_73rd_Street-Joan-Mitchell.jpg" alt=""/><figcaption class="wp-element-caption">Evenings on Seventy-third Street (1956)</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/joni-mitchell-abstract-expressionist-and-feminist-painter/0350-1957-evenings_on_73rd_street-joan-mitchell.jpg" alt=""/><figcaption class="wp-element-caption">Evenings on Seventy-third Street (1956)</figcaption></figure>
 
 
 
@@ -74,7 +74,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.joanmitchellfoundation.org/uploads/artwork/mitchell/0014-1957-Ladybug-Joan-Mitchell.jpg" alt=""/><figcaption class="wp-element-caption">Ladybug (1957)</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/joni-mitchell-abstract-expressionist-and-feminist-painter/0014-1957-ladybug-joan-mitchell.jpg" alt=""/><figcaption class="wp-element-caption">Ladybug (1957)</figcaption></figure>
 
 
 

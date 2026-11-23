@@ -22,7 +22,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="http://www.penn.museum/sites/expedition/files/1989/03/tson-fu-0lie-painting.jpg" alt=""/><figcaption class="wp-element-caption">Painting by Tsou Fu-Lei 1360</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/chinese-ink-drawing/tson-fu-0lie-painting.jpg" alt=""/><figcaption class="wp-element-caption">Painting by Tsou Fu-Lei 1360</figcaption></figure>
 
 
 
@@ -52,7 +52,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://asiasociety.org/sites/default/files/8/8_Pines.jpg" alt=""/><figcaption class="wp-element-caption">Wu Guanzhong</figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/chinese-ink-drawing/8_pines.jpg" alt=""/><figcaption class="wp-element-caption">Wu Guanzhong</figcaption></figure>
 
 
 
@@ -76,7 +76,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.comuseum.com/wp-content/uploads/2015/06/qi-baishi_lotus-flowers-and-wild-duck.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/chinese-ink-drawing/qi-baishi_lotus-flowers-and-wild-duck.jpg" alt=""/></figure>
 
 
 
@@ -96,7 +96,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://sothebys-com.brightspotcdn.com/05/40/93/fe5930239fd21f66bca454b7db2e2ad0a02922fc2249f9a7efffd6e188/hk0860-1415-web.jpg" alt=""/><figcaption class="wp-element-caption">Zhang Daqian - Manchurian Mountains  1969 - Splashed ink and color on paper. </figcaption></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/chinese-ink-drawing/hk0860-1415-web.jpg" alt=""/><figcaption class="wp-element-caption">Zhang Daqian - Manchurian Mountains  1969 - Splashed ink and color on paper. </figcaption></figure>
 
 
 
