@@ -318,7 +318,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Brooklyn_Museum_-_Blue_1_-_Georgia_O%27Keeffe.jpg/422px-Brooklyn_Museum_-_Blue_1_-_Georgia_O%27Keeffe.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/georgia-okeeffe-art-summary-latte/okeeffe-blue-1.jpg" alt=""/></figure>
 </div>
 
 

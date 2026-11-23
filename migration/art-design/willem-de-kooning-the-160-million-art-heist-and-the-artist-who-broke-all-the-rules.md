@@ -100,7 +100,7 @@ status: "pulled"
 <div class="et_pb_accordion_item_1 et_pb_accordion_item et_pb_toggle et_pb_module et_pb_toggle_close et_pb_toggle_empty et_flex_module"><h5 class="et_pb_toggle_title">Close </h5></div>
 </div>
 
-<div class="et_pb_image_0 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img decoding="async" src="https://news.artnet.com/app/news-upload/2017/08/636379959746794707-uscpcent02-6w6uj9r5bixrkdwnid5-original.jpg" /></span></div>
+<div class="et_pb_image_0 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img decoding="async" src="./images/willem-de-kooning-the-160-million-art-heist-and-the-artist-who-broke-all-the-rules/de-kooning-woman-ochre.jpg" /></span></div>
 
 <div class="et_pb_video_0 et_pb_video et_pb_module et_flex_module"><div class="et_pb_video_box"><iframe loading="lazy" title="YouTube video" width="1080" height="608" src="https://www.youtube.com/embed/Y1tj9tfRc9M?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></div>
 </div>

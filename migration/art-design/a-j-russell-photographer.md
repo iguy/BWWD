@@ -18,7 +18,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Shoshone_Indians_by_Andrew_J_Russell.jpg/759px-Shoshone_Indians_by_Andrew_J_Russell.jpg?20110408102156" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/a-j-russell-photographer/russell-shoshone.jpg" alt=""/></figure>
 
 
 
@@ -46,4 +46,4 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/H69.459.2026_13AR_3860_F2-UPRR-civil_engineers.png/1280px-H69.459.2026_13AR_3860_F2-UPRR-civil_engineers.png" alt="Russell - Photo of train and men"/></figure>
+<figure class="wp-block-image aligncenter size-large"><img decoding="async" src="./images/a-j-russell-photographer/1280px-H69.459.2026_13AR_3860_F2-UPRR-civil_engineers.png" alt="Russell - Photo of train and men"/></figure>

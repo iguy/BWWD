@@ -22,7 +22,7 @@ status: "pulled"
 
 
 
-<figure class="wp-block-image size-large"><img decoding="async" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Confederate_Dead_at_Devil%27s_Den_Gettysburg.jpg/1200px-Confederate_Dead_at_Devil%27s_Den_Gettysburg.jpg" alt=""/></figure>
+<figure class="wp-block-image size-large"><img decoding="async" src="./images/alexander-gardner/gardner.jpg" alt=""/></figure>
 
 
 

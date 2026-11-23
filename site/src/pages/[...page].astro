@@ -97,6 +97,32 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
         </div>
       ))}
     </div>
+    <script is:inline>
+      // Smoke follows you: layers shift with the mouse and scroll at different depths; the cursor leaves faint puffs
+      (function () {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var smoke = document.querySelector('.smoke'), main = document.querySelector('.mtg');
+        if (!smoke || !main) return;
+        var colours = ['#a9503d', '#c79d4f', '#44596f'], last = 0, alive = 0;
+        addEventListener('pointermove', function (e) {
+          smoke.style.setProperty('--mx', (e.clientX / innerWidth - 0.5).toFixed(3));
+          smoke.style.setProperty('--my', (e.clientY / innerHeight - 0.5).toFixed(3));
+          var now = performance.now();
+          if (e.pointerType !== 'mouse' || now - last < 70 || alive > 24) return;
+          var r = main.getBoundingClientRect(); if (e.clientY < r.top) return;
+          last = now; alive++;
+          var p = document.createElement('span'); p.className = 'puff';
+          p.style.left = e.clientX + 'px'; p.style.top = e.clientY + 'px';
+          p.style.setProperty('--c', colours[Math.floor(Math.random() * 3)]);
+          p.style.setProperty('--r', (50 + Math.random() * 70) + 'px');
+          p.style.setProperty('--dx', (Math.random() * 80 - 40) + 'px');
+          main.appendChild(p);
+          p.addEventListener('animationend', function () { p.remove(); alive--; });
+        }, { passive: true });
+        var ticking = false;
+        addEventListener('scroll', function () { if (ticking) return; ticking = true; requestAnimationFrame(function () { smoke.style.setProperty('--sy', scrollY.toFixed(0)); ticking = false; }); }, { passive: true });
+      })();
+    </script>
     <section class="mtg-hero">
       <img class="mtg-hero__art" src={graphic} alt="Two profiles facing each other: Montaigne and a modern reader" />
       <div class="mtg-hero__text" data-reveal="right">
@@ -159,15 +185,18 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
   /* Montaigne Essays */
   .mtg { overflow-x: clip; position: relative; isolation: isolate; clip-path: inset(0); }
   .smoke { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
-  .smoke__l { position: absolute; inset: -12%; will-change: transform; }
+  .smoke__l { position: absolute; inset: -12%; will-change: transform, translate; transition: translate 1.2s cubic-bezier(.2,.8,.2,1); translate: calc(var(--mx, 0) * var(--depth) * -1px) calc(var(--my, 0) * var(--depth) * -1px + var(--sy, 0) * var(--depth) * -0.0025px); }
+  .smoke__l--red { --depth: 60; } .smoke__l--yellow { --depth: 35; } .smoke__l--blue { --depth: 85; }
+  .puff { position: fixed; z-index: -1; width: var(--r); height: var(--r); margin: calc(var(--r) / -2) 0 0 calc(var(--r) / -2); border-radius: 50%; pointer-events: none; background: radial-gradient(circle, var(--c) 0%, transparent 68%); opacity: 0; filter: blur(6px); animation: puff 2.6s ease-out forwards; }
+  @keyframes puff { 0% { opacity: .32; transform: translate(0, 0) scale(.4); } 100% { opacity: 0; transform: translate(var(--dx), -90px) scale(2.4) rotate(40deg); } }
   .smoke__l svg { width: 100%; height: 100%; display: block; }
-  .smoke__l--red { animation: smoke-a 46s ease-in-out infinite alternate; }
-  .smoke__l--yellow { animation: smoke-b 58s ease-in-out infinite alternate; }
-  .smoke__l--blue { animation: smoke-c 52s ease-in-out infinite alternate; }
+  .smoke__l--red { animation: smoke-a 22s ease-in-out infinite alternate; }
+  .smoke__l--yellow { animation: smoke-b 28s ease-in-out infinite alternate; }
+  .smoke__l--blue { animation: smoke-c 25s ease-in-out infinite alternate; }
   @keyframes smoke-a { from { transform: translate(-4%, 2%) rotate(-2deg) scale(1); } to { transform: translate(5%, -4%) rotate(3deg) scale(1.08); } }
   @keyframes smoke-b { from { transform: translate(3%, 4%) rotate(1deg); } to { transform: translate(-5%, -2%) rotate(-3deg) scale(1.06); } }
   @keyframes smoke-c { from { transform: translate(4%, -3%) scale(1.04); } to { transform: translate(-4%, 4%) rotate(2deg) scale(1); } }
-  @media (prefers-reduced-motion: reduce) { .smoke__l { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .smoke__l { animation: none; transition: none; translate: none; } .puff { display: none; } }
   .mtg-hero { position: relative; display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 3rem; max-width: 1400px; margin: 0 auto; padding: 4rem 16px 2rem; }
   .mtg-hero__art { width: 100%; height: auto; mix-blend-mode: multiply; }
   .mtg-kicker { margin: 0; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); }
