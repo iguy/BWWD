@@ -1,0 +1,126 @@
+---
+// Every article keeps its WordPress URL: /<slug>/
+import Layout from '../layouts/Layout.astro';
+import { getArticles, mediaUrl, absolute, dateLabel, type Article } from '../lib/sections';
+import { cleanHtml } from '../lib/clean';
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return articles.map((article) => {
+    const inSection = articles.filter((a) => a.section.folder === article.section.folder);
+    const i = inSection.findIndex((a) => a.id === article.id);
+    return {
+      params: { slug: article.data.slug },
+      props: { article, newer: inSection[i - 1], older: inSection[i + 1] },
+    };
+  });
+}
+
+interface Props { article: Article; newer?: Article; older?: Article }
+const { article, newer, older } = Astro.props;
+const { title, description, pubDate, updated, tags } = article.data;
+const section = article.section;
+const html = cleanHtml(article.body ?? '', section);
+const cover = absolute(mediaUrl(article.data.cover, section));
+const hub = `/category/${section.wpCat}/`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description || undefined,
+  image: cover,
+  datePublished: pubDate,
+  dateModified: updated || pubDate,
+  url: absolute(`/${article.data.slug}/`),
+  author: { '@type': 'Person', name: 'Gary Crossey' },
+  isPartOf: { '@type': 'CollectionPage', name: section.name, url: absolute(hub) },
+};
+---
+<Layout title={`${title} — Better World With Design`} description={description} image={cover} type="article" jsonLd={jsonLd}>
+  <header class="article-head" slot="masthead">
+    <a class="back" href={hub}>← {section.name}</a>
+    <h1>{title}</h1>
+    <p class="meta">Gary Crossey · {dateLabel(pubDate)}</p>
+  </header>
+
+  <main>
+    <article class="article" set:html={html} />
+
+    {tags.length > 0 && (
+      <p class="tags">{tags.map((t) => <span>{t}</span>)}</p>
+    )}
+
+    <nav class="pager" aria-label={`More in ${section.name}`}>
+      {newer ? <a href={`/${newer.data.slug}/`}><span>Newer</span>{newer.data.title}</a> : <span />}
+      {older ? <a class="older" href={`/${older.data.slug}/`}><span>Older</span>{older.data.title}</a> : <span />}
+    </nav>
+  </main>
+</Layout>
+
+<style is:global>
+  .article-head { max-width: var(--text); margin: 0 auto; padding: 2.5rem 16px 2.75rem; }
+  .article-head .back { color: #c8813a; text-decoration: none; font-size: 0.95rem; }
+  .article-head .back:hover { color: #efe6d6; }
+  .article-head h1 { font-size: clamp(2rem, 5vw, 3.1rem); margin: 0.6rem 0 0.8rem; color: #efe6d6; }
+  .article-head .meta { margin: 0; color: #b9ae98; font-size: 0.95rem; }
+
+  main { padding: 0 16px; }
+  .article { max-width: var(--text); margin: 3rem auto 0; overflow-wrap: break-word; }
+  .article > :first-child { margin-top: 0; }
+  .article h2 { font-size: 1.75rem; margin: 2.6rem 0 0.8rem; }
+  .article h3 { font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
+  .article h4, .article h5 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+  .article h2 strong, .article h3 strong { font-weight: inherit; }
+  .article blockquote:not(.instagram-media) { margin: 1.8rem 0; padding: 0.2rem 0 0.2rem 1.25rem; border-left: 3px solid var(--brass); font-style: italic; }
+  .article ul, .article ol { padding-left: 1.3rem; }
+  .article hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .article table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .article th, .article td { border-bottom: 1px solid var(--rule); padding: 0.5rem; text-align: left; vertical-align: top; }
+
+  /* WordPress blocks */
+  .article figure { margin: 2rem 0; }
+  .article .wp-block-image img, .article figure img { margin: 0 auto; }
+  .article .aligncenter { margin-left: auto; margin-right: auto; text-align: center; }
+  .article .alignleft { float: left; margin: 0.3rem 1.5rem 1rem 0; max-width: 50%; }
+  .article .alignright { float: right; margin: 0.3rem 0 1rem 1.5rem; max-width: 50%; }
+  .article figcaption, .article .wp-element-caption { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.5rem; text-align: center; }
+  .article .has-text-align-center { text-align: center; }
+  .article .has-large-font-size { font-size: 1.4rem; }
+  .article .has-background { background: var(--paper-deep); padding: 1.1rem 1.3rem; }
+  .article .wp-block-columns { display: flex; gap: 1.5rem; margin: 2rem 0; }
+  .article .wp-block-column { flex: 1 1 0; min-width: 0; }
+  .article .wp-block-column > :first-child { margin-top: 0; }
+  .article .wp-block-group { margin: 2rem 0; }
+  @media (max-width: 720px) {
+    .article .wp-block-columns { flex-direction: column; gap: 0; }
+    .article .alignleft, .article .alignright { float: none; max-width: 100%; margin: 1.5rem auto; }
+  }
+  .article .wp-block-cover { position: relative; margin: 2rem 0; min-height: 280px; display: grid; place-items: center; overflow: hidden; }
+  .article .wp-block-cover__image-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .article .wp-block-cover__background { position: absolute; inset: 0; background: #1a1714; opacity: 0.45; }
+  .article .wp-block-cover__inner-container { position: relative; padding: 2rem 1.5rem; color: #fff; text-align: center; }
+  .article .wp-block-cover__inner-container * { color: #fff; }
+
+  /* Embeds */
+  .article iframe { max-width: 100%; border: 0; }
+  .article .wp-block-embed { margin: 2rem 0; }
+  .article .wp-has-aspect-ratio .wp-block-embed__wrapper { position: relative; aspect-ratio: 16 / 9; }
+  .article .wp-embed-aspect-4-3 .wp-block-embed__wrapper { aspect-ratio: 4 / 3; }
+  .article .wp-has-aspect-ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .article .instagram-media { margin: 2rem auto !important; }
+
+  /* Transcript toggles (were Divi accordions) */
+  .article details.toggle { border: 1px solid var(--rule); margin: 2rem 0; background: var(--paper-deep); }
+  .article details.toggle summary { cursor: pointer; padding: 0.9rem 1.2rem; font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
+  .article details.toggle > div { padding: 0 1.2rem 1.2rem; }
+
+  .tags { max-width: var(--text); margin: 2.5rem auto 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.85rem; }
+  .tags span { border: 1px solid var(--rule); padding: 0.1rem 0.6rem; color: var(--ink-soft); }
+
+  .pager { max-width: var(--text); margin: 3.5rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+  .pager a { text-decoration: none; color: var(--ink); font-family: var(--font-display); font-weight: 600; line-height: 1.3; }
+  .pager a:hover { color: var(--brass); }
+  .pager a span { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); margin-bottom: 0.2rem; }
+  .pager .older { text-align: right; }
+</style>

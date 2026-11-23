@@ -1,0 +1,5 @@
+dist/
+.astro/
+node_modules/
+# copied from ../migration at build time
+public/media/

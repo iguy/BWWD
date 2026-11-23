@@ -1,0 +1,57 @@
+---
+// Section hub at the same URL WordPress used: /category/<wp-category>/
+import Layout from '../../layouts/Layout.astro';
+import { SECTIONS, getArticles, mediaUrl, dateLabel, absolute, type Section, type Article } from '../../lib/sections';
+
+export async function getStaticPaths() {
+  const articles = await getArticles();
+  return SECTIONS.map((section) => ({
+    params: { cat: section.wpCat },
+    props: { section, items: articles.filter((a) => a.section.folder === section.folder) },
+  }));
+}
+
+interface Props { section: Section; items: Article[] }
+const { section, items } = Astro.props;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: section.name,
+  url: absolute(`/category/${section.wpCat}/`),
+  hasPart: items.map((a) => ({ '@type': 'Article', headline: a.data.title, url: absolute(`/${a.data.slug}/`) })),
+};
+---
+<Layout title={`${section.name} — Better World With Design`} description={section.blurb} jsonLd={jsonLd}>
+  <header class="hub-head" slot="masthead">
+    <h1>{section.name}</h1>
+    <p>{section.blurb}</p>
+  </header>
+  <main>
+    <ul class="cards">
+      {items.map((a) => (
+        <li>
+          <a href={`/${a.data.slug}/`}>
+            {a.data.cover
+              ? <img src={mediaUrl(a.data.cover, a.section)} alt={a.data.coverAlt} loading="lazy" decoding="async" />
+              : <span class="no-img" />}
+            <span class="date">{dateLabel(a.data.pubDate)}</span>
+            <span class="title">{a.data.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  .hub-head { max-width: var(--wide); margin: 0 auto; padding: 2.75rem 16px 3rem; }
+  .hub-head h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); margin: 0 0 0.6rem; color: #efe6d6; }
+  .hub-head p { margin: 0; color: #b9ae98; max-width: 40ch; }
+  main { max-width: var(--wide); margin: 3rem auto 0; padding: 0 16px; }
+  .cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2.2rem 1.8rem; }
+  .cards a { display: block; text-decoration: none; color: var(--ink); }
+  .cards img, .no-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--paper-deep); display: block; }
+  .date { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.8rem; }
+  .title { display: block; font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; line-height: 1.25; margin-top: 0.2rem; }
+  .cards a:hover .title { color: var(--brass); }
+</style>
