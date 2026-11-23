@@ -83,5 +83,6 @@ status: "pulled"
 <p><!-- wp:paragraph --></p>
 <p><iframe title="Cookie Jam (Acid 909 Mix) on Spotify" src="https://open.spotify.com/embed/album/6BzuoH1h9skmEhud6Rq9Gr?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
 <p><a href="https://open.spotify.com/album/6BzuoH1h9skmEhud6Rq9Gr">Listen to Cookie Jam (Acid 909 Mix) on Spotify</a></p>
+<p>Follow <a href="https://open.spotify.com/artist/1Pw2y2UrnP0Hhe9ZOszNYu">Warehouse Sunrise on Spotify</a> for every new release.</p>
 <p><!-- /wp:paragraph --></p>
 </div></div></div></div></div>
