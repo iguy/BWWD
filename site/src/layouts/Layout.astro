@@ -57,14 +57,15 @@ const path = Astro.url.pathname;
     gtag('config', 'G-02EPG8KK2Y');
   </script>
   <script is:inline>
-    // Artwork linked from other sites: if it fails to load, show our own image instead
+    // Artwork linked from other sites: if it's blocked, try the post's next artwork; if none load, hide it
     document.addEventListener('error', function (e) {
       var el = e.target;
-      if (el.tagName === 'IMG' && el.dataset.fallback && el.src.indexOf(el.dataset.fallback) === -1) {
-        el.src = el.dataset.fallback;
-        var cap = el.parentNode && el.parentNode.querySelector('figcaption');
-        if (cap) cap.remove();
-      }
+      if (el.tagName !== 'IMG' || !el.dataset.fallback) return;
+      var rest = el.dataset.fallback === 'none' ? [] : el.dataset.fallback.split('|');
+      var next = rest.shift();
+      el.dataset.fallback = rest.length ? rest.join('|') : 'none';
+      if (next) el.src = next;
+      else { el.classList.add('is-missing'); var cap = el.parentNode && el.parentNode.querySelector('figcaption'); if (cap) cap.remove(); }
     }, true);
   </script>
   <style is:global>
@@ -98,6 +99,7 @@ const path = Astro.url.pathname;
     a { color: var(--red); text-underline-offset: 4px; text-decoration-thickness: 2px; }
     a:hover { color: var(--blue); }
     h1, h2, h3, h4, h5 { font-family: var(--font-display); line-height: 1.05; font-weight: 700; letter-spacing: -0.015em; }
+    img.is-missing { visibility: hidden; }
     ::selection { background: var(--yellow); color: var(--ink); }
 
     /* Masthead: black bar, geometric mark, uppercase nav */

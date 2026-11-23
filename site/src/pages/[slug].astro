@@ -64,7 +64,7 @@ const jsonLd = {
           <figure class="hero__art">
             <span class="shape shape--circle" aria-hidden="true"></span>
             <span class="shape shape--square" aria-hidden="true"></span>
-            <img src={heroSrc} alt={heroAlt} data-fallback={art && coverPath ? coverPath : undefined} />
+            <img src={heroSrc} alt={heroAlt} data-fallback={art ? art.others.join('|') || 'none' : undefined} />
             {art?.caption && <figcaption>{art.caption}</figcaption>}
           </figure>
         )}

@@ -83,13 +83,21 @@ export const absolute = (p: string) => (p ? new URL(p, 'https://betterworldwithd
 export const dateLabel = (d: string) =>
   new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-// Card/hero image for an article. Art & Design uses the artist's own work when the post has some.
-export async function cardImage(a: Article): Promise<{ src: string; alt: string; fallback?: string }> {
-  const cover = { src: mediaUrl(a.data.cover, a.section), alt: a.data.coverAlt || a.data.title };
+// Card/hero image for an article. Art & Design uses the artist's own work when the post has some;
+// if a linked image is blocked, it falls through to the post's other artwork (never the generated thumbnail).
+export async function cardImage(a: Article): Promise<{ src: string; alt: string; fallback?: string; local: boolean }> {
+  const coverSrc = mediaUrl(a.data.cover, a.section);
+  const cover = { src: coverSrc, alt: a.data.coverAlt || a.data.title, local: true };
   if (a.section.look !== 'gallery') return cover;
   const { cleanHtml, takeArt } = await import('./clean');
-  const { art } = takeArt(cleanHtml(a.body ?? '', a.section, { title: a.data.title, plates: true, cover: cover.src }));
-  return art ? { src: art.src, alt: art.alt || art.caption || a.data.title, fallback: cover.src || undefined } : cover;
+  const { art } = takeArt(cleanHtml(a.body ?? '', a.section, { title: a.data.title, plates: true, cover: coverSrc }));
+  if (!art) return cover;
+  return {
+    src: art.src,
+    alt: art.alt || art.caption || a.data.title,
+    fallback: art.others.join('|') || 'none',
+    local: art.src.startsWith('/'),
+  };
 }
 
 // Plain-text paragraphs of a post (no headings, players or scripts).

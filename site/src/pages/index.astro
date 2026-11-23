@@ -12,7 +12,7 @@ const art = (await withImg(bySection('art-design'))).filter((x) => x.img.src).sl
 const music = (await withImg(bySection('music'))).filter((x) => x.img.src).slice(0, 6);
 const tech = (await withImg(bySection('technology'))).slice(0, 6).map((x) => ({ ...x, text: excerpt(x.a) }));
 // Featured story: the newest Art & Design piece, told as a spread
-const feat = art[0];
+const feat = art.find((x) => x.img.local) ?? art[0]; // saved on the site, so it always loads
 const featText = feat ? excerpt(feat.a, 420) : '';
 const featQuote = feat
   ? (paragraphs(feat.a).slice(3).join(' ').split(/(?<=[.!?])\s+(?=[A-Z"“])/) as string[])

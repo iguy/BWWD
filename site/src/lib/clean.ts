@@ -11,7 +11,7 @@ interface Options {
   tracks?: boolean; // music: cover images that match a Spotify release become playable tiles
 }
 
-export interface Art { src: string; alt: string; caption: string }
+export interface Art { src: string; alt: string; caption: string; others: string[] }
 
 // Art & Design: the artist's own work leads, not the generated thumbnail.
 // Returns the first plate (the artwork) and removes it from the body.
@@ -24,6 +24,8 @@ export function takeArt(html: string): { html: string; art?: Art } {
     src: img.getAttribute('src')!,
     alt: img.getAttribute('alt') || '',
     caption: fig.querySelector('figcaption')?.text.trim() || '',
+    // the post's other artwork: used if this image is blocked by the site it's linked from
+    others: root.querySelectorAll('figure.plate img').map((i) => i.getAttribute('src') || '').filter((x) => x && x !== img.getAttribute('src')),
   };
   const works = fig.closest('.works');
   fig.remove();
