@@ -18,17 +18,38 @@ status: "pulled"
 <p>Discover Madeline Miller's lyrical retelling of the Trojan War through Patroclus's eyes—a story of fate, friendship, and a love that transcends death.<!-- notionvc: 2871e952-3530-4fba-ab6c-fe304480bec2 --></p>
 </div></div></div><div class="et_pb_column_109 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_row_63 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_110 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_57 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Iliad vs. The Song of Achilles — What's Different?</h2>
 <p><strong>C</strong>ompare Homer's epic with Miller's intimate reimagining. See how scope, perspective, and themes shift from battlefield glory to personal truth.</p>
-<p>View the Comparison Table →</p>
+<p><a class="soa-cta" href="#compare">View the comparison table →</a></p>
 <h2><!-- notionvc: 7b80ddae-df5a-4d0f-b442-ac09243a6eec --></h2>
 <p><!-- notionvc: 16832797-d3b9-4ae0-a645-5946e7b6213e --></p>
 </div></div></div></div><div class="et_pb_row_64 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_111 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_58 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Test Your Knowledge<!-- notionvc: 0b7fb2ff-52ba-41d5-8c68-52683fb89978 --></h2>
 <p>Take the Thetis's Prophecy quiz and see how well you know the story.</p>
-<p>Take the Quiz →</p>
+<p><a class="soa-cta" href="#quiz">Take the quiz →</a></p>
 <p><!-- notionvc: a4e3f723-37ff-471e-a1fe-b7e06490de95 --></p>
 </div></div></div><div class="et_pb_column_112 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_59 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Character Guide</h2>
 <p>Meet Achilles, Patroclus, Thetis, and the cast who bring this epic to life.<!-- notionvc: 8baf49a6-6368-463c-a4cf-0c70406bf89c --></p>
-<p>Explore Characters →</p>
-</div></div></div></div></div></div></div><div class="et_pb_section_40 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_65 et_pb_row et_flex_row"><div class="et_pb_column_113 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_60 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2 class="wp-block-heading has-large-font-size">A Reader's Journey with The Song of Achilles</h2>
+<p><a class="soa-cta" href="#characters">Explore the characters →</a></p>
+</div></div></div></div></div></div></div><div class="et_pb_section_40 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_65 et_pb_row et_flex_row"><div class="et_pb_column_113 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_60 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><section id="compare" class="soa-block soa-compare">
+<h2>Iliad vs. The Song of Achilles</h2>
+<p>Homer and Madeline Miller tell much of the same story. What changes is who is speaking, how much time we see, and what the story is really about.</p>
+<div class="soa-table-wrap">
+<table class="soa-table">
+<thead><tr><th scope="col"></th><th scope="col">The Iliad (Homer)</th><th scope="col">The Song of Achilles (Miller)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Who tells it</th><td>A bard calling on the Muse, seeing everyone from above</td><td>Patroclus, in the first person, and after his death as a ghost</td></tr>
+<tr><th scope="row">Time span</th><td>About fifty days in the tenth year of the war</td><td>Patroclus's childhood through Achilles's death and beyond</td></tr>
+<tr><th scope="row">What it's about</th><td>The rage of Achilles and what it costs the Greeks</td><td>The love between Achilles and Patroclus, and what glory costs it</td></tr>
+<tr><th scope="row">Achilles &amp; Patroclus</th><td>Devoted companions; the nature of their bond is left open</td><td>Openly lovers, from boyhood friendship onward</td></tr>
+<tr><th scope="row">Patroclus</th><td>An older, skilled warrior and Achilles's right hand</td><td>A gentle exile who learns medicine and would rather heal than fight</td></tr>
+<tr><th scope="row">The gods</th><td>On stage constantly, taking sides and steering battles</td><td>Mostly offstage; Thetis is the god who matters</td></tr>
+<tr><th scope="row">Briseis</th><td>A prize of war at the centre of a quarrel, with little voice</td><td>A friend to Patroclus, with her own fears and courage</td></tr>
+<tr><th scope="row">Hector</th><td>A full hero in his own right: son, husband, father, defender of Troy</td><td>Seen from the Greek camp, mostly as the man Achilles is fated to kill</td></tr>
+<tr><th scope="row">How it ends</th><td>Hector's funeral in Troy; Achilles's death is still to come</td><td>Achilles's death, and the two lovers finally reunited in the underworld</td></tr>
+<tr><th scope="row">Style</th><td>Epic verse, repeated phrases and epithets, made to be performed aloud</td><td>Spare, lyrical modern prose, made to be read close</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<h2 class="wp-block-heading has-large-font-size">A Reader's Journey with The Song of Achilles</h2>
 <p><span style="font-size: 15px;">Characters, Relationships, and Modern Relevance</span></p>
 <p>As I delved into this modern retelling of an ancient tale, I joined countless readers online who grapple with similar questions about this interesting narrative. The first half of the book captivated me with its intimate portrayal of young friendship blossoming into love, and the last quarter left me emotionally transformed - as it has many others, judging by the online discourse.</p>
 </div></div></div></div><div class="et_pb_row_66 et_pb_row et_flex_row"><div class="et_pb_column_114 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_3_5 et_flex_column_3_5_tablet et_flex_column_24_24_phone"><div class="et_pb_text_61 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>One of my major challenges was keeping track of the sequence of conflicts:</p>
@@ -44,18 +65,73 @@ status: "pulled"
 <p>The question of whether this is truly a tragic tale or a love story that transcends death continues to spark debate. While the ending is undeniably heartbreaking, the final scene suggests an eternal reunion. Are readers simply trying to soften the blow by imagining a happily-ever-after in the underworld, or is this interpretation crucial to understanding the story's deeper meaning about love's endurance beyond death?</p>
 </div></div></div></div><div class="et_pb_row_68 et_pb_row et_flex_row"><div class="et_pb_column_117 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_image_3 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img loading="lazy" decoding="async" src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/two-men.png" width="1024" height="1024" class="wp-image-4964" /></span></div></div><div class="et_pb_column_118 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_row_69 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_119 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_63 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Character Guide</h2>
 <p>Meet Achilles, Patroclus, Thetis, and the cast who bring this epic to life.<!-- notionvc: 8baf49a6-6368-463c-a4cf-0c70406bf89c --></p>
-<p>Explore Characters →</p>
+<p><a class="soa-cta" href="#characters">Explore the characters →</a></p>
 <p> </p>
 <h2 class="wp-block-heading has-text-align-left has-white-color has-text-color" style="font-size: 100px; font-style: normal; font-weight: bold; letter-spacing: 0px; line-height: 1; text-transform: uppercase;"></h2>
-</div></div></div></div><div class="et_pb_row_70 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_120 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_64 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>KEY Characters</h2>
-<h2><!-- notionvc: 0b7fb2ff-52ba-41d5-8c68-52683fb89978 --></h2>
-<p>UPDATING</p>
-<p>Take the Quiz →</p>
+</div></div></div></div><div class="et_pb_row_70 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_120 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_64 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><section id="characters" class="soa-block soa-web">
+<h2>Who's who: the character web</h2>
+<p>Tap or hover over a name to see who they are and how they're tied to everyone else.</p>
+<div class="soa-web__wrap">
+<svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected">
+<g class="soa-edges">
+<line data-a="achilles" data-b="patroclus" x1="470" y1="300" x2="300" y2="300" class="soa-e soa-e--love"/>
+<line data-a="achilles" data-b="thetis" x1="470" y1="300" x2="470" y2="110"/>
+<line data-a="achilles" data-b="peleus" x1="470" y1="300" x2="300" y2="140"/>
+<line data-a="patroclus" data-b="peleus" x1="300" y1="300" x2="300" y2="140"/>
+<line data-a="patroclus" data-b="menoetius" x1="300" y1="300" x2="110" y2="200"/>
+<line data-a="achilles" data-b="chiron" x1="470" y1="300" x2="180" y2="440"/>
+<line data-a="patroclus" data-b="chiron" x1="300" y1="300" x2="180" y2="440"/>
+<line data-a="achilles" data-b="deidameia" x1="470" y1="300" x2="330" y2="540"/>
+<line data-a="deidameia" data-b="pyrrhus" x1="330" y1="540" x2="500" y2="590"/>
+<line data-a="achilles" data-b="pyrrhus" x1="470" y1="300" x2="500" y2="590"/>
+<line data-a="patroclus" data-b="briseis" x1="300" y1="300" x2="560" y2="460"/>
+<line data-a="achilles" data-b="briseis" x1="470" y1="300" x2="560" y2="460"/>
+<line data-a="agamemnon" data-b="briseis" x1="680" y1="380" x2="560" y2="460"/>
+<line data-a="achilles" data-b="agamemnon" x1="470" y1="300" x2="680" y2="380"/>
+<line data-a="achilles" data-b="odysseus" x1="470" y1="300" x2="640" y2="170"/>
+<line data-a="odysseus" data-b="pyrrhus" x1="640" y1="170" x2="500" y2="590"/>
+<line data-a="hector" data-b="patroclus" x1="860" y1="300" x2="300" y2="300" class="soa-e soa-e--death"/>
+<line data-a="achilles" data-b="hector" x1="470" y1="300" x2="860" y2="300" class="soa-e soa-e--death"/>
+<line data-a="priam" data-b="hector" x1="880" y1="140" x2="860" y2="300"/>
+<line data-a="priam" data-b="achilles" x1="880" y1="140" x2="470" y2="300"/>
+<line data-a="paris" data-b="achilles" x1="840" y1="500" x2="470" y2="300" class="soa-e soa-e--death"/>
+<line data-a="paris" data-b="priam" x1="840" y1="500" x2="880" y2="140"/>
+<line data-a="apollo" data-b="paris" x1="700" y1="590" x2="840" y2="500"/>
+<line data-a="thetis" data-b="patroclus" x1="470" y1="110" x2="300" y2="300" class="soa-e soa-e--tension"/>
+</g>
+<g class="soa-nodes">
+<g class="soa-n soa-n--greek soa-n--big" data-id="achilles" tabindex="0" role="button"><circle cx="470" cy="300" r="66"/><text x="470" y="301">Achilles</text></g>
+<g class="soa-n soa-n--greek soa-n--big" data-id="patroclus" tabindex="0" role="button"><circle cx="300" cy="300" r="66"/><text x="300" y="301">Patroclus</text></g>
+<g class="soa-n soa-n--god" data-id="thetis" tabindex="0" role="button"><circle cx="470" cy="110" r="49"/><text x="470" y="110">Thetis</text></g>
+<g class="soa-n soa-n--greek" data-id="peleus" tabindex="0" role="button"><circle cx="300" cy="140" r="46"/><text x="300" y="140">Peleus</text></g>
+<g class="soa-n soa-n--greek" data-id="menoetius" tabindex="0" role="button"><circle cx="110" cy="200" r="49"/><text x="110" y="200">Menoetius</text></g>
+<g class="soa-n soa-n--god" data-id="chiron" tabindex="0" role="button"><circle cx="180" cy="440" r="46"/><text x="180" y="440">Chiron</text></g>
+<g class="soa-n soa-n--greek" data-id="deidameia" tabindex="0" role="button"><circle cx="330" cy="540" r="52"/><text x="330" y="540">Deidameia</text></g>
+<g class="soa-n soa-n--greek" data-id="pyrrhus" tabindex="0" role="button"><circle cx="500" cy="590" r="49"/><text x="500" y="590">Pyrrhus</text></g>
+<g class="soa-n soa-n--captive" data-id="briseis" tabindex="0" role="button"><circle cx="560" cy="460" r="49"/><text x="560" y="460">Briseis</text></g>
+<g class="soa-n soa-n--greek" data-id="agamemnon" tabindex="0" role="button"><circle cx="680" cy="380" r="58"/><text x="680" y="380">Agamemnon</text></g>
+<g class="soa-n soa-n--greek" data-id="odysseus" tabindex="0" role="button"><circle cx="640" cy="170" r="52"/><text x="640" y="170">Odysseus</text></g>
+<g class="soa-n soa-n--trojan soa-n--big" data-id="hector" tabindex="0" role="button"><circle cx="860" cy="300" r="58"/><text x="860" y="300">Hector</text></g>
+<g class="soa-n soa-n--trojan" data-id="priam" tabindex="0" role="button"><circle cx="880" cy="140" r="46"/><text x="880" y="140">Priam</text></g>
+<g class="soa-n soa-n--trojan" data-id="paris" tabindex="0" role="button"><circle cx="840" cy="500" r="46"/><text x="840" y="500">Paris</text></g>
+<g class="soa-n soa-n--god" data-id="apollo" tabindex="0" role="button"><circle cx="700" cy="590" r="46"/><text x="700" y="590">Apollo</text></g>
+</g>
+</svg>
+<aside class="soa-web__info" aria-live="polite">
+<p class="soa-web__kicker">Character</p>
+<h3 class="soa-web__name">Achilles</h3>
+<p class="soa-web__desc">Son of the sea nymph Thetis and King Peleus, and the best warrior of his generation. He is promised a short life with endless fame, and chooses it.</p>
+<ul class="soa-web__links"></ul>
+</aside>
+</div>
+<ul class="soa-web__key">
+<li><i class="k-greek"></i>Greeks</li><li><i class="k-trojan"></i>Trojans</li><li><i class="k-god"></i>Gods and immortals</li><li><i class="k-captive"></i>Captive</li>
+<li><b class="k-love"></b>Love</li><li><b class="k-death"></b>Kills</li><li><b class="k-tension"></b>Tension</li>
+</ul>
+</section>
+
 <p><!-- notionvc: a4e3f723-37ff-471e-a1fe-b7e06490de95 --></p>
-</div></div></div><div class="et_pb_column_121 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_65 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>KEY Relationships</h2>
-<h2><!-- notionvc: 0b7fb2ff-52ba-41d5-8c68-52683fb89978 --></h2>
-<p>UPDATING</p>
-<p>Take the Quiz →</p>
+</div></div></div><div class="et_pb_column_121 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_65 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner">
 <p><!-- notionvc: a4e3f723-37ff-471e-a1fe-b7e06490de95 --></p>
 </div></div></div></div></div></div><div class="et_pb_row_71 et_pb_row et_flex_row"><div class="et_pb_column_122 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_8_24 et_flex_column_8_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_66 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2 class="wp-block-heading">Main Characters</h2>
 </div></div></div><div class="et_pb_column_123 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_16_24 et_flex_column_16_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_67 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><div class="wp-block-column"><strong>Achilles</strong>: The legendary warrior, son of Thetis and King Peleus, known for his extraordinary fighting abilities and his deep bond with Patroclus.<!-- /wp:paragraph --><!-- /wp:column --></div>
@@ -81,16 +157,13 @@ status: "pulled"
 </div></div></div><div class="et_pb_column_135 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_75 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>King Priam</strong>: King of Troy, father of Hector and Paris.</p>
 </div></div></div></div><div class="et_pb_row_78 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_136 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_76 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>Paris</strong>: Trojan prince whose actions sparked the Trojan War by taking Helen.</p>
 </div></div></div><div class="et_pb_column_137 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_77 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>Odysseus</strong>: a clever Greek warrior and king who attempts to honor Patroclus' memory.</p>
-</div></div></div></div></div></div></div><div class="et_pb_section_44 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_79 et_pb_row et_flex_row"><div class="et_pb_column_138 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_78 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>KEY Relationships</h2>
-<h2><!-- notionvc: 0b7fb2ff-52ba-41d5-8c68-52683fb89978 --></h2>
-<p>UPDATING</p>
-<p>Take the Quiz →</p>
+</div></div></div></div></div></div></div><div class="et_pb_section_44 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_79 et_pb_row et_flex_row"><div class="et_pb_column_138 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_78 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner">
 <p><!-- notionvc: a4e3f723-37ff-471e-a1fe-b7e06490de95 --></p>
 </div></div><div class="et_pb_image_6 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img loading="lazy" decoding="async" src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/screenshot-2025-02-03-at-5.37.40%e2%80%afpm.png" width="625" height="204" class="wp-image-4963" /></span></div></div><div class="et_pb_column_139 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_row_80 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_140 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_79 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
 </div></div></div><div class="et_pb_column_141 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_80 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
 </div></div></div></div><div class="et_pb_row_81 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_142 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_81 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
 </div></div></div><div class="et_pb_column_143 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_82 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"></div></div></div></div></div></div><div class="et_pb_section_45 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_82 et_pb_row et_flex_row"><div class="et_pb_column_144 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_83 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Women in the Story</h2>
-<p>UPDATING</p>
+
 </div></div></div><div class="et_pb_column_145 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_row_83 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_146 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_image_7 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img loading="lazy" decoding="async" src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/fire-3.png" width="1024" height="1024" class="wp-image-4966" /></span></div></div><div class="et_pb_column_147 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_image_8 et_pb_image et_pb_module et_flex_module"><span class="et_pb_image_wrap"><img loading="lazy" decoding="async" src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/fire-4.png" width="1024" height="1024" class="wp-image-4968" /></span></div></div></div></div></div><div class="et_pb_row_84 et_pb_row et_flex_row"><div class="et_pb_column_148 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_6_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_84 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>Penelope: Odysseus's wife, mentioned in his plea to Paris</p>
 </div></div></div><div class="et_pb_column_149 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_6_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_85 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>Panthesilea: Amazon warrior queen killed by Achilles</p>
 </div></div></div><div class="et_pb_column_150 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_6_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_86 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>Deidameia: Princess of Scyros who bore Achilles' son Neoptolemus</p>
@@ -162,8 +235,7 @@ status: "pulled"
 <p>The Song of Achilles is generally considered appropriate for mature teenagers (14+). While it contains some mature themes including violence and romantic relationships, these are handled tastefully and within historical context. Parents should be aware that the book includes battle scenes, some intimate moments (though not explicitly detailed), and discussions of death and war.</p>
 </div></div></div></div><div class="et_pb_row_98 et_pb_row et_flex_row"><div class="et_pb_column_183 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_112 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><h3>Is The Song of Achilles based on The Iliad?</h3>
 <p>Yes, The Song of Achilles is based on Homer's Iliad, but it expands significantly beyond the original epic poem. While The Iliad primarily focuses on a few weeks during the Trojan War, The Song of Achilles tells a broader story, beginning with Patroclus and Achilles' childhood and continuing through the events of The Iliad.</p>
-</div></div></div><div class="et_pb_column_184 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_113 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>Is The Song of Achilles appropriate for a 14 year old?</p>
-<p>The Song of Achilles is generally considered appropriate for mature teenagers (14+). While it contains some mature themes including violence and romantic relationships, these are handled tastefully and within historical context. Parents should be aware that the book includes battle scenes, some intimate moments (though not explicitly detailed), and discussions of death and war.</p>
+</div></div></div><div class="et_pb_column_184 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_113 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner">
 </div></div></div></div></div><div class="et_pb_section_50 et_pb_section et_section_regular et_flex_section"><div class="et_pb_row_99 et_pb_row et_flex_row"><div class="et_pb_column_185 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_114 et_pb_text et_pb_bg_layout_light et_pb_module et_flex_module"><div class="et_pb_text_inner"><p>&nbsp;</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
@@ -305,7 +377,7 @@ status: "pulled"
 <p class="has-large-font-size"><strong>Was Achilles actually shot in the heel?</strong></p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>According to mythology, Achilles was not actually shot in the heel - he was struck by an arrow in his heel. According to the most common version of the myth, Paris shot Achilles in his vulnerable heel with an arrow guided by the god Apollo.</p>
+<p>In the later myths, yes: an arrow struck him in the heel, his one weak spot. According to the most common version of the myth, Paris shot Achilles in his vulnerable heel with an arrow guided by the god Apollo.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
 <p>The story of Achilles' heel vulnerability comes from the legend that when he was born, his mother Thetis dipped him in the River Styx to make him invulnerable. However, she held him by his heel, which didn't touch the water, leaving that spot as his only weak point. This is where we get the phrase "Achilles' heel" to describe a person's weak spot despite overall strength.</p>
@@ -447,3 +519,247 @@ status: "pulled"
 <p><!-- wp:paragraph --></p>
 <p>In the end, their modern story would still be about choosing between personal happiness and societal expectations, about the courage to be true to oneself, and about love that defies conventional norms. The fundamental questions about fate, choice, and the power of love would remain just as relevant in today's context as they were in ancient Greece.</p>
 </div></div></div></div></div>
+
+<section id="quiz" class="soa-block soa-quiz">
+<p class="soa-quiz__kicker">Thetis's Prophecy</p>
+<h2>Which hero are you: Achilles, Patroclus or Hector?</h2>
+<p>Eight questions about fate and choice, love and glory. Answer honestly; the Fates can tell.</p>
+<div class="soa-quiz__box">
+<div class="soa-quiz__progress" aria-hidden="true"><i></i></div>
+<div class="soa-quiz__stage" aria-live="polite"></div>
+</div>
+</section>
+
+<style>
+.soa-block { margin: 4rem 0; scroll-margin-top: 90px; }
+.soa-block h2 { margin-bottom: .6rem; }
+.soa-cta { display: inline-block; padding: .7rem 1.1rem; background: #2a2622; color: #ece4d3 !important; text-decoration: none; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.soa-cta:hover { background: #a9503d; }
+.soa-table-wrap { overflow-x: auto; border: 4px solid #2a2622; margin-top: 1.4rem; }
+.soa-table { width: 100%; border-collapse: collapse; font-size: .98rem; line-height: 1.45; min-width: 640px; }
+.soa-table th, .soa-table td { padding: .85rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid #c9bea8; }
+.soa-table thead th { background: #2a2622; color: #ece4d3; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+.soa-table thead th:nth-child(2) { background: #44596f; } .soa-table thead th:nth-child(3) { background: #a9503d; }
+.soa-table tbody th { width: 22%; font-weight: 700; background: #ddd2bd; }
+.soa-table tbody tr:hover td { background: #f3ede1; }
+
+.soa-web__wrap { display: grid; grid-template-columns: 1fr; gap: 1.4rem; margin-top: 1.2rem; }
+.soa-web__links { columns: 2 14rem; column-gap: 1.6rem; }
+.soa-web__links li { break-inside: avoid; }
+.soa-web__svg { width: 100%; height: auto; background: #ddd2bd; border: 4px solid #2a2622; }
+.soa-edges line { stroke: #2a2622; stroke-width: 2; opacity: .28; transition: opacity .3s, stroke-width .3s; }
+.soa-e--love { stroke: #a9503d !important; stroke-width: 5 !important; opacity: .7 !important; }
+.soa-e--death { stroke-dasharray: 10 7; }
+.soa-e--tension { stroke-dasharray: 2 6; }
+.soa-edges line.on { opacity: 1; stroke-width: 4; }
+.soa-edges.dim line:not(.on) { opacity: .08; }
+.soa-n { cursor: pointer; outline: none; }
+.soa-n circle { fill: #ece4d3; stroke: #2a2622; stroke-width: 3; transition: transform .35s cubic-bezier(.2,.9,.2,1.3); transform-box: fill-box; transform-origin: center; }
+.soa-n text { font: 700 23px Jost, sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #2a2622; pointer-events: none; }
+.soa-n--big text { font-size: 26px; }
+.soa-n--greek circle { fill: #c5ced8; } .soa-n--trojan circle { fill: #e3c2b8; } .soa-n--god circle { fill: #ead7ae; } .soa-n--captive circle { fill: #ece4d3; stroke-dasharray: 5 4; }
+.soa-n:hover circle, .soa-n:focus-visible circle, .soa-n.on circle { transform: scale(1.12); stroke-width: 5; }
+.soa-n.on circle { fill: #2a2622; } .soa-n.on text { fill: #ece4d3; }
+.soa-nodes.dim .soa-n:not(.on):not(.near) { opacity: .35; }
+.soa-web__info { border: 4px solid #2a2622; padding: 1.2rem 1.3rem; background: #ece4d3; box-shadow: 10px 10px 0 #a9503d; }
+.soa-web__kicker { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #a9503d; }
+.soa-web__name { margin: .3rem 0 .6rem; font-size: 2rem; letter-spacing: -.03em; }
+.soa-web__desc { margin: 0 0 .9rem; font-size: 1rem; line-height: 1.5; }
+.soa-web__links { list-style: none; margin: 0; padding: 0; font-size: .92rem; }
+.soa-web__links li { padding: .4rem 0; border-top: 1px solid #c9bea8; }
+.soa-web__links b { font-weight: 700; }
+.soa-web__key { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; list-style: none; margin: 1rem 0 0; padding: 0; font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.soa-web__key li { display: inline-flex; align-items: center; gap: .4rem; }
+.soa-web__key i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #2a2622; display: inline-block; }
+.soa-web__key b { width: 26px; height: 0; border-top: 3px solid #2a2622; display: inline-block; }
+.k-greek { background: #c5ced8; } .k-trojan { background: #e3c2b8; } .k-god { background: #ead7ae; } .k-captive { background: #ece4d3; border-style: dashed !important; }
+.k-love { border-color: #a9503d !important; border-top-width: 5px !important; } .k-death { border-top-style: dashed !important; } .k-tension { border-top-style: dotted !important; }
+@media (max-width: 820px) { .soa-web__wrap { grid-template-columns: 1fr; } .soa-web__info { box-shadow: 6px 6px 0 #a9503d; } }
+
+.soa-quiz { background: #2a2622; color: #ece4d3; padding: 2.4rem 1.6rem; box-shadow: 12px 12px 0 #c79d4f; }
+.soa-quiz h2 { color: #ece4d3; }
+.soa-quiz__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #c79d4f; }
+.soa-quiz__box { margin-top: 1.4rem; }
+.soa-quiz__progress { height: 8px; background: #4a443d; margin-bottom: 1.4rem; }
+.soa-quiz__progress i { display: block; height: 100%; width: 0; background: #c79d4f; transition: width .5s cubic-bezier(.2,.9,.2,1); }
+.soa-q { animation: soa-in .45s cubic-bezier(.2,.8,.2,1); }
+@keyframes soa-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.soa-q__n { margin: 0 0 .4rem; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #c79d4f; }
+.soa-q__text { margin: 0 0 1.1rem; font-size: clamp(1.3rem, 2.6vw, 1.8rem); line-height: 1.25; font-weight: 600; }
+.soa-q__opts { display: grid; gap: .6rem; }
+.soa-opt { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: 2rem 1fr; gap: .7rem; align-items: center; padding: .9rem 1rem; border: 2px solid #6b635a; color: #ece4d3; font-size: 1.02rem; line-height: 1.35; transition: background .2s, border-color .2s, transform .2s; }
+.soa-opt b { display: grid; place-items: center; width: 2rem; height: 2rem; border: 2px solid currentColor; font-size: .85rem; }
+.soa-opt:hover, .soa-opt:focus-visible { border-color: #c79d4f; background: #3a342e; transform: translateX(4px); }
+.soa-opt.picked { background: #c79d4f; color: #2a2622; border-color: #c79d4f; }
+.soa-q__nav { display: flex; justify-content: space-between; margin-top: 1rem; }
+.soa-link { all: unset; cursor: pointer; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #c79d4f; }
+.soa-link:hover { color: #ece4d3; }
+.soa-result { animation: soa-in .6s cubic-bezier(.2,.8,.2,1); }
+.soa-card { position: relative; overflow: hidden; padding: 2rem 1.6rem; background: #ece4d3; color: #2a2622; border: 6px solid #c79d4f; }
+.soa-card--achilles { border-color: #c79d4f; } .soa-card--patroclus { border-color: #a9503d; } .soa-card--hector { border-color: #44596f; }
+.soa-card__shape { position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; opacity: .9; }
+.soa-card--achilles .soa-card__shape { background: #c79d4f; }
+.soa-card--patroclus .soa-card__shape { background: #a9503d; border-radius: 50%; }
+.soa-card--hector .soa-card__shape { background: #44596f; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.soa-card__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.soa-quiz .soa-card .soa-card__name { position: relative; margin: .3rem 0 .2rem; font-size: clamp(2.6rem, 7vw, 4rem); line-height: .95; letter-spacing: -.04em; color: #2a2622; }
+.soa-card__tier { position: relative; margin: 0 0 1rem; font-weight: 700; color: #a9503d; }
+.soa-card__text { position: relative; margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.55; max-width: 52ch; }
+.soa-bars { display: grid; gap: .45rem; margin: 1.2rem 0 0; }
+.soa-bar { display: grid; grid-template-columns: 6.5rem 1fr 2.4rem; gap: .6rem; align-items: center; font-size: .85rem; font-weight: 600; }
+.soa-bar span { height: 12px; background: #ddd2bd; }
+.soa-bar span i { display: block; height: 100%; width: 0; transition: width 1s cubic-bezier(.2,.9,.2,1) .2s; }
+.soa-bar--achilles i { background: #c79d4f; } .soa-bar--patroclus i { background: #a9503d; } .soa-bar--hector i { background: #44596f; }
+.soa-result__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.2rem; }
+.soa-btn { all: unset; cursor: pointer; padding: .75rem 1.1rem; background: #c79d4f; color: #2a2622; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.soa-btn--ghost { background: transparent; color: #ece4d3; border: 2px solid #ece4d3; }
+.soa-btn:hover { background: #ece4d3; color: #2a2622; }
+.soa-review { margin-top: 1.4rem; display: none; }
+.soa-review.open { display: block; }
+.soa-review li { margin-bottom: .9rem; font-size: .95rem; line-height: 1.5; }
+.soa-review em { color: #c79d4f; font-style: normal; font-weight: 700; }
+.soa-copied { font-size: .8rem; color: #c79d4f; align-self: center; }
+@media (prefers-reduced-motion: reduce) { .soa-q, .soa-result { animation: none; } }
+</style>
+<script>
+(function () {
+  /* ---------- Character web ---------- */
+  var web = document.querySelector('.soa-web');
+  if (web) {
+    var people = {
+      achilles: ['Greek hero', 'Achilles', 'Son of the sea nymph Thetis and King Peleus, and the best warrior of his generation. He is promised a short life with endless fame, and chooses it.'],
+      patroclus: ['The narrator', 'Patroclus', 'An exiled prince who grows up beside Achilles in Phthia. Gentle, unsure of himself, and a gifted healer, he tells the whole story.'],
+      thetis: ['Sea nymph, goddess', 'Thetis', "Achilles's immortal mother. She wants her son to be a god-like hero and sees Patroclus as standing in the way."],
+      peleus: ['King of Phthia', 'Peleus', 'Achilles\'s mortal father, a kind king who takes in the exiled Patroclus and raises him with his son.'],
+      menoetius: ['King of Opus', 'Menoetius', 'Patroclus\'s cold, disappointed father, who sends him into exile after a boy dies in a fight.'],
+      chiron: ['Centaur, teacher', 'Chiron', 'The wise centaur of Mount Pelion who teaches Achilles and Patroclus medicine, music and the names of plants.'],
+      deidameia: ['Princess of Scyros', 'Deidameia', 'Thetis hides Achilles on Scyros disguised as a girl, and marries him to Deidameia. She bears his son.'],
+      pyrrhus: ['Achilles\'s son', 'Pyrrhus (Neoptolemus)', 'Raised by Thetis to be a weapon. He arrives at Troy after his father\'s death and is crueller than Achilles ever was.'],
+      briseis: ['Captive from Lyrnessus', 'Briseis', 'Taken as a prize of war. Patroclus asks Achilles to claim her to keep her safe, and she becomes his close friend.'],
+      agamemnon: ['Leader of the Greeks', 'Agamemnon', 'King of Mycenae and commander of the army. His seizure of Briseis starts the quarrel that keeps Achilles out of the fighting.'],
+      odysseus: ['King of Ithaca', 'Odysseus', 'The cleverest of the Greeks. He finds Achilles on Scyros, talks him into the war, and at the end speaks up for Patroclus.'],
+      hector: ['Prince of Troy', 'Hector', 'Troy\'s greatest defender. The prophecy says Achilles will die soon after Hector does. He kills Patroclus.'],
+      priam: ['King of Troy', 'Priam', 'Hector\'s father. He comes alone to Achilles\'s tent at night to beg for his son\'s body.'],
+      paris: ['Prince of Troy', 'Paris', 'His taking of Helen starts the war. With Apollo guiding his arrow, he kills Achilles.'],
+      apollo: ['God', 'Apollo', 'The god who protects Troy. He sends a plague on the Greek camp and guides the arrow that kills Achilles.']
+    };
+    var ties = {
+      'achilles|patroclus': 'Lovers, from boyhood friends onward', 'achilles|thetis': 'Mother and son', 'achilles|peleus': 'Father and son',
+      'patroclus|peleus': 'Takes him in after his exile', 'patroclus|menoetius': 'Father who exiled him', 'achilles|chiron': 'His teacher',
+      'patroclus|chiron': 'His teacher in medicine', 'achilles|deidameia': 'Married on Scyros', 'deidameia|pyrrhus': 'Mother and son',
+      'achilles|pyrrhus': 'Father and son', 'patroclus|briseis': 'Close friends', 'achilles|briseis': 'Claims her to protect her',
+      'agamemnon|briseis': 'Takes her from Achilles', 'achilles|agamemnon': 'The quarrel at the heart of the war', 'achilles|odysseus': 'Recruits him for Troy',
+      'odysseus|pyrrhus': 'Argues for Patroclus at the tomb', 'hector|patroclus': 'Kills him in battle', 'achilles|hector': 'Kills him in revenge',
+      'priam|hector': 'Father and son', 'priam|achilles': 'Begs him for Hector\'s body', 'paris|achilles': 'Kills him with an arrow',
+      'paris|priam': 'Son and father', 'apollo|paris': 'Guides his arrow', 'thetis|patroclus': 'Distrust, slowly giving way'
+    };
+    var edges = web.querySelectorAll('.soa-edges line'), nodes = web.querySelectorAll('.soa-n');
+    var gE = web.querySelector('.soa-edges'), gN = web.querySelector('.soa-nodes');
+    var info = { k: web.querySelector('.soa-web__kicker'), n: web.querySelector('.soa-web__name'), d: web.querySelector('.soa-web__desc'), l: web.querySelector('.soa-web__links') };
+    function show(id) {
+      var p = people[id]; if (!p) return;
+      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = '';
+      var near = {};
+      edges.forEach(function (e) {
+        var a = e.dataset.a, b = e.dataset.b, hit = a === id || b === id;
+        e.classList.toggle('on', hit);
+        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
+      });
+      nodes.forEach(function (n) { n.classList.toggle('on', n.dataset.id === id); n.classList.toggle('near', !!near[n.dataset.id]); });
+      gE.classList.add('dim'); gN.classList.add('dim');
+    }
+    nodes.forEach(function (n) {
+      n.addEventListener('mouseenter', function () { show(n.dataset.id); });
+      n.addEventListener('focus', function () { show(n.dataset.id); });
+      n.addEventListener('click', function () { show(n.dataset.id); });
+      n.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n.dataset.id); } });
+    });
+    show('achilles');
+  }
+
+  /* ---------- Thetis's Prophecy quiz ---------- */
+  var quiz = document.querySelector('.soa-quiz');
+  if (!quiz) return;
+  // Each answer: A = Achilles (glory, fate embraced), B = Hector (duty, fate accepted), C = Patroclus (love, choice).
+  // Scoring: the chosen hero gets 2, the nearest other hero gets 1, the third gets 0, so every question gives out 3 points (24 in all).
+  var Q = [
+    ['The Fates say you will be famous for ever but die young. What do you do?',
+      ['Take the bargain. A short life remembered beats a long one forgotten.', 'Accept it, and spend the time you have protecting the people who need you.', 'Argue with fate. Every ordinary day with the one you love is worth more than fame.'],
+      ['Achilles makes exactly this choice, knowingly.', 'Hector knows Troy may fall and fights for it anyway.', 'Patroclus never wanted glory; he wanted Achilles alive.']],
+    ['What frightens you most?', ['Being forgotten.', 'Failing the people who rely on you.', 'Losing the person you love.'],
+      ['Kleos, undying fame, is everything to Achilles.', "Hector's dread is what happens to his wife, son and city if he falls.", 'Every fear Patroclus has is for Achilles.']],
+    ["A proud friend's stubbornness is about to get people hurt. You...", ["Back them. Their honour is their own business.", 'Call it out in front of everyone. The group comes first.', 'Find them alone and quietly beg them to stop.'],
+      ['Achilles treats insults to honour as unforgivable.', 'Hector puts Troy above any one man, himself included.', 'Patroclus pleads with Achilles in private, then acts himself.']],
+    ['Where are you in a battle?', ['Out in front, the name everyone is shouting.', 'Holding the line so others can get home.', 'Behind the line, tending the wounded.'],
+      ['No one on the field compares to Achilles.', 'Hector is the wall of Troy.', 'Patroclus learned medicine from Chiron and uses it in the camp.']],
+    ['What should be carved on your tomb?', ['Your name, so it lasts for ever.', 'The names of those you kept safe.', 'Their name beside yours.'],
+      ['Achilles wants to be remembered above all.', 'Hector measures his life by those he defends.', 'The book ends on exactly this wish.']],
+    ['A god offers you one gift. You choose...', ['To be unbeatable in battle.', 'Safety for your family and your city.', 'More time with the people you love.'],
+      ["Achilles's divine blood makes him nearly invincible.", 'Everything Hector does is for Andromache, Astyanax and Troy.', 'Patroclus would trade any gift for time.']],
+    ['Someone you love asks you to give up what you have worked for.', ['You refuse. They knew who you were.', 'You weigh it against your duty, then decide.', 'You give it up without a second thought.'],
+      ['Achilles will not give up his pride, even for Patroclus, until it is too late.', 'Hector listens to Andromache and still goes back to the walls.', 'Patroclus gives up home, safety and his own life for love.']],
+    ['Where would you rather be?', ['On the plain before Troy, with the whole world watching.', 'On the city walls at dusk, your family beside you.', "In Chiron's cave on Mount Pelion, far from any war."],
+      ['Troy is the stage Achilles was made for.', 'The walls of Troy are Hector\'s home and his post.', 'Pelion is where Patroclus and Achilles were happiest.']]
+  ];
+  var HEROES = ['achilles', 'hector', 'patroclus'];
+  var NEAR = { achilles: 'hector', hector: 'achilles', patroclus: 'hector' };
+  var R = {
+    achilles: { name: 'Achilles', text: 'You know what you want and you are willing to pay for it. Like Achilles, you would rather burn bright than last, and you hold your honour close, sometimes too close. The question is what it costs the people around you.' },
+    hector: { name: 'Hector', text: 'You fight for something bigger than yourself. Like Hector, you see the danger clearly and stand your ground anyway, because others depend on you. Duty is your strength, and sometimes your burden.' },
+    patroclus: { name: 'Patroclus', text: 'Love comes first for you, and kindness is how you show strength. Like Patroclus, you notice the people others overlook, and you would give up fame without a pause for the person you love.' }
+  };
+  var stage = quiz.querySelector('.soa-quiz__stage'), bar = quiz.querySelector('.soa-quiz__progress i');
+  var answers = [];
+  function esc(t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function score(list) {
+    var s = { achilles: 0, hector: 0, patroclus: 0 };
+    list.forEach(function (a) { var h = HEROES[a]; s[h] += 2; s[NEAR[h]] += 1; });
+    return s;
+  }
+  function ask(i) {
+    bar.style.width = (i / Q.length * 100) + '%';
+    var q = Q[i];
+    stage.innerHTML = '<div class="soa-q"><p class="soa-q__n">Question ' + (i + 1) + ' of ' + Q.length + '</p><p class="soa-q__text">' + esc(q[0]) + '</p><div class="soa-q__opts">' +
+      q[1].map(function (t, k) { return '<button type="button" class="soa-opt" data-k="' + k + '"><b>' + 'ABC'[k] + '</b><span>' + esc(t) + '</span></button>'; }).join('') +
+      '</div><div class="soa-q__nav">' + (i ? '<button type="button" class="soa-link soa-back">← Back</button>' : '<span></span>') + '<span></span></div></div>';
+    stage.querySelectorAll('.soa-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        b.classList.add('picked'); answers[i] = +b.dataset.k;
+        setTimeout(function () { i + 1 < Q.length ? ask(i + 1) : finish(); }, 260);
+      });
+    });
+    var back = stage.querySelector('.soa-back'); if (back) back.addEventListener('click', function () { ask(i - 1); });
+    var first = stage.querySelector('.soa-opt'); if (first && i) first.focus({ preventScroll: true });
+  }
+  function finish(forced) {
+    bar.style.width = '100%';
+    var s = score(answers), order = HEROES.slice().sort(function (a, b) { return s[b] - s[a]; });
+    var top = forced || order[0], second = forced ? NEAR[forced] : order[1];
+    // tie-break: the hero chosen most often by A/B/C wins, then Patroclus (the narrator)
+    if (!forced && s[top] === s[second]) { var c = [0, 0, 0]; answers.forEach(function (a) { c[a]++; }); top = HEROES[c.indexOf(Math.max.apply(null, c))]; second = order.filter(function (h) { return h !== top; })[0]; }
+    var tier = forced ? 'Take the quiz to find your own hero.' : s[top] >= 14 ? 'Unmistakably ' + R[top].name + '.' : s[top] >= 11 ? 'Mostly ' + R[top].name + ', with a streak of ' + R[second].name + '.' : 'Torn between ' + R[top].name + ' and ' + R[second].name + '.';
+    var url = location.origin + location.pathname + '?hero=' + top + '#quiz';
+    stage.innerHTML = '<div class="soa-result"><div class="soa-card soa-card--' + top + '"><span class="soa-card__shape" aria-hidden="true"></span><p class="soa-card__kicker">' + (forced ? 'A friend got' : 'Thetis\'s Prophecy says you are') + '</p><h3 class="soa-card__name">' + R[top].name + '</h3><p class="soa-card__tier">' + tier + '</p><p class="soa-card__text">' + R[top].text + '</p>' +
+      (answers.length ? '<div class="soa-bars">' + HEROES.map(function (h) { return '<div class="soa-bar soa-bar--' + h + '"><b>' + R[h].name + '</b><span><i data-w="' + (s[h] / 16 * 100) + '"></i></span><em>' + s[h] + '</em></div>'; }).join('') + '</div>' : '') +
+      '</div><div class="soa-result__actions">' + (forced ? '' : '<button type="button" class="soa-btn soa-share">Share my result</button>') + '<button type="button" class="soa-btn' + (forced ? '' : ' soa-btn--ghost') + ' soa-again">' + (forced ? 'Take the quiz' : 'Take it again') + '</button>' +
+      (answers.length ? '<button type="button" class="soa-btn soa-btn--ghost soa-show">See my answers</button>' : '') + '<span class="soa-copied" hidden>Link copied</span></div>' +
+      (answers.length ? '<ol class="soa-review">' + Q.map(function (q, i) { var k = answers[i]; return '<li>' + esc(q[0]) + '<br><em>' + 'ABC'[k] + ' · ' + esc(q[1][k]) + '</em><br>' + esc(q[2][k]) + '</li>'; }).join('') + '</ol>' : '') + '</div>';
+    requestAnimationFrame(function () { stage.querySelectorAll('.soa-bar i').forEach(function (i) { i.style.width = i.dataset.w + '%'; }); });
+    stage.querySelector('.soa-again').addEventListener('click', function () { answers = []; history.replaceState(null, '', location.pathname + '#quiz'); ask(0); });
+    var show = stage.querySelector('.soa-show'); if (show) show.addEventListener('click', function () { stage.querySelector('.soa-review').classList.toggle('open'); });
+    var shareBtn = stage.querySelector('.soa-share'); if (shareBtn) shareBtn.addEventListener('click', function () {
+      var share = url.replace('#quiz', '') + '&utm_source=share&utm_medium=quiz&utm_campaign=achilles_quiz#quiz';
+      var text = 'Thetis\'s Prophecy says I\'m ' + R[top].name + '. Which Song of Achilles hero are you?';
+      if (window.gtag) gtag('event', 'share', { method: navigator.share ? 'native' : 'copy', content_type: 'quiz_result', item_id: top });
+      if (navigator.share) navigator.share({ title: 'The Song of Achilles quiz', text: text, url: share }).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + share).then(function () { stage.querySelector('.soa-copied').hidden = false; });
+    });
+    if (!forced && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
+  }
+  // A shared link (?hero=...) opens straight on that result card
+  var shared = new URLSearchParams(location.search).get('hero');
+  if (R[shared]) { answers = []; finish(shared); }
+  else ask(0);
+})();
+</script>
+

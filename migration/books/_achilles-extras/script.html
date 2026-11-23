@@ -1,0 +1,230 @@
+<style>
+.soa-block { margin: 4rem 0; scroll-margin-top: 90px; }
+.soa-block h2 { margin-bottom: .6rem; }
+.soa-cta { display: inline-block; padding: .7rem 1.1rem; background: #2a2622; color: #ece4d3 !important; text-decoration: none; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.soa-cta:hover { background: #a9503d; }
+.soa-table-wrap { overflow-x: auto; border: 4px solid #2a2622; margin-top: 1.4rem; }
+.soa-table { width: 100%; border-collapse: collapse; font-size: .98rem; line-height: 1.45; min-width: 640px; }
+.soa-table th, .soa-table td { padding: .85rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid #c9bea8; }
+.soa-table thead th { background: #2a2622; color: #ece4d3; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+.soa-table thead th:nth-child(2) { background: #44596f; } .soa-table thead th:nth-child(3) { background: #a9503d; }
+.soa-table tbody th { width: 22%; font-weight: 700; background: #ddd2bd; }
+.soa-table tbody tr:hover td { background: #f3ede1; }
+
+.soa-web__wrap { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.4rem; align-items: start; margin-top: 1.2rem; }
+.soa-web__svg { width: 100%; height: auto; background: #ddd2bd; border: 4px solid #2a2622; }
+.soa-edges line { stroke: #2a2622; stroke-width: 2; opacity: .28; transition: opacity .3s, stroke-width .3s; }
+.soa-e--love { stroke: #a9503d !important; stroke-width: 5 !important; opacity: .7 !important; }
+.soa-e--death { stroke-dasharray: 10 7; }
+.soa-e--tension { stroke-dasharray: 2 6; }
+.soa-edges line.on { opacity: 1; stroke-width: 4; }
+.soa-edges.dim line:not(.on) { opacity: .08; }
+.soa-n { cursor: pointer; outline: none; }
+.soa-n circle { fill: #ece4d3; stroke: #2a2622; stroke-width: 3; transition: transform .35s cubic-bezier(.2,.9,.2,1.3); transform-box: fill-box; transform-origin: center; }
+.soa-n text { font: 700 15px Jost, sans-serif; text-anchor: middle; fill: #2a2622; pointer-events: none; }
+.soa-n--big text { font-size: 17px; }
+.soa-n--greek circle { fill: #c5ced8; } .soa-n--trojan circle { fill: #e3c2b8; } .soa-n--god circle { fill: #ead7ae; } .soa-n--captive circle { fill: #ece4d3; stroke-dasharray: 5 4; }
+.soa-n:hover circle, .soa-n:focus-visible circle, .soa-n.on circle { transform: scale(1.12); stroke-width: 5; }
+.soa-n.on circle { fill: #2a2622; } .soa-n.on text { fill: #ece4d3; }
+.soa-nodes.dim .soa-n:not(.on):not(.near) { opacity: .35; }
+.soa-web__info { border: 4px solid #2a2622; padding: 1.2rem 1.3rem; background: #ece4d3; box-shadow: 10px 10px 0 #a9503d; min-height: 100%; }
+.soa-web__kicker { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #a9503d; }
+.soa-web__name { margin: .3rem 0 .6rem; font-size: 2rem; letter-spacing: -.03em; }
+.soa-web__desc { margin: 0 0 .9rem; font-size: 1rem; line-height: 1.5; }
+.soa-web__links { list-style: none; margin: 0; padding: 0; font-size: .92rem; }
+.soa-web__links li { padding: .4rem 0; border-top: 1px solid #c9bea8; }
+.soa-web__links b { font-weight: 700; }
+.soa-web__key { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; list-style: none; margin: 1rem 0 0; padding: 0; font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.soa-web__key li { display: inline-flex; align-items: center; gap: .4rem; }
+.soa-web__key i { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #2a2622; display: inline-block; }
+.soa-web__key b { width: 26px; height: 0; border-top: 3px solid #2a2622; display: inline-block; }
+.k-greek { background: #c5ced8; } .k-trojan { background: #e3c2b8; } .k-god { background: #ead7ae; } .k-captive { background: #ece4d3; border-style: dashed !important; }
+.k-love { border-color: #a9503d !important; border-top-width: 5px !important; } .k-death { border-top-style: dashed !important; } .k-tension { border-top-style: dotted !important; }
+@media (max-width: 820px) { .soa-web__wrap { grid-template-columns: 1fr; } .soa-web__info { box-shadow: 6px 6px 0 #a9503d; } }
+
+.soa-quiz { background: #2a2622; color: #ece4d3; padding: 2.4rem 1.6rem; box-shadow: 12px 12px 0 #c79d4f; }
+.soa-quiz h2 { color: #ece4d3; }
+.soa-quiz__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #c79d4f; }
+.soa-quiz__box { margin-top: 1.4rem; }
+.soa-quiz__progress { height: 8px; background: #4a443d; margin-bottom: 1.4rem; }
+.soa-quiz__progress i { display: block; height: 100%; width: 0; background: #c79d4f; transition: width .5s cubic-bezier(.2,.9,.2,1); }
+.soa-q { animation: soa-in .45s cubic-bezier(.2,.8,.2,1); }
+@keyframes soa-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.soa-q__n { margin: 0 0 .4rem; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #c79d4f; }
+.soa-q__text { margin: 0 0 1.1rem; font-size: clamp(1.3rem, 2.6vw, 1.8rem); line-height: 1.25; font-weight: 600; }
+.soa-q__opts { display: grid; gap: .6rem; }
+.soa-opt { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: 2rem 1fr; gap: .7rem; align-items: center; padding: .9rem 1rem; border: 2px solid #6b635a; color: #ece4d3; font-size: 1.02rem; line-height: 1.35; transition: background .2s, border-color .2s, transform .2s; }
+.soa-opt b { display: grid; place-items: center; width: 2rem; height: 2rem; border: 2px solid currentColor; font-size: .85rem; }
+.soa-opt:hover, .soa-opt:focus-visible { border-color: #c79d4f; background: #3a342e; transform: translateX(4px); }
+.soa-opt.picked { background: #c79d4f; color: #2a2622; border-color: #c79d4f; }
+.soa-q__nav { display: flex; justify-content: space-between; margin-top: 1rem; }
+.soa-link { all: unset; cursor: pointer; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #c79d4f; }
+.soa-link:hover { color: #ece4d3; }
+.soa-result { animation: soa-in .6s cubic-bezier(.2,.8,.2,1); }
+.soa-card { position: relative; overflow: hidden; padding: 2rem 1.6rem; background: #ece4d3; color: #2a2622; border: 6px solid #c79d4f; }
+.soa-card--achilles { border-color: #c79d4f; } .soa-card--patroclus { border-color: #a9503d; } .soa-card--hector { border-color: #44596f; }
+.soa-card__shape { position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; opacity: .9; }
+.soa-card--achilles .soa-card__shape { background: #c79d4f; }
+.soa-card--patroclus .soa-card__shape { background: #a9503d; border-radius: 50%; }
+.soa-card--hector .soa-card__shape { background: #44596f; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.soa-card__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.soa-card__name { position: relative; margin: .3rem 0 .2rem; font-size: clamp(2.6rem, 7vw, 4rem); line-height: .95; letter-spacing: -.04em; color: #2a2622; }
+.soa-card__tier { position: relative; margin: 0 0 1rem; font-weight: 700; color: #a9503d; }
+.soa-card__text { position: relative; margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.55; max-width: 52ch; }
+.soa-bars { display: grid; gap: .45rem; margin: 1.2rem 0 0; }
+.soa-bar { display: grid; grid-template-columns: 6.5rem 1fr 2.4rem; gap: .6rem; align-items: center; font-size: .85rem; font-weight: 600; }
+.soa-bar span { height: 12px; background: #ddd2bd; }
+.soa-bar span i { display: block; height: 100%; width: 0; transition: width 1s cubic-bezier(.2,.9,.2,1) .2s; }
+.soa-bar--achilles i { background: #c79d4f; } .soa-bar--patroclus i { background: #a9503d; } .soa-bar--hector i { background: #44596f; }
+.soa-result__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.2rem; }
+.soa-btn { all: unset; cursor: pointer; padding: .75rem 1.1rem; background: #c79d4f; color: #2a2622; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.soa-btn--ghost { background: transparent; color: #ece4d3; border: 2px solid #ece4d3; }
+.soa-btn:hover { background: #ece4d3; color: #2a2622; }
+.soa-review { margin-top: 1.4rem; display: none; }
+.soa-review.open { display: block; }
+.soa-review li { margin-bottom: .9rem; font-size: .95rem; line-height: 1.5; }
+.soa-review em { color: #c79d4f; font-style: normal; font-weight: 700; }
+.soa-copied { font-size: .8rem; color: #c79d4f; align-self: center; }
+@media (prefers-reduced-motion: reduce) { .soa-q, .soa-result { animation: none; } }
+</style>
+<script>
+(function () {
+  /* ---------- Character web ---------- */
+  var web = document.querySelector('.soa-web');
+  if (web) {
+    var people = {
+      achilles: ['Greek hero', 'Achilles', 'Son of the sea nymph Thetis and King Peleus, and the best warrior of his generation. He is promised a short life with endless fame, and chooses it.'],
+      patroclus: ['The narrator', 'Patroclus', 'An exiled prince who grows up beside Achilles in Phthia. Gentle, unsure of himself, and a gifted healer, he tells the whole story.'],
+      thetis: ['Sea nymph, goddess', 'Thetis', "Achilles's immortal mother. She wants her son to be a god-like hero and sees Patroclus as standing in the way."],
+      peleus: ['King of Phthia', 'Peleus', 'Achilles\'s mortal father, a kind king who takes in the exiled Patroclus and raises him with his son.'],
+      menoetius: ['King of Opus', 'Menoetius', 'Patroclus\'s cold, disappointed father, who sends him into exile after a boy dies in a fight.'],
+      chiron: ['Centaur, teacher', 'Chiron', 'The wise centaur of Mount Pelion who teaches Achilles and Patroclus medicine, music and the names of plants.'],
+      deidameia: ['Princess of Scyros', 'Deidameia', 'Thetis hides Achilles on Scyros disguised as a girl, and marries him to Deidameia. She bears his son.'],
+      pyrrhus: ['Achilles\'s son', 'Pyrrhus (Neoptolemus)', 'Raised by Thetis to be a weapon. He arrives at Troy after his father\'s death and is crueller than Achilles ever was.'],
+      briseis: ['Captive from Lyrnessus', 'Briseis', 'Taken as a prize of war. Patroclus asks Achilles to claim her to keep her safe, and she becomes his close friend.'],
+      agamemnon: ['Leader of the Greeks', 'Agamemnon', 'King of Mycenae and commander of the army. His seizure of Briseis starts the quarrel that keeps Achilles out of the fighting.'],
+      odysseus: ['King of Ithaca', 'Odysseus', 'The cleverest of the Greeks. He finds Achilles on Scyros, talks him into the war, and at the end speaks up for Patroclus.'],
+      hector: ['Prince of Troy', 'Hector', 'Troy\'s greatest defender. The prophecy says Achilles will die soon after Hector does. He kills Patroclus.'],
+      priam: ['King of Troy', 'Priam', 'Hector\'s father. He comes alone to Achilles\'s tent at night to beg for his son\'s body.'],
+      paris: ['Prince of Troy', 'Paris', 'His taking of Helen starts the war. With Apollo guiding his arrow, he kills Achilles.'],
+      apollo: ['God', 'Apollo', 'The god who protects Troy. He sends a plague on the Greek camp and guides the arrow that kills Achilles.']
+    };
+    var ties = {
+      'achilles|patroclus': 'Lovers, from boyhood friends onward', 'achilles|thetis': 'Mother and son', 'achilles|peleus': 'Father and son',
+      'patroclus|peleus': 'Takes him in after his exile', 'patroclus|menoetius': 'Father who exiled him', 'achilles|chiron': 'His teacher',
+      'patroclus|chiron': 'His teacher in medicine', 'achilles|deidameia': 'Married on Scyros', 'deidameia|pyrrhus': 'Mother and son',
+      'achilles|pyrrhus': 'Father and son', 'patroclus|briseis': 'Close friends', 'achilles|briseis': 'Claims her to protect her',
+      'agamemnon|briseis': 'Takes her from Achilles', 'achilles|agamemnon': 'The quarrel at the heart of the war', 'achilles|odysseus': 'Recruits him for Troy',
+      'odysseus|pyrrhus': 'Argues for Patroclus at the tomb', 'hector|patroclus': 'Kills him in battle', 'achilles|hector': 'Kills him in revenge',
+      'priam|hector': 'Father and son', 'priam|achilles': 'Begs him for Hector\'s body', 'paris|achilles': 'Kills him with an arrow',
+      'paris|priam': 'Son and father', 'apollo|paris': 'Guides his arrow', 'thetis|patroclus': 'Distrust, slowly giving way'
+    };
+    var edges = web.querySelectorAll('.soa-edges line'), nodes = web.querySelectorAll('.soa-n');
+    var gE = web.querySelector('.soa-edges'), gN = web.querySelector('.soa-nodes');
+    var info = { k: web.querySelector('.soa-web__kicker'), n: web.querySelector('.soa-web__name'), d: web.querySelector('.soa-web__desc'), l: web.querySelector('.soa-web__links') };
+    function show(id) {
+      var p = people[id]; if (!p) return;
+      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = '';
+      var near = {};
+      edges.forEach(function (e) {
+        var a = e.dataset.a, b = e.dataset.b, hit = a === id || b === id;
+        e.classList.toggle('on', hit);
+        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
+      });
+      nodes.forEach(function (n) { n.classList.toggle('on', n.dataset.id === id); n.classList.toggle('near', !!near[n.dataset.id]); });
+      gE.classList.add('dim'); gN.classList.add('dim');
+    }
+    nodes.forEach(function (n) {
+      n.addEventListener('mouseenter', function () { show(n.dataset.id); });
+      n.addEventListener('focus', function () { show(n.dataset.id); });
+      n.addEventListener('click', function () { show(n.dataset.id); });
+      n.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n.dataset.id); } });
+    });
+    show('achilles');
+  }
+
+  /* ---------- Thetis's Prophecy quiz ---------- */
+  var quiz = document.querySelector('.soa-quiz');
+  if (!quiz) return;
+  // Each answer: A = Achilles (glory, fate embraced), B = Hector (duty, fate accepted), C = Patroclus (love, choice).
+  // Scoring: the chosen hero gets 2, the nearest other hero gets 1, the third gets 0, so every question gives out 3 points (24 in all).
+  var Q = [
+    ['The Fates say you will be famous for ever but die young. What do you do?',
+      ['Take the bargain. A short life remembered beats a long one forgotten.', 'Accept it, and spend the time you have protecting the people who need you.', 'Argue with fate. Every ordinary day with the one you love is worth more than fame.'],
+      ['Achilles makes exactly this choice, knowingly.', 'Hector knows Troy may fall and fights for it anyway.', 'Patroclus never wanted glory; he wanted Achilles alive.']],
+    ['What frightens you most?', ['Being forgotten.', 'Failing the people who rely on you.', 'Losing the person you love.'],
+      ['Kleos, undying fame, is everything to Achilles.', "Hector's dread is what happens to his wife, son and city if he falls.", 'Every fear Patroclus has is for Achilles.']],
+    ["A proud friend's stubbornness is about to get people hurt. You...", ["Back them. Their honour is their own business.", 'Call it out in front of everyone. The group comes first.', 'Find them alone and quietly beg them to stop.'],
+      ['Achilles treats insults to honour as unforgivable.', 'Hector puts Troy above any one man, himself included.', 'Patroclus pleads with Achilles in private, then acts himself.']],
+    ['Where are you in a battle?', ['Out in front, the name everyone is shouting.', 'Holding the line so others can get home.', 'Behind the line, tending the wounded.'],
+      ['No one on the field compares to Achilles.', 'Hector is the wall of Troy.', 'Patroclus learned medicine from Chiron and uses it in the camp.']],
+    ['What should be carved on your tomb?', ['Your name, so it lasts for ever.', 'The names of those you kept safe.', 'Their name beside yours.'],
+      ['Achilles wants to be remembered above all.', 'Hector measures his life by those he defends.', 'The book ends on exactly this wish.']],
+    ['A god offers you one gift. You choose...', ['To be unbeatable in battle.', 'Safety for your family and your city.', 'More time with the people you love.'],
+      ["Achilles's divine blood makes him nearly invincible.", 'Everything Hector does is for Andromache, Astyanax and Troy.', 'Patroclus would trade any gift for time.']],
+    ['Someone you love asks you to give up what you have worked for.', ['You refuse. They knew who you were.', 'You weigh it against your duty, then decide.', 'You give it up without a second thought.'],
+      ['Achilles will not give up his pride, even for Patroclus, until it is too late.', 'Hector listens to Andromache and still goes back to the walls.', 'Patroclus gives up home, safety and his own life for love.']],
+    ['Where would you rather be?', ['On the plain before Troy, with the whole world watching.', 'On the city walls at dusk, your family beside you.', "In Chiron's cave on Mount Pelion, far from any war."],
+      ['Troy is the stage Achilles was made for.', 'The walls of Troy are Hector\'s home and his post.', 'Pelion is where Patroclus and Achilles were happiest.']]
+  ];
+  var HEROES = ['achilles', 'hector', 'patroclus'];
+  var NEAR = { achilles: 'hector', hector: 'achilles', patroclus: 'hector' };
+  var R = {
+    achilles: { name: 'Achilles', text: 'You know what you want and you are willing to pay for it. Like Achilles, you would rather burn bright than last, and you hold your honour close, sometimes too close. The question is what it costs the people around you.' },
+    hector: { name: 'Hector', text: 'You fight for something bigger than yourself. Like Hector, you see the danger clearly and stand your ground anyway, because others depend on you. Duty is your strength, and sometimes your burden.' },
+    patroclus: { name: 'Patroclus', text: 'Love comes first for you, and kindness is how you show strength. Like Patroclus, you notice the people others overlook, and you would give up fame without a pause for the person you love.' }
+  };
+  var stage = quiz.querySelector('.soa-quiz__stage'), bar = quiz.querySelector('.soa-quiz__progress i');
+  var answers = [];
+  function esc(t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function score(list) {
+    var s = { achilles: 0, hector: 0, patroclus: 0 };
+    list.forEach(function (a) { var h = HEROES[a]; s[h] += 2; s[NEAR[h]] += 1; });
+    return s;
+  }
+  function ask(i) {
+    bar.style.width = (i / Q.length * 100) + '%';
+    var q = Q[i];
+    stage.innerHTML = '<div class="soa-q"><p class="soa-q__n">Question ' + (i + 1) + ' of ' + Q.length + '</p><p class="soa-q__text">' + esc(q[0]) + '</p><div class="soa-q__opts">' +
+      q[1].map(function (t, k) { return '<button type="button" class="soa-opt" data-k="' + k + '"><b>' + 'ABC'[k] + '</b><span>' + esc(t) + '</span></button>'; }).join('') +
+      '</div><div class="soa-q__nav">' + (i ? '<button type="button" class="soa-link soa-back">← Back</button>' : '<span></span>') + '<span></span></div></div>';
+    stage.querySelectorAll('.soa-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        b.classList.add('picked'); answers[i] = +b.dataset.k;
+        setTimeout(function () { i + 1 < Q.length ? ask(i + 1) : finish(); }, 260);
+      });
+    });
+    var back = stage.querySelector('.soa-back'); if (back) back.addEventListener('click', function () { ask(i - 1); });
+    var first = stage.querySelector('.soa-opt'); if (first && i) first.focus({ preventScroll: true });
+  }
+  function finish(forced) {
+    bar.style.width = '100%';
+    var s = score(answers), order = HEROES.slice().sort(function (a, b) { return s[b] - s[a]; });
+    var top = forced || order[0], second = forced ? NEAR[forced] : order[1];
+    // tie-break: the hero chosen most often by A/B/C wins, then Patroclus (the narrator)
+    if (!forced && s[top] === s[second]) { var c = [0, 0, 0]; answers.forEach(function (a) { c[a]++; }); top = HEROES[c.indexOf(Math.max.apply(null, c))]; second = order.filter(function (h) { return h !== top; })[0]; }
+    var tier = forced ? 'Take the quiz to find your own hero.' : s[top] >= 14 ? 'Unmistakably ' + R[top].name + '.' : s[top] >= 11 ? 'Mostly ' + R[top].name + ', with a streak of ' + R[second].name + '.' : 'Torn between ' + R[top].name + ' and ' + R[second].name + '.';
+    var url = location.origin + location.pathname + '?hero=' + top + '#quiz';
+    stage.innerHTML = '<div class="soa-result"><div class="soa-card soa-card--' + top + '"><span class="soa-card__shape" aria-hidden="true"></span><p class="soa-card__kicker">' + (forced ? 'A friend got' : 'Thetis\'s Prophecy says you are') + '</p><h3 class="soa-card__name">' + R[top].name + '</h3><p class="soa-card__tier">' + tier + '</p><p class="soa-card__text">' + R[top].text + '</p>' +
+      (answers.length ? '<div class="soa-bars">' + HEROES.map(function (h) { return '<div class="soa-bar soa-bar--' + h + '"><b>' + R[h].name + '</b><span><i data-w="' + (s[h] / 16 * 100) + '"></i></span><em>' + s[h] + '</em></div>'; }).join('') + '</div>' : '') +
+      '</div><div class="soa-result__actions">' + (forced ? '' : '<button type="button" class="soa-btn soa-share">Share my result</button>') + '<button type="button" class="soa-btn' + (forced ? '' : ' soa-btn--ghost') + ' soa-again">' + (forced ? 'Take the quiz' : 'Take it again') + '</button>' +
+      (answers.length ? '<button type="button" class="soa-btn soa-btn--ghost soa-show">See my answers</button>' : '') + '<span class="soa-copied" hidden>Link copied</span></div>' +
+      (answers.length ? '<ol class="soa-review">' + Q.map(function (q, i) { var k = answers[i]; return '<li>' + esc(q[0]) + '<br><em>' + 'ABC'[k] + ' · ' + esc(q[1][k]) + '</em><br>' + esc(q[2][k]) + '</li>'; }).join('') + '</ol>' : '') + '</div>';
+    requestAnimationFrame(function () { stage.querySelectorAll('.soa-bar i').forEach(function (i) { i.style.width = i.dataset.w + '%'; }); });
+    stage.querySelector('.soa-again').addEventListener('click', function () { answers = []; history.replaceState(null, '', location.pathname + '#quiz'); ask(0); });
+    var show = stage.querySelector('.soa-show'); if (show) show.addEventListener('click', function () { stage.querySelector('.soa-review').classList.toggle('open'); });
+    var shareBtn = stage.querySelector('.soa-share'); if (shareBtn) shareBtn.addEventListener('click', function () {
+      var share = url.replace('#quiz', '') + '&utm_source=share&utm_medium=quiz&utm_campaign=achilles_quiz#quiz';
+      var text = 'Thetis\'s Prophecy says I\'m ' + R[top].name + '. Which Song of Achilles hero are you?';
+      if (window.gtag) gtag('event', 'share', { method: navigator.share ? 'native' : 'copy', content_type: 'quiz_result', item_id: top });
+      if (navigator.share) navigator.share({ title: 'The Song of Achilles quiz', text: text, url: share }).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + share).then(function () { stage.querySelector('.soa-copied').hidden = false; });
+    });
+    if (!forced && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
+  }
+  // A shared link (?hero=...) opens straight on that result card
+  var shared = new URLSearchParams(location.search).get('hero');
+  if (R[shared]) { answers = []; finish(shared); }
+  else ask(0);
+})();
+</script>
