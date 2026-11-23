@@ -64,18 +64,23 @@ for (const p of posts) {
 
   const featured = p._embedded?.['wp:featuredmedia']?.[0];
   const featuredUrl = featured?.source_url;
-  const urls = [...new Set([...(html.match(IMG) || []), ...(featuredUrl ? [featuredUrl] : [])])];
+  // Images hosted on other sites, used in <img> tags
+  const external = [...html.matchAll(/<img[^>]+src="(https?:\/\/[^"]+)"/gi)].map((m) => m[1]);
+  const urls = [...new Set([...(html.match(IMG) || []), ...external, ...(featuredUrl ? [featuredUrl] : [])])];
 
   const local = {};
   for (const url of urls) {
+    const own = /betterworldwithdesign\.com\/wp-content/.test(url);
+    const clean = decode(url);
     // Prefer the full-size original over a WordPress thumbnail (-300x200)
-    const full = url.replace(/-\d+x\d+(\.\w+)$/, '$1');
-    const name = path.basename(new URL(full).pathname).toLowerCase();
+    const full = own ? clean.replace(/-\d+x\d+(\.\w+)$/, '$1') : clean;
+    let name = path.basename(new URL(full).pathname).toLowerCase();
+    if (!/\.(jpe?g|png|gif|webp|svg)$/.test(name)) name += '.jpg';
     const dest = path.join(imgDir, name);
     if (!existsSync(dest)) {
       await mkdir(imgDir, { recursive: true });
       let res = await fetch(full, { headers: UA });
-      if (!res.ok && full !== url) res = await fetch(url, { headers: UA });
+      if (!res.ok && full !== clean) res = await fetch(clean, { headers: UA });
       if (!res.ok) {
         console.error(`  image FAILED ${res.status} ${url}`);
         continue;
