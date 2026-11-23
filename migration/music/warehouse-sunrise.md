@@ -15,7 +15,7 @@ status: "pulled"
 ---
 
 <div class="et_pb_section_12 et_pb_section et_section_regular et_block_section"><div class="et_pb_row_11 et_pb_row et_block_row"><div class="et_pb_column_15 et_pb_column et_pb_column_4_4 et-last-child et_block_column et_pb_css_mix_blend_mode_passthrough"><div class="et_pb_text_11 et_pb_text et_pb_bg_layout_light et_pb_module et_block_module"><div class="et_pb_text_inner"><p><!-- wp:html --><br />
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2nYhZDxcBgcgvPrsGp1fnH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br />
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2gMhjg7D8B97gYXuKwvL89?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br />
 <!-- /wp:html --></p>
 <p><!-- wp:heading --></p>
 <h2 class="wp-block-heading">Warehouse Sunrise: A 303 Love Letter (Where Design Meets Acid House)</h2>
