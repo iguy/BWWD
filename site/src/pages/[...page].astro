@@ -211,11 +211,11 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
 
   .mtg-essays { list-style: none; margin: 6rem 0 0; padding: 0; }
   .mtg-essay { position: relative; min-height: 78vh; display: grid; align-items: center; padding: 4rem 16px; border-top: 4px solid var(--ink); overflow: hidden; }
-  .mtg-ch { position: absolute; z-index: 0; right: -2vw; top: 50%; transform: translateY(-50%); font-weight: 800; line-height: 0.75; letter-spacing: -0.08em; font-size: clamp(14rem, 42vw, 40rem); color: transparent; -webkit-text-stroke: 3px var(--ink); opacity: .9; pointer-events: none; }
+  .mtg-ch { position: absolute; z-index: 0; right: -2vw; top: 50%; transform: translateY(-50%); font-weight: 800; line-height: 0.75; letter-spacing: -0.08em; font-size: clamp(14rem, 42vw, 40rem); color: color-mix(in srgb, var(--ink) 9%, transparent); -webkit-text-stroke: 3px var(--ink); opacity: .9; pointer-events: none; transition: color 1.2s; }
   .mtg-essay.alt .mtg-ch { right: auto; left: -2vw; }
-  .mtg-essay--blue .mtg-ch { -webkit-text-stroke-color: var(--blue); }
-  .mtg-essay--red .mtg-ch { -webkit-text-stroke-color: var(--red); }
-  .mtg-essay--yellow .mtg-ch { -webkit-text-stroke-color: var(--yellow); -webkit-text-stroke-width: 5px; }
+  .mtg-essay--blue .mtg-ch { -webkit-text-stroke-color: var(--blue); color: color-mix(in srgb, var(--blue) 16%, transparent); }
+  .mtg-essay--red .mtg-ch { -webkit-text-stroke-color: var(--red); color: color-mix(in srgb, var(--red) 16%, transparent); }
+  .mtg-essay--yellow .mtg-ch { -webkit-text-stroke-color: var(--yellow); -webkit-text-stroke-width: 5px; color: color-mix(in srgb, var(--yellow) 22%, transparent); }
   .mtg-essay__text { position: relative; z-index: 1; max-width: 760px; margin: 0 auto 0 max(16px, 6vw); transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .8s; }
   .mtg-essay.alt .mtg-essay__text { margin: 0 max(16px, 6vw) 0 auto; text-align: right; }
   .mtg-essay__text:not(.in) { opacity: 0; transform: translateX(-10vw); }
