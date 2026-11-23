@@ -6,6 +6,7 @@ export interface Section {
   wpCat: string; // WordPress category slug; hub lives at /category/<wpCat>/ like WordPress
   blurb: string;
   nav?: boolean; // show in the top menu (default true)
+  look?: 'gallery'; // art pages: hero plate, numbered plates, catalogue headings
 }
 
 // Sections built on the new site. Add one here when its pages are ready.
@@ -15,6 +16,7 @@ export const SECTIONS: Section[] = [
     name: 'Art & Design',
     wpCat: 'art-design-insights',
     blurb: 'Artists, photographers and movements I keep coming back to.',
+    look: 'gallery',
   },
   {
     folder: 'technology',
