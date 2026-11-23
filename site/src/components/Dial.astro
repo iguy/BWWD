@@ -1,0 +1,75 @@
+---
+// Dial: the site navigation on every page — bottom-left, with a ring that fills as you scroll.
+const path = Astro.url.pathname;
+const items = [
+  { label: 'Home', href: '/', c: 'yellow' },
+  { label: 'Art & Design', href: '/category/art-design-insights/', c: 'red' },
+  { label: 'Books', href: '/category/book-reviews-reading-lists/', c: 'blue' },
+  { label: 'Music', href: '/category/music-discovery-reviews/', c: 'red' },
+  { label: 'Technology', href: '/category/technology-trends-tips/', c: 'yellow' },
+  { label: 'Photography', href: 'https://photography.betterworldwithdesign.com/', c: 'red' },
+  { label: 'Podcast', href: 'https://podcast.betterworldwithdesign.com/', c: 'blue' },
+  { label: 'Index', href: '/sitemap/', c: 'yellow' },
+].filter((d) => d.href !== path);
+---
+<nav class="dial" aria-label="Site menu">
+  <button class="dial__btn" type="button" aria-expanded="false" aria-controls="dial-items">
+    <span class="dial__ring" aria-hidden="true"></span>
+    <span class="dial__core" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="sr">Menu</span>
+  </button>
+  <ul id="dial-items" class="dial__items">
+    {items.map((d, i) => (
+      <li style={`--i:${i}`}><a class={`dial__item dial__item--${d.c}`} href={d.href}>{d.label}</a></li>
+    ))}
+  </ul>
+</nav>
+
+<style is:global>
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  /* ---------- Dial navigation ---------- */
+  .dial { position: fixed; z-index: 50; left: 22px; bottom: 22px; }
+  .dial__btn { all: unset; cursor: pointer; position: relative; display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; }
+  .dial__btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+  .dial__ring { position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(var(--yellow) calc(var(--page, 0) * 360deg), var(--ink) 0); }
+  .dial__core { position: relative; width: 60px; height: 60px; border-radius: 50%; background: var(--red); display: grid; place-items: center; transition: transform .45s cubic-bezier(.7,0,.2,1); }
+  .dial__core i { position: absolute; width: 24px; height: 3px; background: var(--paper); transition: transform .35s; }
+  .dial__core i:nth-child(1) { transform: translateY(-7px); }
+  .dial__core i:nth-child(3) { transform: translateY(7px); }
+  .dial.open .dial__core { transform: rotate(135deg); background: var(--ink); }
+  .dial.open .dial__core i:nth-child(1) { transform: rotate(90deg); }
+  .dial.open .dial__core i:nth-child(2) { transform: scaleX(0); }
+  .dial.open .dial__core i:nth-child(3) { transform: none; }
+  .dial.open::before { content: ''; position: fixed; inset: 0; background: rgba(18,18,18,.35); z-index: -1; }
+  .dial__items { list-style: none; margin: 0; padding: 0; position: absolute; left: 38px; bottom: 38px; width: 0; height: 0; }
+  .dial__items li {
+    position: absolute; left: 0; bottom: 0;
+    transform: translate(0, 0) scale(.4);
+    opacity: 0; pointer-events: none;
+    transition: transform .5s cubic-bezier(.2,.9,.2,1.15) calc(var(--i) * 35ms), opacity .25s calc(var(--i) * 35ms);
+  }
+  .dial.open .dial__items li { transform: translate(calc(30px + var(--i) * 16px), calc(-1 * (var(--i) + 1) * 52px - 20px)); opacity: 1; pointer-events: auto; }
+  .dial__item {
+    display: inline-block; transform: translateY(50%); white-space: nowrap; padding: 0.5rem 0.9rem;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;
+    background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 var(--c, var(--red));
+  }
+  .dial__item--red { --c: var(--red); } .dial__item--blue { --c: var(--blue); } .dial__item--yellow { --c: var(--yellow); }
+  .dial__item:hover, .dial__item:focus-visible { background: var(--c); color: var(--paper); }
+  .dial__item--yellow:hover { color: var(--ink); }
+</style>
+
+<script is:inline>
+  (function () {
+    var nav = document.querySelector('.dial'); if (!nav) return;
+    var btn = nav.querySelector('.dial__btn'), root = document.documentElement, ticking = false;
+    function ring() { ticking = false; var max = root.scrollHeight - innerHeight; root.style.setProperty('--page', (max > 0 ? scrollY / max : 0).toFixed(4)); }
+    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(ring); } }, { passive: true });
+    ring();
+    function setOpen(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+    btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    document.addEventListener('click', function (e) { if (!nav.contains(e.target)) setOpen(false); });
+    nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  })();
+</script>

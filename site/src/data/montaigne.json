@@ -1,0 +1,13 @@
+{
+  "_note": "Montaigne Essays page: one line from each essay, shown large. 'mark' is the phrase that gets highlighted.",
+  "quotes": {
+    "chapter-23-various-events-form-the-same-counsel": { "q": "Effective leadership often requires balancing prudent caution with bold confidence.", "mark": "prudent caution with bold confidence" },
+    "chapter-24-of-pedantry": { "q": "The excessive emphasis on formal academic knowledge at the expense of practical wisdom and moral development.", "mark": "practical wisdom" },
+    "montaigne-chapter-25-of-the-education-of-children": { "q": "Teaching students how to think rather than what to think.", "mark": "how to think" },
+    "montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity": { "q": "Opposing viewpoints often contain partial truths worthy of consideration.", "mark": "partial truths" },
+    "montaigne-chapter-27-of-friendship": { "q": "Through losing his friend Étienne de La Boétie, Montaigne explores the philosophical dimensions of loss and human attachment.", "mark": "loss and human attachment" },
+    "montaigne-chapter-29-of-moderation": { "q": "He questions both extreme hedonism and extreme asceticism.", "mark": "both" },
+    "montaigne-chapter-30-of-cannibals": { "q": "The disposition of this army that I see has nothing of barbarism in it.", "mark": "nothing of barbarism" },
+    "montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution": { "q": "Nothing is so firmly believed, as what we least know.", "mark": "what we least know" }
+  }
+}
