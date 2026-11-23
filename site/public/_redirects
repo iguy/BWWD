@@ -21,3 +21,12 @@
 /tag/book-review/ /category/book-reviews-reading-lists/ 301
 /tag/music/ /category/music-discovery-reviews/ 301
 /tag/* /sitemap/ 301
+
+# WordPress sub-categories
+/category/book-reviews-reading-lists/montaigne-essays/ /montaigne-essays/ 301
+/category/book-reviews-reading-lists/voices-from-the-margins/ /category/book-reviews-reading-lists/#margins 301
+/category/technology-trends-tips/tech-reviews-ai-tools/ /category/technology-trends-tips/#ai 301
+/category/media-entertainment/* /category/music-discovery-reviews/ 301
+# WordPress feeds
+/feed /feed/ 301
+/comments/feed/ /feed/ 301

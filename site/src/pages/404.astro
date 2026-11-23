@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SECTIONS } from '../lib/sections';
+import '../styles/article.css';
+---
+<Layout title="Not found — Better World With Design">
+  <header class="hero hero--plain" slot="masthead">
+    <span class="shape shape--sun" aria-hidden="true"></span>
+    <div class="hero__inner"><div class="hero__text">
+      <span class="tag-block">404</span>
+      <h1>This page has moved, or never was.</h1>
+    </div></div>
+  </header>
+  <main class="nf">
+    <p>Try the <a href="/sitemap/">index</a> — everything on the site, searchable — or start from a section:</p>
+    <ul>
+      {SECTIONS.filter((s) => s.nav !== false).map((s) => <li><a href={`/category/${s.wpCat}/`}>{s.name}</a></li>)}
+      <li><a href="/">Home</a></li>
+    </ul>
+  </main>
+</Layout>
+<style>
+  .nf { max-width: var(--text); margin: 3rem auto 0; padding: 0 16px; font-size: 1.2rem; }
+  .nf ul { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; padding: 0; }
+  .nf li a { display: inline-block; padding: 0.5rem 0.9rem; background: var(--ink); color: var(--paper); text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .nf li a:hover { background: var(--red); }
+</style>
