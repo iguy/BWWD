@@ -74,9 +74,9 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
     <!-- Smoke: wisps in the palette, drifting slowly behind the page (taken from the two-faces graphic) -->
     <div class="smoke" aria-hidden="true">
       {[
-        { c: '#a9503d', o: 0.34, d: 'M-200 260 C 150 120, 380 420, 700 300 S 1150 80, 1500 240 M-150 560 C 200 420, 420 720, 760 600 S 1100 420, 1350 560', cls: 'smoke__l smoke__l--red' },
-        { c: '#c79d4f', o: 0.3, d: 'M-100 760 C 260 640, 520 900, 820 780 S 1300 620, 1700 760 M300 120 C 520 40, 700 220, 980 140', cls: 'smoke__l smoke__l--yellow' },
-        { c: '#44596f', o: 0.28, d: 'M700 900 C 900 760, 1100 980, 1350 820 S 1600 700, 1800 820 M900 360 C 1100 220, 1300 460, 1650 300 M1000 620 C 1200 520, 1400 700, 1750 560', cls: 'smoke__l smoke__l--blue' },
+        { c: '#a9503d', o: 0.17, d: 'M-200 260 C 150 120, 380 420, 700 300 S 1150 80, 1500 240 M-150 560 C 200 420, 420 720, 760 600 S 1100 420, 1350 560', cls: 'smoke__l smoke__l--red' },
+        { c: '#c79d4f', o: 0.15, d: 'M-100 760 C 260 640, 520 900, 820 780 S 1300 620, 1700 760 M300 120 C 520 40, 700 220, 980 140', cls: 'smoke__l smoke__l--yellow' },
+        { c: '#44596f', o: 0.14, d: 'M700 900 C 900 760, 1100 980, 1350 820 S 1600 700, 1800 820 M900 360 C 1100 220, 1300 460, 1650 300 M1000 620 C 1200 520, 1400 700, 1750 560', cls: 'smoke__l smoke__l--blue' },
       ].map((l, i) => (
         <div class={l.cls}>
           <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
@@ -88,7 +88,6 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
               </filter>
             </defs>
             <g filter={`url(#smoke-f${i})`} fill="none" stroke={l.c} stroke-linecap="round" opacity={l.o}>
-              <path d={l.d} stroke-width="34" opacity="0.5" />
               <path d={l.d} stroke-width="12" transform="translate(30 -36)" />
               <path d={l.d} stroke-width="5" transform="translate(-48 28)" />
               <path d={l.d} stroke-width="2.5" transform="translate(70 60)" />
