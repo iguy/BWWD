@@ -5,7 +5,7 @@ oldUrl: "https://betterworldwithdesign.com/warehouse-sunrise/"
 oldPath: "/warehouse-sunrise/"
 pubDate: "2026-01-29"
 updated: "2026-03-28"
-description: ""
+description: "Warehouse Sunrise is my acid house project: tracks built on the TB-303 and TR-909, released one at a time on Spotify, with a vinyl continuous mix now being mastered."
 cover: "./images/warehouse-sunrise/warehouse-sunrise-by-gary-crossey-scaled.png"
 coverAlt: ""
 categories: ["Music Discovery & Reviews"]
@@ -19,6 +19,7 @@ status: "pulled"
 <!-- /wp:html --></p>
 <p><!-- wp:heading --></p>
 <h2 class="wp-block-heading">Warehouse Sunrise: A 303 Love Letter (Where Design Meets Acid House)</h2>
+<p class="answer"><strong>Warehouse Sunrise is my acid house project: tracks built on the Roland TB-303 and TR-909, released one at a time on Spotify, with a vinyl continuous mix now being mastered.</strong></p>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:image {"id":7262,"sizeSlug":"large","linkDestination":"none"} --></p>
 <figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="1024" height="1024" src="./images/warehouse-sunrise/warehouse-sunrise-by-gary-crossey.png" alt="Warehouse Sunrise by Gary Crossey" class="wp-image-7262" /></figure>
@@ -60,25 +61,25 @@ status: "pulled"
 <p>"Warehouse Sunrise" is the start of a collection of 303/909-driven work—built around the TB-303 and TR-909, and meant as a tribute to the sounds that shaped the direction of this platform’s creative output.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>This track represents the convergence of everything I’ve been building toward across Irishguy Design Studio Inc (parent company) and Better World with Design (creative platform): design, content creation, audio production, and now, finally, my own music released into the world.</p>
+<p>It’s where everything I’ve been building comes together: design, content, audio production, and now, finally, my own music out in the world.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
-<h2 class="wp-block-heading">The release plan (what’s happening now)</h2>
+<h2 class="wp-block-heading">Where it stands</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>Right now, the release plan is simple: I’m starting with a track a week.</p>
+<p>It started in January with a simple plan: a track a week.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Those weekly drops are the bricks.</p>
+<p>Sixteen tracks later, those weekly drops are the bricks.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>And there’s a bigger format in the works too: a vinyl release of the scene I’m building. That vinyl will be a non-stop mix.</p>
+<p>The vinyl is the building: one non-stop mix of the scene I’m building. It’s being mastered now.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>That non-stop mix is the building.</p>
+
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Later this summer, the full continuous version will be available online as a full track.</p>
+<p>Once the vinyl is out, the full continuous mix goes online too.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:separator --></p>
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
@@ -214,22 +215,22 @@ status: "pulled"
 <p>It also changes how you listen. Vinyl invites full-side listening. It rewards details that streaming often turns into background noise.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
-<h2 class="wp-block-heading">Later this summer: the full track online</h2>
+<h2 class="wp-block-heading">After the vinyl: the full mix online</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>While the vinyl will present the continuous mix as the primary format, we also want the full version to be accessible online later this summer.</p>
+<p>The vinyl is the main format for the continuous mix, but I want the full version to be easy to hear online too, once the record is out.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>The idea is to let the weekly releases do their job first—build familiarity, build continuity, build an audience that understands the sound—then deliver the longer piece as a payoff: the panoramic view of the scene.</p>
+<p>The weekly releases have done their job first—building familiarity, continuity and an audience that understands the sound. The longer piece is the payoff: the panoramic view of the scene.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:separator --></p>
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator --></p>
 <p><!-- wp:heading --></p>
-<h2 class="wp-block-heading">Process note (for the podcast version)</h2>
+<h2 class="wp-block-heading">How to listen</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>If you’re hearing this as a podcast script: the best way to listen is the same way I learned to love this music—pay attention to the small moves.</p>
+<p>The best way to listen is the way I learned to love this music: pay attention to the small moves.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
 <p>Listen to how the 303 line changes over time. That’s the voice.</p>
@@ -244,13 +245,13 @@ status: "pulled"
 <h2 class="wp-block-heading">Where this goes next</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>If you’re following along, the cadence is steady: one track a week as the foundation.</p>
+<p>The catalog keeps growing, and as it does, the larger shape gets clearer.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>As the catalog grows, the larger shape becomes clearer.</p>
+
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p><a href="https://open.spotify.com/artist/7tgnuwIuD9FW6dEdq6Aop9?si=x5Wi2S_ZRHG1JTyeBmVOmA">And if you want to start at the beginning: find the first weekly “Warehouse Sunrise”</a>.</p>
+<p>Follow the newer releases on <a href="https://open.spotify.com/artist/1Pw2y2UrnP0Hhe9ZOszNYu">Warehouse Sunrise on Spotify</a>, and find where it started—including the first track, “Warehouse Sunrise”—on <a href="https://open.spotify.com/artist/7tgnuwIuD9FW6dEdq6Aop9">Gary Crossey on Spotify</a>.</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:gallery {"linkTo":"none"} --></p>
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":7252,"sizeSlug":"large","linkDestination":"none"} --></p>
