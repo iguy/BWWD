@@ -30,3 +30,21 @@
 # WordPress feeds
 /feed /feed/ 301
 /comments/feed/ /feed/ 301
+
+# From Search Console: old addresses still being shown in Google
+/smoke-photography/ https://photography.betterworldwithdesign.com/smoke-photography/ 301
+/asheville-rugby/ https://photography.betterworldwithdesign.com/asheville-rugby/ 301
+/sandy-mush-community-center/ https://photography.betterworldwithdesign.com/sandy-mush-community-center/ 301
+/azelia-design-portfolio/ https://photography.betterworldwithdesign.com/azelia-design-portfolio/ 301
+/beer-city-7s-rugby-tournament/ https://photography.betterworldwithdesign.com/beer-city-7s-rugby-tournament/ 301
+/spring-fling-2023/ https://photography.betterworldwithdesign.com/spring-fling-2023/ 301
+/animals-we-live-with/ https://photography.betterworldwithdesign.com/animals-we-live-with/ 301
+/new-york-2023/ https://photography.betterworldwithdesign.com/new-york-2023/ 301
+/category/photography-visual-arts/ https://photography.betterworldwithdesign.com/ 301
+/gear-review/ https://photography.betterworldwithdesign.com/ 301
+/montaigne-chapter-xxx-of-cannibals/ /montaigne-chapter-30-of-cannibals/ 301
+/aeo-decoded/ https://aeodecoded.ai/ 301
+/episode-4-entity-optimization-becoming-a-subject-authority/ https://aeodecoded.ai/ 301
+/episode-10-future-proofing-your-aeo-strategy-advanced-techniques-for-sustainable-success/ https://aeodecoded.ai/ 301
+/category/tech-reviews-ai-tools/ /category/technology-trends-tips/#ai 301
+/category/:cat/page/* /category/:cat/ 301
