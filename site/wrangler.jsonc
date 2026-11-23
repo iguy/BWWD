@@ -1,0 +1,10 @@
+// Preview of the main site as a static Cloudflare Worker (bwwd-site.<account>.workers.dev).
+// No custom domain: betterworldwithdesign.com stays on WordPress.
+{
+  "name": "bwwd-site",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
