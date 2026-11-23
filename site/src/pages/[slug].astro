@@ -6,6 +6,7 @@ import SeriesBanner from '../components/SeriesBanner.astro';
 import { cleanHtml, takeArt } from '../lib/clean';
 import '../styles/article.css';
 import metaDescriptions from '../data/meta.json';
+import faqData from '../data/faq.json';
 
 export async function getStaticPaths() {
   const articles = await getArticles();
@@ -68,6 +69,10 @@ const jsonLd = {
       publisher: { '@id': absolute('/') + '#site' },
       isPartOf: { '@type': 'CollectionPage', name: section.name, url: absolute(hub) },
     },
+    ...(((faqData as Record<string, unknown>)[article.data.slug] as string[][] | undefined) ? [{
+      '@type': 'FAQPage',
+      mainEntity: ((faqData as Record<string, unknown>)[article.data.slug] as string[][]).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+    }] : []),
     {
       '@type': 'BreadcrumbList',
       itemListElement: [

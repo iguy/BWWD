@@ -1,10 +1,10 @@
 ---
-title: "The Song of Achilles Deep Dive"
+title: "The Song of Achilles Characters: Family Tree, Character Map & Quiz"
 slug: "the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance"
 oldUrl: "https://betterworldwithdesign.com/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/"
 oldPath: "/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/"
 pubDate: "2025-02-03"
-updated: "2025-11-29"
+updated: "2026-11-23"
 description: ""
 cover: "./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/achillis-song-fo.png"
 coverAlt: ""
@@ -18,7 +18,7 @@ status: "pulled"
 <p>Discover Madeline Miller's lyrical retelling of the Trojan War through Patroclus's eyes—a story of fate, friendship, and a love that transcends death.<!-- notionvc: 2871e952-3530-4fba-ab6c-fe304480bec2 --></p>
 </div></div></div><div class="et_pb_column_109 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_12_24_tablet et_flex_column_24_24_phone"><div class="et_pb_row_63 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_110 et_pb_column et-last-child et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_24_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_57 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Iliad vs. The Song of Achilles — What's Different?</h2>
 <p><strong>C</strong>ompare Homer's epic with Miller's intimate reimagining. See how scope, perspective, and themes shift from battlefield glory to personal truth.</p>
-<p><a class="soa-cta" href="#compare">View the comparison table →</a></p>
+<p><a class="soa-cta" href="#compare">View the comparison table →</a></p><p><a class="soa-cta" href="#family-tree">See the family tree →</a></p>
 <h2><!-- notionvc: 7b80ddae-df5a-4d0f-b442-ac09243a6eec --></h2>
 <p><!-- notionvc: 16832797-d3b9-4ae0-a645-5946e7b6213e --></p>
 </div></div></div></div><div class="et_pb_row_64 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_111 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_58 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><h2>Test Your Knowledge<!-- notionvc: 0b7fb2ff-52ba-41d5-8c68-52683fb89978 --></h2>
@@ -49,6 +49,54 @@ status: "pulled"
 </table>
 </div>
 </section>
+<section id="family-tree" class="soa-block soa-tree">
+<h2>Achilles family tree</h2>
+<p>Achilles is half god, half mortal: his mother is the sea nymph Thetis and his father is King Peleus, a grandson of Zeus. Parents sit above their children; a thick line joins a couple.</p>
+<div class="soa-tree__wrap">
+<svg class="soa-tree__svg" viewBox="0 0 900 530" role="img" aria-label="Family tree of Achilles and Patroclus: Zeus and Aegina are parents of Aeacus; Aeacus and Endeïs are parents of Peleus and Telamon; Nereus and Doris are parents of Thetis; Peleus and Thetis are parents of Achilles; Achilles and Deidameia are parents of Pyrrhus; Aegina and Actor are parents of Menoetius, father of Patroclus; Telamon is father of Ajax."><g class="soa-tl"><path class="cp" d="M140 50 H170"/><path class="cp" d="M490 50 H540"/><path class="cp" d="M660 50 H710"/><path class="cp" d="M410 160 H455"/><path class="cp" d="M310 270 H370"/><path class="cp" d="M230 380 H280"/><path d="M155 50 V232.0 H250 V250.0"/><path d="M515 50 V122.0 H515 V140.0"/><path d="M685 50 V122.0 H770 V140.0"/><path d="M432 160 V232.0 H430 V250.0"/><path d="M432 160 V232.0 H600 V250.0"/><path d="M340 270 V342.0 H340 V360.0"/><path d="M255 380 V452.0 H255 V470.0"/><path d="M770 180.0 V232.0 H800 V250.0"/></g><path class="love" d="M400.0 380 C 520 500, 820 470, 800 290.0"/><g class="soa-tn soa-tn--god"><rect x="20" y="30.0" width="120" height="40" rx="4"/><text x="80" y="56">Nereus</text></g><g class="soa-tn soa-tn--god"><rect x="170" y="30.0" width="120" height="40" rx="4"/><text x="230" y="56">Doris</text></g><g class="soa-tn soa-tn--god"><rect x="370" y="30.0" width="120" height="40" rx="4"/><text x="430" y="56">Zeus</text></g><g class="soa-tn "><rect x="540" y="30.0" width="120" height="40" rx="4"/><text x="600" y="56">Aegina</text></g><g class="soa-tn "><rect x="710" y="30.0" width="120" height="40" rx="4"/><text x="770" y="56">Actor</text></g><g class="soa-tn "><rect x="290" y="140.0" width="120" height="40" rx="4"/><text x="350" y="166">Endeïs</text></g><g class="soa-tn "><rect x="455" y="140.0" width="120" height="40" rx="4"/><text x="515" y="166">Aeacus</text></g><g class="soa-tn "><rect x="710" y="140.0" width="120" height="40" rx="4"/><text x="770" y="166">Menoetius</text></g><g class="soa-tn soa-tn--god soa-tn--key"><rect x="190" y="250.0" width="120" height="40" rx="4"/><text x="250" y="276">Thetis</text></g><g class="soa-tn soa-tn--key"><rect x="370" y="250.0" width="120" height="40" rx="4"/><text x="430" y="276">Peleus</text></g><g class="soa-tn "><rect x="540" y="250.0" width="120" height="40" rx="4"/><text x="600" y="276">Telamon</text></g><g class="soa-tn soa-tn--star"><rect x="740" y="250.0" width="120" height="40" rx="4"/><text x="800" y="276">Patroclus</text></g><g class="soa-tn "><rect x="110" y="360.0" width="120" height="40" rx="4"/><text x="170" y="386">Deidameia</text></g><g class="soa-tn soa-tn--star"><rect x="280" y="360.0" width="120" height="40" rx="4"/><text x="340" y="386">Achilles</text></g><g class="soa-tn "><rect x="540" y="360.0" width="120" height="40" rx="4"/><text x="600" y="386">Ajax</text></g><g class="soa-tn soa-tn--key"><rect x="195" y="470.0" width="120" height="40" rx="4"/><text x="255" y="496">Pyrrhus</text></g></svg>
+</div>
+<p class="soa-tree__note">Gold: gods and nymphs. Black: the two heroes. Red curve: Achilles and Patroclus. Ancient sources don't always agree; this follows the most common versions.</p>
+<div class="soa-tree__facts">
+<div><h3>Achilles's family at a glance</h3>
+<ul>
+<li><b>Mother:</b> Thetis, a sea nymph, daughter of Nereus and Doris</li>
+<li><b>Father:</b> Peleus, mortal king of Phthia</li>
+<li><b>Grandparents:</b> Aeacus and Endeïs (father's side); Nereus and Doris (mother's side)</li>
+<li><b>Great-grandfather:</b> Zeus, through Aeacus</li>
+<li><b>Uncle and cousin:</b> Telamon, and his son Ajax the Great, who also fights at Troy</li>
+<li><b>Wife and son:</b> Deidameia, princess of Scyros, and their son Pyrrhus (Neoptolemus)</li>
+</ul></div>
+<div><h3>Patroclus's family tree</h3>
+<ul>
+<li><b>Father:</b> Menoetius, king of Opus</li>
+<li><b>Grandparents:</b> Actor and Aegina, in one ancient version; his mother's name varies between sources</li>
+<li><b>Link to Achilles:</b> Aegina is the mother of both Menoetius and Aeacus, so in this version Patroclus is Peleus's cousin and Achilles's first cousin once removed. Miller doesn't use the connection; in the novel Patroclus arrives at Phthia as an exiled stranger</li>
+<li><b>Foster father:</b> Peleus, who takes him in after his exile</li>
+</ul></div>
+</div>
+</section>
+
+<section id="who-is" class="soa-block soa-answers">
+<h2>Song of Achilles characters: quick answers</h2>
+<div class="soa-answers__grid">
+<div class="soa-ans"><h3>Who is Deidameia in The Song of Achilles?</h3><p>Deidameia is the princess of Scyros, daughter of King Lycomedes. Thetis hides Achilles at her father's court disguised as a girl and arranges their marriage. Deidameia bears Achilles's only son, Pyrrhus, and is left behind when Achilles sails for Troy. Her scenes with Patroclus are some of the most uncomfortable in the book.</p></div>
+<div class="soa-ans"><h3>Who is Pyrrhus (Neoptolemus)?</h3><p>Pyrrhus, also called Neoptolemus, is the son of Achilles and Deidameia. Raised by Thetis, he arrives at Troy only after his father's death. He is colder and crueller than Achilles ever was, and his choices shape how Achilles and Patroclus are remembered.</p></div>
+<div class="soa-ans"><h3>Who is Menoetius, Patroclus's father?</h3><p>Menoetius is the king of Opus. In the novel he is a distant, disappointed father who sees nothing worth valuing in his son. After a boy dies in a fight, Menoetius sends Patroclus into exile, which is how Patroclus ends up at Peleus's court with Achilles.</p></div>
+<div class="soa-ans"><h3>Who are Achilles's parents?</h3><p>Achilles's mother is Thetis, an immortal sea nymph, and his father is Peleus, the mortal king of Phthia. That split, half god and half human, runs through his whole story: the fame Thetis wants for him, and the death Peleus's mortality makes certain.</p></div>
+</div>
+</section>
+
+<section id="priam" class="soa-block soa-priam">
+<h2>Achilles and Priam: the most emotional scene</h2>
+<figure class="soa-priam__fig">
+<img src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/priam-achilles-ivanov.jpg" alt="Painting of the elderly King Priam kneeling before Achilles in his tent, asking for the body of his son Hector" loading="lazy" />
+<figcaption>Alexander Ivanov, <i>Priam Asks Achilles to Return Hector's Body</i>, 1824. Public domain.</figcaption>
+</figure>
+<p>Near the end of the Iliad, King Priam of Troy crosses the battlefield at night, alone but for one old herald, and enters the tent of the man who killed his son. He kneels, kisses Achilles's hands and asks for Hector's body. Both men weep: Priam for Hector, Achilles for Patroclus and for his own father, whom he will never see again.</p>
+<p>It is the moment the poem's rage finally breaks. Achilles gives back the body and grants Troy days of truce to mourn. Miller keeps this meeting in the novel, and it lands harder because we have watched what Achilles lost.</p>
+<p>Painters have returned to the scene for centuries. Ivanov's version, above, puts the light on Priam's bowed head and leaves Achilles half in shadow, a fair picture of a hero who has just remembered he is human.</p>
+</section>
+
 <h2 class="wp-block-heading has-large-font-size">A Reader's Journey with The Song of Achilles</h2>
 <p><span style="font-size: 15px;">Characters, Relationships, and Modern Relevance</span></p>
 <p>As I delved into this modern retelling of an ancient tale, I joined countless readers online who grapple with similar questions about this interesting narrative. The first half of the book captivated me with its intimate portrayal of young friendship blossoming into love, and the last quarter left me emotionally transformed - as it has many others, judging by the online discourse.</p>
@@ -69,7 +117,7 @@ status: "pulled"
 <p> </p>
 <h2 class="wp-block-heading has-text-align-left has-white-color has-text-color" style="font-size: 100px; font-style: normal; font-weight: bold; letter-spacing: 0px; line-height: 1; text-transform: uppercase;"></h2>
 </div></div></div></div><div class="et_pb_row_70 et_pb_row et_pb_row_nested et_flex_row"><div class="et_pb_column_120 et_pb_column et_flex_column et_pb_css_mix_blend_mode_passthrough et_flex_column_12_24 et_flex_column_24_24_tablet et_flex_column_24_24_phone"><div class="et_pb_text_64 et_pb_text et_pb_bg_layout_light et_clickable et_pb_module et_flex_module"><div class="et_pb_text_inner"><section id="characters" class="soa-block soa-web">
-<h2>Who's who: the character web</h2>
+<h2>The Song of Achilles character map</h2>
 <p>Tap or hover over a name to see who they are and how they're tied to everyone else.</p>
 <div class="soa-web__wrap">
 <svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected">
@@ -520,6 +568,7 @@ status: "pulled"
 <p>In the end, their modern story would still be about choosing between personal happiness and societal expectations, about the courage to be true to oneself, and about love that defies conventional norms. The fundamental questions about fate, choice, and the power of love would remain just as relevant in today's context as they were in ancient Greece.</p>
 </div></div></div></div></div>
 
+<aside class="soa-block soa-guide"><span class="soa-guide__icon" aria-hidden="true"></span><div><h3>Beyond the Battlefield: free discussion guide</h3><p>A printable 6-page guide for book clubs and classes: questions for each part of the book, big themes, and activities.</p><a class="soa-cta" href="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf" download>Download the PDF →</a></div></aside>
 <section id="quiz" class="soa-block soa-quiz">
 <p class="soa-quiz__kicker">Thetis's Prophecy</p>
 <h2>Which hero are you: Achilles, Patroclus or Hector?</h2>
@@ -543,9 +592,7 @@ status: "pulled"
 .soa-table tbody th { width: 22%; font-weight: 700; background: #ddd2bd; }
 .soa-table tbody tr:hover td { background: #f3ede1; }
 
-.soa-web__wrap { display: grid; grid-template-columns: 1fr; gap: 1.4rem; margin-top: 1.2rem; }
-.soa-web__links { columns: 2 14rem; column-gap: 1.6rem; }
-.soa-web__links li { break-inside: avoid; }
+.soa-web__wrap { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.4rem; align-items: start; margin-top: 1.2rem; }
 .soa-web__svg { width: 100%; height: auto; background: #ddd2bd; border: 4px solid #2a2622; }
 .soa-edges line { stroke: #2a2622; stroke-width: 2; opacity: .28; transition: opacity .3s, stroke-width .3s; }
 .soa-e--love { stroke: #a9503d !important; stroke-width: 5 !important; opacity: .7 !important; }
@@ -555,13 +602,13 @@ status: "pulled"
 .soa-edges.dim line:not(.on) { opacity: .08; }
 .soa-n { cursor: pointer; outline: none; }
 .soa-n circle { fill: #ece4d3; stroke: #2a2622; stroke-width: 3; transition: transform .35s cubic-bezier(.2,.9,.2,1.3); transform-box: fill-box; transform-origin: center; }
-.soa-n text { font: 700 23px Jost, sans-serif; dominant-baseline: middle; text-anchor: middle; fill: #2a2622; pointer-events: none; }
-.soa-n--big text { font-size: 26px; }
+.soa-n text { font: 700 15px Jost, sans-serif; text-anchor: middle; fill: #2a2622; pointer-events: none; }
+.soa-n--big text { font-size: 17px; }
 .soa-n--greek circle { fill: #c5ced8; } .soa-n--trojan circle { fill: #e3c2b8; } .soa-n--god circle { fill: #ead7ae; } .soa-n--captive circle { fill: #ece4d3; stroke-dasharray: 5 4; }
 .soa-n:hover circle, .soa-n:focus-visible circle, .soa-n.on circle { transform: scale(1.12); stroke-width: 5; }
 .soa-n.on circle { fill: #2a2622; } .soa-n.on text { fill: #ece4d3; }
 .soa-nodes.dim .soa-n:not(.on):not(.near) { opacity: .35; }
-.soa-web__info { border: 4px solid #2a2622; padding: 1.2rem 1.3rem; background: #ece4d3; box-shadow: 10px 10px 0 #a9503d; }
+.soa-web__info { border: 4px solid #2a2622; padding: 1.2rem 1.3rem; background: #ece4d3; box-shadow: 10px 10px 0 #a9503d; min-height: 100%; }
 .soa-web__kicker { margin: 0; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #a9503d; }
 .soa-web__name { margin: .3rem 0 .6rem; font-size: 2rem; letter-spacing: -.03em; }
 .soa-web__desc { margin: 0 0 .9rem; font-size: 1rem; line-height: 1.5; }
@@ -602,7 +649,7 @@ status: "pulled"
 .soa-card--patroclus .soa-card__shape { background: #a9503d; border-radius: 50%; }
 .soa-card--hector .soa-card__shape { background: #44596f; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .soa-card__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-.soa-quiz .soa-card .soa-card__name { position: relative; margin: .3rem 0 .2rem; font-size: clamp(2.6rem, 7vw, 4rem); line-height: .95; letter-spacing: -.04em; color: #2a2622; }
+.soa-card__name { position: relative; margin: .3rem 0 .2rem; font-size: clamp(2.6rem, 7vw, 4rem); line-height: .95; letter-spacing: -.04em; color: #2a2622; }
 .soa-card__tier { position: relative; margin: 0 0 1rem; font-weight: 700; color: #a9503d; }
 .soa-card__text { position: relative; margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.55; max-width: 52ch; }
 .soa-bars { display: grid; gap: .45rem; margin: 1.2rem 0 0; }
@@ -620,6 +667,48 @@ status: "pulled"
 .soa-review em { color: #c79d4f; font-style: normal; font-weight: 700; }
 .soa-copied { font-size: .8rem; color: #c79d4f; align-self: center; }
 @media (prefers-reduced-motion: reduce) { .soa-q, .soa-result { animation: none; } }
+.soa-tree__wrap { margin-top: 1.2rem; border: 4px solid #2a2622; background: #ddd2bd; padding: .6rem; overflow-x: auto; }
+.soa-tree__svg { display: block; width: 100%; min-width: 620px; height: auto; }
+.soa-tl path { fill: none; stroke: #2a2622; stroke-width: 2.2; }
+.soa-tl path.cp { stroke-width: 4; }
+.soa-tree__svg .love { fill: none; stroke: #a9503d; stroke-width: 4; stroke-dasharray: 3 8; stroke-linecap: round; }
+.soa-tn rect { fill: #ece4d3; stroke: #2a2622; stroke-width: 2.5; transition: transform .3s cubic-bezier(.2,.9,.2,1.3), fill .3s; transform-box: fill-box; transform-origin: center; }
+.soa-tn text { font: 700 17px Jost, sans-serif; text-anchor: middle; fill: #2a2622; pointer-events: none; }
+.soa-tn--god rect { fill: #ead7ae; }
+.soa-tn--star rect { fill: #2a2622; } .soa-tn--star text { fill: #ece4d3; }
+.soa-tn--key rect { stroke-width: 4; }
+.soa-tn:hover rect { transform: scale(1.08); fill: #c79d4f; }
+.soa-tree__note { font-size: .85rem; color: #5a534a; margin: .6rem 0 1.2rem; }
+.soa-tree__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.soa-tree__facts > div { border-top: 5px solid #2a2622; padding-top: .5rem; }
+.soa-tree__facts h3 { font-size: 1.15rem; margin: 0 0 .5rem; }
+.soa-tree__facts ul { margin: 0; padding-left: 1.1rem; font-size: .98rem; line-height: 1.55; }
+.soa-tree__facts li { margin-bottom: .35rem; }
+.soa-answers__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; }
+.soa-ans { border: 3px solid #2a2622; padding: 1rem 1.1rem; background: #ece4d3; }
+.soa-ans:nth-child(4n+1) { box-shadow: 7px 7px 0 #a9503d; } .soa-ans:nth-child(4n+2) { box-shadow: 7px 7px 0 #44596f; } .soa-ans:nth-child(4n+3) { box-shadow: 7px 7px 0 #c79d4f; } .soa-ans:nth-child(4n) { box-shadow: 7px 7px 0 #2a2622; }
+.soa-ans h3 { font-size: 1.1rem; margin: 0 0 .5rem; line-height: 1.2; }
+.soa-ans p { margin: 0; font-size: .97rem; line-height: 1.55; }
+.soa-priam__fig { margin: 1rem 0 1.2rem; }
+.soa-priam__fig img { width: 100%; height: auto; border: 4px solid #2a2622; }
+.soa-priam__fig figcaption { font-size: .85rem; color: #5a534a; margin-top: .4rem; }
+.soa-guide { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: center; padding: 1.2rem 1.3rem; border: 4px solid #2a2622; background: #ece4d3; box-shadow: 10px 10px 0 #44596f; }
+.soa-guide__icon { width: 64px; height: 82px; background: #2a2622; position: relative; }
+.soa-guide__icon::before { content: ''; position: absolute; width: 30px; height: 30px; border-radius: 50%; background: #a9503d; left: 8px; top: 12px; }
+.soa-guide__icon::after { content: ''; position: absolute; width: 22px; height: 22px; background: #c79d4f; right: 8px; bottom: 10px; }
+.soa-guide h3 { margin: 0 0 .3rem; font-size: 1.25rem; }
+.soa-guide p { margin: 0 0 .6rem; font-size: .97rem; }
+@media (max-width: 720px) { .soa-tree__facts, .soa-answers__grid { grid-template-columns: 1fr; } .soa-guide { grid-template-columns: 1fr; } }
+/* character map: changes flow instead of jumping */
+.soa-web__info { transition: min-height .4s; }
+.soa-web__info.swap .soa-web__kicker, .soa-web__info.swap .soa-web__name, .soa-web__info.swap .soa-web__desc { animation: soa-fade .45s cubic-bezier(.2,.8,.2,1) both; }
+.soa-web__info.swap .soa-web__name { animation-delay: .05s; } .soa-web__info.swap .soa-web__desc { animation-delay: .1s; }
+.soa-web__links li { animation: soa-fade .4s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(.12s + var(--k, 0) * 45ms); }
+@keyframes soa-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.soa-edges line { transition: opacity .5s, stroke-width .5s; }
+.soa-n { transition: opacity .5s; }
+.soa-web__tour { all: unset; cursor: pointer; margin-top: .8rem; font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #a9503d; }
+
 </style>
 <script>
 (function () {
@@ -658,15 +747,17 @@ status: "pulled"
     var info = { k: web.querySelector('.soa-web__kicker'), n: web.querySelector('.soa-web__name'), d: web.querySelector('.soa-web__desc'), l: web.querySelector('.soa-web__links') };
     function show(id) {
       var p = people[id]; if (!p) return;
-      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = '';
+      var box = web.querySelector('.soa-web__info'); box.style.minHeight = box.offsetHeight + 'px'; box.classList.remove('swap'); void box.offsetWidth; box.classList.add('swap');
+      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = ''; var k = 0;
       var near = {};
       edges.forEach(function (e) {
         var a = e.dataset.a, b = e.dataset.b, hit = a === id || b === id;
         e.classList.toggle('on', hit);
-        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
+        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.style.setProperty('--k', k++); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
       });
       nodes.forEach(function (n) { n.classList.toggle('on', n.dataset.id === id); n.classList.toggle('near', !!near[n.dataset.id]); });
       gE.classList.add('dim'); gN.classList.add('dim');
+      setTimeout(function () { box.style.minHeight = ''; }, 450);
     }
     nodes.forEach(function (n) {
       n.addEventListener('mouseenter', function () { show(n.dataset.id); });
@@ -675,6 +766,16 @@ status: "pulled"
       n.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n.dataset.id); } });
     });
     show('achilles');
+    // a slow tour of the main characters while the map is on screen, until someone touches it
+    var tour = ['achilles', 'patroclus', 'thetis', 'briseis', 'hector', 'priam', 'odysseus'], ti = 0, tt = null, touched = false;
+    function stopTour() { touched = true; clearInterval(tt); tt = null; }
+    nodes.forEach(function (n) { ['mouseenter', 'focus', 'click'].forEach(function (ev) { n.addEventListener(ev, stopTour); }); });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es.forEach(function (e) {
+        if (e.isIntersecting && !tt && !touched) tt = setInterval(function () { ti = (ti + 1) % tour.length; show(tour[ti]); }, 3800);
+        if (!e.isIntersecting && tt) { clearInterval(tt); tt = null; }
+      }); }, { threshold: .4 }).observe(web);
+    }
   }
 
   /* ---------- Thetis's Prophecy quiz ---------- */
@@ -754,10 +855,12 @@ status: "pulled"
       if (navigator.share) navigator.share({ title: 'The Song of Achilles quiz', text: text, url: share }).catch(function () {});
       else if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + share).then(function () { stage.querySelector('.soa-copied').hidden = false; });
     });
-    if (!forced && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
+    if (!forced && !window.__soaTest && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
   }
   // A shared link (?hero=...) opens straight on that result card
-  var shared = new URLSearchParams(location.search).get('hero');
+  var params = new URLSearchParams(location.search), test = (params.get('answers') || '').toUpperCase();
+  if (/^[ABC]{8}$/.test(test)) { answers = test.split('').map(function (c) { return 'ABC'.indexOf(c); }); window.__soaTest = true; finish(); var st = stage.querySelector('.soa-card__kicker'); if (st) st.textContent = 'Test run · answers ' + test; return; }
+  var shared = params.get('hero');
   if (R[shared]) { answers = []; finish(shared); }
   else ask(0);
 })();

@@ -86,6 +86,48 @@
 .soa-review em { color: #c79d4f; font-style: normal; font-weight: 700; }
 .soa-copied { font-size: .8rem; color: #c79d4f; align-self: center; }
 @media (prefers-reduced-motion: reduce) { .soa-q, .soa-result { animation: none; } }
+.soa-tree__wrap { margin-top: 1.2rem; border: 4px solid #2a2622; background: #ddd2bd; padding: .6rem; overflow-x: auto; }
+.soa-tree__svg { display: block; width: 100%; min-width: 620px; height: auto; }
+.soa-tl path { fill: none; stroke: #2a2622; stroke-width: 2.2; }
+.soa-tl path.cp { stroke-width: 4; }
+.soa-tree__svg .love { fill: none; stroke: #a9503d; stroke-width: 4; stroke-dasharray: 3 8; stroke-linecap: round; }
+.soa-tn rect { fill: #ece4d3; stroke: #2a2622; stroke-width: 2.5; transition: transform .3s cubic-bezier(.2,.9,.2,1.3), fill .3s; transform-box: fill-box; transform-origin: center; }
+.soa-tn text { font: 700 17px Jost, sans-serif; text-anchor: middle; fill: #2a2622; pointer-events: none; }
+.soa-tn--god rect { fill: #ead7ae; }
+.soa-tn--star rect { fill: #2a2622; } .soa-tn--star text { fill: #ece4d3; }
+.soa-tn--key rect { stroke-width: 4; }
+.soa-tn:hover rect { transform: scale(1.08); fill: #c79d4f; }
+.soa-tree__note { font-size: .85rem; color: #5a534a; margin: .6rem 0 1.2rem; }
+.soa-tree__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.soa-tree__facts > div { border-top: 5px solid #2a2622; padding-top: .5rem; }
+.soa-tree__facts h3 { font-size: 1.15rem; margin: 0 0 .5rem; }
+.soa-tree__facts ul { margin: 0; padding-left: 1.1rem; font-size: .98rem; line-height: 1.55; }
+.soa-tree__facts li { margin-bottom: .35rem; }
+.soa-answers__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; }
+.soa-ans { border: 3px solid #2a2622; padding: 1rem 1.1rem; background: #ece4d3; }
+.soa-ans:nth-child(4n+1) { box-shadow: 7px 7px 0 #a9503d; } .soa-ans:nth-child(4n+2) { box-shadow: 7px 7px 0 #44596f; } .soa-ans:nth-child(4n+3) { box-shadow: 7px 7px 0 #c79d4f; } .soa-ans:nth-child(4n) { box-shadow: 7px 7px 0 #2a2622; }
+.soa-ans h3 { font-size: 1.1rem; margin: 0 0 .5rem; line-height: 1.2; }
+.soa-ans p { margin: 0; font-size: .97rem; line-height: 1.55; }
+.soa-priam__fig { margin: 1rem 0 1.2rem; }
+.soa-priam__fig img { width: 100%; height: auto; border: 4px solid #2a2622; }
+.soa-priam__fig figcaption { font-size: .85rem; color: #5a534a; margin-top: .4rem; }
+.soa-guide { display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: center; padding: 1.2rem 1.3rem; border: 4px solid #2a2622; background: #ece4d3; box-shadow: 10px 10px 0 #44596f; }
+.soa-guide__icon { width: 64px; height: 82px; background: #2a2622; position: relative; }
+.soa-guide__icon::before { content: ''; position: absolute; width: 30px; height: 30px; border-radius: 50%; background: #a9503d; left: 8px; top: 12px; }
+.soa-guide__icon::after { content: ''; position: absolute; width: 22px; height: 22px; background: #c79d4f; right: 8px; bottom: 10px; }
+.soa-guide h3 { margin: 0 0 .3rem; font-size: 1.25rem; }
+.soa-guide p { margin: 0 0 .6rem; font-size: .97rem; }
+@media (max-width: 720px) { .soa-tree__facts, .soa-answers__grid { grid-template-columns: 1fr; } .soa-guide { grid-template-columns: 1fr; } }
+/* character map: changes flow instead of jumping */
+.soa-web__info { transition: min-height .4s; }
+.soa-web__info.swap .soa-web__kicker, .soa-web__info.swap .soa-web__name, .soa-web__info.swap .soa-web__desc { animation: soa-fade .45s cubic-bezier(.2,.8,.2,1) both; }
+.soa-web__info.swap .soa-web__name { animation-delay: .05s; } .soa-web__info.swap .soa-web__desc { animation-delay: .1s; }
+.soa-web__links li { animation: soa-fade .4s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(.12s + var(--k, 0) * 45ms); }
+@keyframes soa-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.soa-edges line { transition: opacity .5s, stroke-width .5s; }
+.soa-n { transition: opacity .5s; }
+.soa-web__tour { all: unset; cursor: pointer; margin-top: .8rem; font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #a9503d; }
+
 </style>
 <script>
 (function () {
@@ -124,15 +166,17 @@
     var info = { k: web.querySelector('.soa-web__kicker'), n: web.querySelector('.soa-web__name'), d: web.querySelector('.soa-web__desc'), l: web.querySelector('.soa-web__links') };
     function show(id) {
       var p = people[id]; if (!p) return;
-      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = '';
+      var box = web.querySelector('.soa-web__info'); box.style.minHeight = box.offsetHeight + 'px'; box.classList.remove('swap'); void box.offsetWidth; box.classList.add('swap');
+      info.k.textContent = p[0]; info.n.textContent = p[1]; info.d.textContent = p[2]; info.l.innerHTML = ''; var k = 0;
       var near = {};
       edges.forEach(function (e) {
         var a = e.dataset.a, b = e.dataset.b, hit = a === id || b === id;
         e.classList.toggle('on', hit);
-        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
+        if (hit) { var o = a === id ? b : a; near[o] = 1; var li = document.createElement('li'); li.style.setProperty('--k', k++); li.innerHTML = '<b>' + people[o][1] + '</b> · ' + (ties[a + '|' + b] || ''); info.l.appendChild(li); }
       });
       nodes.forEach(function (n) { n.classList.toggle('on', n.dataset.id === id); n.classList.toggle('near', !!near[n.dataset.id]); });
       gE.classList.add('dim'); gN.classList.add('dim');
+      setTimeout(function () { box.style.minHeight = ''; }, 450);
     }
     nodes.forEach(function (n) {
       n.addEventListener('mouseenter', function () { show(n.dataset.id); });
@@ -141,6 +185,16 @@
       n.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(n.dataset.id); } });
     });
     show('achilles');
+    // a slow tour of the main characters while the map is on screen, until someone touches it
+    var tour = ['achilles', 'patroclus', 'thetis', 'briseis', 'hector', 'priam', 'odysseus'], ti = 0, tt = null, touched = false;
+    function stopTour() { touched = true; clearInterval(tt); tt = null; }
+    nodes.forEach(function (n) { ['mouseenter', 'focus', 'click'].forEach(function (ev) { n.addEventListener(ev, stopTour); }); });
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es.forEach(function (e) {
+        if (e.isIntersecting && !tt && !touched) tt = setInterval(function () { ti = (ti + 1) % tour.length; show(tour[ti]); }, 3800);
+        if (!e.isIntersecting && tt) { clearInterval(tt); tt = null; }
+      }); }, { threshold: .4 }).observe(web);
+    }
   }
 
   /* ---------- Thetis's Prophecy quiz ---------- */
@@ -220,10 +274,12 @@
       if (navigator.share) navigator.share({ title: 'The Song of Achilles quiz', text: text, url: share }).catch(function () {});
       else if (navigator.clipboard) navigator.clipboard.writeText(text + ' ' + share).then(function () { stage.querySelector('.soa-copied').hidden = false; });
     });
-    if (!forced && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
+    if (!forced && !window.__soaTest && window.gtag) gtag('event', 'quiz_complete', { quiz_name: 'song_of_achilles', result: top, achilles: s.achilles, hector: s.hector, patroclus: s.patroclus });
   }
   // A shared link (?hero=...) opens straight on that result card
-  var shared = new URLSearchParams(location.search).get('hero');
+  var params = new URLSearchParams(location.search), test = (params.get('answers') || '').toUpperCase();
+  if (/^[ABC]{8}$/.test(test)) { answers = test.split('').map(function (c) { return 'ABC'.indexOf(c); }); window.__soaTest = true; finish(); var st = stage.querySelector('.soa-card__kicker'); if (st) st.textContent = 'Test run · answers ' + test; return; }
+  var shared = params.get('hero');
   if (R[shared]) { answers = []; finish(shared); }
   else ask(0);
 })();
