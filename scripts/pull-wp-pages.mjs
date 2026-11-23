@@ -68,13 +68,18 @@ for (const p of posts) {
     const dest = path.join(imgDir, name);
     if (!existsSync(dest)) {
       await mkdir(imgDir, { recursive: true });
-      let res = await fetch(full, { headers: UA });
-      if (!res.ok && full !== clean) res = await fetch(clean, { headers: UA });
-      if (!res.ok) {
-        console.error(`  image FAILED ${res.status} ${url}`);
+      try {
+        let res = await fetch(full, { headers: UA, signal: AbortSignal.timeout(30000) });
+        if (!res.ok && full !== clean) res = await fetch(clean, { headers: UA, signal: AbortSignal.timeout(30000) });
+        if (!res.ok) {
+          console.error(`  image FAILED ${res.status} ${url}`);
+          continue;
+        }
+        await writeFile(dest, Buffer.from(await res.arrayBuffer()));
+      } catch (err) {
+        console.error(`  image FAILED ${err.cause?.code || err.name} ${url}`); // keep going; the image stays linked
         continue;
       }
-      await writeFile(dest, Buffer.from(await res.arrayBuffer()));
     }
     local[url] = `./images/${slug}/${name}`;
   }
