@@ -387,7 +387,7 @@ const dial = [
     animation: spin 6s linear infinite;
   }
   .vinyl i { position: absolute; inset: 47.6%; border-radius: 50%; background: var(--paper); }
-  .vinyl::before { content: ''; position: absolute; left: 50%; top: 20%; width: 11%; height: 3%; background: var(--paper); border-radius: 2px; transform: translateX(-50%); opacity: .9; }
+  .vinyl::before { content: ''; position: absolute; inset: 41%; border-radius: 50%; border: 5px dotted var(--paper); opacity: .95; } /* dotted ring on the label shows it turning */
   .vinyl::after { content: ''; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 20deg, transparent, rgba(255,255,255,.1), transparent 15%, transparent 50%, rgba(255,255,255,.08), transparent 65%); }
   @keyframes spin { to { transform: rotate(360deg); } }
   .ch--music .ch__num { background: var(--yellow); color: var(--ink); }
