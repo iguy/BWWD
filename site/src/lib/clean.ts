@@ -5,7 +5,8 @@ import { mediaUrl, type Section } from './sections';
 interface Options {
   title?: string; // page title: a heading repeating it inside the body is dropped
   plates?: boolean; // gallery sections: every artwork image becomes a numbered plate
-  cover?: string; // local cover path, shown in the header (gallery sections)
+  cover?: string; // local cover path, shown in the header — removed from the body
+  lede?: boolean; // mark the opening paragraph
 }
 
 export function cleanHtml(html: string, section: Section, opts: Options = {}): string {
@@ -22,7 +23,7 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
   for (const el of root.querySelectorAll('.et_pb_number_counter .percent')) if (!el.text.trim()) el.remove();
 
   // Old WordPress menus and search forms placed inside posts
-  for (const el of root.querySelectorAll('nav.wp-block-navigation, form')) el.remove();
+  for (const el of root.querySelectorAll('nav.wp-block-navigation, .wp-block-page-list, form')) el.remove();
 
   // WordPress/Divi inline styling (colours, spacing) — the new site's styles take over
   for (const el of root.querySelectorAll('[style]')) {
@@ -53,12 +54,16 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
     img.setAttribute('decoding', 'async');
   }
 
+  // The cover already sits in the page header
+  const base = (src = '') =>
+    (src.split('/').pop() ?? '').toLowerCase().replace(/\.\w+$/, '').replace(/(-\d+x\d+|-scaled|-e\d+|-\d)+$/, '');
+  if (opts.cover) for (const img of root.querySelectorAll('img')) {
+    if (base(img.getAttribute('src')) !== base(opts.cover) || img.closest('.wp-block-cover')) continue;
+    const fig = img.closest('figure');
+    (fig && fig.querySelectorAll('img').length === 1 ? fig : img).remove();
+  }
+
   if (opts.plates) {
-    // The cover already sits in the page header
-    if (opts.cover) for (const img of root.querySelectorAll(`img[src="${opts.cover}"]`)) {
-      const fig = img.closest('figure');
-      (fig && fig.querySelectorAll('img').length === 1 ? fig : img).remove();
-    }
     for (const img of root.querySelectorAll('img')) {
       if (img.closest('.wp-block-cover')) continue;
       let fig = img.closest('figure');
@@ -80,14 +85,17 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
     }
   }
 
-  // Gallery: the first real paragraph opens with a drop cap
-  if (opts.plates) {
+  // Designed sections: the first real paragraph opens the piece
+  if (opts.plates || opts.lede) {
     const lede = root.querySelectorAll('p').find((p) => p.text.trim().length > 80 && !p.closest('figure, .wp-block-column, .wp-block-cover'));
     lede?.classList.add('lede');
   }
 
   // Cover blocks use the image as a background
   for (const cover of root.querySelectorAll('.wp-block-cover')) cover.removeAttribute('style');
+
+  // Headings left empty (spacers in the old layout)
+  for (const h of root.querySelectorAll('h1,h2,h3,h4,h5,h6')) if (!h.text.trim() && !h.querySelector('img')) h.remove();
 
   // Paragraphs that only held an empty &nbsp;
   for (const p of root.querySelectorAll('p')) if (!p.text.trim() && !p.querySelector('img,iframe')) p.remove();

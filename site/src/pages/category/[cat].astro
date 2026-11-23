@@ -27,7 +27,7 @@ const jsonLd = {
     <p>{section.blurb}</p>
   </header>
   <main>
-    <ul class="cards">
+    <ul class={section.look === 'sleeve' ? 'cards cards--square' : 'cards'}>
       {items.map((a) => (
         <li>
           <a href={`/${a.data.slug}/`}>
@@ -51,6 +51,7 @@ const jsonLd = {
   .cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2.2rem 1.8rem; }
   .cards a { display: block; text-decoration: none; color: var(--ink); }
   .cards img, .no-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--paper-deep); display: block; }
+  .cards--square img, .cards--square .no-img { aspect-ratio: 1; box-shadow: 0 16px 30px -18px rgba(0,0,0,.6); }
   .date { display: block; font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.8rem; }
   .title { display: block; font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; line-height: 1.25; margin-top: 0.2rem; }
   .cards a:hover .title { color: var(--brass); }

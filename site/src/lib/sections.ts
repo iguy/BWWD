@@ -6,7 +6,7 @@ export interface Section {
   wpCat: string; // WordPress category slug; hub lives at /category/<wpCat>/ like WordPress
   blurb: string;
   nav?: boolean; // show in the top menu (default true)
-  look?: 'gallery'; // art pages: hero plate, numbered plates, catalogue headings
+  look?: 'gallery' | 'sleeve'; // gallery: art catalogue; sleeve: record sleeve + liner notes
 }
 
 // Sections built on the new site. Add one here when its pages are ready.
@@ -23,6 +23,13 @@ export const SECTIONS: Section[] = [
     name: 'Technology',
     wpCat: 'technology-trends-tips',
     blurb: 'AI tools, WordPress, search and the Sandy Mush Tech Hub.',
+  },
+  {
+    folder: 'music',
+    name: 'Music',
+    wpCat: 'music-discovery-reviews',
+    blurb: 'Reviews, playlists and records I keep going back to — plus my own tracks.',
+    look: 'sleeve',
   },
   {
     folder: 'programming',
