@@ -3,3 +3,4 @@ dist/
 node_modules/
 # copied from ../migration at build time
 public/media/
+public/wp-map.json

@@ -32,4 +32,19 @@ if (existsSync(SRC)) {
     await decodeNames(fileURLToPath(out));
   }
 }
-console.log('Media copied to public/media/');
+// Old WordPress image addresses (/wp-content/uploads/YYYY/MM/name-300x200.jpg) -> the copy this site has.
+// Key: file name without folder, size suffix or extension, lower case.
+const map = {};
+async function index(dir, rel) {
+  for (const ent of await readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, ent.name), r = rel + '/' + ent.name;
+    if (ent.isDirectory()) { await index(full, r); continue; }
+    if (!/\.(jpe?g|png|gif|webp|svg|mp4)$/i.test(ent.name)) continue;
+    const key = ent.name.toLowerCase().replace(/\.[a-z0-9]+$/, '').replace(/-\d+x\d+$/, '');
+    if (!map[key]) map[key] = '/media' + r;
+  }
+}
+if (existsSync(DEST)) await index(fileURLToPath(DEST), '');
+const { writeFile } = await import('node:fs/promises');
+await writeFile(new URL('../public/wp-map.json', import.meta.url), JSON.stringify(map));
+console.log(`Media copied to public/media/ (${Object.keys(map).length} old image addresses mapped)`);
