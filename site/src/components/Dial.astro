@@ -22,6 +22,13 @@ const items = [
     {items.map((d, i) => (
       <li style={`--i:${i}`}><a class={`dial__item dial__item--${d.c}`} href={d.href}>{d.label}</a></li>
     ))}
+    <li class="dial__search-li" style={`--i:${items.length}`}>
+      <form class="dial__search" action="/sitemap/" method="get" role="search">
+        <label class="sr" for="dial-q">Search the site</label>
+        <input id="dial-q" name="q" type="search" placeholder="Search…" autocomplete="off" />
+        <button type="submit" aria-label="Search">→</button>
+      </form>
+    </li>
   </ul>
 </nav>
 
@@ -57,6 +64,11 @@ const items = [
   .dial__item--red { --c: var(--red); } .dial__item--blue { --c: var(--blue); } .dial__item--yellow { --c: var(--yellow); }
   .dial__item:hover, .dial__item:focus-visible { background: var(--c); color: var(--paper); }
   .dial__item--yellow:hover { color: var(--ink); }
+  .dial__search { display: flex; transform: translateY(50%); box-shadow: 4px 4px 0 var(--red); }
+  .dial__search input { width: 13rem; padding: .55rem .8rem; border: 3px solid var(--ink); border-right: 0; background: var(--paper); color: var(--ink); font: inherit; font-size: .95rem; font-weight: 600; outline: none; }
+  .dial__search input:focus { background: #fff; }
+  .dial__search button { all: unset; cursor: pointer; padding: 0 .8rem; background: var(--ink); color: var(--paper); font-weight: 800; }
+  .dial__search button:hover { background: var(--red); }
 </style>
 
 <script is:inline>
@@ -68,7 +80,13 @@ const items = [
     ring();
     function setOpen(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
     btn.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    var q = nav.querySelector('#dial-q');
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+      var t = document.activeElement, typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+      if (e.key === '/' && !typing && !document.querySelector('.idx-search input')) { e.preventDefault(); setOpen(true); setTimeout(function () { q.focus(); }, 120); }
+    });
+    btn.addEventListener('click', function () { if (nav.classList.contains('open') && matchMedia('(hover: hover)').matches) setTimeout(function () { q.focus({ preventScroll: true }); }, 250); });
     document.addEventListener('click', function (e) { if (!nav.contains(e.target)) setOpen(false); });
     nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
   })();

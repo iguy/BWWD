@@ -1,0 +1,134 @@
+---
+// Scroll piece for a section: each theme pins to the screen and its posts slide past as you scroll,
+// while a big shape turns with your progress. On phones it becomes a swipeable row per theme.
+import type { Article } from '../lib/sections';
+import { dateLabel, excerpt } from '../lib/sections';
+interface Group { id: string; name: string; colour: string; blurb: string; list: { a: Article; img: { src: string } }[] }
+const { groups } = Astro.props as { groups: Group[] };
+const shapes = ['circle', 'square', 'triangle'];
+const all = groups.flatMap((g) => g.list.map((x) => `/${x.a.data.slug}/`));
+---
+<div class="st">
+  <nav class="st-bar" aria-label="Themes">
+    {groups.map((g, i) => <a class={`st-chip st-chip--${g.colour}`} href={`#${g.id}`}><b>{String(i + 1).padStart(2, '0')}</b> {g.name}</a>)}
+    <a class="st-dice" href={all[0]} data-all={all.join('|')}>⚄ Surprise me</a>
+  </nav>
+
+  {groups.map((g, gi) => (
+    <section class={`st-group st-group--${g.colour}`} id={g.id} style={`--n:${g.list.length}`} data-st>
+      <div class="st-sticky">
+        <span class={`st-shape st-shape--${shapes[gi % 3]}`} aria-hidden="true"></span>
+        <header class="st-head">
+          <span class="st-num">{String(gi + 1).padStart(2, '0')}</span>
+          <h2>{g.name}</h2>
+          {g.blurb && <p>{g.blurb}</p>}
+          <p class="st-count"><b class="st-at">1</b> / {g.list.length}</p>
+        </header>
+        <ol class="st-track">
+          {g.list.map(({ a, img }, i) => (
+            <li class="st-card">
+              <a href={`/${a.data.slug}/`}>
+                <span class="st-card__img">
+                  {img.src ? <img src={img.src} alt="" loading={gi === 0 && i < 2 ? 'eager' : 'lazy'} decoding="async" /> : <i class={`st-card__ph st-shape--${shapes[(i + gi) % 3]}`} aria-hidden="true"></i>}
+                </span>
+                <span class="st-card__date">{dateLabel(a.data.pubDate)}</span>
+                <span class="st-card__title">{a.data.title}</span>
+                <span class="st-card__ex">{excerpt(a, 150)}</span>
+                <span class="st-card__go">Read it →</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+        <div class="st-rail" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+  ))}
+</div>
+
+<script is:inline>
+  (function () {
+    var groups = [].slice.call(document.querySelectorAll('[data-st]'));
+    var dice = document.querySelector('.st-dice');
+    if (dice) dice.addEventListener('click', function (e) { e.preventDefault(); var l = dice.dataset.all.split('|'); location.href = l[Math.floor(Math.random() * l.length)]; });
+    var mq = matchMedia('(max-width: 820px), (prefers-reduced-motion: reduce)');
+    var ticking = false;
+    function update() {
+      ticking = false;
+      if (mq.matches) return;
+      var vh = innerHeight;
+      groups.forEach(function (g) {
+        var r = g.getBoundingClientRect();
+        if (r.bottom < -50 || r.top > vh + 50) return;
+        var p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - vh)));
+        var track = g.querySelector('.st-track'), stage = g.querySelector('.st-sticky');
+        var max = Math.max(0, track.scrollWidth - (stage.clientWidth - track.offsetLeft) + 48);
+        track.style.transform = 'translate3d(' + (-max * p).toFixed(1) + 'px,0,0)';
+        g.style.setProperty('--p', p.toFixed(4));
+        var n = g.querySelectorAll('.st-card').length;
+        g.querySelector('.st-at').textContent = Math.min(n, 1 + Math.floor(p * n * 0.999));
+      });
+    }
+    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener('resize', update);
+    mq.addEventListener && mq.addEventListener('change', function () { groups.forEach(function (g) { g.querySelector('.st-track').style.transform = ''; }); update(); });
+    update();
+  })();
+</script>
+
+<style is:global>
+  .st-bar { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; padding: .9rem 16px; background: var(--paper); border-bottom: 4px solid var(--ink); }
+  .st-chip { display: inline-flex; gap: .45rem; padding: .4rem .75rem; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; color: var(--paper); background: var(--ink); }
+  .st-chip--red { background: var(--red); } .st-chip--blue { background: var(--blue); } .st-chip--yellow { background: var(--yellow); color: var(--ink); }
+  .st-chip:hover { background: var(--ink); color: var(--paper); }
+  .st-dice { margin-left: auto; padding: .45rem .9rem; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--paper); background: var(--ink); }
+  .st-dice:hover { background: var(--red); color: var(--paper); }
+
+  .st-group { --c: var(--ink); --band: var(--paper-deep); position: relative; height: calc(100vh + var(--n) * 48vh); background: var(--band); border-top: 8px solid var(--ink); scroll-margin-top: 60px; }
+  .st-group--red { --c: var(--red); --band: color-mix(in srgb, var(--red) 14%, var(--paper)); }
+  .st-group--blue { --c: var(--blue); --band: color-mix(in srgb, var(--blue) 16%, var(--paper)); }
+  .st-group--yellow { --c: var(--yellow); --band: color-mix(in srgb, var(--yellow) 24%, var(--paper)); }
+  .st-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: grid; grid-template-columns: minmax(16rem, 30vw) 1fr; align-items: center; }
+  .st-shape { position: absolute; z-index: 4; mix-blend-mode: multiply; width: 46vh; height: 46vh; left: calc(8vw + var(--p, 0) * 6vw); bottom: -10vh; background: var(--c); opacity: .9; transform: rotate(calc(var(--p, 0) * 160deg)) scale(calc(.85 + var(--p, 0) * .3)); transition: transform .1s linear; pointer-events: none; }
+  .st-shape--circle { border-radius: 50%; }
+  .st-shape--triangle { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .st-head { position: relative; z-index: 3; align-self: stretch; padding: 16vh 2rem 0 max(16px, 4vw); background: linear-gradient(90deg, var(--band) 88%, transparent); }
+  .st-num { display: inline-grid; place-items: center; width: 3.2rem; height: 3.2rem; font-weight: 800; color: var(--paper); background: var(--ink); }
+  .st-head h2 { margin: .8rem 0 .8rem; font-size: clamp(2.4rem, 3.6vw, 4.2rem); line-height: .9; letter-spacing: -.045em; text-transform: lowercase; font-weight: 800; }
+  .st-head p { margin: 0 0 1rem; font-size: 1.05rem; max-width: 28ch; }
+  .st-count { font-size: .78rem !important; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+  .st-count b { display: inline-block; min-width: 1.6em; font-size: 1.9rem; letter-spacing: -.04em; color: var(--c); }
+  .st-group--yellow .st-count b { color: var(--ink); }
+  .st-track { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0 0 0 1rem; display: flex; gap: 2rem; align-items: center; will-change: transform; }
+  .st-card { flex: 0 0 min(30rem, 36vw); transition: transform .5s cubic-bezier(.2,.9,.2,1.2); }
+  .st-card:nth-child(even) { transform: translateY(6vh); }
+  .st-card a { display: grid; gap: .5rem; padding: 1rem 1rem 1.3rem; background: var(--paper); border: 4px solid var(--ink); color: var(--ink); text-decoration: none; box-shadow: 12px 12px 0 var(--c); transition: transform .35s cubic-bezier(.2,.9,.2,1.3), box-shadow .35s; }
+  .st-card a:hover, .st-card a:focus-visible { transform: translate(-6px, -6px) rotate(-1deg); box-shadow: 18px 18px 0 var(--ink); }
+  .st-card__img { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-deep); position: relative; }
+  .st-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+  .st-card a:hover img { transform: scale(1.06); }
+  .st-card__ph { position: absolute; width: 40%; aspect-ratio: 1; left: 30%; top: 15%; background: var(--c); }
+  .st-card__date { margin-top: .3rem; font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+  .st-card__title { font-size: 1.45rem; line-height: 1.1; font-weight: 800; letter-spacing: -.02em; }
+  .st-card__ex { font-size: .95rem; line-height: 1.5; color: var(--ink-soft); }
+  .st-card__go { font-size: .74rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
+  .st-rail { position: absolute; z-index: 2; left: max(16px, 4vw); right: 4vw; bottom: 5vh; height: 6px; background: color-mix(in srgb, var(--ink) 15%, transparent); }
+  .st-rail i { display: block; height: 100%; width: calc(var(--p, 0) * 100%); background: var(--ink); }
+
+  @media (max-width: 820px), (prefers-reduced-motion: reduce) {
+    .st-bar { position: relative; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .st-bar::-webkit-scrollbar { display: none; }
+    .st-chip, .st-dice { flex: 0 0 auto; white-space: nowrap; }
+    .st-group { height: auto; padding: 3rem 0 2.5rem; }
+    .st-head { background: none; padding-top: 0; }
+    .st-sticky { position: relative; height: auto; display: block; overflow: visible; }
+    .st-head { margin: 0 0 1.4rem; padding: 0 16px; }
+    .st-head h2 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+    .st-count { display: none; }
+    .st-shape { width: 44vw; height: 44vw; left: auto; right: -12vw; top: 1rem; bottom: auto; opacity: .85; transform: none; z-index: 0; mix-blend-mode: normal; }
+    .st-track { overflow-x: auto; scroll-snap-type: x mandatory; padding: .5rem 16px 1.6rem; gap: 1rem; -webkit-overflow-scrolling: touch; transform: none !important; }
+    .st-card { flex: 0 0 82vw; scroll-snap-align: start; }
+    .st-card:nth-child(even) { transform: none; }
+    .st-card a { box-shadow: 8px 8px 0 var(--c); }
+    .st-rail { display: none; }
+  }
+</style>
