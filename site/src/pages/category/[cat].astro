@@ -4,7 +4,6 @@ import Layout from '../../layouts/Layout.astro';
 import { SECTIONS, getArticles, cardImage, dateLabel, absolute, excerpt, type Section, type Article } from '../../lib/sections';
 import Shelf from '../../components/Shelf.astro';
 import Explore from '../../components/Explore.astro';
-import Composition from '../../components/Composition.astro';
 import techThemes from '../../data/tech-themes.json';
 import musicThemes from '../../data/music-themes.json';
 import shelfData from '../../data/book-shelves.json';
@@ -84,9 +83,7 @@ const jsonLd = {
       </section>
     )}
   </main>
-  {section.folder === 'technology'
-    ? <Composition groups={techGroups} />
-    : <Explore groups={techGroups} total={cards.length} storageKey={section.folder} records={section.look === 'sleeve'} />}
+  <Explore groups={techGroups} total={cards.length} storageKey={section.folder} records={section.look === 'sleeve'} />
   </Fragment>
   ) : isBooks ? (
   <main class="books">
