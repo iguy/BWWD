@@ -48,3 +48,5 @@
 /episode-10-future-proofing-your-aeo-strategy-advanced-techniques-for-sustainable-success/ https://aeodecoded.ai/ 301
 /category/tech-reviews-ai-tools/ /category/technology-trends-tips/#ai 301
 /category/:cat/page/* /category/:cat/ 301
+/category/deflaut/ /sitemap/ 301
+/category/deflaut/* /sitemap/ 301
