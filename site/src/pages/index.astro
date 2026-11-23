@@ -15,7 +15,8 @@ const tech = (await withImg(bySection('technology'))).slice(0, 6).map((x) => ({ 
 const feat = art[0];
 const featText = feat ? excerpt(feat.a, 420) : '';
 const featQuote = feat
-  ? paragraphs(feat.a).slice(3).join(' ').match(/[^.!?]{50,170}[.!?]/g)?.map((t) => t.trim())
+  ? (paragraphs(feat.a).slice(3).join(' ').split(/(?<=[.!?])\s+(?=[A-Z"“])/) as string[])
+      .map((t) => t.trim()).filter((t) => t.length >= 50 && t.length <= 220)
       .find((t) => /\$\d|\d{2,}|never|nobody|found|broke|vanish/i.test(t)) ?? ''
   : '';
 const small = SECTIONS.filter((s) => s.nav === false).map((s) => ({ s, n: bySection(s.folder).length }));
