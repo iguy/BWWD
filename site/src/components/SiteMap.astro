@@ -3,14 +3,14 @@
 // Click a shape and its contents open below in a colour wipe that grows out of the shape.
 interface Item { t: string; h: string }
 interface Group { id: string; name: string; href?: string; colour: string; items: Item[] }
-const { groups } = Astro.props as { groups: Group[] };
+const { groups, title = 'the map', intro = "Every section as a shape, sized by what's inside. Tap one to open it." } = Astro.props as { groups: Group[]; title?: string; intro?: string };
 const shapes = ['circle', 'square', 'triangle'];
 const size = (n: number) => Math.round(70 + Math.sqrt(n) * 17);
 ---
 <section class="smap" aria-label="Site map">
   <div class="smap__intro">
-    <h2>the map</h2>
-    <p>Every section as a shape, sized by what's inside. Tap one to open it.</p>
+    <h2>{title}</h2>
+    <p>{intro}</p>
   </div>
   <div class="smap__stage">
     {groups.map((g, i) => (
@@ -20,7 +20,7 @@ const size = (n: number) => Math.round(70 + Math.sqrt(n) * 17);
       </button>
     ))}
   </div>
-  <div class="smap__panel" id="smap-panel" hidden>
+  <div class="smap__panel" id={`smap-panel`} hidden>
     {groups.map((g) => (
       <div class={`smap__set smap__set--${g.colour}`} data-set={g.id} hidden>
         <div class="smap__set-head">

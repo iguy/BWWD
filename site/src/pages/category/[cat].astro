@@ -5,6 +5,7 @@ import { SECTIONS, getArticles, cardImage, dateLabel, absolute, excerpt, type Se
 import Shelf from '../../components/Shelf.astro';
 import Explore from '../../components/Explore.astro';
 import ScrollThemes from '../../components/ScrollThemes.astro';
+import SiteMap from '../../components/SiteMap.astro';
 import techThemes from '../../data/tech-themes.json';
 import musicThemes from '../../data/music-themes.json';
 import shelfData from '../../data/book-shelves.json';
@@ -115,6 +116,19 @@ const jsonLd = {
         <Shelf items={sh.list} height="min(56vh, 500px)" />
       </section>
     ))}
+    <section class="books-end">
+      <SiteMap title="the whole library" intro="Every shelf as a shape, sized by how many books it holds. Open one to see them all." groups={shelves.map((sh) => ({ id: `map-${sh.id}`, name: sh.name, href: `#${sh.id}`, colour: sh.colour, items: sh.list.map((x) => ({ t: x.a.data.title, h: `/${x.a.data.slug}/` })) }))} />
+      <div class="books-next">
+        <h2>keep reading</h2>
+        <ul>
+          <li class="books-next--blue"><a href="/montaigne-essays/"><span>Series</span>Montaigne, chapter by chapter<em>A 16th-century philosopher, read for now</em></a></li>
+          <li class="books-next--red"><a href="/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/#quiz"><span>Quiz</span>Achilles, Patroclus or Hector?<em>Take Thetis's Prophecy</em></a></li>
+          <li class="books-next--yellow"><a href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf"><span>Book club</span>Beyond the Battlefield<em>Free discussion guide (PDF)</em></a></li>
+          <li class="books-next--ink"><a href="https://podcast.betterworldwithdesign.com/"><span>Listen</span>The podcast<em>Book reviews you can hear</em></a></li>
+        </ul>
+        <p class="books-next__more"><a href="/sitemap/?q=book">Search every review →</a></p>
+      </div>
+    </section>
   </main>
   ) : (
   <main>
@@ -135,6 +149,18 @@ const jsonLd = {
   )}
 </Layout>
 
+<style is:global>
+  .books-end { margin-top: 5rem; border-top: 10px solid var(--ink); }
+  .books-next { max-width: 1100px; margin: 2rem auto 0; padding: 0 16px; }
+  .books-next h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -.04em; margin: 0 0 1rem; }
+  .books-next ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; }
+  .books-next a { display: grid; gap: .3rem; height: 100%; padding: 1.1rem; border: 3px solid var(--ink); background: var(--paper); color: var(--ink); text-decoration: none; font-weight: 800; font-size: 1.2rem; line-height: 1.15; transition: transform .25s cubic-bezier(.2,.9,.2,1.3); }
+  .books-next a:hover { transform: translate(-4px, -4px) rotate(-1deg); }
+  .books-next span { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
+  .books-next em { font-style: normal; font-weight: 500; font-size: .92rem; color: var(--ink-soft); }
+  .books-next--red a { box-shadow: 8px 8px 0 var(--red); } .books-next--blue a { box-shadow: 8px 8px 0 var(--blue); } .books-next--yellow a { box-shadow: 8px 8px 0 var(--yellow); } .books-next--ink a { box-shadow: 8px 8px 0 var(--ink); }
+  .books-next__more { margin-top: 1.6rem; font-weight: 700; }
+</style>
 <style is:global>
   /* Books page */
   .books { max-width: 1500px; margin: 0 auto; padding: 0 16px; }

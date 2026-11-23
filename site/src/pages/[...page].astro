@@ -42,6 +42,9 @@ const jsonLd = {
   isPartOf: { '@id': absolute('/') + '#site' },
   ...(slug === 'about' ? { mainEntity: { '@id': absolute('/about/') + '#gary' } } : {}),
 };
+const isThanks = slug === 'thank-you-newsletter';
+const PICKS = ['the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance', 'the-answer-engine-far-but-near', 'chapter-23-various-events-form-the-same-counsel'];
+const picks = isThanks ? (await getArticles()).filter((a) => PICKS.includes(a.data.slug)).sort((a, b) => PICKS.indexOf(a.data.slug) - PICKS.indexOf(b.data.slug)) : [];
 const isMontaigne = slug === 'montaigne-essays';
 const montaigne = isMontaigne
   ? await Promise.all((await getArticles()).filter((a) => a.data.tags.includes('Montaigne') || /montaigne/i.test(a.data.title))
@@ -58,8 +61,8 @@ const quotes = montaigneData.quotes as Record<string, { q: string; mark: string 
 const markUp = (q: string, mark: string) => q.replace(mark, `<mark>${mark}</mark>`);
 const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\s*[–—-]+\s*/i, '').replace(/^Chapter\s*\d+\s*[–-]\s*/i, '').replace(/\s*\(&?\s*Podcast\)/i, '').replace(/\b([A-Z]{2,})\b/g, (w) => w[0] + w.slice(1).toLowerCase());
 ---
-<Layout title={`${title} — Better World With Design`} description={meta} image={cover} jsonLd={jsonLd}>
-  <header class="hero hero--plain" slot="masthead">
+<Layout title={`${title} — Better World With Design`} description={meta} image={cover} jsonLd={isThanks ? undefined : jsonLd} noindex={isThanks}>
+  {!isThanks && <header class="hero hero--plain" slot="masthead">
     <span class="shape shape--sun" aria-hidden="true"></span>
     <span class="shape shape--bar" aria-hidden="true"></span>
     <div class="hero__inner">
@@ -68,8 +71,21 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
         <h1>{title}</h1>
       </div>
     </div>
-  </header>
-  {isMontaigne ? (
+  </header>}
+  {isThanks ? (
+  <main class="thanks">
+    <div class="thanks__mark" aria-hidden="true"><i class="c"></i><i class="s"></i><i class="t"></i></div>
+    <p class="thanks__kicker">Newsletter</p>
+    <h1>You're in.</h1>
+    <p class="thanks__lede">No autoresponder sequence, no welcome funnel. Just the next dispatch when there's something worth sending: music, photography, books, and the occasional argument about design.</p>
+    <p class="thanks__check">Check your inbox: Mailchimp may ask you to confirm your address.</p>
+    <h2>While you're here</h2>
+    <ul class="thanks__picks">
+      {picks.map((a, i) => <li class={`thanks__pick thanks__pick--${['red', 'blue', 'yellow'][i]}`}><a href={`/${a.data.slug}/`}><span>{a.section.name}</span>{a.data.title}</a></li>)}
+    </ul>
+    <p class="thanks__more"><a href="/">Back to the homepage</a> · <a href="/sitemap/">Browse everything</a> · <a href="https://podcast.betterworldwithdesign.com/">Listen to the podcast</a></p>
+  </main>
+  ) : isMontaigne ? (
   <main class="mtg">
     <!-- Smoke: wisps in the palette, drifting slowly behind the page (taken from the two-faces graphic) -->
     <div class="smoke" aria-hidden="true">
@@ -183,6 +199,24 @@ const subjectOf = (t: string) => t.replace(/^Montaigne\s*[–-]\s*chapter\s*\d+\
 
 <style is:global>
   /* Montaigne Essays */
+  .thanks { max-width: 760px; margin: 0 auto; padding: 4rem 16px 2rem; }
+  .thanks__mark { display: flex; gap: 10px; align-items: flex-end; margin-bottom: 1.6rem; }
+  .thanks__mark i { display: block; animation: thanks-pop .7s cubic-bezier(.2,.9,.2,1.4) both; }
+  .thanks__mark .c { width: 54px; height: 54px; border-radius: 50%; background: var(--red); }
+  .thanks__mark .s { width: 44px; height: 44px; background: var(--yellow); animation-delay: .12s; }
+  .thanks__mark .t { width: 0; height: 0; border-left: 26px solid transparent; border-right: 26px solid transparent; border-bottom: 46px solid var(--blue); animation-delay: .24s; }
+  @keyframes thanks-pop { from { transform: translateY(30px) scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+  .thanks__kicker { margin: 0; font-size: .74rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--red); }
+  .thanks h1 { margin: .3rem 0 1rem; font-size: clamp(3.4rem, 10vw, 6.5rem); line-height: .9; letter-spacing: -.05em; font-weight: 800; }
+  .thanks__lede { font-size: 1.3rem; line-height: 1.45; margin: 0 0 1rem; }
+  .thanks__check { display: inline-block; margin: 0 0 3rem; padding: .5rem .8rem; background: var(--paper-deep); font-size: .95rem; }
+  .thanks h2 { font-size: 1.6rem; margin: 0 0 1rem; border-top: 6px solid var(--ink); padding-top: .8rem; }
+  .thanks__picks { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+  .thanks__pick a { display: grid; gap: .2rem; padding: 1rem 1.1rem; border: 3px solid var(--ink); background: var(--paper); color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1.15rem; transition: transform .25s, box-shadow .25s; }
+  .thanks__pick span { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+  .thanks__pick--red a { box-shadow: 7px 7px 0 var(--red); } .thanks__pick--blue a { box-shadow: 7px 7px 0 var(--blue); } .thanks__pick--yellow a { box-shadow: 7px 7px 0 var(--yellow); }
+  .thanks__pick a:hover { transform: translate(-3px, -3px); }
+  .thanks__more { margin-top: 2rem; font-weight: 600; }
   .mtg { overflow-x: clip; position: relative; isolation: isolate; clip-path: inset(0); }
   .smoke { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
   .smoke__l { position: absolute; inset: -12%; will-change: transform, translate; transition: translate 1.2s cubic-bezier(.2,.8,.2,1); translate: calc(var(--mx, 0) * var(--depth) * -1px) calc(var(--my, 0) * var(--depth) * -1px + var(--sy, 0) * var(--depth) * -0.0025px); }

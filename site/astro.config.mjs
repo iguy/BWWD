@@ -9,5 +9,5 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   build: { format: 'directory', inlineStylesheets: 'always' },
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.includes('/thank-you-newsletter/') })],
 });

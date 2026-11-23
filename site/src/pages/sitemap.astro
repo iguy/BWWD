@@ -11,7 +11,7 @@ const shelfOf = new Map<string, string>();
 shelfData.shelves.forEach((sh) => sh.books.forEach((b) => shelfOf.set(b, sh.name)));
 const groups = SECTIONS.map((s) => ({ s, items: articles.filter((a) => a.section.folder === s.folder) })).filter((g) => g.items.length);
 const pages = (await getCollection('articles'))
-  .filter((e) => (e.filePath ?? '').includes('/pages/'))
+  .filter((e) => (e.filePath ?? '').includes('/pages/') && e.data.slug !== 'thank-you-newsletter')
   .sort((a, b) => a.data.title.localeCompare(b.data.title));
 const elsewhere = [
   { title: 'Photography', href: 'https://photography.betterworldwithdesign.com/', note: 'Photo stories and bookings' },
