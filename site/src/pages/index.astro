@@ -305,6 +305,32 @@ const dial = [
         else { audio.pause(); playBtn.classList.remove('is-playing'); playBtn.lastChild.textContent = 'Play'; document.querySelector('.ch--pod').classList.remove('is-playing'); }
       });
 
+      // Topic band: drifts on its own; the mouse steers it (left edge = left, right edge = right), and it can be dragged or swiped
+      var band = document.querySelector('.marquee'), track = band && band.querySelector('.marquee__track');
+      if (band && track) {
+        var x = 0, base = reduce ? -0.25 : -0.6, speed = base, target = base, half = 0, drag = null, last = 0;
+        function measure() { half = track.scrollWidth / 2; }
+        measure(); window.addEventListener('resize', measure);
+        band.addEventListener('pointermove', function (e) {
+          if (drag) { var dx = e.clientX - drag.x; drag.x = e.clientX; x += dx; drag.v = dx; if (Math.abs(dx) > 2) band.classList.add('is-dragging'); return; }
+          var r = band.getBoundingClientRect(), f = (e.clientX - r.left) / r.width - 0.5; // -0.5 .. 0.5
+          target = Math.abs(f) < 0.12 ? 0 : -f * 14; // centre holds still, edges move it
+        });
+        band.addEventListener('pointerleave', function () { if (!drag) target = base; });
+        band.addEventListener('dragstart', function (e) { e.preventDefault(); }); // links would otherwise start a native drag
+        band.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, v: 0 }; band.setPointerCapture(e.pointerId); });
+        function endDrag() { if (!drag) return; speed = drag.v; drag = null; setTimeout(function () { band.classList.remove('is-dragging'); }, 0); }
+        band.addEventListener('pointerup', endDrag); band.addEventListener('pointercancel', endDrag);
+        band.addEventListener('wheel', function (e) { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { x -= e.deltaX; e.preventDefault(); } }, { passive: false });
+        function tick(t) {
+          if (!drag) { speed += (target - speed) * 0.06; x += speed; }
+          if (half) { while (x <= -half) x += half; while (x > 0) x -= half; }
+          track.style.transform = 'translateX(' + x + 'px)';
+          requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
       // Dial menu
       var nav = document.querySelector('.dial'), btn = nav.querySelector('.dial__btn');
       function setOpen(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
@@ -618,14 +644,14 @@ const dial = [
   .big-count { max-width: var(--wide); margin: 0 auto 3rem; padding: 0 16px 0 max(16px, 110px); font-size: clamp(1.4rem, 3vw, 2.4rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
   .big-count strong { display: block; font-size: clamp(6rem, 22vw, 18rem); line-height: 0.8; letter-spacing: -0.06em; color: var(--red); }
   .marquee { overflow: hidden; border-top: 10px solid var(--ink); border-bottom: 10px solid var(--ink); background: var(--paper-deep); }
-  .marquee__track { display: flex; width: max-content; animation: marquee 28s linear infinite; will-change: transform; }
-  .marquee:hover .marquee__track { animation-play-state: paused; }
+  .marquee__track { display: flex; width: max-content; will-change: transform; }
+  .marquee { cursor: grab; touch-action: pan-y; user-select: none; }
+  .marquee.is-dragging { cursor: grabbing; }
+  .marquee.is-dragging a { pointer-events: none; }
   .marquee__set { display: flex; }
-  .marquee a { padding: 1.4rem 2.4rem; font-weight: 800; font-size: clamp(1.6rem, 3.6vw, 3rem); letter-spacing: -0.03em; text-transform: lowercase; color: var(--ink); text-decoration: none; white-space: nowrap; border-right: 3px solid var(--ink); }
+  .marquee a { padding: 1rem 1.6rem; font-weight: 800; font-size: clamp(1.05rem, 2vw, 1.7rem); letter-spacing: -0.03em; text-transform: lowercase; color: var(--ink); text-decoration: none; white-space: nowrap; border-right: 3px solid var(--ink); }
   .marquee a:nth-child(3n+1):hover { background: var(--red); color: var(--paper); }
   .marquee a:nth-child(3n+2):hover { background: var(--yellow); }
   .marquee a:nth-child(3n):hover { background: var(--blue); color: var(--paper); }
   .marquee sup { font-size: 0.4em; font-weight: 700; vertical-align: super; }
-  @keyframes marquee { to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .marquee__track { animation-duration: 45s; } }
 </style>
