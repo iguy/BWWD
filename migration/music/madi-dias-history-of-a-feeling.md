@@ -1,5 +1,5 @@
 ---
-title: "Madi Dias – History of a Feeling ?"
+title: "Madi Dias – History of a Feeling"
 slug: "madi-dias-history-of-a-feeling"
 oldUrl: "https://betterworldwithdesign.com/madi-dias-history-of-a-feeling/"
 oldPath: "/madi-dias-history-of-a-feeling/"

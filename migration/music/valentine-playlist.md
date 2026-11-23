@@ -1,5 +1,5 @@
 ---
-title: "Valentine Playlist ?"
+title: "Valentine Playlist"
 slug: "valentine-playlist"
 oldUrl: "https://betterworldwithdesign.com/valentine-playlist/"
 oldPath: "/valentine-playlist/"

@@ -1,5 +1,5 @@
 ---
-title: "￼Danae Good Fruit Review ⭐"
+title: "Danae Good Fruit Review ⭐"
 slug: "danae-good-fruit-review"
 oldUrl: "https://betterworldwithdesign.com/danae-good-fruit-review/"
 oldPath: "/danae-good-fruit-review/"

@@ -4,10 +4,10 @@
 import type { Article } from '../lib/sections';
 import { dateLabel, excerpt } from '../lib/sections';
 interface Group { id: string; name: string; colour: string; blurb: string; list: { a: Article; img: { src: string } }[] }
-interface Props { groups: Group[]; total: number; storageKey: string }
-const { groups, total, storageKey } = Astro.props;
+interface Props { groups: Group[]; total: number; storageKey: string; records?: boolean }
+const { groups, total, storageKey, records = false } = Astro.props;
 ---
-<div class="explore" data-key={storageKey} data-total={total}>
+<div class={records ? 'explore explore--records' : 'explore'} data-key={storageKey} data-total={total}>
   <div class="ex-bar">
     <nav class="ex-chips" aria-label="Groups">
       {groups.map((g, i) => <a class={`chip chip--${g.colour}`} href={`#${g.id}`}><b>{String(i + 1).padStart(2, '0')}</b> {g.name} <sup>{g.list.length}</sup></a>)}
@@ -33,6 +33,7 @@ const { groups, total, storageKey } = Astro.props;
       <ul class="ex-cards">
         {g.list.map(({ a, img }, i) => (
           <li class="ex-card" data-slug={a.data.slug} data-reveal="up" style={`--d:${i}`}>
+            {records && <span class="ex-disc" aria-hidden="true"></span>}
             <div class="ex-card__inner">
               <button type="button" class="ex-card__front" aria-label={`Show summary: ${a.data.title}`}>
                 {img.src ? <img src={img.src} alt="" loading="lazy" decoding="async" /> : <span class="ex-card__shape" aria-hidden="true"></span>}
@@ -121,6 +122,17 @@ const { groups, total, storageKey } = Astro.props;
   .ex-card.is-picked .ex-card__inner { animation: picked 1.2s cubic-bezier(.2,.9,.2,1); }
   .ex-card.is-picked .ex-card__front { box-shadow: 12px 12px 0 var(--yellow); }
   @keyframes picked { 0% { transform: scale(1); } 30% { transform: scale(1.08) rotate(-2deg); } 60% { transform: scale(1.04) rotate(1deg); } 100% { transform: scale(1); } }
+  /* Records: square sleeves, a disc slides out on hover */
+  .explore--records .ex-cards { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem 1.6rem; }
+  .explore--records .ex-card { height: auto; aspect-ratio: 1 / 1.32; }
+  .explore--records .ex-card__front img, .explore--records .ex-card__shape { height: auto; aspect-ratio: 1; }
+  .ex-disc { position: absolute; z-index: 0; top: 2%; left: 4%; width: 92%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, var(--red) 0 15%, var(--ink) 15.5% 17%, transparent 17.5%), repeating-radial-gradient(circle, #0d0d0d 0 1.4px, #262626 1.6px 3px);
+    transition: transform .6s cubic-bezier(.2,.9,.2,1.1); }
+  .ex-disc::after { content: ''; position: absolute; inset: 47%; border-radius: 50%; background: var(--paper); }
+  .explore--records .ex-card__inner { z-index: 1; }
+  .explore--records .ex-card:hover .ex-disc { transform: translateX(34%) rotate(200deg); }
+  .explore--records .ex-card.is-flipped .ex-disc { transform: translateX(34%) rotate(360deg); }
   @media (max-width: 900px) {
     .ex-group { grid-template-columns: 1fr; padding-top: 3.5rem; }
     .ex-head { position: static; }

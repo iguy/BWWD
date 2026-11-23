@@ -1,0 +1,17 @@
+{
+  "_note": "Music page groups. Each post (by slug) sits in one group; groups show in this order. Edit freely.",
+  "groups": [
+    { "id": "mine", "name": "My music", "colour": "red", "blurb": "The Answer Engine, Warehouse Sunrise and the rest of what I make.",
+      "posts": ["the-answer-engine-far-but-near", "the-answer-engine-tokyo-mix", "the-answer-engine-club-light-dawn-the-remixes", "the-answer-engine-pop-a-pill",
+        "the-answer-engine-underground-glow", "warehouse-sunrise", "cookie-jam-by-gary-crossey", "throwback-to-my-dj-days-the-magic-of-music-and-visuals-in-my-video-mashup"] },
+    { "id": "deep", "name": "Deep dives", "colour": "blue", "blurb": "Long reads on records that changed the rules.",
+      "posts": ["3-feet-high-and-rising-the-masterpiece-hip-hop-cant-hear", "the-accidental-alchemist-5-surprising-truths-about-the-bollywood-legend-who-invented-acid-house-by-mistake",
+        "remixed-realities-dissecting-the-cures-ambitious-mixes-of-a-lost-world-collection"] },
+    { "id": "reviews", "name": "Artists & releases", "colour": "yellow", "blurb": "Records and artists worth your time, star-rated.",
+      "posts": ["james-wake-my-foxy-lass", "fever-ray", "spaceman-3-spiritualized", "annabel-lee", "ladytron", "kristina-sheli", "zeigest", "onetwothree",
+        "review-a-certain-ratio-loco-remezclada", "danae-good-fruit-review", "clock-opera", "robin-guthrie", "madi-dias-history-of-a-feeling"] },
+    { "id": "playlists", "name": "Playlists", "colour": "ink", "blurb": "Mixes for coffee, parties, Valentine's and turning fifty.",
+      "posts": ["fearless-frequencies", "art-party", "pour-yourself-a-cup-of-ambition-a-coffee-inspired-playlist", "dance-manifesto", "valentine-playlist", "2022-fall-playlist",
+        "11-1-2022-playlist", "2022-%f0%9f%8e%a1-big-wheel", "2022-hot-%f0%9f%92%a9-tunes", "mp3-player-playlist", "dad-bod-playlist"] }
+  ]
+}

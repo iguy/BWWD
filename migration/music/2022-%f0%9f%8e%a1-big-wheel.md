@@ -1,5 +1,5 @@
 ---
-title: "? 2022 ? Big Wheel ?"
+title: "2022 Big Wheel"
 slug: "2022-%f0%9f%8e%a1-big-wheel"
 oldUrl: "https://betterworldwithdesign.com/2022-%f0%9f%8e%a1-big-wheel/"
 oldPath: "/2022-%f0%9f%8e%a1-big-wheel/"

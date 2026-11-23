@@ -1,5 +1,5 @@
 ---
-title: "Zeigest ?"
+title: "Zeigest"
 slug: "zeigest"
 oldUrl: "https://betterworldwithdesign.com/zeigest/"
 oldPath: "/zeigest/"

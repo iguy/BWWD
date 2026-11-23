@@ -5,6 +5,7 @@ import { SECTIONS, getArticles, cardImage, dateLabel, absolute, excerpt, type Se
 import Shelf from '../../components/Shelf.astro';
 import Explore from '../../components/Explore.astro';
 import techThemes from '../../data/tech-themes.json';
+import musicThemes from '../../data/music-themes.json';
 import shelfData from '../../data/book-shelves.json';
 
 export async function getStaticPaths() {
@@ -34,11 +35,13 @@ const shelves = isBooks
 const pick = cards[0];
 
 // Technology: themed groups to explore (src/data/tech-themes.json)
-const isTech = section.folder === 'technology';
+const THEMES: Record<string, typeof techThemes> = { technology: techThemes, music: musicThemes };
+const themes = THEMES[section.folder];
+const isTech = !!themes;
 const techGroups = isTech
   ? (() => {
       const seen = new Set<string>();
-      const gs = techThemes.groups.map((g) => {
+      const gs = themes.groups.map((g) => {
         const list = g.posts.map((p) => bySlug.get(p)).filter((x): x is (typeof cards)[number] => !!x);
         list.forEach((x) => seen.add(x.a.data.slug));
         return { id: g.id, name: g.name, colour: g.colour, blurb: g.blurb, list };
@@ -79,7 +82,7 @@ const jsonLd = {
       </section>
     )}
   </main>
-  <Explore groups={techGroups} total={cards.length} storageKey="technology" />
+  <Explore groups={techGroups} total={cards.length} storageKey={section.folder} records={section.look === 'sleeve'} />
   ) : isBooks ? (
   <main class="books">
     <nav class="shelf-index" aria-label="Shelves">

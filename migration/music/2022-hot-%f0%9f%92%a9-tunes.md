@@ -1,5 +1,5 @@
 ---
-title: "￼2022 Hot ? Tunes ?"
+title: "2022 Hot Tunes"
 slug: "2022-hot-%f0%9f%92%a9-tunes"
 oldUrl: "https://betterworldwithdesign.com/2022-hot-%f0%9f%92%a9-tunes/"
 oldPath: "/2022-hot-%f0%9f%92%a9-tunes/"

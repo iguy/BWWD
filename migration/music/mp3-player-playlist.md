@@ -1,5 +1,5 @@
 ---
-title: "MP3 Player Playlist ?"
+title: "MP3 Player Playlist"
 slug: "mp3-player-playlist"
 oldUrl: "https://betterworldwithdesign.com/mp3-player-playlist/"
 oldPath: "/mp3-player-playlist/"
