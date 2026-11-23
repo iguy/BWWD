@@ -58,3 +58,5 @@
 /post-sitemap.xml /sitemap-index.xml 301
 /page-sitemap.xml /sitemap-index.xml 301
 /category-sitemap.xml /sitemap-index.xml 301
+/belfast-stories/ /sitemap/?q=belfast 302
+/category/music-i-am-listening-to/ /category/music-discovery-reviews/ 301

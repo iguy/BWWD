@@ -202,7 +202,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.georgiaokeeffe.net/images/paintings/jimson-weed-white-flower.jpg" alt=""/></figure>
+
 </div>
 
 
@@ -238,7 +238,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.georgiaokeeffe.net/images/paintings/red-canna.jpg" alt=""/></figure>
+
 </div>
 
 
@@ -256,7 +256,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.georgiaokeeffe.net/images/paintings/horse-skull-with-pink-rose.jpg" alt=""/></figure>
+
 </div>
 
 
@@ -300,7 +300,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.georgiaokeeffe.net/images/paintings/abstraction-white-rose.jpg" alt=""/></figure>
+
 </div>
 
 
@@ -336,7 +336,7 @@ status: "pulled"
 
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<figure class="wp-block-image size-large"><img decoding="async" src="https://www.georgiaokeeffe.net/images/paintings/from-faraway-nearby.jpg" alt=""/></figure>
+
 </div>
 
 
