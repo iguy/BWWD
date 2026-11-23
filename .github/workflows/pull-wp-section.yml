@@ -1,0 +1,35 @@
+name: Pull WordPress section
+
+# Read-only against WordPress. Saves posts + images into migration/<folder>/.
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: WordPress category slug
+        required: true
+        default: art-design-insights
+      folder:
+        description: Folder name under migration/
+        required: true
+        default: art-design
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/pull-wp-section.mjs "${{ inputs.category }}" "${{ inputs.folder }}"
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add migration
+          git diff --cached --quiet || git commit -m "Pull ${{ inputs.folder }} from WordPress"
+          git pull --rebase origin main
+          git push
