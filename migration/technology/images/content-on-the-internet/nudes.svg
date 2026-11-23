@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="youth_share_nudes" data-name="youth share nudes" viewBox="0 0 600 185.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2634b;
+      }
+
+      .cls-2 {
+        fill: #a1a5b6;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+    </style>
+    <symbol id="INFO-No" viewBox="0 0 101.05 325.89">
+      <path class="cls-1" d="m76.46,93.89l24.59,232H0L24.59,93.89C9.86,85.07,0,68.95,0,50.53,0,22.62,22.62,0,50.53,0s50.52,22.62,50.52,50.53c0,18.42-9.86,34.54-24.59,43.36Z"></path>
+    </symbol>
+    <symbol id="INFO-Yes" viewBox="0 0 101.05 325.89">
+      <path class="cls-2" d="m76.46,93.89l24.59,232H0L24.59,93.89C9.86,85.07,0,68.95,0,50.53,0,22.62,22.62,0,50.53,0s50.52,22.62,50.52,50.53c0,18.42-9.86,34.54-24.59,43.36Z"></path>
+    </symbol>
+  </defs>
+  <g>
+    <use width="101.05" height="325.89" transform="translate(251.41 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(309.88 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(368.36 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(426.83 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(485.31 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(543.78 8.11) scale(.52)" xlink:href="#INFO-Yes"></use>
+    <use width="101.05" height="325.89" transform="translate(17.51 8.11) scale(.52)" xlink:href="#INFO-No"></use>
+    <use width="101.05" height="325.89" transform="translate(75.99 8.11) scale(.52)" xlink:href="#INFO-No"></use>
+    <use width="101.05" height="325.89" transform="translate(134.46 8.11) scale(.52)" xlink:href="#INFO-No"></use>
+    <use width="101.05" height="325.89" transform="translate(192.94 8.11) scale(.52)" xlink:href="#INFO-No"></use>
+  </g>
+  <rect class="cls-3" x="186.81" y="120.91" width="73.67" height="11.14"></rect>
+  <rect class="cls-3" x="123.8" y="126.47" width="73.67" height="11.14" transform="translate(-40.05 77.6) rotate(-24.24)"></rect>
+  <rect class="cls-3" x="123.8" y="77.17" width="73.67" height="11.14" transform="translate(33.89 -46.05) rotate(18.21)"></rect>
+  <rect class="cls-3" x="65.33" y="115.34" width="73.67" height="11.14" transform="translate(27.62 -18.73) rotate(12.1)"></rect>
+  <rect class="cls-3" x="6.51" y="71.51" width="73.67" height="11.14" transform="translate(-13.43 9.28) rotate(-10.59)"></rect>
+  <rect class="cls-3" x="3.76" y="115.34" width="73.67" height="11.14" transform="translate(39.81 -6.63) rotate(18.21)"></rect>
+</svg>

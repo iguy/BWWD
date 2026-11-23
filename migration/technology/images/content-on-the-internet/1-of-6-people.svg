@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="_1_of_6" data-name="1 of 6" viewBox="0 0 600 284.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2634b;
+      }
+
+      .cls-2 {
+        fill: #a1a5b6;
+      }
+    </style>
+    <symbol id="INFO-No" viewBox="0 0 101.05 325.89">
+      <path class="cls-1" d="m76.46,93.89l24.59,232H0L24.59,93.89C9.86,85.07,0,68.95,0,50.53,0,22.62,22.62,0,50.53,0s50.52,22.62,50.52,50.53c0,18.42-9.86,34.54-24.59,43.36Z"></path>
+    </symbol>
+    <symbol id="INFO-Yes" viewBox="0 0 101.05 325.89">
+      <path class="cls-2" d="m76.46,93.89l24.59,232H0L24.59,93.89C9.86,85.07,0,68.95,0,50.53,0,22.62,22.62,0,50.53,0s50.52,22.62,50.52,50.53c0,18.42-9.86,34.54-24.59,43.36Z"></path>
+    </symbol>
+  </defs>
+  <use width="101.05" height="325.89" transform="translate(6.38 17.87) scale(.78)" xlink:href="#INFO-No"></use>
+  <use width="101.05" height="325.89" transform="translate(108 17.87) scale(.78)" xlink:href="#INFO-Yes"></use>
+  <use width="101.05" height="325.89" transform="translate(209.63 17.87) scale(.78)" xlink:href="#INFO-Yes"></use>
+  <use width="101.05" height="325.89" transform="translate(311.26 17.87) scale(.78)" xlink:href="#INFO-Yes"></use>
+  <use width="101.05" height="325.89" transform="translate(412.89 17.87) scale(.78)" xlink:href="#INFO-Yes"></use>
+  <use width="101.05" height="325.89" transform="translate(514.51 17.87) scale(.78)" xlink:href="#INFO-Yes"></use>
+</svg>
