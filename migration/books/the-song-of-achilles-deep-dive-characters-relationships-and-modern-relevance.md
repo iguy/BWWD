@@ -856,6 +856,11 @@ a.soa-email { text-decoration: none; }
 .soa-guide__cover:hover { transform: rotate(0deg) translateY(-4px); }
 .soa-guide__cover img { display: block; width: 150px; height: auto; border: 3px solid #ece4d3 !important; box-shadow: 8px 8px 0 #c79d4f; }
 .soa-guide { overflow: visible !important; } .soa-guide__cover { margin: .6rem .4rem .6rem 0; }
+.soa-card { position: relative; }
+.soa-card__portrait { float: right; width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #2a2622 !important; background: #ddd2bd; margin: 0 0 1rem 1.4rem; position: relative; z-index: 1; }
+.soa-card--achilles .soa-card__portrait { background: #c5ced8; } .soa-card--patroclus .soa-card__portrait { background: #e3c2b8; } .soa-card--hector .soa-card__portrait { background: #ead7ae; }
+.soa-bars { clear: both; }
+@media (max-width: 600px) { .soa-card__portrait { float: none; display: block; margin: 0 auto 1rem; width: 120px; height: 120px; } }
 
 </style>
 <script>
@@ -965,11 +970,12 @@ a.soa-email { text-decoration: none; }
     list.forEach(function (a) { var h = HEROES[a]; s[h] += 2; s[NEAR[h]] += 1; });
     return s;
   }
+  var ORD = {};
   function ask(i) {
     bar.style.width = (i / Q.length * 100) + '%';
     var q = Q[i];
     stage.innerHTML = '<div class="soa-q"><p class="soa-q__n">Question ' + (i + 1) + ' of ' + Q.length + '</p><p class="soa-q__text">' + esc(q[0]) + '</p><div class="soa-q__opts">' +
-      q[1].map(function (t, k) { return '<button type="button" class="soa-opt" data-k="' + k + '"><b>' + 'ABC'[k] + '</b><span>' + esc(t) + '</span></button>'; }).join('') +
+      (ORD[i] || (ORD[i] = [0, 1, 2].map(function (k) { return [Math.random(), k]; }).sort(function (a, b) { return a[0] - b[0]; }).map(function (p) { return p[1]; }))).map(function (k, pos) { return '<button type="button" class="soa-opt" data-k="' + k + '"><b>' + 'ABC'[pos] + '</b><span>' + esc(q[1][k]) + '</span></button>'; }).join('') +
       '</div><div class="soa-q__nav">' + (i ? '<button type="button" class="soa-link soa-back">← Back</button>' : '<span></span>') + '<span></span></div></div>';
     stage.querySelectorAll('.soa-opt').forEach(function (b) {
       b.addEventListener('click', function () {
@@ -992,9 +998,9 @@ a.soa-email { text-decoration: none; }
       (answers.length ? '<div class="soa-bars">' + HEROES.map(function (h) { return '<div class="soa-bar soa-bar--' + h + '"><b>' + R[h].name + '</b><span><i data-w="' + (s[h] / 16 * 100) + '"></i></span><em>' + s[h] + '</em></div>'; }).join('') + '</div>' : '') +
       '</div><div class="soa-result__actions">' + (forced ? '' : '<button type="button" class="soa-btn soa-share">Share my result</button>') + '<button type="button" class="soa-btn' + (forced ? '' : ' soa-btn--ghost') + ' soa-again">' + (forced ? 'Take the quiz' : 'Take it again') + '</button>' +
       (answers.length ? '<button type="button" class="soa-btn soa-btn--ghost soa-show">See my answers</button>' : '') + '<span class="soa-copied" hidden>Link copied</span></div>' +
-      (answers.length ? '<ol class="soa-review">' + Q.map(function (q, i) { var k = answers[i]; return '<li>' + esc(q[0]) + '<br><em>' + 'ABC'[k] + ' · ' + esc(q[1][k]) + '</em><br>' + esc(q[2][k]) + '</li>'; }).join('') + '</ol>' : '') + '</div>';
+      (answers.length ? '<ol class="soa-review">' + Q.map(function (q, i) { var k = answers[i]; return '<li>' + esc(q[0]) + '<br><em>' + esc(q[1][k]) + '</em><br>' + esc(q[2][k]) + '</li>'; }).join('') + '</ol>' : '') + '</div>';
     requestAnimationFrame(function () { stage.querySelectorAll('.soa-bar i').forEach(function (i) { i.style.width = i.dataset.w + '%'; }); });
-    stage.querySelector('.soa-again').addEventListener('click', function () { answers = []; history.replaceState(null, '', location.pathname + '#quiz'); ask(0); });
+    stage.querySelector('.soa-again').addEventListener('click', function () { answers = []; ORD = {}; history.replaceState(null, '', location.pathname + '#quiz'); ask(0); });
     var show = stage.querySelector('.soa-show'); if (show) show.addEventListener('click', function () { stage.querySelector('.soa-review').classList.toggle('open'); });
     var shareBtn = stage.querySelector('.soa-share'); if (shareBtn) shareBtn.addEventListener('click', function () {
       var share = url.replace('#quiz', '') + '&utm_source=share&utm_medium=quiz&utm_campaign=achilles_quiz#quiz';
@@ -1052,13 +1058,10 @@ var s=document.createElement('script');s.src=url;s.onerror=function(){btn.disabl
 
 <script>
 (function(){var stage=document.querySelector('.soa-quiz__stage');if(!stage)return;
-new MutationObserver(function(){var acts=stage.querySelector('.soa-result__actions');if(!acts||acts.querySelector('.soa-email'))return;
-var card=stage.querySelector('.soa-card');if(!card)return;var name=card.querySelector('.soa-card__name').textContent,tier=(card.querySelector('.soa-card__tier')||{}).textContent||'',text=(card.querySelector('.soa-card__text')||{}).textContent||'';
-var hero=(card.className.match(/soa-card--(\w+)/)||[])[1]||'';var link=location.origin+location.pathname+'?hero='+hero+'#quiz';
-var body='Thetis\'s Prophecy says I am '+name+'.\n'+tier+'\n\n'+text+'\n\nSee the result and take the quiz again: '+link+'\n\nFree discussion guide: '+location.origin+'/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf';
-var a=document.createElement('a');a.className='soa-btn soa-btn--ghost soa-email';a.textContent='Email me my result';
-a.href='mailto:?subject='+encodeURIComponent('My Song of Achilles hero: '+name)+'&body='+encodeURIComponent(body);
-a.addEventListener('click',function(){if(window.gtag)gtag('event','share',{method:'email',content_type:'quiz_result',item_id:hero});});
-var again=acts.querySelector('.soa-again');acts.insertBefore(a,again);}).observe(stage,{childList:true,subtree:true});})();
+var IMG={achilles:'ink-achilles.png',patroclus:'ink-patroclus.png',hector:'ink-hector.png'},BASE='/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/';
+new MutationObserver(function(){var card=stage.querySelector('.soa-card');if(!card||card.querySelector('.soa-card__portrait'))return;
+var hero=(card.className.match(/soa-card--(\w+)/)||[])[1];if(!IMG[hero])return;
+var im=document.createElement('img');im.className='soa-card__portrait';im.src=BASE+IMG[hero];im.alt='Ink portrait of '+card.querySelector('.soa-card__name').textContent+', after John Flaxman';
+card.insertBefore(im,card.firstChild);}).observe(stage,{childList:true,subtree:true});})();
 </script>
 
