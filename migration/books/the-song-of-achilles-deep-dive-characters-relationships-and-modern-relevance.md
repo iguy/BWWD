@@ -173,8 +173,8 @@ status: "pulled"
 </div>
 <p>Tap or hover over a name to see who they are and how they're tied to everyone else.</p>
 <ul class="soa-web__key">
-<li><i class="k-greek"></i>Greeks.</li><li><i class="k-trojan"></i>Trojans.</li><li><i class="k-god"></i>Gods and immortals.</li><li><i class="k-captive"></i>Captive.</li>
-<li><b class="k-love"></b>Love.</li><li><b class="k-death"></b>Kills.</li><li><b class="k-tension"></b>Tension.</li>
+<li><i class="k-greek"></i>Greeks</li><li><i class="k-trojan"></i>Trojans</li><li><i class="k-god"></i>Gods and immortals</li><li><i class="k-captive"></i>Captive</li>
+<li><b class="k-love"></b>Love</li><li><b class="k-death"></b>Kills</li><li><b class="k-tension"></b>Tension</li>
 </ul>
 <div class="soa-web__wrap">
 <svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected"><defs><clipPath id="soa-cp-achilles"><circle cx="470.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-patroclus"><circle cx="300.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-thetis"><circle cx="470.0" cy="110.0" r="47.0"/></clipPath><clipPath id="soa-cp-briseis"><circle cx="560.0" cy="460.0" r="47.0"/></clipPath><clipPath id="soa-cp-odysseus"><circle cx="640.0" cy="170.0" r="50.0"/></clipPath><clipPath id="soa-cp-hector"><circle cx="860.0" cy="300.0" r="56.0"/></clipPath></defs>
