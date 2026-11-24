@@ -470,7 +470,7 @@ status: "pulled"
 
 <p>Near the end of the Iliad, King Priam of Troy crosses the battlefield at night, alone but for one old herald, and enters the tent of the man who killed his son. He kneels, kisses Achilles's hands and asks for Hector's body. Both men weep: Priam for Hector, Achilles for Patroclus and for his own father, whom he will never see again.</p>
 <p>It is the moment the poem's rage finally breaks. Achilles gives back the body and grants Troy days of truce to mourn. Miller keeps this meeting in the novel, and it lands harder because we have watched what Achilles lost.</p>
-<p>Painters have returned to the scene for centuries. Ivanov's version, above, puts the light on Priam's bowed head and leaves Achilles half in shadow, a fair picture of a hero who has just remembered he is human.</p>
+<p>Painters have returned to the scene for centuries. Ivanov's version, at the end of this page, puts the light on Priam's bowed head and leaves Achilles half in shadow, a fair picture of a hero who has just remembered he is human.</p>
 <details class="soa-more">
 <summary>A reader's journey: tracking the wars, Achilles's moods, and that ending</summary>
 <div class="soa-more__body">
