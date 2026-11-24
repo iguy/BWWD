@@ -818,6 +818,7 @@ status: "pulled"
 .soa-signup__msg { margin: .8rem 0 0 !important; font-weight: 600; }
 .soa-signup__msg a { color: #c79d4f !important; }
 .soa-rail { box-shadow: 0 0 0 4px #ece4d3, 0 8px 24px rgba(42, 38, 34, .18); }
+.soa-main p.soa-credit { max-width: none !important; }
 
 </style>
 <script>
