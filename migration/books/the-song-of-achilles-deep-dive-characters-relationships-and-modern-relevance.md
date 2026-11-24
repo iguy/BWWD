@@ -81,10 +81,13 @@ status: "pulled"
 <details class="soa-more">
 <summary>More on Patroclus's family: exile, fostering, and his father</summary>
 <div class="soa-more__body">
-<p>While Patroclus came from royal lineage, his exile and subsequent fostering by King Peleus became a crucial turning point in his life and in the story.</p>
-<p>Adoption: After his exile, Patroclus was taken in by King Peleus and raised alongside Achilles in Phthia</p>
-<p>Exile: Patroclus was exiled from his homeland after accidentally killing another noble's son during a game</p>
-<p>King Menoetius: Patroclus's father, ruler of Opus</p>
+<div class="soa-notes">
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--slate" aria-hidden="true"></span>Patroclus's family</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Menoetius<span>His father</span></dt><dd>King of Opus. A cold, disappointed father who never values his son.</dd></div>
+<div class="soa-notes__row"><dt>Exile<span>Age ten</span></dt><dd>A noble boy dies in a fight over Patroclus's dice, and Menoetius sends him away.</dd></div>
+<div class="soa-notes__row"><dt>Fostering<span>Phthia</span></dt><dd>King Peleus takes him in, and he is raised alongside Achilles.</dd></div>
+</dl></section>
+</div>
 </div>
 </details>
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
@@ -119,47 +122,43 @@ status: "pulled"
 <div class="soa-ans"><h3>Who are Achilles's parents?</h3><p>Achilles's mother is Thetis, an immortal sea nymph, and his father is Peleus, the mortal king of Phthia. That split, half god and half human, runs through his whole story: the fame Thetis wants for him, and the death Peleus's mortality makes certain.</p></div>
 </div>
 <details class="soa-more">
-<summary>Full character notes: gods, royal families, war leaders, women in the story</summary>
+<summary>All the characters, by group: heroes, gods, families, leaders, women</summary>
 <div class="soa-more__body">
-<h3>Main Characters</h3>
-<strong>Achilles</strong>: The legendary warrior, son of Thetis and King Peleus, known for his extraordinary fighting abilities and his deep bond with Patroclus.
-<strong>Patroclus</strong>: Exiled prince who becomes Achilles' closest companion and lover.
-</p>
-<strong>Thetis</strong>: sea nymph goddess and Achilles' mother, who tries to protect her son from his fate.
-<strong>Chiron</strong>: the wise centaur who mentors both Achilles and Patroclus.
-<h3>Divine Characters</h3>
-<h3>Royal Family Members</h3>
-<strong>King Peleus</strong>: Mortal king of Phthia and Achilles' father.
-<p><strong>Neoptolemus (Pyrrhus)</strong>: Achilles' son, who later becomes known for his brutality.</p>
-<h3>Trojan War Leaders</h3>
-<p>King Priam with Achilles in his tent.</p>
-<p><strong>Agamemnon</strong>: Leader of the Greek forces during the Trojan War.</p>
-<p><strong>King Priam</strong>: King of Troy, father of Hector and Paris.</p>
-<p><strong>Paris</strong>: Trojan prince whose actions sparked the Trojan War by taking Helen.</p>
-<p><strong>Odysseus</strong>: a clever Greek warrior and king who attempts to honor Patroclus' memory.</p>
-<p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
-<p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
-<p><strong>Achilles &amp; Patroclus:</strong> Central relationship of the story - from childhood friends to lifelong companions</p>
-<h3>Women in the Story</h3>
-<p>Penelope: Odysseus's wife, mentioned in his plea to Paris</p>
-<p>Panthesilea: Amazon warrior queen killed by Achilles</p>
-<p>Deidameia: Princess of Scyros who bore Achilles' son Neoptolemus</p>
-<p>Thetis: sea nymph goddess, Achilles' mother</p>
-<p>Briseis: war captive claimed by Achilles, later taken by Agamemnon</p>
-<p>The Three Fates: Divine women who prophesied about Achilles' destiny</p>
-<p>Helen: Of Sparta, whose beauty launched the Trojan War</p>
-<h3> Additional Characters Mentioned</h3>
-<p>Additional Characters Mentioned</p>
-<p><strong>Hector</strong>: Trojan warrior and prince, killed by Achilles</p>
-<p><strong>Memnon</strong>: Warrior killed by Achilles in battle</p>
-<p><strong>Panthesilea</strong>: Amazon warrior encountered by Achilles</p>
-<p><strong>Helen</strong>: Of Sparta, whose abduction by Paris sparked the Trojan War</p>
-<p><strong>King Menoetius</strong>: Father of Patroclus</p>
-<p><strong>Briseis</strong>: Captive taken by Achilles during the war</p>
-<p><strong>Zeus</strong>: King of the gods, mentioned in relation to Thetis</p>
-<p><strong>Poseidon</strong>: God of the sea, also involved in Thetis's story</p>
-<p><strong>Agamemnon's son</strong>: Who killed Pyrrhus</p>
-<p><strong>The Three Old Women</strong>: Who spoke the prophecy about Achilles</p>
+<div class="soa-notes">
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--clay" aria-hidden="true"></span>The two heroes</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Achilles<span>Greek</span></dt><dd>Son of Thetis and King Peleus, the best fighter of his generation. He chooses a short, famous life, and his bond with Patroclus is the heart of the book.</dd></div>
+<div class="soa-notes__row"><dt>Patroclus<span>Greek · narrator</span></dt><dd>An exiled prince who grows up beside Achilles and becomes his companion and lover. He tells the whole story.</dd></div>
+</dl></section>
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--ochre" aria-hidden="true"></span>Gods and immortals</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Thetis<span>Sea nymph</span></dt><dd>Achilles's mother. She tries to protect her son from his fate, and to keep Patroclus away from him.</dd></div>
+<div class="soa-notes__row"><dt>Chiron<span>Centaur</span></dt><dd>The wise teacher on Mount Pelion who trains both boys, Achilles in war and Patroclus in medicine.</dd></div>
+<div class="soa-notes__row"><dt>Apollo<span>God</span></dt><dd>He sides with Troy. Achilles dies by Paris's arrow, guided by Apollo.</dd></div>
+</dl></section>
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--slate" aria-hidden="true"></span>Families</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Peleus<span>King of Phthia</span></dt><dd>Achilles's mortal father, who takes in the exiled Patroclus.</dd></div>
+<div class="soa-notes__row"><dt>Menoetius<span>King of Opus</span></dt><dd>Patroclus's father, who sends him into exile.</dd></div>
+<div class="soa-notes__row"><dt>Deidameia<span>Princess of Scyros</span></dt><dd>Bears Achilles's son while Thetis hides Achilles at her father's court.</dd></div>
+<div class="soa-notes__row"><dt>Pyrrhus<span>Achilles's son</span></dt><dd>Also called Neoptolemus. He arrives at Troy after his father's death and becomes known for his brutality.</dd></div>
+</dl></section>
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--ink" aria-hidden="true"></span>Leaders at war</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Agamemnon<span>Greek commander</span></dt><dd>Leads the Greek army. His seizure of Briseis splits the camp.</dd></div>
+<div class="soa-notes__row"><dt>Odysseus<span>King of Ithaca</span></dt><dd>Clever and persuasive. He brings Achilles to Troy and later tries to honour Patroclus's memory.</dd></div>
+<div class="soa-notes__row"><dt>Priam<span>King of Troy</span></dt><dd>Father of Hector and Paris, who kneels to Achilles to ask for Hector's body.</dd></div>
+<div class="soa-notes__row"><dt>Hector<span>Prince of Troy</span></dt><dd>Troy's greatest warrior. He kills Patroclus and is killed by Achilles.</dd></div>
+<div class="soa-notes__row"><dt>Paris<span>Prince of Troy</span></dt><dd>His taking of Helen starts the war.</dd></div>
+</dl></section>
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--clay" aria-hidden="true"></span>Women in the story</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Briseis<span>Captive</span></dt><dd>Claimed by Achilles to keep her safe, she becomes Patroclus's close friend.</dd></div>
+<div class="soa-notes__row"><dt>Helen<span>Of Sparta</span></dt><dd>Her flight with Paris launches the Trojan War.</dd></div>
+<div class="soa-notes__row"><dt>Penelope<span>Odysseus's wife</span></dt><dd>Odysseus speaks of her with real affection.</dd></div>
+<div class="soa-notes__row"><dt>Penthesilea<span>Amazon queen</span></dt><dd>A warrior queen killed by Achilles at Troy.</dd></div>
+</dl></section>
+<section class="soa-notes__group"><h4 class="soa-notes__head"><span class="soa-shape soa-shape--square soa-shape--slate" aria-hidden="true"></span>Key relationships</h4><dl class="soa-notes__list">
+<div class="soa-notes__row"><dt>Achilles & Patroclus<span>The centre</span></dt><dd>From childhood friends to lifelong companions and lovers.</dd></div>
+<div class="soa-notes__row"><dt>Thetis & Achilles<span>Mother and son</span></dt><dd>Love shaped by prophecy and her wish to make him immortal in fame.</dd></div>
+<div class="soa-notes__row"><dt>Achilles & Peleus<span>Father and son</span></dt><dd>A mortal father overshadowed by his son's divine mother.</dd></div>
+</dl></section>
+</div>
 </div>
 </details>
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
@@ -819,6 +818,18 @@ status: "pulled"
 .soa-signup__msg a { color: #c79d4f !important; }
 .soa-rail { box-shadow: 0 0 0 4px #ece4d3, 0 8px 24px rgba(42, 38, 34, .18); }
 .soa-main p.soa-credit { max-width: none !important; }
+/* Character notes: one consistent format */
+.soa-notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.6rem 2rem; padding: .6rem 0; }
+.soa-notes__group { margin: 0; }
+.soa-notes__head { display: flex; align-items: center; gap: .6rem; margin: 0 0 .6rem !important; padding-bottom: .5rem; border-bottom: 3px solid #2a2622; font-size: 1.05rem; letter-spacing: .02em; }
+.soa-notes__head .soa-shape { width: 14px; height: 14px; }
+.soa-notes__list { margin: 0; }
+.soa-notes__row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .9rem; padding: .65rem 0; border-bottom: 1px solid #c9bea8; }
+.soa-notes__row:last-child { border-bottom: 0; }
+.soa-notes dt { margin: 0; font-weight: 800; line-height: 1.25; }
+.soa-notes dt span { display: block; margin-top: .2rem; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a9503d; }
+.soa-notes dd { margin: 0; font-size: .97rem; line-height: 1.5; }
+@media (max-width: 520px) { .soa-notes__row { grid-template-columns: 1fr; gap: .2rem; } }
 
 </style>
 <script>
