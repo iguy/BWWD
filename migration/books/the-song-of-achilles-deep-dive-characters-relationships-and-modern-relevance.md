@@ -568,7 +568,7 @@ status: "pulled"
 <p>In the end, their modern story would still be about choosing between personal happiness and societal expectations, about the courage to be true to oneself, and about love that defies conventional norms. The fundamental questions about fate, choice, and the power of love would remain just as relevant in today's context as they were in ancient Greece.</p>
 </div></div></div></div></div>
 
-<aside class="soa-block soa-guide"><span class="soa-guide__icon" aria-hidden="true"></span><div><h3>Beyond the Battlefield: free discussion guide</h3><p>A printable 6-page guide for book clubs and classes: questions for each part of the book, big themes, and activities.</p><a class="soa-cta" href="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf" download>Download the PDF →</a></div></aside>
+<aside class="soa-block soa-guide"><span class="soa-guide__icon" aria-hidden="true"></span><div><h3>Beyond the Battlefield: free discussion guide</h3><p>A printable 6-page guide for book clubs and classes: questions for each part of the book, big themes, and activities.</p><a class="soa-cta" href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf" download>Download the PDF →</a></div></aside>
 <section id="quiz" class="soa-block soa-quiz">
 <p class="soa-quiz__kicker">Thetis's Prophecy</p>
 <h2>Which hero are you: Achilles, Patroclus or Hector?</h2>
