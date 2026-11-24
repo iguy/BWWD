@@ -830,6 +830,7 @@ status: "pulled"
 .soa-notes dt span { display: block; margin-top: .2rem; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a9503d; }
 .soa-notes dd { margin: 0; font-size: .97rem; line-height: 1.5; }
 @media (max-width: 520px) { .soa-notes__row { grid-template-columns: 1fr; gap: .2rem; } }
+.soa-faq__list { grid-template-columns: 1fr !important; } .soa-faq__body p, .soa-faq__body li { max-width: 72ch; }
 
 </style>
 <script>
