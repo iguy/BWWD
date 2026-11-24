@@ -831,6 +831,7 @@ status: "pulled"
 .soa-notes dd { margin: 0; font-size: .97rem; line-height: 1.5; }
 @media (max-width: 520px) { .soa-notes__row { grid-template-columns: 1fr; gap: .2rem; } }
 .soa-faq__list { grid-template-columns: 1fr !important; } .soa-faq__body p, .soa-faq__body li { max-width: 72ch; }
+.soa-table tbody th .soa-ic { display: inline-block !important; vertical-align: middle; margin: 0 .55rem 0 0 !important; width: 22px; height: 22px; } .soa-table tbody th { white-space: nowrap; } @media (max-width: 720px) { .soa-table tbody th { white-space: normal; } }
 
 </style>
 <script>
