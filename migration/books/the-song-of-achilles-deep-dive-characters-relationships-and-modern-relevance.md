@@ -882,6 +882,17 @@ a.soa-email { text-decoration: none; }
 .soa-finale img { display: block; width: 100%; height: auto; border: 0 !important; }
 .soa-finale figcaption { margin-top: 1rem; font-size: .9rem; color: #cfc6b6; max-width: 72ch; }
 .soa-finale figcaption a { color: #c79d4f !important; }
+.soa-zoom { cursor: zoom-in; }
+.soa-zoom:focus-visible { outline: 4px solid #c79d4f; outline-offset: 4px; }
+.soa-lb { position: fixed; inset: 0; z-index: 1000; background: rgba(20, 18, 16, .94); display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; cursor: zoom-out; }
+.soa-lb[hidden] { display: none; }
+.soa-lb__fig { margin: 0; max-width: min(1400px, 100%); display: flex; flex-direction: column; align-items: center; }
+.soa-lb__fig img { max-width: 100%; max-height: calc(100vh - 9rem); width: auto; height: auto; border: 4px solid #ece4d3; box-shadow: 12px 12px 0 #a9503d; }
+.soa-lb__fig figcaption { margin-top: 1.2rem; color: #ece4d3; text-align: center; max-width: 70ch; font-size: .95rem; line-height: 1.5; }
+.soa-lb__fig figcaption p { margin: 0 0 .3rem; color: #ece4d3 !important; }
+.soa-lb__fig figcaption a { color: #c79d4f !important; }
+.soa-lb__close { position: absolute; top: 1rem; right: 1.2rem; width: 48px; height: 48px; border: 3px solid #ece4d3; background: #2a2622; color: #ece4d3; font-size: 1.3rem; cursor: pointer; }
+.soa-lb__close:hover { background: #a9503d; }
 
 </style>
 <script>
@@ -1084,5 +1095,18 @@ new MutationObserver(function(){var card=stage.querySelector('.soa-card');if(!ca
 var hero=(card.className.match(/soa-card--(\w+)/)||[])[1];if(!IMG[hero])return;
 var im=document.createElement('img');im.className='soa-card__portrait';im.src=BASE+IMG[hero];im.alt='Ink portrait of '+card.querySelector('.soa-card__name').textContent+', after John Flaxman';
 card.insertBefore(im,card.firstChild);}).observe(stage,{childList:true,subtree:true});})();
+</script>
+
+<script>
+(function(){var imgs=[].slice.call(document.querySelectorAll('.soa-art img, .soa-finale img'));if(!imgs.length)return;
+var box=document.createElement('div');box.className='soa-lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Enlarged painting');box.hidden=true;
+box.innerHTML='<button type="button" class="soa-lb__close" aria-label="Close">\u2715</button><figure class="soa-lb__fig"><img alt=""><figcaption></figcaption></figure>';
+document.body.appendChild(box);var big=box.querySelector('img'),cap=box.querySelector('figcaption'),closeBtn=box.querySelector('.soa-lb__close'),last=null;
+function open(im){last=im;big.src=im.currentSrc||im.src;big.alt=im.alt;var fc=im.closest('figure').querySelector('figcaption');cap.innerHTML=fc?fc.innerHTML:'';box.hidden=false;document.documentElement.style.overflow='hidden';closeBtn.focus();}
+function close(){box.hidden=true;document.documentElement.style.overflow='';if(last)last.focus();}
+imgs.forEach(function(im){im.classList.add('soa-zoom');im.setAttribute('tabindex','0');im.setAttribute('role','button');im.setAttribute('aria-label','Enlarge: '+im.alt);
+im.addEventListener('click',function(){open(im)});im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im);}});});
+box.addEventListener('click',function(e){if(e.target.tagName!=='A')close();});
+document.addEventListener('keydown',function(e){if(!box.hidden&&e.key==='Escape')close();});})();
 </script>
 
