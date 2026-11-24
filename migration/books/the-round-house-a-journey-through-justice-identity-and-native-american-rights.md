@@ -1,5 +1,7 @@
 ---
 title: "The Round House – A Journey Through Justice, Identity, and Native American Rights"
+book: "The Round House"
+author: "Louise Erdrich"
 slug: "the-round-house-a-journey-through-justice-identity-and-native-american-rights"
 oldUrl: "https://betterworldwithdesign.com/the-round-house-a-journey-through-justice-identity-and-native-american-rights/"
 oldPath: "/the-round-house-a-journey-through-justice-identity-and-native-american-rights/"

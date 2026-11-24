@@ -1,5 +1,7 @@
 ---
 title: "A Month in the Country"
+book: "A Month in the Country"
+author: "J. L. Carr"
 slug: "a-month-in-the-country"
 oldUrl: "https://betterworldwithdesign.com/a-month-in-the-country/"
 oldPath: "/a-month-in-the-country/"

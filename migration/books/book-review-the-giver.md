@@ -1,5 +1,7 @@
 ---
 title: "BOOK REVIEW – The Giver –"
+book: "The Giver"
+author: "Lois Lowry"
 slug: "book-review-the-giver"
 oldUrl: "https://betterworldwithdesign.com/book-review-the-giver/"
 oldPath: "/book-review-the-giver/"

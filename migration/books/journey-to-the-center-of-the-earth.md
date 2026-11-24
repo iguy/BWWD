@@ -1,5 +1,7 @@
 ---
 title: "Journey to the Center of the Earth"
+book: "Journey to the Center of the Earth"
+author: "Jules Verne"
 slug: "journey-to-the-center-of-the-earth"
 oldUrl: "https://betterworldwithdesign.com/journey-to-the-center-of-the-earth/"
 oldPath: "/journey-to-the-center-of-the-earth/"

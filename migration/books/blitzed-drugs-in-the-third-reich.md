@@ -1,5 +1,7 @@
 ---
 title: "Blitzed: Drugs in the Third Reich"
+book: "Blitzed"
+author: "Norman Ohler"
 slug: "blitzed-drugs-in-the-third-reich"
 oldUrl: "https://betterworldwithdesign.com/blitzed-drugs-in-the-third-reich/"
 oldPath: "/blitzed-drugs-in-the-third-reich/"

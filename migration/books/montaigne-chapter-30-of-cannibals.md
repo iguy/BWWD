@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – CHAPTER 30——OF CANNIBALS (& Podcast)"
+book: "Of Cannibals"
+author: "Montaigne"
 slug: "montaigne-chapter-30-of-cannibals"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-30-of-cannibals/"
 oldPath: "/montaigne-chapter-30-of-cannibals/"

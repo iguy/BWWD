@@ -1,5 +1,7 @@
 ---
 title: "Race After Technology: Abolitionist Tools for the New Jim Code"
+book: "Race After Technology"
+author: "Ruha Benjamin"
 slug: "race-after-technology-abolitionist-tools-for-the-new-jim-code"
 oldUrl: "https://betterworldwithdesign.com/race-after-technology-abolitionist-tools-for-the-new-jim-code/"
 oldPath: "/race-after-technology-abolitionist-tools-for-the-new-jim-code/"

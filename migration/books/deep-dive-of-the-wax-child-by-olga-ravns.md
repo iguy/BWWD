@@ -1,5 +1,7 @@
 ---
 title: "Deep Dive of The Wax Child by Olga Ravn’s"
+book: "The Wax Child"
+author: "Olga Ravn"
 slug: "deep-dive-of-the-wax-child-by-olga-ravns"
 oldUrl: "https://betterworldwithdesign.com/deep-dive-of-the-wax-child-by-olga-ravns/"
 oldPath: "/deep-dive-of-the-wax-child-by-olga-ravns/"

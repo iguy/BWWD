@@ -1,5 +1,7 @@
 ---
 title: "Foundation by Isaac Asimov"
+book: "Foundation"
+author: "Isaac Asimov"
 slug: "foundation-by-isaac-asimov"
 oldUrl: "https://betterworldwithdesign.com/foundation-by-isaac-asimov/"
 oldPath: "/foundation-by-isaac-asimov/"

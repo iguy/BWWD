@@ -1,5 +1,7 @@
 ---
 title: "Voices From the Margins: The Canterville Ghost by Oscar Wilde"
+book: "The Canterville Ghost"
+author: "Oscar Wilde"
 slug: "voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition"
 oldUrl: "https://betterworldwithdesign.com/voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition/"
 oldPath: "/voices-from-the-margins-the-canterville-ghost-by-oscar-wilde-audiobook-edition/"

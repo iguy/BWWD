@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 29 – Of Moderation"
+book: "Of Moderation"
+author: "Montaigne"
 slug: "montaigne-chapter-29-of-moderation"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-29-of-moderation/"
 oldPath: "/montaigne-chapter-29-of-moderation/"

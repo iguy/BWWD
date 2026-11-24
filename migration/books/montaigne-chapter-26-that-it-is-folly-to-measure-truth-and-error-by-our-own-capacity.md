@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 26 – That It Is Folly To Measure Truth And Error By Our Own Capacity"
+book: "That It Is Folly to Measure Truth and Error by Our Own Capacity"
+author: "Montaigne"
 slug: "montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity/"
 oldPath: "/montaigne-chapter-26-that-it-is-folly-to-measure-truth-and-error-by-our-own-capacity/"

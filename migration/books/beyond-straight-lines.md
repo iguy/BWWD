@@ -1,5 +1,7 @@
 ---
 title: "Beyond Straight Lines: Sara Ahmed’s Queer Phenomenology and the Future of Inclusive Design"
+book: "Queer Phenomenology"
+author: "Sara Ahmed"
 slug: "beyond-straight-lines"
 oldUrl: "https://betterworldwithdesign.com/beyond-straight-lines/"
 oldPath: "/beyond-straight-lines/"

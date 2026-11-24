@@ -1,5 +1,7 @@
 ---
 title: "Voices from the Margins: “The School Days of an Indian Girl” by Zitkala-Ša"
+book: "The School Days of an Indian Girl"
+author: "Zitkála-Šá"
 slug: "voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook"
 oldUrl: "https://betterworldwithdesign.com/voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook/"
 oldPath: "/voices-from-the-margins-the-school-days-of-an-indian-girl-by-zitkala-sa-audiobook/"

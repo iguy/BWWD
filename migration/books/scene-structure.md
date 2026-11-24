@@ -1,5 +1,7 @@
 ---
 title: "Summary of the book Scene & Structure"
+book: "Scene & Structure"
+author: "Jack M. Bickham"
 slug: "scene-structure"
 oldUrl: "https://betterworldwithdesign.com/scene-structure/"
 oldPath: "/scene-structure/"

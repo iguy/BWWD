@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 23 – Various events form the same counsel"
+book: "Various Events Form the Same Counsel"
+author: "Montaigne"
 slug: "chapter-23-various-events-form-the-same-counsel"
 oldUrl: "https://betterworldwithdesign.com/chapter-23-various-events-form-the-same-counsel/"
 oldPath: "/chapter-23-various-events-form-the-same-counsel/"

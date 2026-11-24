@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – CHAPTER 31——Hazarding an Opinion on God’s Plans Demands Caution"
+book: "Hazarding an Opinion on God's Plans"
+author: "Montaigne"
 slug: "montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution/"
 oldPath: "/montaigne-chapter-31-hazarding-an-opinion-on-gods-plans-demands-caution/"

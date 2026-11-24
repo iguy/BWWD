@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 24 – OF Pedantry"
+book: "Of Pedantry"
+author: "Montaigne"
 slug: "chapter-24-of-pedantry"
 oldUrl: "https://betterworldwithdesign.com/chapter-24-of-pedantry/"
 oldPath: "/chapter-24-of-pedantry/"

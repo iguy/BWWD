@@ -1,5 +1,7 @@
 ---
 title: "Book Club Review – The Round House"
+book: "The Round House"
+author: "Louise Erdrich"
 slug: "book-club-review-the-round-house"
 oldUrl: "https://betterworldwithdesign.com/book-club-review-the-round-house/"
 oldPath: "/book-club-review-the-round-house/"

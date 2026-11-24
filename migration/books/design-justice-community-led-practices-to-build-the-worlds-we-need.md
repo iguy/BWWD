@@ -1,5 +1,7 @@
 ---
 title: "Design Justice"
+book: "Design Justice"
+author: "Sasha Costanza-Chock"
 slug: "design-justice-community-led-practices-to-build-the-worlds-we-need"
 oldUrl: "https://betterworldwithdesign.com/design-justice-community-led-practices-to-build-the-worlds-we-need/"
 oldPath: "/design-justice-community-led-practices-to-build-the-worlds-we-need/"

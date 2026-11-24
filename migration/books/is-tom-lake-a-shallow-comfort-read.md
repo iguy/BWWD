@@ -1,5 +1,7 @@
 ---
 title: "Is Tom Lake a Shallow Comfort-Read?"
+book: "Tom Lake"
+author: "Ann Patchett"
 slug: "is-tom-lake-a-shallow-comfort-read"
 oldUrl: "https://betterworldwithdesign.com/is-tom-lake-a-shallow-comfort-read/"
 oldPath: "/is-tom-lake-a-shallow-comfort-read/"

@@ -1,5 +1,7 @@
 ---
 title: "Parable of the Sower – Octavia Butler"
+book: "Parable of the Sower"
+author: "Octavia E. Butler"
 slug: "parable-of-the-sower-octavia-butler"
 oldUrl: "https://betterworldwithdesign.com/parable-of-the-sower-octavia-butler/"
 oldPath: "/parable-of-the-sower-octavia-butler/"

@@ -1,12 +1,13 @@
 ---
 title: "The Song of Achilles: Family Tree, Character Map & Quiz"
+book: "The Song of Achilles"
+author: "Madeline Miller"
 slug: "the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance"
 oldUrl: "https://betterworldwithdesign.com/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/"
 oldPath: "/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/"
 pubDate: "2025-02-03"
 updated: "2026-11-23"
 revised: "2026-11"
-author: "Madeline Miller"
 description: ""
 cover: "./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/achillis-song-fo.png"
 coverAlt: ""
@@ -814,6 +815,8 @@ status: "pulled"
 .soa-rail { background: #ece4d3; padding: 1.2rem .6rem 1.2rem 64px !important; box-shadow: 0 0 0 4px #ece4d3; }
 .soa-n.on image { filter: invert(1); }
 .soa-n__under { fill: #2a2622 !important; }
+.soa-signup__msg { margin: .8rem 0 0 !important; font-weight: 600; }
+.soa-signup__msg a { color: #c79d4f !important; }
 
 </style>
 <script>
@@ -993,3 +996,18 @@ g.addEventListener('mouseenter',function(){show(g)});g.addEventListener('mousele
 g.addEventListener('click',function(){show(g)});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});})();
 </script>
+<script>
+(function(){var f=document.querySelector('.soa-signup__form');if(!f)return;
+var out=document.createElement('p');out.className='soa-signup__msg';out.setAttribute('role','status');f.appendChild(out);
+f.addEventListener('submit',function(e){e.preventDefault();var em=f.querySelector('input[name=EMAIL]');
+if(!em.value||!em.checkValidity()){out.textContent='Please enter a valid email address.';em.focus();return;}
+var cb='soaMc'+Date.now();var btn=f.querySelector('button');btn.disabled=true;out.textContent='Signing you up…';
+window[cb]=function(r){btn.disabled=false;delete window[cb];s.remove();
+if(r&&r.result==='success'){f.querySelector('.soa-signup__row').hidden=true;
+out.innerHTML='You\u2019re in. Check your inbox to confirm. Meanwhile, here\u2019s the guide: <a href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf">download Beyond the Battlefield (PDF)</a>.';
+if(window.gtag)gtag('event','newsletter_signup',{form:'achilles_quiz'});}
+else{var m=(r&&r.msg||'').replace(/<[^>]+>/g,'');out.textContent=/already subscribed/i.test(m)?'You\u2019re already on the list. Thank you!':'That didn\u2019t work. Please try again.';}};
+var url=f.action.replace('/post?','/post-json?')+'&EMAIL='+encodeURIComponent(em.value)+'&c='+cb;
+var s=document.createElement('script');s.src=url;s.onerror=function(){btn.disabled=false;out.textContent='That didn\u2019t work. Please try again.';};document.body.appendChild(s);});})();
+</script>
+

@@ -1,5 +1,7 @@
 ---
 title: "The Story of My Teeth"
+book: "The Story of My Teeth"
+author: "Valeria Luiselli"
 slug: "the-story-of-my-teeth"
 oldUrl: "https://betterworldwithdesign.com/the-story-of-my-teeth/"
 oldPath: "/the-story-of-my-teeth/"

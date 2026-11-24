@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 25 – Of the Education of Children"
+book: "Of the Education of Children"
+author: "Montaigne"
 slug: "montaigne-chapter-25-of-the-education-of-children"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-25-of-the-education-of-children/"
 oldPath: "/montaigne-chapter-25-of-the-education-of-children/"

@@ -1,5 +1,7 @@
 ---
 title: "Reasons and Persons by Derek Parfit"
+book: "Reasons and Persons"
+author: "Derek Parfit"
 slug: "book-review-reasons-and-persons"
 oldUrl: "https://betterworldwithdesign.com/book-review-reasons-and-persons/"
 oldPath: "/book-review-reasons-and-persons/"

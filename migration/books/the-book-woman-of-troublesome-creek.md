@@ -1,5 +1,7 @@
 ---
 title: "The Book Woman of Troublesome Creek"
+book: "The Book Woman of Troublesome Creek"
+author: "Kim Michele Richardson"
 slug: "the-book-woman-of-troublesome-creek"
 oldUrl: "https://betterworldwithdesign.com/the-book-woman-of-troublesome-creek/"
 oldPath: "/the-book-woman-of-troublesome-creek/"

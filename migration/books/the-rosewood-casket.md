@@ -1,5 +1,7 @@
 ---
 title: "The Rosewood Casket"
+book: "The Rosewood Casket"
+author: "Sharyn McCrumb"
 slug: "the-rosewood-casket"
 oldUrl: "https://betterworldwithdesign.com/the-rosewood-casket/"
 oldPath: "/the-rosewood-casket/"

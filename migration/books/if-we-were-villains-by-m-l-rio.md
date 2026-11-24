@@ -1,5 +1,7 @@
 ---
 title: "BOOK REVIEW: If We Were Villains by M.L. Rio – Complete Analysis"
+book: "If We Were Villains"
+author: "M. L. Rio"
 slug: "if-we-were-villains-by-m-l-rio"
 oldUrl: "https://betterworldwithdesign.com/if-we-were-villains-by-m-l-rio/"
 oldPath: "/if-we-were-villains-by-m-l-rio/"

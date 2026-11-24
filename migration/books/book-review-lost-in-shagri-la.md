@@ -1,5 +1,7 @@
 ---
 title: "BOOK REVIEW Lost in Shagri-la"
+book: "Lost in Shangri-La"
+author: "Mitchell Zuckoff"
 slug: "book-review-lost-in-shagri-la"
 oldUrl: "https://betterworldwithdesign.com/book-review-lost-in-shagri-la/"
 oldPath: "/book-review-lost-in-shagri-la/"

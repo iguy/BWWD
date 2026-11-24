@@ -1,5 +1,7 @@
 ---
 title: "A tree grows in Brooklyn"
+book: "A Tree Grows in Brooklyn"
+author: "Betty Smith"
 slug: "a-tree-grows-in-brooklyn"
 oldUrl: "https://betterworldwithdesign.com/a-tree-grows-in-brooklyn/"
 oldPath: "/a-tree-grows-in-brooklyn/"

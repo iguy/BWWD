@@ -1,5 +1,7 @@
 ---
 title: "Killer High: A History of War in Six Drugs by Peter Andreas"
+book: "Killer High"
+author: "Peter Andreas"
 slug: "killer-high-a-history-of-war-in-six-drugs-by-peter-andreas"
 oldUrl: "https://betterworldwithdesign.com/killer-high-a-history-of-war-in-six-drugs-by-peter-andreas/"
 oldPath: "/killer-high-a-history-of-war-in-six-drugs-by-peter-andreas/"

@@ -1,5 +1,7 @@
 ---
 title: "MY TAKE – James Joyce ~ The Sisters"
+book: "The Sisters"
+author: "James Joyce"
 slug: "my-take-james-joyce-the-sisters"
 oldUrl: "https://betterworldwithdesign.com/my-take-james-joyce-the-sisters/"
 oldPath: "/my-take-james-joyce-the-sisters/"

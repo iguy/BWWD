@@ -1,5 +1,7 @@
 ---
 title: "Thinking, Fast and Slow"
+book: "Thinking, Fast and Slow"
+author: "Daniel Kahneman"
 slug: "thinking-fast-and-slow"
 oldUrl: "https://betterworldwithdesign.com/thinking-fast-and-slow/"
 oldPath: "/thinking-fast-and-slow/"

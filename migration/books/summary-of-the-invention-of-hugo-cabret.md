@@ -1,5 +1,7 @@
 ---
 title: "Summary of The Invention of Hugo Cabret"
+book: "The Invention of Hugo Cabret"
+author: "Brian Selznick"
 slug: "summary-of-the-invention-of-hugo-cabret"
 oldUrl: "https://betterworldwithdesign.com/summary-of-the-invention-of-hugo-cabret/"
 oldPath: "/summary-of-the-invention-of-hugo-cabret/"

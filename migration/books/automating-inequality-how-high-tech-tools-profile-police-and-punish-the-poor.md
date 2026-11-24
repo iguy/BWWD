@@ -1,5 +1,7 @@
 ---
 title: "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+book: "Automating Inequality"
+author: "Virginia Eubanks"
 slug: "automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor"
 oldUrl: "https://betterworldwithdesign.com/automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor/"
 oldPath: "/automating-inequality-how-high-tech-tools-profile-police-and-punish-the-poor/"

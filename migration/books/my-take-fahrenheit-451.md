@@ -1,5 +1,7 @@
 ---
 title: "MY TAKE – Fahrenheit 451"
+book: "Fahrenheit 451"
+author: "Ray Bradbury"
 slug: "my-take-fahrenheit-451"
 oldUrl: "https://betterworldwithdesign.com/my-take-fahrenheit-451/"
 oldPath: "/my-take-fahrenheit-451/"

@@ -12,6 +12,7 @@ const articles = defineCollection({
     pubDate: z.string(),
     updated: z.string().optional(),
     revised: z.string().optional(),
+    book: z.string().optional(), // the book's own title, for its shelf spine
     author: z.string().optional(), // the book's author, shown small on its shelf spine // a real rewrite (YYYY-MM), shown in the byline as "Updated Month Year"
     description: z.string().default(''),
     cover: z.string().default(''),

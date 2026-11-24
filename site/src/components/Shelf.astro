@@ -23,7 +23,7 @@ function spine(raw: string): { main: string; sub: string } {
 }
 ---
 <ul class="shelf" data-reveal="up" style={height ? `--shelf-h:${height}` : undefined}>
-  {items.map(({ a, img }, i) => { const sp = spine(a.data.title); if (!sp.sub && a.data.author) sp.sub = a.data.author; return (
+  {items.map(({ a, img }, i) => { const sp = spine(a.data.title); if (a.data.book) sp.main = a.data.book.length > 34 ? a.data.book.slice(0, 32).replace(/\s+\S*$/, '') + '…' : a.data.book; if (a.data.author) sp.sub = a.data.author; return (
     <li class={`spine spine--${colours[i % colours.length]}`} style={`--h:${74 + ((i * 37) % 26)}%; --w:${Math.min(84, 44 + Math.round(sp.main.length * 0.95) + (sp.sub ? 14 : 0))}px; --d:${i}`}>
       <a href={`/${a.data.slug}/`} title={a.data.title}>
         <span class="spine__title">{sp.main}{sp.sub && <small>{sp.sub}</small>}</span>

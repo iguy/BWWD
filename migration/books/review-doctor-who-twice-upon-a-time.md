@@ -1,5 +1,7 @@
 ---
 title: "BOOK REVIEW – Doctor Who: Twice Upon a Time"
+book: "Twice Upon a Time"
+author: "Paul Cornell"
 slug: "review-doctor-who-twice-upon-a-time"
 oldUrl: "https://betterworldwithdesign.com/review-doctor-who-twice-upon-a-time/"
 oldPath: "/review-doctor-who-twice-upon-a-time/"

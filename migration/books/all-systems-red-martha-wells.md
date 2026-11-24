@@ -1,5 +1,7 @@
 ---
 title: "All Systems Red – Martha Wells"
+book: "All Systems Red"
+author: "Martha Wells"
 slug: "all-systems-red-martha-wells"
 oldUrl: "https://betterworldwithdesign.com/all-systems-red-martha-wells/"
 oldPath: "/all-systems-red-martha-wells/"

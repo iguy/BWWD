@@ -1,5 +1,7 @@
 ---
 title: "We always lived in the castle"
+book: "We Have Always Lived in the Castle"
+author: "Shirley Jackson"
 slug: "we-always-lived-in-the-castle"
 oldUrl: "https://betterworldwithdesign.com/we-always-lived-in-the-castle/"
 oldPath: "/we-always-lived-in-the-castle/"

@@ -1,5 +1,7 @@
 ---
 title: "Dao De Jing by Laozi"
+book: "Dao De Jing"
+author: "Laozi"
 slug: "dao-de-jing-by-laozi"
 oldUrl: "https://betterworldwithdesign.com/dao-de-jing-by-laozi/"
 oldPath: "/dao-de-jing-by-laozi/"

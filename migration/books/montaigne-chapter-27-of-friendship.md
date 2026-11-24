@@ -1,5 +1,7 @@
 ---
 title: "Montaigne – Chapter 27 – Of Friendship"
+book: "Of Friendship"
+author: "Montaigne"
 slug: "montaigne-chapter-27-of-friendship"
 oldUrl: "https://betterworldwithdesign.com/montaigne-chapter-27-of-friendship/"
 oldPath: "/montaigne-chapter-27-of-friendship/"

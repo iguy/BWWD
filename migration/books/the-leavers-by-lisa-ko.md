@@ -1,5 +1,7 @@
 ---
 title: "The Leavers by Lisa Ko"
+book: "The Leavers"
+author: "Lisa Ko"
 slug: "the-leavers-by-lisa-ko"
 oldUrl: "https://betterworldwithdesign.com/the-leavers-by-lisa-ko/"
 oldPath: "/the-leavers-by-lisa-ko/"

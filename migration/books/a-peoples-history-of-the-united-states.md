@@ -1,5 +1,7 @@
 ---
 title: "A People’s History of the United States"
+book: "A People's History of the United States"
+author: "Howard Zinn"
 slug: "a-peoples-history-of-the-united-states"
 oldUrl: "https://betterworldwithdesign.com/a-peoples-history-of-the-united-states/"
 oldPath: "/a-peoples-history-of-the-united-states/"

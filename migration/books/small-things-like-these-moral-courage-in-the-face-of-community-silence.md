@@ -1,5 +1,7 @@
 ---
 title: "Small Things Like These: Moral Courage in the Face of Community Silence"
+book: "Small Things Like These"
+author: "Claire Keegan"
 slug: "small-things-like-these-moral-courage-in-the-face-of-community-silence"
 oldUrl: "https://betterworldwithdesign.com/small-things-like-these-moral-courage-in-the-face-of-community-silence/"
 oldPath: "/small-things-like-these-moral-courage-in-the-face-of-community-silence/"
