@@ -48,7 +48,7 @@ export function cleanHtml(html: string, section: Section, opts: Options = {}): s
   for (const el of root.querySelectorAll('.et_pb_number_counter .percent')) if (!el.text.trim()) el.remove();
 
   // Old WordPress menus and search forms placed inside posts
-  for (const el of root.querySelectorAll(opts.keepForms ? 'nav.wp-block-navigation, .wp-block-page-list, form[role="search"], .et_pb_searchform' : 'nav.wp-block-navigation, .wp-block-page-list, form')) el.remove();
+  for (const el of root.querySelectorAll(opts.keepForms ? 'nav.wp-block-navigation, .wp-block-page-list, form[role="search"], .et_pb_searchform' : 'nav.wp-block-navigation, .wp-block-page-list, form')) if (!el.hasAttribute('data-keep')) el.remove(); // data-keep: a form written for the new site
 
   // WordPress/Divi inline styling (colours, spacing) — the new site's styles take over
   for (const el of root.querySelectorAll('[style]')) {

@@ -22,7 +22,8 @@ export async function getStaticPaths() {
 
 interface Props { article: Article; newer?: Article; older?: Article }
 const { article, newer, older } = Astro.props;
-const { title, description, pubDate, updated, tags } = article.data;
+const { title, description, pubDate, updated, revised, tags } = article.data;
+const revisedLabel = revised ? new Date(revised + '-15T12:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : '';
 const section = article.section;
 const gallery = section.look === 'gallery';
 const sleeve = section.look === 'sleeve';
@@ -127,7 +128,7 @@ const jsonLd = {
         <div class="hero__text">
           <a class="tag-block" href={hub}>{section.name}</a>
           <h1>{title}</h1>
-          <p class="meta">Gary Crossey <b></b> {dateLabel(pubDate)}</p>
+          <p class="meta">Gary Crossey <b></b> {dateLabel(pubDate)}{revisedLabel && <><b></b> Updated {revisedLabel}</>}</p>
         </div>
       </div>
     </header>
