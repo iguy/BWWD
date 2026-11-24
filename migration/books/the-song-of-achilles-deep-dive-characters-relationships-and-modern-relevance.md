@@ -467,10 +467,7 @@ status: "pulled"
 <div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>Near the end of the Iliad, King Priam crosses the battlefield at night to beg Achilles for his son Hector's body. Both men weep, and the poem's rage finally breaks.</p></div>
 </div>
 <figure class="soa-art soa-art--wide"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/art-hamilton.jpg" alt="Achilles Lamenting the Death of Patroclus, painting by Gavin Hamilton" loading="lazy"><figcaption><p class="soa-art__title"><i>Achilles Lamenting the Death of Patroclus</i></p><p class="soa-art__by">Gavin Hamilton, 1760–63. National Galleries of Scotland.</p><p class="soa-art__why">Achilles over Patroclus's body: the grief that turns the war, and the book.</p><p class="soa-art__credit">Public domain. <a href="https://commons.wikimedia.org/wiki/File:Gavin_Hamilton_(1723-1798)_-_Achilles_Lamenting_the_Death_of_Patroclus_-_NG_2339_-_National_Galleries_of_Scotland.jpg">Source: Wikimedia Commons</a>.</p></figcaption></figure>
-<figure class="soa-priam__fig">
-<img src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/priam-achilles-ivanov.jpg" alt="Painting of the elderly King Priam kneeling before Achilles in his tent, asking for the body of his son Hector" loading="lazy" />
-<figcaption>Alexander Ivanov, <i>Priam Asks Achilles to Return Hector's Body</i>, 1824. Public domain.</figcaption>
-</figure>
+
 <p>Near the end of the Iliad, King Priam of Troy crosses the battlefield at night, alone but for one old herald, and enters the tent of the man who killed his son. He kneels, kisses Achilles's hands and asks for Hector's body. Both men weep: Priam for Hector, Achilles for Patroclus and for his own father, whom he will never see again.</p>
 <p>It is the moment the poem's rage finally breaks. Achilles gives back the body and grants Troy days of truce to mourn. Miller keeps this meeting in the novel, and it lands harder because we have watched what Achilles lost.</p>
 <p>Painters have returned to the scene for centuries. Ivanov's version, above, puts the light on Priam's bowed head and leaves Achilles half in shadow, a fair picture of a hero who has just remembered he is human.</p>
@@ -531,6 +528,10 @@ status: "pulled"
 </div>
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
+<figure class="soa-finale">
+<img src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/priam-achilles-ivanov.jpg" alt="Painting of the elderly King Priam kneeling before Achilles in his tent, asking for the body of his son Hector" loading="lazy" />
+<figcaption>Alexander Ivanov, <i>Priam Asks Achilles to Return Hector's Body</i>, 1824. Public domain.</figcaption>
+</figure>
 </div>
 </div>
 
@@ -876,6 +877,11 @@ a.soa-email { text-decoration: none; }
 .soa-art__why { font-size: 1rem; line-height: 1.5; }
 .soa-art__credit { font-size: .8rem; color: #5a534a; }
 @media (max-width: 820px) { .soa-art, .soa-art--tall { grid-template-columns: 1fr; } }
+/* Closing painting, full width */
+.soa-finale { margin: 0 !important; padding: 3rem 0 3.5rem; background: #2a2622; box-shadow: 0 0 0 100vmax #2a2622; clip-path: inset(0 -100vmax); }
+.soa-finale img { display: block; width: 100%; height: auto; border: 0 !important; }
+.soa-finale figcaption { margin-top: 1rem; font-size: .9rem; color: #cfc6b6; max-width: 72ch; }
+.soa-finale figcaption a { color: #c79d4f !important; }
 
 </style>
 <script>
