@@ -91,7 +91,7 @@ status: "pulled"
 </div>
 </div>
 </details>
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="who-is-who" class="soa-block soa-chapter soa-chapter--clay soa-band--alt soa-answers">
@@ -162,7 +162,7 @@ status: "pulled"
 </div>
 </div>
 </details>
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="characters" class="soa-block soa-chapter soa-chapter--ink  soa-web">
@@ -232,7 +232,7 @@ status: "pulled"
 </div>
 
 
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="questions" class="soa-block soa-chapter soa-chapter--ochre soa-band--alt ">
@@ -404,7 +404,7 @@ status: "pulled"
 </ul>
 <p>While the book contains mature themes and some violence, it's written in an accessible style that makes it suitable for most readers who can handle emotional complexity and moderate adult content. The novel bridges the gap between young adult and adult literature, making it appealing to a broad age range of mature readers.</p></div></details>
 </div>
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="compare" class="soa-block soa-chapter soa-chapter--slate  soa-compare">
@@ -434,7 +434,7 @@ status: "pulled"
 </table>
 </div>
 
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="quiz" class="soa-block soa-chapter soa-chapter--clay soa-band--dark soa-quiz">
@@ -456,7 +456,7 @@ status: "pulled"
 <div class="soa-quiz__stage" aria-live="polite"></div>
 </div>
 
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="my-take" class="soa-block soa-chapter soa-chapter--ink  soa-priam">
@@ -498,7 +498,7 @@ status: "pulled"
 <p>In the end, their modern story would still be about choosing between personal happiness and societal expectations, about the courage to be true to oneself, and about love that defies conventional norms. The fundamental questions about fate, choice, and the power of love would remain just as relevant in today's context as they were in ancient Greece.</p>
 </div>
 </details>
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
 <section id="guide" class="soa-block soa-chapter soa-chapter--ochre soa-band--alt ">
@@ -526,7 +526,7 @@ status: "pulled"
 <div class="soa-hp" aria-hidden="true"><input type="text" name="b_2ffed8266e34371a186f845d0_75cbd5c6de" tabindex="-1" value=""></div>
 </form>
 </div>
-<p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
+<p class="soa-toc-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 <figure class="soa-finale">
 <img src="./images/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/priam-achilles-ivanov.jpg" alt="Painting of the elderly King Priam kneeling before Achilles in his tent, asking for the body of his son Hector" loading="lazy" />
@@ -694,7 +694,7 @@ status: "pulled"
 .soa-more[open] summary::after { content: "–"; }
 .soa-more summary:hover { background: #2a2622; color: #ece4d3; }
 .soa-more__body { padding: .4rem 1.3rem 1.2rem; }
-.soa-back { margin: 1.8rem 0 0; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.soa-toc-back { margin: 1.8rem 0 0; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .soa-cast { list-style: none; margin: 0 0 1.6rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: .8rem; }
 .soa-cast__card { margin: 0; padding: 1rem 1.1rem; background: #f3ede1; border: 3px solid #2a2622; border-top-width: 10px; }
 .soa-cast__card h3 { margin: 0 0 .3rem; font-size: 1.25rem; }
@@ -780,7 +780,7 @@ status: "pulled"
 /* Round 3 */
 .soa-rail { z-index: 5; }
 .soa-band--dark { background: #2a2622; box-shadow: 0 0 0 100vmax #2a2622 !important; clip-path: inset(0 -100vmax); color: #ece4d3; padding: 3.2rem 0 3rem !important; }
-.soa-band--dark h2, .soa-band--dark .soa-back a { color: #ece4d3 !important; }
+.soa-band--dark h2, .soa-band--dark .soa-toc-back a { color: #ece4d3 !important; }
 .soa-band--dark .soa-quick { color: #2a2622; box-shadow: 10px 10px 0 #c79d4f; }
 .soa-band--dark .soa-signup { background: #3a342e; }
 .soa-web__key { margin: 1rem 0 .4rem !important; }
@@ -908,6 +908,8 @@ a.soa-email { text-decoration: none; }
   .soa-table tbody td::before { content: attr(data-label); display: block; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a9503d; margin-bottom: .2rem; }
 }
 
+.soa-q__nav .soa-back { min-height: 44px; min-width: 88px; padding: .6rem .9rem; display: inline-flex; align-items: center; }
+
 </style>
 <script>
 (function () {
@@ -1013,7 +1015,7 @@ a.soa-email { text-decoration: none; }
   function esc(t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function score(list) {
     var s = { achilles: 0, hector: 0, patroclus: 0 };
-    list.forEach(function (a) { var h = HEROES[a]; s[h] += 2; s[NEAR[h]] += 1; });
+    list.forEach(function (a) { var h = HEROES[a]; s[h] += 2; });
     return s;
   }
   var ORD = {};
