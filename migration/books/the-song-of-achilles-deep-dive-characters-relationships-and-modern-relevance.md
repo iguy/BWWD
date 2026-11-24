@@ -42,7 +42,7 @@ status: "pulled"
 <li><a class="soa-outline__card soa-outline__card--ink" href="#characters"><span class="soa-outline__top"><span class="soa-outline__num">03</span><span class="soa-shape soa-shape--tri soa-shape--ink" aria-hidden="true"></span></span><span class="soa-outline__title">Character map</span><span class="soa-outline__line">How everyone connects: love, loyalty, rivalry.</span></a></li>
 <li><a class="soa-outline__card soa-outline__card--ochre" href="#questions"><span class="soa-outline__top"><span class="soa-outline__num">04</span><span class="soa-shape soa-shape--square soa-shape--ochre" aria-hidden="true"></span></span><span class="soa-outline__title">Questions readers ask</span><span class="soa-outline__line">Is it spicy? What age is it for? Is it LGBTQ?</span></a></li>
 <li><a class="soa-outline__card soa-outline__card--slate" href="#compare"><span class="soa-outline__top"><span class="soa-outline__num">05</span><span class="soa-shape soa-shape--circle soa-shape--slate" aria-hidden="true"></span></span><span class="soa-outline__title">Iliad vs. The Song of Achilles</span><span class="soa-outline__line">What Miller kept, changed and added.</span></a></li>
-<li><a class="soa-outline__card soa-outline__card--clay" href="#quiz"><span class="soa-outline__top"><span class="soa-outline__num">06</span><span class="soa-shape soa-shape--tri soa-shape--clay" aria-hidden="true"></span></span><span class="soa-outline__title">Which hero are you?</span><span class="soa-outline__line">Achilles, Patroclus or Hector: take the quiz.</span></a></li>
+<li><a class="soa-outline__card soa-outline__card--clay" href="#quiz"><span class="soa-outline__top"><span class="soa-outline__num">06</span><span class="soa-shape soa-shape--tri soa-shape--clay" aria-hidden="true"></span></span><span class="soa-outline__title">Which hero are you?</span><span class="soa-outline__line">A personality quiz: are you Achilles, Patroclus or Hector?</span></a></li>
 <li><a class="soa-outline__card soa-outline__card--ink" href="#my-take"><span class="soa-outline__top"><span class="soa-outline__num">07</span><span class="soa-shape soa-shape--circle soa-shape--ink" aria-hidden="true"></span></span><span class="soa-outline__title">My take</span><span class="soa-outline__line">Priam, the ending, and a modern retelling.</span></a></li>
 <li><a class="soa-outline__card soa-outline__card--ochre" href="#guide"><span class="soa-outline__top"><span class="soa-outline__num">08</span><span class="soa-shape soa-shape--square soa-shape--ochre" aria-hidden="true"></span></span><span class="soa-outline__title">Discussion guide</span><span class="soa-outline__line">Free printable guide for book clubs and classes.</span></a></li>
 </ol>
@@ -440,22 +440,20 @@ status: "pulled"
 <div class="soa-chapter__head">
 <div class="soa-chapter__title"><p class="soa-chapter__num">06</p>
 <h2>Which hero are you: Achilles, Patroclus or Hector?</h2></div>
-<div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>Eight questions about fate and choice, love and glory tell you which hero you are: Achilles, Patroclus or Hector.</p></div>
+<div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>This is a personality quiz, not a memory test. Eight questions about fate, love and glory show which of the three heroes you are most like: Achilles, Patroclus or Hector.</p></div>
 </div>
-<div class="soa-quiz__box">
+<div class="soa-heroes">
+<p class="soa-heroes__lead">No right answers. Pick what you would actually do, and Thetis's Prophecy tells you which of these three you are.</p>
+<ul class="soa-heroes__grid">
+<li class="soa-hero soa-hero--achilles"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-achilles.png" alt="Ink portrait of Achilles, after John Flaxman" loading="lazy" width="120" height="120"><h3>Achilles</h3><p>Glory first. You'd trade a long life for a name that lasts.</p></li>
+<li class="soa-hero soa-hero--patroclus"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-patroclus.png" alt="Ink portrait of Patroclus, after John Flaxman" loading="lazy" width="120" height="120"><h3>Patroclus</h3><p>Love first. You'd rather heal than win, and you stay.</p></li>
+<li class="soa-hero soa-hero--hector"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-hector.png" alt="Ink portrait of Hector, after John Flaxman" loading="lazy" width="120" height="120"><h3>Hector</h3><p>Duty first. You fight for the people and the city behind you.</p></li>
+</ul>
+</div><div class="soa-quiz__box">
 <div class="soa-quiz__progress" aria-hidden="true"><i></i></div>
 <div class="soa-quiz__stage" aria-live="polite"></div>
 </div>
-<div class="soa-signup">
-<p class="soa-signup__label">Got your hero?</p>
-<p class="soa-signup__title">Get the discussion guide and new deep dives by email</p>
-<form action="https://studio.us20.list-manage.com/subscribe/post?u=2ffed8266e34371a186f845d0&amp;id=75cbd5c6de&amp;f_id=00447eeaf0" method="post" target="_blank" class="soa-signup__form" data-keep>
-<label for="soa-email">Email address</label>
-<div class="soa-signup__row"><input type="email" name="EMAIL" id="soa-email" required autocomplete="email" placeholder="you@example.com"><button type="submit">Sign me up</button></div>
-<p class="soa-signup__note">You're joining the Better World With Design newsletter. Unsubscribe any time.</p>
-<div class="soa-hp" aria-hidden="true"><input type="text" name="b_2ffed8266e34371a186f845d0_75cbd5c6de" tabindex="-1" value=""></div>
-</form>
-</div>
+
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
@@ -518,6 +516,15 @@ status: "pulled"
 <p>Questions for each part of the book, the big themes, and activities for book clubs and classes.</p>
 </div>
 <a class="soa-cta soa-cta--light" href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf">Download the guide</a>
+</div><div class="soa-signup">
+<p class="soa-signup__label">Stay in touch</p>
+<p class="soa-signup__title">New book deep dives by email</p>
+<form action="https://studio.us20.list-manage.com/subscribe/post?u=2ffed8266e34371a186f845d0&amp;id=75cbd5c6de&amp;f_id=00447eeaf0" method="post" target="_blank" class="soa-signup__form" data-keep>
+<label for="soa-email">Email address</label>
+<div class="soa-signup__row"><input type="email" name="EMAIL" id="soa-email" required autocomplete="email" placeholder="you@example.com"><button type="submit">Sign me up</button></div>
+<p class="soa-signup__note">You're joining the Better World With Design newsletter. Unsubscribe any time.</p>
+<div class="soa-hp" aria-hidden="true"><input type="text" name="b_2ffed8266e34371a186f845d0_75cbd5c6de" tabindex="-1" value=""></div>
+</form>
 </div>
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
@@ -832,6 +839,18 @@ status: "pulled"
 @media (max-width: 520px) { .soa-notes__row { grid-template-columns: 1fr; gap: .2rem; } }
 .soa-faq__list { grid-template-columns: 1fr !important; } .soa-faq__body p, .soa-faq__body li { max-width: 72ch; }
 .soa-table tbody th .soa-ic { display: inline-block !important; vertical-align: middle; margin: 0 .55rem 0 0 !important; width: 22px; height: 22px; } .soa-table tbody th { white-space: nowrap; } @media (max-width: 720px) { .soa-table tbody th { white-space: normal; } }
+.soa-heroes { margin: 0 0 1.8rem; }
+.soa-main p.soa-heroes__lead { font-size: 1.15rem; margin: 0 0 1rem !important; color: #ece4d3; }
+.article .soa-heroes__grid { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.article .soa-heroes__grid li::before { content: none !important; }
+.soa-hero { margin: 0 !important; padding: 1.1rem; background: #ece4d3; color: #2a2622; border: 3px solid #ece4d3; text-align: center; }
+.soa-hero img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 3px solid #2a2622; margin: 0 auto .6rem; display: block; }
+.soa-hero--achilles img { background: #c5ced8; } .soa-hero--patroclus img { background: #e3c2b8; } .soa-hero--hector img { background: #ead7ae; }
+.soa-hero h3 { margin: 0 0 .3rem !important; font-size: 1.3rem; color: #2a2622 !important; }
+.soa-hero p { margin: 0 !important; font-size: .95rem; line-height: 1.45; }
+.soa-hero--achilles { box-shadow: 6px 6px 0 #44596f; } .soa-hero--patroclus { box-shadow: 6px 6px 0 #a9503d; } .soa-hero--hector { box-shadow: 6px 6px 0 #c79d4f; }
+.soa-guide + .soa-signup { margin-top: 1.4rem; }
+a.soa-email { text-decoration: none; }
 
 </style>
 <script>
@@ -1024,5 +1043,17 @@ if(window.gtag)gtag('event','newsletter_signup',{form:'achilles_quiz'});}
 else{var m=(r&&r.msg||'').replace(/<[^>]+>/g,'');out.textContent=/already subscribed/i.test(m)?'You\u2019re already on the list. Thank you!':'That didn\u2019t work. Please try again.';}};
 var url=f.action.replace('/post?','/post-json?')+'&EMAIL='+encodeURIComponent(em.value)+'&c='+cb;
 var s=document.createElement('script');s.src=url;s.onerror=function(){btn.disabled=false;out.textContent='That didn\u2019t work. Please try again.';};document.body.appendChild(s);});})();
+</script>
+
+<script>
+(function(){var stage=document.querySelector('.soa-quiz__stage');if(!stage)return;
+new MutationObserver(function(){var acts=stage.querySelector('.soa-result__actions');if(!acts||acts.querySelector('.soa-email'))return;
+var card=stage.querySelector('.soa-card');if(!card)return;var name=card.querySelector('.soa-card__name').textContent,tier=(card.querySelector('.soa-card__tier')||{}).textContent||'',text=(card.querySelector('.soa-card__text')||{}).textContent||'';
+var hero=(card.className.match(/soa-card--(\w+)/)||[])[1]||'';var link=location.origin+location.pathname+'?hero='+hero+'#quiz';
+var body='Thetis\'s Prophecy says I am '+name+'.\n'+tier+'\n\n'+text+'\n\nSee the result and take the quiz again: '+link+'\n\nFree discussion guide: '+location.origin+'/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf';
+var a=document.createElement('a');a.className='soa-btn soa-btn--ghost soa-email';a.textContent='Email me my result';
+a.href='mailto:?subject='+encodeURIComponent('My Song of Achilles hero: '+name)+'&body='+encodeURIComponent(body);
+a.addEventListener('click',function(){if(window.gtag)gtag('event','share',{method:'email',content_type:'quiz_result',item_id:hero});});
+var again=acts.querySelector('.soa-again');acts.insertBefore(a,again);}).observe(stage,{childList:true,subtree:true});})();
 </script>
 
