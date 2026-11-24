@@ -63,19 +63,19 @@ status: "pulled"
 <div class="soa-tree__facts">
 <div><h3>Achilles's family at a glance</h3>
 <ul>
-<li><b>Mother:</b> Thetis, a sea nymph, daughter of Nereus and Doris</li>
-<li><b>Father:</b> Peleus, mortal king of Phthia</li>
-<li><b>Grandparents:</b> Aeacus and Endeïs (father's side); Nereus and Doris (mother's side)</li>
-<li><b>Great-grandfather:</b> Zeus, through Aeacus</li>
-<li><b>Uncle and cousin:</b> Telamon, and his son Ajax the Great, who also fights at Troy</li>
-<li><b>Wife and son:</b> Deidameia, princess of Scyros, and their son Pyrrhus (Neoptolemus)</li>
+<li><b>Mother:</b> Thetis, a sea nymph, daughter of Nereus and Doris.</li>
+<li><b>Father:</b> Peleus, mortal king of Phthia.</li>
+<li><b>Grandparents:</b> Aeacus and Endeïs (father's side); Nereus and Doris (mother's side).</li>
+<li><b>Great-grandfather:</b> Zeus, through Aeacus.</li>
+<li><b>Uncle and cousin:</b> Telamon, and his son Ajax the Great, who also fights at Troy.</li>
+<li><b>Wife and son:</b> Deidameia, princess of Scyros, and their son Pyrrhus (Neoptolemus).</li>
 </ul></div>
 <div><h3>Patroclus's family tree</h3>
 <ul>
-<li><b>Father:</b> Menoetius, king of Opus</li>
-<li><b>Grandparents:</b> Actor and Aegina, in one ancient version; his mother's name varies between sources</li>
-<li><b>Link to Achilles:</b> Aegina is the mother of both Menoetius and Aeacus, so in this version Patroclus is Peleus's cousin and Achilles's first cousin once removed. Miller doesn't use the connection; in the novel Patroclus arrives at Phthia as an exiled stranger</li>
-<li><b>Foster father:</b> Peleus, who takes him in after his exile</li>
+<li><b>Father:</b> Menoetius, king of Opus.</li>
+<li><b>Grandparents:</b> Actor and Aegina, in one ancient version; his mother's name varies between sources.</li>
+<li><b>Link to Achilles:</b> Aegina is the mother of both Menoetius and Aeacus, so in this version Patroclus is Peleus's cousin and Achilles's first cousin once removed. Miller doesn't use the connection; in the novel Patroclus arrives at Phthia as an exiled stranger.</li>
+<li><b>Foster father:</b> Peleus, who takes him in after his exile.</li>
 </ul></div>
 </div>
 <details class="soa-more">
@@ -173,8 +173,8 @@ status: "pulled"
 </div>
 <p>Tap or hover over a name to see who they are and how they're tied to everyone else.</p>
 <ul class="soa-web__key">
-<li><i class="k-greek"></i>Greeks</li><li><i class="k-trojan"></i>Trojans</li><li><i class="k-god"></i>Gods and immortals</li><li><i class="k-captive"></i>Captive</li>
-<li><b class="k-love"></b>Love</li><li><b class="k-death"></b>Kills</li><li><b class="k-tension"></b>Tension</li>
+<li><i class="k-greek"></i>Greeks.</li><li><i class="k-trojan"></i>Trojans.</li><li><i class="k-god"></i>Gods and immortals.</li><li><i class="k-captive"></i>Captive.</li>
+<li><b class="k-love"></b>Love.</li><li><b class="k-death"></b>Kills.</li><li><b class="k-tension"></b>Tension.</li>
 </ul>
 <div class="soa-web__wrap">
 <svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected"><defs><clipPath id="soa-cp-achilles"><circle cx="470.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-patroclus"><circle cx="300.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-thetis"><circle cx="470.0" cy="110.0" r="47.0"/></clipPath><clipPath id="soa-cp-briseis"><circle cx="560.0" cy="460.0" r="47.0"/></clipPath><clipPath id="soa-cp-odysseus"><circle cx="640.0" cy="170.0" r="50.0"/></clipPath><clipPath id="soa-cp-hector"><circle cx="860.0" cy="300.0" r="56.0"/></clipPath></defs>
@@ -252,10 +252,10 @@ status: "pulled"
 <p>The book's LGBTQ themes are handled naturally within the context of ancient Greek culture, where same-sex relationships were viewed differently than in modern times. Miller portrays their relationship without anachronistic elements, while still making it accessible and meaningful to contemporary readers. The story doesn't treat their same-sex relationship as taboo or problematic; instead, any conflict stems from Achilles's divine destiny and the prophecies surrounding his fate.</p>
 <p>The novel has become particularly significant in LGBTQ literature for several reasons:</p>
 <ul>
-<li>It presents a same-sex relationship as the central love story rather than a subplot</li>
-<li>It treats the relationship with dignity and depth, avoiding stereotypes or sensationalism</li>
-<li>It connects modern LGBTQ readers with classical literature and mythology</li>
-<li>It demonstrates how queer narratives have always been part of human storytelling</li>
+<li>It presents a same-sex relationship as the central love story rather than a subplot.</li>
+<li>It treats the relationship with dignity and depth, avoiding stereotypes or sensationalism.</li>
+<li>It connects modern LGBTQ readers with classical literature and mythology.</li>
+<li>It demonstrates how queer narratives have always been part of human storytelling.</li>
 </ul>
 <p>The book has found particular resonance among LGBTQ readers who appreciate seeing a complex, tender love story between two men that doesn't shy away from emotional depth while still remaining true to its historical context. Miller's approach has helped make classical literature more accessible and relevant to contemporary LGBTQ audiences while also highlighting how same-sex love has been part of human storytelling for thousands of years.</p>
 <p>The success of The Song of Achilles as LGBTQ literature lies in how it balances historical context with emotional authenticity, creating a narrative that speaks to modern readers while honoring its classical roots. The novel demonstrates how LGBTQ themes can be explored in historical and classical settings without feeling forced or anachronistic.</p></div></details>
@@ -272,10 +272,10 @@ status: "pulled"
 <ul>
 <ul>
 <ul></ul>
-<li>The novel is narrated from Patroclus's perspective rather than using The Iliad's third-person narrative</li>
-<li>It provides extensive background on the characters' early lives and relationship development</li>
-<li>The story incorporates elements from other ancient Greek sources beyond The Iliad</li>
-<li>It expands on characters and relationships that receive less attention in Homer's work</li>
+<li>The novel is narrated from Patroclus's perspective rather than using The Iliad's third-person narrative.</li>
+<li>It provides extensive background on the characters' early lives and relationship development.</li>
+<li>The story incorporates elements from other ancient Greek sources beyond The Iliad.</li>
+<li>It expands on characters and relationships that receive less attention in Homer's work.</li>
 <ul></ul>
 </ul>
 </ul>
@@ -285,17 +285,17 @@ status: "pulled"
 <details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The title "The Song of Achilles" references several aspects of the novel:</p>
 <ul>
 <ul></p>
-<li><strong>Classical tradition:</strong> It evokes the tradition of epic poetry, like The Iliad, where heroes' stories were sung by bards</li>
+<li><strong>Classical tradition:</strong> It evokes the tradition of epic poetry, like The Iliad, where heroes' stories were sung by bards.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Narrative perspective:</strong> The novel serves as Patroclus's "song" about Achilles, telling the hero's story through the eyes of the one who loved him most</li>
+<li><strong>Narrative perspective:</strong> The novel serves as Patroclus's "song" about Achilles, telling the hero's story through the eyes of the one who loved him most.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Poetic style:</strong> The lyrical, flowing prose style of the novel resembles a song in its beauty and rhythm</li>
+<li><strong>Poetic style:</strong> The lyrical, flowing prose style of the novel resembles a song in its beauty and rhythm.</li>
 <li>The title also carries a touch of irony, as this "song" is not the traditional glorification of Achilles's martial prowess, but rather an intimate portrait that reveals his humanity through his relationship with Patroclus.</li>
 </ul>
 </ul></div></details><h3 class="soa-faq__head">More questions readers ask</h3>
@@ -361,17 +361,17 @@ status: "pulled"
 <p>In the original Greek mythology, Achilles has several romantic associations, including:</p>
 <ul>
 <ul></p>
-<li><strong>Deidameia:</strong> The princess of Skyros who becomes the mother of his son</li>
+<li><strong>Deidameia:</strong> The princess of Skyros who becomes the mother of his son.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Briseis:</strong> A war prize captured during the Trojan War, though their relationship is more complex and varies depending on the source material</li>
+<li><strong>Briseis:</strong> A war prize captured during the Trojan War, though their relationship is more complex and varies depending on the source material.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Patroclus:</strong> While ancient sources vary in their explicit description of their relationship, many classical writers interpreted their bond as romantic, a view that The Song of Achilles fully embraces</li>
+<li><strong>Patroclus:</strong> While ancient sources vary in their explicit description of their relationship, many classical writers interpreted their bond as romantic, a view that The Song of Achilles fully embraces.</li>
 </ul>
 </ul></div></details>
 <details class="soa-faq"><summary>How old are Achilles and Patroclus in The Song of Achilles?</summary><div class="soa-faq__body"><p>In The Song of Achilles, Patroclus and Achilles first meet when they are young boys around 8-9 years old. The story follows them through their childhood, adolescence, and into early adulthood. When they join the Trojan War, they are young men in their late teens or early twenties. The exact ages aren't always explicitly stated, but their relationship develops over approximately a decade before the events of the Trojan War.</p></div></details>
@@ -383,22 +383,22 @@ status: "pulled"
 <details class="soa-faq"><summary>What is the target audience of The Song of Achilles?</summary><div class="soa-faq__body"><p>The Song of Achilles is primarily targeted at:</p>
 <ul>
 <ul></p>
-<li><strong>Young Adult and Adult readers:</strong> While marketed as adult fiction, it appeals strongly to mature young adult readers (14+)</li>
+<li><strong>Young Adult and Adult readers:</strong> While marketed as adult fiction, it appeals strongly to mature young adult readers (14+).</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Lovers of mythology:</strong> Readers interested in Greek mythology and classical retellings</li>
+<li><strong>Lovers of mythology:</strong> Readers interested in Greek mythology and classical retellings.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>Literary fiction readers:</strong> Those who appreciate character-driven narratives and lyrical prose</li>
+<li><strong>Literary fiction readers:</strong> Those who appreciate character-driven narratives and lyrical prose.</li>
 </ul>
 </ul>
 <ul>
 <ul>
-<li><strong>LGBTQ+ readers:</strong> People seeking well-crafted queer representation in historical/mythological contexts</li>
+<li><strong>LGBTQ+ readers:</strong> People seeking well-crafted queer representation in historical/mythological contexts.</li>
 </ul>
 </ul>
 <p>While the book contains mature themes and some violence, it's written in an accessible style that makes it suitable for most readers who can handle emotional complexity and moderate adult content. The novel bridges the gap between young adult and adult literature, making it appealing to a broad age range of mature readers.</p></div></details>
@@ -477,11 +477,11 @@ status: "pulled"
 <p>As I delved into this modern retelling of an ancient tale, I joined countless readers online who grapple with similar questions about this interesting narrative. The first half of the book captivated me with its intimate portrayal of young friendship blossoming into love, and the last quarter left me emotionally transformed - as it has many others, judging by the online discourse.</p>
 <p>One of my major challenges was keeping track of the sequence of conflicts:</p>
 <ul>
-<li>The initial political tensions between Greek kingdoms</li>
-<li>The conflict over Helen's abduction</li>
-<li>gathering of forces at Aulis</li>
-<li>The early years of the Trojan War</li>
-<li>The final year's devastating events</li>
+<li>The initial political tensions between Greek kingdoms.</li>
+<li>The conflict over Helen's abduction.</li>
+<li>gathering of forces at Aulis.</li>
+<li>The early years of the Trojan War.</li>
+<li>The final year's devastating events.</li>
 </ul>
 <p>Like many readers, I found myself questioning Achilles' emotional landscape. His moodiness and periods of withdrawal suggest what we might today recognize as depression, particularly after significant losses and during the weight of prophecy bearing down on him. Was this legendary warrior actually struggling with the burden of expectations, destiny, and the conflict between divine heritage and human emotion?</p>
 <p>The question of whether this is truly a tragic tale or a love story that transcends death continues to spark debate. While the ending is undeniably heartbreaking, the final scene suggests an eternal reunion. Are readers simply trying to soften the blow by imagining a happily-ever-after in the underworld, or is this interpretation crucial to understanding the story's deeper meaning about love's endurance beyond death?</p>
