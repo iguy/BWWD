@@ -509,7 +509,7 @@ status: "pulled"
 <div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>A free, printable guide for book clubs and classes: questions for each part of the book, big themes, and activities.</p></div>
 </div>
 <div class="soa-guide">
-<span class="soa-shape soa-shape--square soa-shape--ochre soa-guide__shape" aria-hidden="true"></span>
+<a class="soa-guide__cover" href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/guide-cover.jpg" alt="Cover of the Beyond the Battlefield discussion guide" width="180" height="236" loading="lazy"></a>
 <div class="soa-guide__text">
 <p class="soa-guide__label">Free · 6 pages · PDF</p>
 <p class="soa-guide__title">Beyond the Battlefield</p>
@@ -851,6 +851,11 @@ status: "pulled"
 .soa-hero--achilles { box-shadow: 6px 6px 0 #44596f; } .soa-hero--patroclus { box-shadow: 6px 6px 0 #a9503d; } .soa-hero--hector { box-shadow: 6px 6px 0 #c79d4f; }
 .soa-guide + .soa-signup { margin-top: 1.4rem; }
 a.soa-email { text-decoration: none; }
+.soa-guide { gap: 2rem !important; padding: 1.8rem 2rem !important; }
+.soa-guide__cover { flex: none; display: block; transform: rotate(-4deg); transition: transform .25s; }
+.soa-guide__cover:hover { transform: rotate(0deg) translateY(-4px); }
+.soa-guide__cover img { display: block; width: 150px; height: auto; border: 3px solid #ece4d3 !important; box-shadow: 8px 8px 0 #c79d4f; }
+.soa-guide { overflow: visible !important; } .soa-guide__cover { margin: .6rem .4rem .6rem 0; }
 
 </style>
 <script>
