@@ -78,7 +78,7 @@ status: "pulled"
 </ul></div>
 </div>
 <details class="soa-more">
-<summary>More on Patroclus's family</summary>
+<summary>More on Patroclus's family: exile, fostering, and his father</summary>
 <div class="soa-more__body">
 <p>While Patroclus came from royal lineage, his exile and subsequent fostering by King Peleus became a crucial turning point in his life and in the story.</p>
 <p>Adoption: After his exile, Patroclus was taken in by King Peleus and raised alongside Achilles in Phthia</p>
@@ -97,27 +97,28 @@ status: "pulled"
 <div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>The main characters are Patroclus, the narrator; Achilles; Achilles's parents Thetis and Peleus; their teacher Chiron; the Greek leaders Odysseus and Agamemnon; Briseis; and the Trojan prince Hector.</p></div>
 </div>
 <ul class="soa-cast">
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Patroclus</h3><p>The narrator. An exiled prince raised at Phthia beside Achilles, and a gifted healer.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Achilles</h3><p>Son of Peleus and Thetis; the best of the Greeks, torn between glory and love.</p></li>
-<li class="soa-cast__card soa-cast__card--god"><p class="soa-cast__side">God / immortal</p><h3>Thetis</h3><p>Sea nymph and Achilles's mother. She distrusts Patroclus.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Peleus</h3><p>Mortal king of Phthia, Achilles's father. He takes Patroclus in after his exile.</p></li>
-<li class="soa-cast__card soa-cast__card--god"><p class="soa-cast__side">God / immortal</p><h3>Chiron</h3><p>The centaur who teaches the boys medicine and music on Mount Pelion.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Odysseus</h3><p>King of Ithaca. He brings Achilles to the war at Troy.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Agamemnon</h3><p>Leader of the Greek army. His seizure of Briseis splits the camp.</p></li>
-<li class="soa-cast__card soa-cast__card--captive"><p class="soa-cast__side">Captive</p><h3>Briseis</h3><p>A captive woman Patroclus protects, and his close friend.</p></li>
-<li class="soa-cast__card soa-cast__card--trojan"><p class="soa-cast__side">Trojan</p><h3>Hector</h3><p>Prince of Troy. He kills Patroclus in battle.</p></li>
-<li class="soa-cast__card soa-cast__card--trojan"><p class="soa-cast__side">Trojan</p><h3>Priam</h3><p>King of Troy, Hector's father. He begs Achilles for his son's body.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Deidameia</h3><p>Princess of Scyros, mother of Achilles's son Pyrrhus.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Pyrrhus</h3><p>Also called Neoptolemus. Achilles's son, who arrives at Troy after his father's death.</p></li>
-<li class="soa-cast__card soa-cast__card--greek"><p class="soa-cast__side">Greek</p><h3>Menoetius</h3><p>King of Opus, Patroclus's father, who sends him into exile.</p></li>
-</ul><div class="soa-answers__grid">
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-patroclus.png" alt="Ink portrait of Patroclus, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Patroclus</h3><p>The narrator. An exiled prince raised at Phthia beside Achilles, and a gifted healer.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-achilles.png" alt="Ink portrait of Achilles, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Achilles</h3><p>Son of Peleus and Thetis; the best of the Greeks, torn between glory and love.</p></div></li>
+<li class="soa-cast__card soa-cast__card--god"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-thetis.png" alt="Ink portrait of Thetis, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">God / immortal</p><h3>Thetis</h3><p>Sea nymph and Achilles's mother. She distrusts Patroclus.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">P</span></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Peleus</h3><p>Mortal king of Phthia, Achilles's father. He takes Patroclus in after his exile.</p></div></li>
+<li class="soa-cast__card soa-cast__card--god"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">C</span></span><div class="soa-cast__text"><p class="soa-cast__side">God / immortal</p><h3>Chiron</h3><p>The centaur who teaches the boys medicine and music on Mount Pelion.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-odysseus.png" alt="Ink portrait of Odysseus, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Odysseus</h3><p>King of Ithaca. He brings Achilles to the war at Troy.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">A</span></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Agamemnon</h3><p>Leader of the Greek army. His seizure of Briseis splits the camp.</p></div></li>
+<li class="soa-cast__card soa-cast__card--captive"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-briseis.png" alt="Ink portrait of Briseis, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">Captive</p><h3>Briseis</h3><p>A captive woman Patroclus protects, and his close friend.</p></div></li>
+<li class="soa-cast__card soa-cast__card--trojan"><span class="soa-cast__art"><img class="soa-cast__img" src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-hector.png" alt="Ink portrait of Hector, after John Flaxman" loading="lazy" width="96" height="96"></span><div class="soa-cast__text"><p class="soa-cast__side">Trojan</p><h3>Hector</h3><p>Prince of Troy. He kills Patroclus in battle.</p></div></li>
+<li class="soa-cast__card soa-cast__card--trojan"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">P</span></span><div class="soa-cast__text"><p class="soa-cast__side">Trojan</p><h3>Priam</h3><p>King of Troy, Hector's father. He begs Achilles for his son's body.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">D</span></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Deidameia</h3><p>Princess of Scyros, mother of Achilles's son Pyrrhus.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">P</span></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Pyrrhus</h3><p>Also called Neoptolemus. Achilles's son, who arrives at Troy after his father's death.</p></div></li>
+<li class="soa-cast__card soa-cast__card--greek"><span class="soa-cast__art"><span class="soa-cast__mono" aria-hidden="true">M</span></span><div class="soa-cast__text"><p class="soa-cast__side">Greek</p><h3>Menoetius</h3><p>King of Opus, Patroclus's father, who sends him into exile.</p></div></li>
+</ul>
+<p class="soa-credit">Portraits: John Flaxman's illustrations to the <i>Iliad</i> (1793), engraved by Tommaso Piroli, redrawn as ink crops. Public domain. Sources: <a href="https://commons.wikimedia.org/wiki/File:The_Iliad_of_Homer_-_engraved_by_Thomas_Piroli,_from_the_;_from_the_composition_of_John_Flaxman,_sculptor_-_btv1b8457384b_(10_of_82).jpg">plate 1</a> (Achilles, Patroclus, Briseis), <a href="https://commons.wikimedia.org/wiki/File:The_Iliad_of_Homer_-_engraved_by_Thomas_Piroli,_from_the_;_from_the_composition_of_John_Flaxman,_sculptor_-_btv1b8457384b_(19_of_82).jpg">plate 10</a> (Hector), <a href="https://commons.wikimedia.org/wiki/File:The_Iliad_of_Homer_-_engraved_by_Thomas_Piroli,_from_the_;_from_the_composition_of_John_Flaxman,_sculptor_-_btv1b8457384b_(23_of_82).jpg">plate 14</a> (Odysseus), <a href="https://commons.wikimedia.org/wiki/File:The_Iliad_of_Homer_-_engraved_by_Thomas_Piroli,_from_the_;_from_the_composition_of_John_Flaxman,_sculptor_-_btv1b8457384b_(36_of_82).jpg">plate 27</a> (Thetis), Bibliothèque nationale de France via Wikimedia Commons.</p><div class="soa-answers__grid">
 <div class="soa-ans"><h3>Who is Deidameia in The Song of Achilles?</h3><p>Deidameia is the princess of Scyros, daughter of King Lycomedes. Thetis hides Achilles at her father's court disguised as a girl and arranges their marriage. Deidameia bears Achilles's only son, Pyrrhus, and is left behind when Achilles sails for Troy. Her scenes with Patroclus are some of the most uncomfortable in the book.</p></div>
 <div class="soa-ans"><h3>Who is Pyrrhus (Neoptolemus)?</h3><p>Pyrrhus, also called Neoptolemus, is the son of Achilles and Deidameia. Raised by Thetis, he arrives at Troy only after his father's death. He is colder and crueller than Achilles ever was, and his choices shape how Achilles and Patroclus are remembered.</p></div>
 <div class="soa-ans"><h3>Who is Menoetius, Patroclus's father?</h3><p>Menoetius is the king of Opus. In the novel he is a distant, disappointed father who sees nothing worth valuing in his son. After a boy dies in a fight, Menoetius sends Patroclus into exile, which is how Patroclus ends up at Peleus's court with Achilles.</p></div>
 <div class="soa-ans"><h3>Who are Achilles's parents?</h3><p>Achilles's mother is Thetis, an immortal sea nymph, and his father is Peleus, the mortal king of Phthia. That split, half god and half human, runs through his whole story: the fame Thetis wants for him, and the death Peleus's mortality makes certain.</p></div>
 </div>
 <details class="soa-more">
-<summary>Full character notes</summary>
+<summary>Full character notes: gods, royal families, war leaders, women in the story</summary>
 <div class="soa-more__body">
 <h3>Main Characters</h3>
 <strong>Achilles</strong>: The legendary warrior, son of Thetis and King Peleus, known for his extraordinary fighting abilities and his deep bond with Patroclus.
@@ -171,8 +172,12 @@ status: "pulled"
 <div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>Everything turns on Achilles and Patroclus. Thetis pulls against them, Odysseus and Agamemnon draw Achilles into the war, and Hector's death seals Achilles's fate.</p></div>
 </div>
 <p>Tap or hover over a name to see who they are and how they're tied to everyone else.</p>
+<ul class="soa-web__key">
+<li><i class="k-greek"></i>Greeks</li><li><i class="k-trojan"></i>Trojans</li><li><i class="k-god"></i>Gods and immortals</li><li><i class="k-captive"></i>Captive</li>
+<li><b class="k-love"></b>Love</li><li><b class="k-death"></b>Kills</li><li><b class="k-tension"></b>Tension</li>
+</ul>
 <div class="soa-web__wrap">
-<svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected">
+<svg class="soa-web__svg" viewBox="0 0 1000 640" role="img" aria-label="Diagram of the characters in The Song of Achilles and how they are connected"><defs><clipPath id="soa-cp-achilles"><circle cx="470.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-patroclus"><circle cx="300.0" cy="300.0" r="64.0"/></clipPath><clipPath id="soa-cp-thetis"><circle cx="470.0" cy="110.0" r="47.0"/></clipPath><clipPath id="soa-cp-briseis"><circle cx="560.0" cy="460.0" r="47.0"/></clipPath><clipPath id="soa-cp-odysseus"><circle cx="640.0" cy="170.0" r="50.0"/></clipPath><clipPath id="soa-cp-hector"><circle cx="860.0" cy="300.0" r="56.0"/></clipPath></defs>
 <g class="soa-edges">
 <line data-a="achilles" data-b="patroclus" x1="470" y1="300" x2="300" y2="300" class="soa-e soa-e--love"/>
 <line data-a="achilles" data-b="thetis" x1="470" y1="300" x2="470" y2="110"/>
@@ -200,18 +205,18 @@ status: "pulled"
 <line data-a="thetis" data-b="patroclus" x1="470" y1="110" x2="300" y2="300" class="soa-e soa-e--tension"/>
 </g>
 <g class="soa-nodes">
-<g class="soa-n soa-n--greek soa-n--big" data-id="achilles" tabindex="0" role="button"><circle cx="470" cy="300" r="66"/><text x="470" y="301">Achilles</text></g>
-<g class="soa-n soa-n--greek soa-n--big" data-id="patroclus" tabindex="0" role="button"><circle cx="300" cy="300" r="66"/><text x="300" y="301">Patroclus</text></g>
-<g class="soa-n soa-n--god" data-id="thetis" tabindex="0" role="button"><circle cx="470" cy="110" r="49"/><text x="470" y="110">Thetis</text></g>
+<g class="soa-n soa-n--greek soa-n--big" data-id="achilles" tabindex="0" role="button"><circle cx="470" cy="300" r="66"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-achilles.png" x="404.0" y="234.0" width="132.0" height="132.0" clip-path="url(#soa-cp-achilles)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="470" y="386.0">Achilles</text></g>
+<g class="soa-n soa-n--greek soa-n--big" data-id="patroclus" tabindex="0" role="button"><circle cx="300" cy="300" r="66"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-patroclus.png" x="234.0" y="234.0" width="132.0" height="132.0" clip-path="url(#soa-cp-patroclus)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="300" y="386.0">Patroclus</text></g>
+<g class="soa-n soa-n--god" data-id="thetis" tabindex="0" role="button"><circle cx="470" cy="110" r="49"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-thetis.png" x="421.0" y="61.0" width="98.0" height="98.0" clip-path="url(#soa-cp-thetis)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="470" y="179.0">Thetis</text></g>
 <g class="soa-n soa-n--greek" data-id="peleus" tabindex="0" role="button"><circle cx="300" cy="140" r="46"/><text x="300" y="140">Peleus</text></g>
 <g class="soa-n soa-n--greek" data-id="menoetius" tabindex="0" role="button"><circle cx="110" cy="200" r="49"/><text x="110" y="200">Menoetius</text></g>
 <g class="soa-n soa-n--god" data-id="chiron" tabindex="0" role="button"><circle cx="180" cy="440" r="46"/><text x="180" y="440">Chiron</text></g>
 <g class="soa-n soa-n--greek" data-id="deidameia" tabindex="0" role="button"><circle cx="330" cy="540" r="52"/><text x="330" y="540">Deidameia</text></g>
 <g class="soa-n soa-n--greek" data-id="pyrrhus" tabindex="0" role="button"><circle cx="500" cy="590" r="49"/><text x="500" y="590">Pyrrhus</text></g>
-<g class="soa-n soa-n--captive" data-id="briseis" tabindex="0" role="button"><circle cx="560" cy="460" r="49"/><text x="560" y="460">Briseis</text></g>
+<g class="soa-n soa-n--captive" data-id="briseis" tabindex="0" role="button"><circle cx="560" cy="460" r="49"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-briseis.png" x="511.0" y="411.0" width="98.0" height="98.0" clip-path="url(#soa-cp-briseis)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="560" y="529.0">Briseis</text></g>
 <g class="soa-n soa-n--greek" data-id="agamemnon" tabindex="0" role="button"><circle cx="680" cy="380" r="58"/><text x="680" y="380">Agamemnon</text></g>
-<g class="soa-n soa-n--greek" data-id="odysseus" tabindex="0" role="button"><circle cx="640" cy="170" r="52"/><text x="640" y="170">Odysseus</text></g>
-<g class="soa-n soa-n--trojan soa-n--big" data-id="hector" tabindex="0" role="button"><circle cx="860" cy="300" r="58"/><text x="860" y="300">Hector</text></g>
+<g class="soa-n soa-n--greek" data-id="odysseus" tabindex="0" role="button"><circle cx="640" cy="170" r="52"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-odysseus.png" x="588.0" y="118.0" width="104.0" height="104.0" clip-path="url(#soa-cp-odysseus)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="640" y="242.0">Odysseus</text></g>
+<g class="soa-n soa-n--trojan soa-n--big" data-id="hector" tabindex="0" role="button"><circle cx="860" cy="300" r="58"/><image href="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-hector.png" x="802.0" y="242.0" width="116.0" height="116.0" clip-path="url(#soa-cp-hector)" preserveAspectRatio="xMidYMid slice"/><text class="soa-n__under" x="860" y="378.0">Hector</text></g>
 <g class="soa-n soa-n--trojan" data-id="priam" tabindex="0" role="button"><circle cx="880" cy="140" r="46"/><text x="880" y="140">Priam</text></g>
 <g class="soa-n soa-n--trojan" data-id="paris" tabindex="0" role="button"><circle cx="840" cy="500" r="46"/><text x="840" y="500">Paris</text></g>
 <g class="soa-n soa-n--god" data-id="apollo" tabindex="0" role="button"><circle cx="700" cy="590" r="46"/><text x="700" y="590">Apollo</text></g>
@@ -224,10 +229,7 @@ status: "pulled"
 <ul class="soa-web__links"></ul>
 </aside>
 </div>
-<ul class="soa-web__key">
-<li><i class="k-greek"></i>Greeks</li><li><i class="k-trojan"></i>Trojans</li><li><i class="k-god"></i>Gods and immortals</li><li><i class="k-captive"></i>Captive</li>
-<li><b class="k-love"></b>Love</li><li><b class="k-death"></b>Kills</li><li><b class="k-tension"></b>Tension</li>
-</ul>
+
 
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
@@ -241,18 +243,10 @@ status: "pulled"
 </div>
 <h3>Is The Song of Achilles spicy?</h3>
 <p>A little. There are a few intimate scenes between Achilles and Patroclus, written with restraint rather than explicit detail. The book cares far more about their emotional bond.</p>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The Song of Achilles contains some intimate scenes and romantic content between the main characters, though they are written with literary sensitivity rather than explicit detail. While there are some passionate moments, they are generally handled tastefully and serve the story's emotional development rather than being gratuitous. The book focuses more on the deep emotional bond between the characters than on the physical aspects of their relationship.</p></div></details>
 <h3>Is The Song of Achilles LGBTQ?</h3>
 <p>Yes. It is a love story between Achilles and Patroclus, following an ancient tradition, including Plato and Aeschylus, that read them as lovers.</p>
-<h3>Is The Song of Achilles appropriate for a 14 year old?</h3>
-<p>It is generally considered suitable for mature readers aged 14 and up. It includes battle violence, death and some intimate moments, none of them explicit.</p>
-<h3>Is The Song of Achilles based on The Iliad?</h3>
-<p>Yes. It retells events from Homer's Iliad but begins with Patroclus and Achilles's childhood and continues past the end of the Iliad, narrated by Patroclus.</p>
-<h3>Why is it called The Song of Achilles?</h3>
-<p>Epic heroes were sung by bards. This book is Patroclus's song about Achilles: the hero's story told by the person who loved him most.</p><details class="soa-more">
-<summary>Longer answers and more questions</summary>
-<div class="soa-more__body">
-<h4>Is The Song of Achilles LGBTQ?</h4>
-<p>Yes, The Song of Achilles is considered LGBTQ literature as it centers on the romantic relationship between two male characters, Achilles and Patroclus. Author Madeline Miller deliberately chose to portray their relationship as explicitly romantic and intimate, building upon interpretations of their bond that date back to ancient times.</p>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>Yes, The Song of Achilles is considered LGBTQ literature as it centers on the romantic relationship between two male characters, Achilles and Patroclus. Author Madeline Miller deliberately chose to portray their relationship as explicitly romantic and intimate, building upon interpretations of their bond that date back to ancient times.</p>
 <p>The nature of Achilles and Patroclus's relationship has been debated throughout history. While Homer's Iliad depicts them as extremely close companions, ancient Greek texts and commentaries often interpreted their relationship as romantic love. Notable classical writers like Plato, in his Symposium, referenced their relationship as romantic, and Aeschylus explicitly portrayed them as lovers in his lost play The Myrmidons.</p>
 <p>Miller's interpretation in The Song of Achilles follows this romantic tradition, presenting their relationship as a deep love story that develops from childhood friendship to adult romance. The novel explores their relationship with sensitivity and depth, focusing on emotional intimacy, mutual understanding, and unwavering devotion.</p>
 <p>The book's LGBTQ themes are handled naturally within the context of ancient Greek culture, where same-sex relationships were viewed differently than in modern times. Miller portrays their relationship without anachronistic elements, while still making it accessible and meaningful to contemporary readers. The story doesn't treat their same-sex relationship as taboo or problematic; instead, any conflict stems from Achilles's divine destiny and the prophecies surrounding his fate.</p>
@@ -264,103 +258,151 @@ status: "pulled"
 <li>It demonstrates how queer narratives have always been part of human storytelling</li>
 </ul>
 <p>The book has found particular resonance among LGBTQ readers who appreciate seeing a complex, tender love story between two men that doesn't shy away from emotional depth while still remaining true to its historical context. Miller's approach has helped make classical literature more accessible and relevant to contemporary LGBTQ audiences while also highlighting how same-sex love has been part of human storytelling for thousands of years.</p>
-<p>The success of The Song of Achilles as LGBTQ literature lies in how it balances historical context with emotional authenticity, creating a narrative that speaks to modern readers while honoring its classical roots. The novel demonstrates how LGBTQ themes can be explored in historical and classical settings without feeling forced or anachronistic.</p>
-<h4>Is The Song of Achilles spicy?</h4>
-<p>The Song of Achilles contains some intimate scenes and romantic content between the main characters, though they are written with literary sensitivity rather than explicit detail. While there are some passionate moments, they are generally handled tastefully and serve the story's emotional development rather than being gratuitous. The book focuses more on the deep emotional bond between the characters than on the physical aspects of their relationship.</p>
-<h4>Is The Song of Achilles appropriate for a 14 year old?</h4>
-<p>The Song of Achilles is generally considered appropriate for mature teenagers (14+). While it contains some mature themes including violence and romantic relationships, these are handled tastefully and within historical context. Parents should be aware that the book includes battle scenes, some intimate moments (though not explicitly detailed), and discussions of death and war.</p>
-<h4>Is The Song of Achilles based on The Iliad?</h4>
-<p>Yes, The Song of Achilles is based on Homer's Iliad, but it expands significantly beyond the original epic poem. While The Iliad primarily focuses on a few weeks during the Trojan War, The Song of Achilles tells a broader story, beginning with Patroclus and Achilles' childhood and continuing through the events of The Iliad.</p>
+<p>The success of The Song of Achilles as LGBTQ literature lies in how it balances historical context with emotional authenticity, creating a narrative that speaks to modern readers while honoring its classical roots. The novel demonstrates how LGBTQ themes can be explored in historical and classical settings without feeling forced or anachronistic.</p></div></details>
+<h3>Is The Song of Achilles appropriate for a 14 year old?</h3>
+<p>It is generally considered suitable for mature readers aged 14 and up. It includes battle violence, death and some intimate moments, none of them explicit.</p>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The Song of Achilles is generally considered appropriate for mature teenagers (14+). While it contains some mature themes including violence and romantic relationships, these are handled tastefully and within historical context. Parents should be aware that the book includes battle scenes, some intimate moments (though not explicitly detailed), and discussions of death and war.</p></div></details>
+<h3>Is The Song of Achilles based on The Iliad?</h3>
+<p>Yes. It retells events from Homer's Iliad but begins with Patroclus and Achilles's childhood and continues past the end of the Iliad, narrated by Patroclus.</p>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>Yes, The Song of Achilles is based on Homer's Iliad, but it expands significantly beyond the original epic poem. While The Iliad primarily focuses on a few weeks during the Trojan War, The Song of Achilles tells a broader story, beginning with Patroclus and Achilles' childhood and continuing through the events of The Iliad.</p>
+<ul>
 <ul></ul>
+</ul>
 <p>Key differences from The Iliad include:</p>
+<ul>
+<ul>
 <ul></ul>
 <li>The novel is narrated from Patroclus's perspective rather than using The Iliad's third-person narrative</li>
 <li>It provides extensive background on the characters' early lives and relationship development</li>
 <li>The story incorporates elements from other ancient Greek sources beyond The Iliad</li>
 <li>It expands on characters and relationships that receive less attention in Homer's work</li>
 <ul></ul>
-<p>While Miller stays faithful to the major events and outcomes of The Iliad, she reimagines the story through a more intimate lens, focusing on the personal relationships and emotional journeys of the characters rather than the epic's emphasis on warfare and divine intervention.</p>
-<h4>Why is The Song of Achilles so popular?</h4>
-
-<p>The Song of Achilles has achieved remarkable popularity for several key reasons:</p>
-<ul>
-<li><strong>Accessible retelling of classics:</strong> Miller makes ancient Greek mythology accessible to modern readers while maintaining the story's epic scope and emotional depth.</li>
-
-<li><strong>Beautiful prose:</strong> The novel is celebrated for its lyrical writing style and poetic language that captures both tender moments and tragic events with equal grace.</li>
-
-<li><strong>Universal themes:</strong> The story explores timeless themes like love, destiny, loyalty, and sacrifice that resonate deeply with readers across different backgrounds and ages.</li>
-
-<li><strong>Character development:</strong> The novel provides rich psychological depth to mythological figures, making them feel deeply human and relatable to modern readers.</li>
-
-<li><strong>Social media influence:</strong> The book gained significant popularity through platforms like TikTok and Instagram, where readers enthusiastically shared their emotional responses to the story.</li>
 </ul>
-<p>The novel's success also stems from its unique narrative approach:</p>
-<ul>
-<li><strong>Fresh perspective:</strong> By telling the story through Patroclus's eyes, Miller offers a fresh take on a well-known myth, providing intimate insights into the characters' motivations and emotions.</li>
-
-<li><strong>Love story focus:</strong> While maintaining historical accuracy, the book prioritizes the love story between Achilles and Patroclus, appealing to readers who appreciate character-driven narratives.</li>
-
-<li><strong>Emotional impact:</strong> The novel's ability to create deep emotional investment in its characters, leading to a powerful and moving conclusion, has generated strong word-of-mouth recommendations.</li>
 </ul>
-<p>Additionally, the book's timing and cultural relevance have contributed to its popularity:</p>
+<p>While Miller stays faithful to the major events and outcomes of The Iliad, she reimagines the story through a more intimate lens, focusing on the personal relationships and emotional journeys of the characters rather than the epic's emphasis on warfare and divine intervention.</p></div></details>
+<h3>Why is it called The Song of Achilles?</h3>
+<p>Epic heroes were sung by bards. This book is Patroclus's song about Achilles: the hero's story told by the person who loved him most.</p>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The title "The Song of Achilles" references several aspects of the novel:</p>
 <ul>
-<li><strong>LGBTQ+ representation:</strong> The novel's sensitive and dignified portrayal of a same-sex relationship in classical literature has resonated with many readers seeking diverse perspectives in historical fiction.</li>
-
-<li><strong>Cultural moment:</strong> The book's themes of identity, love, and acceptance align with contemporary social discussions, making it particularly relevant to modern audiences.</li>
-</ul>
-<h4>Was Achilles actually shot in the heel?</h4>
-
-<p>In the later myths, yes: an arrow struck him in the heel, his one weak spot. According to the most common version of the myth, Paris shot Achilles in his vulnerable heel with an arrow guided by the god Apollo.</p>
-<p>The story of Achilles' heel vulnerability comes from the legend that when he was born, his mother Thetis dipped him in the River Styx to make him invulnerable. However, she held him by his heel, which didn't touch the water, leaving that spot as his only weak point. This is where we get the phrase "Achilles' heel" to describe a person's weak spot despite overall strength.</p>
-<p>Interestingly, this particular detail about his heel vulnerability doesn't appear in Homer's Iliad. The story of Achilles' heel and his death by Paris's arrow emerged in later Greek and Roman myths, particularly in Ovid's Metamorphoses. In the Iliad, while Achilles' death is prophesied, the specific method isn't described in detail.</p>
-<p>The myth of Achilles' death highlights important themes about fate and hubris - even the greatest warrior had a weakness, and despite his near-invulnerability, he was still mortal and subject to the will of the gods. Paris, considered a lesser warrior, was able to defeat him through divine intervention, demonstrating that even the mightiest heroes could fall.</p>
-<h4>Who is Achilles girlfriend?</h4>
-
-<p>In The Song of Achilles, Achilles does not have a girlfriend in the traditional sense. His primary romantic relationship is with Patroclus. While he does have a brief relationship with Princess Deidameia during his time on Skyros (which results in the birth of his son Neoptolemus), this is not portrayed as a love match but rather a relationship of circumstance while he was hiding from the war.</p>
-<p>In the original Greek mythology, Achilles has several romantic associations, including:</p>
-<ul>
-<li><strong>Deidameia:</strong> The princess of Skyros who becomes the mother of his son</li>
-
-<li><strong>Briseis:</strong> A war prize captured during the Trojan War, though their relationship is more complex and varies depending on the source material</li>
-
-<li><strong>Patroclus:</strong> While ancient sources vary in their explicit description of their relationship, many classical writers interpreted their bond as romantic, a view that The Song of Achilles fully embraces</li>
-</ul>
-<h4>How old are Achilles and Patroclus in The Song of Achilles?</h4>
-
-<p>In The Song of Achilles, Patroclus and Achilles first meet when they are young boys around 8-9 years old. The story follows them through their childhood, adolescence, and into early adulthood. When they join the Trojan War, they are young men in their late teens or early twenties. The exact ages aren't always explicitly stated, but their relationship develops over approximately a decade before the events of the Trojan War.</p>
-<h4>Are Achilles and Patroclus lovers in Song of Achilles?</h4>
-
-<p>Yes, in The Song of Achilles, Achilles and Patroclus are explicitly portrayed as lovers. Their relationship develops from childhood friendship into a deep romantic and physical partnership. The novel presents their love story as the central narrative, depicting their relationship with tenderness and emotional depth. While they begin as close friends during their youth, their bond gradually evolves into romantic love during their teenage years, particularly during their time training with Chiron. Their relationship continues to deepen throughout the story, becoming one of profound devotion that ultimately shapes both characters' destinies.</p>
-<p>The novel stays true to interpretations from ancient Greek literature that viewed their relationship as romantic, while developing their love story in a way that resonates with modern readers. Their bond is portrayed as both emotional and physical, though intimate scenes are handled with restraint and literary sensitivity.</p>
-<p>One of the most poignant moments regarding their relationship comes at the end of the novel, after both Achilles and Patroclus have died. Achilles' son, Pyrrhus (also known as Neoptolemus), arrives at Troy and initially refuses to bury Patroclus's ashes with Achilles', not understanding their significance to each other. It is Thetis, Achilles' divine mother, who ultimately reveals the depth of their relationship to Pyrrhus.</p>
-<p>Despite her initial disapproval of Patroclus during their lives, Thetis comes to recognize and honor the profound love between her son and Patroclus. In a moving scene, she tells Pyrrhus about their relationship and convinces him to allow their ashes to be mixed together. This moment is particularly significant because Thetis, who had once seen Patroclus as unworthy of her son, is the one who ensures their eternal union.</p>
-<p>The novel ends with Patroclus's spirit finally being able to join Achilles in the underworld after their ashes are combined, symbolizing their eternal reunion. This conclusion reinforces the central theme that their love transcends death itself. The fact that Thetis, a goddess who had opposed their relationship in life, becomes the advocate for their love in death adds a powerful layer of recognition and acceptance to their story.</p>
-<h4>What is the target audience of The Song of Achilles?</h4>
-
-<p>The Song of Achilles is primarily targeted at:</p>
-<ul>
-<li><strong>Young Adult and Adult readers:</strong> While marketed as adult fiction, it appeals strongly to mature young adult readers (14+)</li>
-
-<li><strong>Lovers of mythology:</strong> Readers interested in Greek mythology and classical retellings</li>
-
-<li><strong>Literary fiction readers:</strong> Those who appreciate character-driven narratives and lyrical prose</li>
-
-<li><strong>LGBTQ+ readers:</strong> People seeking well-crafted queer representation in historical/mythological contexts</li>
-</ul>
-<p>While the book contains mature themes and some violence, it's written in an accessible style that makes it suitable for most readers who can handle emotional complexity and moderate adult content. The novel bridges the gap between young adult and adult literature, making it appealing to a broad age range of mature readers.</p>
-<h4>Why is it called The Song of Achilles?</h4>
-
-<p>The title "The Song of Achilles" references several aspects of the novel:</p>
-<ul>
+<ul></p>
 <li><strong>Classical tradition:</strong> It evokes the tradition of epic poetry, like The Iliad, where heroes' stories were sung by bards</li>
-
+</ul>
+</ul>
+<ul>
+<ul>
 <li><strong>Narrative perspective:</strong> The novel serves as Patroclus's "song" about Achilles, telling the hero's story through the eyes of the one who loved him most</li>
-
+</ul>
+</ul>
+<ul>
+<ul>
 <li><strong>Poetic style:</strong> The lyrical, flowing prose style of the novel resembles a song in its beauty and rhythm</li>
 <li>The title also carries a touch of irony, as this "song" is not the traditional glorification of Achilles's martial prowess, but rather an intimate portrait that reveals his humanity through his relationship with Patroclus.</li>
 </ul>
+</ul></div></details><h3 class="soa-faq__head">More questions readers ask</h3>
+<div class="soa-faq__list">
+<details class="soa-faq"><summary>Why is The Song of Achilles so popular?</summary><div class="soa-faq__body"><p>The Song of Achilles has achieved remarkable popularity for several key reasons:</p>
+<ul>
+<ul></p>
+<li><strong>Accessible retelling of classics:</strong> Miller makes ancient Greek mythology accessible to modern readers while maintaining the story's epic scope and emotional depth.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Beautiful prose:</strong> The novel is celebrated for its lyrical writing style and poetic language that captures both tender moments and tragic events with equal grace.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Universal themes:</strong> The story explores timeless themes like love, destiny, loyalty, and sacrifice that resonate deeply with readers across different backgrounds and ages.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Character development:</strong> The novel provides rich psychological depth to mythological figures, making them feel deeply human and relatable to modern readers.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Social media influence:</strong> The book gained significant popularity through platforms like TikTok and Instagram, where readers enthusiastically shared their emotional responses to the story.</li>
+</ul>
+</ul>
+<p>The novel's success also stems from its unique narrative approach:</p>
+<ul>
+<ul></p>
+<li><strong>Fresh perspective:</strong> By telling the story through Patroclus's eyes, Miller offers a fresh take on a well-known myth, providing intimate insights into the characters' motivations and emotions.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Love story focus:</strong> While maintaining historical accuracy, the book prioritizes the love story between Achilles and Patroclus, appealing to readers who appreciate character-driven narratives.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Emotional impact:</strong> The novel's ability to create deep emotional investment in its characters, leading to a powerful and moving conclusion, has generated strong word-of-mouth recommendations.</li>
+</ul>
+</ul>
+<p>Additionally, the book's timing and cultural relevance have contributed to its popularity:</p>
+<ul>
+<ul></p>
+<li><strong>LGBTQ+ representation:</strong> The novel's sensitive and dignified portrayal of a same-sex relationship in classical literature has resonated with many readers seeking diverse perspectives in historical fiction.</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Cultural moment:</strong> The book's themes of identity, love, and acceptance align with contemporary social discussions, making it particularly relevant to modern audiences.</li>
+</ul>
+</ul></div></details>
+<details class="soa-faq"><summary>Was Achilles actually shot in the heel?</summary><div class="soa-faq__body"><p>In the later myths, yes: an arrow struck him in the heel, his one weak spot. According to the most common version of the myth, Paris shot Achilles in his vulnerable heel with an arrow guided by the god Apollo.</p>
+<p>The story of Achilles' heel vulnerability comes from the legend that when he was born, his mother Thetis dipped him in the River Styx to make him invulnerable. However, she held him by his heel, which didn't touch the water, leaving that spot as his only weak point. This is where we get the phrase "Achilles' heel" to describe a person's weak spot despite overall strength.</p>
+<p>Interestingly, this particular detail about his heel vulnerability doesn't appear in Homer's Iliad. The story of Achilles' heel and his death by Paris's arrow emerged in later Greek and Roman myths, particularly in Ovid's Metamorphoses. In the Iliad, while Achilles' death is prophesied, the specific method isn't described in detail.</p>
+<p>The myth of Achilles' death highlights important themes about fate and hubris - even the greatest warrior had a weakness, and despite his near-invulnerability, he was still mortal and subject to the will of the gods. Paris, considered a lesser warrior, was able to defeat him through divine intervention, demonstrating that even the mightiest heroes could fall.</p></div></details>
+<details class="soa-faq"><summary>Who is Achilles girlfriend?</summary><div class="soa-faq__body"><p>In The Song of Achilles, Achilles does not have a girlfriend in the traditional sense. His primary romantic relationship is with Patroclus. While he does have a brief relationship with Princess Deidameia during his time on Skyros (which results in the birth of his son Neoptolemus), this is not portrayed as a love match but rather a relationship of circumstance while he was hiding from the war.</p>
+<p>In the original Greek mythology, Achilles has several romantic associations, including:</p>
+<ul>
+<ul></p>
+<li><strong>Deidameia:</strong> The princess of Skyros who becomes the mother of his son</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Briseis:</strong> A war prize captured during the Trojan War, though their relationship is more complex and varies depending on the source material</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Patroclus:</strong> While ancient sources vary in their explicit description of their relationship, many classical writers interpreted their bond as romantic, a view that The Song of Achilles fully embraces</li>
+</ul>
+</ul></div></details>
+<details class="soa-faq"><summary>How old are Achilles and Patroclus in The Song of Achilles?</summary><div class="soa-faq__body"><p>In The Song of Achilles, Patroclus and Achilles first meet when they are young boys around 8-9 years old. The story follows them through their childhood, adolescence, and into early adulthood. When they join the Trojan War, they are young men in their late teens or early twenties. The exact ages aren't always explicitly stated, but their relationship develops over approximately a decade before the events of the Trojan War.</p></div></details>
+<details class="soa-faq"><summary>Are Achilles and Patroclus lovers in Song of Achilles?</summary><div class="soa-faq__body"><p>Yes, in The Song of Achilles, Achilles and Patroclus are explicitly portrayed as lovers. Their relationship develops from childhood friendship into a deep romantic and physical partnership. The novel presents their love story as the central narrative, depicting their relationship with tenderness and emotional depth. While they begin as close friends during their youth, their bond gradually evolves into romantic love during their teenage years, particularly during their time training with Chiron. Their relationship continues to deepen throughout the story, becoming one of profound devotion that ultimately shapes both characters' destinies.</p>
+<p>The novel stays true to interpretations from ancient Greek literature that viewed their relationship as romantic, while developing their love story in a way that resonates with modern readers. Their bond is portrayed as both emotional and physical, though intimate scenes are handled with restraint and literary sensitivity.</p>
+<p>One of the most poignant moments regarding their relationship comes at the end of the novel, after both Achilles and Patroclus have died. Achilles' son, Pyrrhus (also known as Neoptolemus), arrives at Troy and initially refuses to bury Patroclus's ashes with Achilles', not understanding their significance to each other. It is Thetis, Achilles' divine mother, who ultimately reveals the depth of their relationship to Pyrrhus.</p>
+<p>Despite her initial disapproval of Patroclus during their lives, Thetis comes to recognize and honor the profound love between her son and Patroclus. In a moving scene, she tells Pyrrhus about their relationship and convinces him to allow their ashes to be mixed together. This moment is particularly significant because Thetis, who had once seen Patroclus as unworthy of her son, is the one who ensures their eternal union.</p>
+<p>The novel ends with Patroclus's spirit finally being able to join Achilles in the underworld after their ashes are combined, symbolizing their eternal reunion. This conclusion reinforces the central theme that their love transcends death itself. The fact that Thetis, a goddess who had opposed their relationship in life, becomes the advocate for their love in death adds a powerful layer of recognition and acceptance to their story.</p></div></details>
+<details class="soa-faq"><summary>What is the target audience of The Song of Achilles?</summary><div class="soa-faq__body"><p>The Song of Achilles is primarily targeted at:</p>
+<ul>
+<ul></p>
+<li><strong>Young Adult and Adult readers:</strong> While marketed as adult fiction, it appeals strongly to mature young adult readers (14+)</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Lovers of mythology:</strong> Readers interested in Greek mythology and classical retellings</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>Literary fiction readers:</strong> Those who appreciate character-driven narratives and lyrical prose</li>
+</ul>
+</ul>
+<ul>
+<ul>
+<li><strong>LGBTQ+ readers:</strong> People seeking well-crafted queer representation in historical/mythological contexts</li>
+</ul>
+</ul>
+<p>While the book contains mature themes and some violence, it's written in an accessible style that makes it suitable for most readers who can handle emotional complexity and moderate adult content. The novel bridges the gap between young adult and adult literature, making it appealing to a broad age range of mature readers.</p></div></details>
 </div>
-</details>
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
@@ -376,16 +418,16 @@ status: "pulled"
 <table class="soa-table">
 <thead><tr><th scope="col"></th><th scope="col">The Iliad (Homer)</th><th scope="col">The Song of Achilles (Miller)</th></tr></thead>
 <tbody>
-<tr><th scope="row">Who tells it</th><td>A bard calling on the Muse, seeing everyone from above</td><td>Patroclus, in the first person, and after his death as a ghost</td></tr>
-<tr><th scope="row">Time span</th><td>About fifty days in the tenth year of the war</td><td>Patroclus's childhood through Achilles's death and beyond</td></tr>
-<tr><th scope="row">What it's about</th><td>The rage of Achilles and what it costs the Greeks</td><td>The love between Achilles and Patroclus, and what glory costs it</td></tr>
-<tr><th scope="row">Achilles &amp; Patroclus</th><td>Devoted companions; the nature of their bond is left open</td><td>Openly lovers, from boyhood friendship onward</td></tr>
-<tr><th scope="row">Patroclus</th><td>An older, skilled warrior and Achilles's right hand</td><td>A gentle exile who learns medicine and would rather heal than fight</td></tr>
-<tr><th scope="row">The gods</th><td>On stage constantly, taking sides and steering battles</td><td>Mostly offstage; Thetis is the god who matters</td></tr>
-<tr><th scope="row">Briseis</th><td>A prize of war at the centre of a quarrel, with little voice</td><td>A friend to Patroclus, with her own fears and courage</td></tr>
-<tr><th scope="row">Hector</th><td>A full hero in his own right: son, husband, father, defender of Troy</td><td>Seen from the Greek camp, mostly as the man Achilles is fated to kill</td></tr>
-<tr><th scope="row">How it ends</th><td>Hector's funeral in Troy; Achilles's death is still to come</td><td>Achilles's death, and the two lovers finally reunited in the underworld</td></tr>
-<tr><th scope="row">Style</th><td>Epic verse, repeated phrases and epithets, made to be performed aloud</td><td>Spare, lyrical modern prose, made to be read close</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 27h12M11 27 9 9M21 27l2-18M9 9c3-3 11-3 14 0M13 11v14M16 11v14M19 11v14"/></svg><span>Who tells it</span></th><td>A bard calling on the Muse, seeing everyone from above.</td><td>Patroclus, in the first person, and after his death as a ghost.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h14M9 27h14M10 5c0 7 12 8 12 11s-12 4-12 11M22 5c0 7-12 8-12 11s12 4 12 11"/></svg><span>Time span</span></th><td>About fifty days in the tenth year of the war.</td><td>Patroclus's childhood through Achilles's death and beyond.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h13a3 3 0 0 1 0 6H9M9 7a3 3 0 0 0 0 6v11a3 3 0 0 0 3 3h12M25 13v11a3 3 0 0 1-3 3"/></svg><span>What it's about</span></th><td>The rage of Achilles and what it costs the Greeks.</td><td>The love between Achilles and Patroclus, and what glory costs it.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12.5" cy="16" r="6.5"/><circle cx="19.5" cy="16" r="6.5"/></svg><span>Achilles &amp; Patroclus</span></th><td>Devoted companions; the nature of their bond is left open.</td><td>Openly lovers, from boyhood friendship onward.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 25c0-10 8-17 18-17 0 10-7 17-18 17zM7 25l11-11"/></svg><span>Patroclus</span></th><td>An older, skilled warrior and Achilles's right hand.</td><td>A gentle exile who learns medicine and would rather heal than fight.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4 9 18h7l-2 10 9-14h-7z"/></svg><span>The gods</span></th><td>On stage constantly, taking sides and steering battles.</td><td>Mostly offstage; Thetis is the god who matters.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26 26 6M11 21c-3 0-5-2-5-4 3 0 5 2 5 4zM15 17c0-3 2-5 4-5 0 3-2 5-4 5zM19 13c-3 0-5-2-5-4 3 0 5 2 5 4zM23 9c0-3 1-4 3-5"/></svg><span>Briseis</span></th><td>A prize of war at the centre of a quarrel, with little voice.</td><td>A friend to Patroclus, with her own fears and courage.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 23c0-9 4-15 8-15s8 6 8 15M8 23h5v-7M24 23h-5v-7M16 8V4h9"/></svg><span>Hector</span></th><td>A full hero in his own right: son, husband, father, defender of Troy.</td><td>Seen from the Greek camp, mostly as the man Achilles is fated to kill.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5h8M13 5c0 4-5 5-5 11 0 6 4 10 8 10s8-4 8-10c0-6-5-7-5-11M11 27h10"/></svg><span>How it ends</span></th><td>Hector's funeral in Troy; Achilles's death is still to come.</td><td>Achilles's death, and the two lovers finally reunited in the underworld.</td></tr>
+<tr><th scope="row"><svg class="soa-ic" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M25 5C15 8 10 16 8 27M25 5c-1 8-7 13-15 15M8 27l3-2"/></svg><span>Style</span></th><td>Epic verse, repeated phrases and epithets, made to be performed aloud.</td><td>Spare, lyrical modern prose, made to be read close.</td></tr>
 </tbody>
 </table>
 </div>
@@ -393,7 +435,7 @@ status: "pulled"
 <p class="soa-back"><a href="#outline">Back to the outline ↑</a></p>
 </section>
 
-<section id="quiz" class="soa-block soa-chapter soa-chapter--clay soa-band--alt soa-quiz">
+<section id="quiz" class="soa-block soa-chapter soa-chapter--clay soa-band--dark soa-quiz">
 <span class="soa-chapter__shape soa-shape soa-shape--tri soa-shape--clay" aria-hidden="true"></span>
 <div class="soa-chapter__head">
 <div class="soa-chapter__title"><p class="soa-chapter__num">06</p>
@@ -432,7 +474,7 @@ status: "pulled"
 <p>It is the moment the poem's rage finally breaks. Achilles gives back the body and grants Troy days of truce to mourn. Miller keeps this meeting in the novel, and it lands harder because we have watched what Achilles lost.</p>
 <p>Painters have returned to the scene for centuries. Ivanov's version, above, puts the light on Priam's bowed head and leaves Achilles half in shadow, a fair picture of a hero who has just remembered he is human.</p>
 <details class="soa-more">
-<summary>A reader's journey</summary>
+<summary>A reader's journey: tracking the wars, Achilles's moods, and that ending</summary>
 <div class="soa-more__body">
 <p>As I delved into this modern retelling of an ancient tale, I joined countless readers online who grapple with similar questions about this interesting narrative. The first half of the book captivated me with its intimate portrayal of young friendship blossoming into love, and the last quarter left me emotionally transformed - as it has many others, judging by the online discourse.</p>
 <p>One of my major challenges was keeping track of the sequence of conflicts:</p>
@@ -447,7 +489,7 @@ status: "pulled"
 <p>The question of whether this is truly a tragic tale or a love story that transcends death continues to spark debate. While the ending is undeniably heartbreaking, the final scene suggests an eternal reunion. Are readers simply trying to soften the blow by imagining a happily-ever-after in the underworld, or is this interpretation crucial to understanding the story's deeper meaning about love's endurance beyond death?</p>
 </div>
 </details><details class="soa-more">
-<summary>A modern reimagining</summary>
+<summary>A modern reimagining: Achilles and Patroclus today</summary>
 <div class="soa-more__body">
 <p>Imagining Achilles and Patroclus in contemporary society offers fascinating parallels and contrasts. In today's world, they might meet at an elite private school where Achilles is the star athlete with Olympic potential, while Patroclus is a scholarship student with dreams of becoming a doctor. Their relationship would face different challenges - not prophecies and gods, but perhaps social media pressure, family expectations, and career aspirations.</p>
 <p>Achilles might be struggling with the intense pressure of being a child prodigy, his Instagram filled with sponsorship deals and millions of followers, while dealing with a helicopter parent (Thetis as a high-powered CEO or influential politician). Patroclus could be the grounding force, perhaps running a medical nonprofit for underprivileged communities, his empathy and care for others remaining his defining characteristic.</p>
@@ -724,6 +766,54 @@ status: "pulled"
   .soa-rail { padding-left: 64px; }
   .soa-chapter__shape { display: none; }
 }
+/* Round 3 */
+.soa-rail { z-index: 5; }
+.soa-band--dark { background: #2a2622; box-shadow: 0 0 0 100vmax #2a2622 !important; clip-path: inset(0 -100vmax); color: #ece4d3; padding: 3.2rem 0 3rem !important; }
+.soa-band--dark h2, .soa-band--dark .soa-back a { color: #ece4d3 !important; }
+.soa-band--dark .soa-quick { color: #2a2622; box-shadow: 10px 10px 0 #c79d4f; }
+.soa-band--dark .soa-signup { background: #3a342e; }
+.soa-web__key { margin: 1rem 0 .4rem !important; }
+@media (min-width: 1120px) {
+  .soa-web__wrap { grid-template-columns: 1.9fr 1fr; align-items: stretch; }
+  .soa-web__info { contain: size; overflow-y: auto; min-height: 0 !important; }
+}
+.soa-n__under { font-weight: 700; paint-order: stroke; stroke: #ece4d3; stroke-width: 5px; }
+.soa-cast__card { display: grid !important; grid-template-columns: 84px minmax(0,1fr); gap: .9rem; align-items: start; }
+.soa-cast__art { display: grid; place-items: center; width: 84px; height: 84px; background: #ddd2bd; border: 2px solid #2a2622; overflow: hidden; }
+.soa-cast__card--greek .soa-cast__art { background: #c5ced8; } .soa-cast__card--trojan .soa-cast__art { background: #e3c2b8; }
+.soa-cast__card--god .soa-cast__art { background: #ead7ae; } .soa-cast__card--captive .soa-cast__art { border-style: dashed; background: #ece4d3; }
+.soa-cast__img { width: 100%; height: 100%; object-fit: cover; display: block; border: 0 !important; }
+.soa-cast__mono { font-size: 2.4rem; font-weight: 800; color: #2a2622; opacity: .55; }
+.soa-credit { font-size: .8rem !important; color: #5a534a; line-height: 1.5; margin: -.6rem 0 1.6rem !important; }
+.soa-ic { width: 26px; height: 26px; flex: none; color: #a9503d; }
+.soa-table tbody th { display: table-cell; } .soa-table tbody th span { vertical-align: middle; }
+.soa-table tbody th .soa-ic { display: block; margin-bottom: .35rem; }
+.soa-faq { border: 3px solid #2a2622; background: #f3ede1; margin: .6rem 0; }
+.soa-faq summary { cursor: pointer; padding: .8rem 1.1rem; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.soa-faq summary::-webkit-details-marker { display: none; }
+.soa-faq summary::after { content: "+"; font-size: 1.3rem; line-height: 1; }
+.soa-faq[open] summary::after { content: "–"; }
+.soa-faq summary:hover { background: #2a2622; color: #ece4d3; }
+.soa-faq__body { padding: .2rem 1.2rem 1rem; }
+.soa-faq--longer { border-width: 0 0 0 4px; border-color: #a9503d; background: transparent; margin: -.4rem 0 1.4rem; }
+.soa-faq--longer summary { padding: .3rem .8rem; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #a9503d; }
+.soa-faq__head { margin-top: 2rem; }
+.soa-faq__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 0 1rem; align-items: start; }
+/* family tree pop-ups */
+.soa-tree__wrap { position: relative; }
+.soa-tn { cursor: pointer; outline: none; }
+.soa-tn:focus rect, .soa-tn:hover rect { stroke-width: 4px; }
+.soa-pop { position: absolute; z-index: 10; width: min(300px, 80%); padding: .9rem 1rem; background: #f3ede1; border: 3px solid #2a2622; box-shadow: 8px 8px 0 #a9503d; pointer-events: none; opacity: 0; transform: translateY(6px); transition: opacity .18s, transform .18s; }
+.soa-pop.on { opacity: 1; transform: none; }
+.soa-pop__head { display: flex; gap: .7rem; align-items: center; margin-bottom: .4rem; }
+.soa-pop__head img { width: 52px; height: 52px; object-fit: cover; border: 2px solid #2a2622; background: #ddd2bd; }
+.soa-pop__name { font-weight: 800; font-size: 1.15rem; margin: 0 !important; }
+.soa-pop__role { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #a9503d; margin: 0 !important; }
+.soa-pop p.soa-pop__text { margin: 0 !important; font-size: .95rem; line-height: 1.45; }
+
+.soa-rail { background: #ece4d3; padding: 1.2rem .6rem 1.2rem 64px !important; box-shadow: 0 0 0 4px #ece4d3; }
+.soa-n.on image { filter: invert(1); }
+.soa-n__under { fill: #2a2622 !important; }
 
 </style>
 <script>
@@ -886,4 +976,20 @@ status: "pulled"
 var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('is-on');});var a=map[e.target.id];if(a)a.classList.add('is-on');}});},{rootMargin:'-40% 0px -55% 0px'});
 Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+<script>
+(function(){var D={"Nereus": ["Sea god", "The old man of the sea and Thetis's father. His line is why Achilles is half divine."], "Doris": ["Sea nymph", "Thetis's mother. One of the many sea nymphs behind the goddess who watches over Achilles."], "Zeus": ["King of the gods", "Father of Aeacus, which makes him Peleus's grandfather. Thetis was once desired by Zeus and Poseidon, until a prophecy said her son would outshine his father."], "Aegina": ["Nymph", "Mother of Aeacus by Zeus. In one ancient version she is also Menoetius's mother, so Patroclus is Peleus's cousin and Achilles's cousin once removed."], "Actor": ["King", "Menoetius's father in that same version, and so Patroclus's grandfather."], "Endeïs": ["Queen", "Wife of Aeacus and mother of Peleus and Telamon."], "Aeacus": ["King of Aegina", "Son of Zeus, father of Peleus and Telamon. Through him Achilles has divine blood on his father's side too."], "Menoetius": ["King of Opus", "Patroclus's father: a cold, disappointed man. After a boy dies in a fight, he sends his son into exile, which is how Patroclus reaches Phthia."], "Thetis": ["Sea nymph · Achilles's mother", "Forced to marry a mortal, she wants her son's fame to be immortal. She sees Patroclus as a threat and tries to keep them apart."], "Peleus": ["King of Phthia · Achilles's father", "A mortal king favoured by the gods. He takes in the exiled Patroclus and raises him alongside Achilles."], "Telamon": ["King of Salamis", "Peleus's brother and father of Ajax, Achilles's cousin."], "Patroclus": ["The narrator", "An exiled prince raised beside Achilles. He becomes a healer, Achilles's companion and lover, and his death turns the war."], "Deidameia": ["Princess of Scyros", "Thetis hides Achilles at her father's court and arranges their marriage. She bears Achilles's only son, Pyrrhus."], "Achilles": ["The best of the Greeks", "Son of Peleus and Thetis. Offered a short, famous life or a long, quiet one, he chooses glory, and loves Patroclus."], "Ajax": ["Greek warrior", "Telamon's son and Achilles's cousin, the huge, steady fighter who holds the line at Troy."], "Pyrrhus": ["Achilles's son", "Also called Neoptolemus. Raised by Thetis, he arrives at Troy after his father's death and is crueller than Achilles ever was."]},I={"Achilles": "/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-achilles.png", "Patroclus": "/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-patroclus.png", "Thetis": "/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/ink-thetis.png"};var wrap=document.querySelector('.soa-tree__wrap');if(!wrap)return;var svg=wrap.querySelector('svg');
+var pop=document.createElement('div');pop.className='soa-pop';pop.setAttribute('role','tooltip');pop.id='soa-pop';wrap.appendChild(pop);
+function show(g){var name=g.querySelector('text').textContent.trim(),d=D[name];if(!d)return;
+pop.innerHTML='<div class="soa-pop__head">'+(I[name]?'<img src="'+I[name]+'" alt="">':'')+'<div><p class="soa-pop__role">'+d[0]+'</p><p class="soa-pop__name">'+name+'</p></div></div><p class="soa-pop__text">'+d[1]+'</p>';
+var r=g.getBoundingClientRect(),w=wrap.getBoundingClientRect();var x=r.left-w.left+r.width/2,y=r.bottom-w.top+8;
+pop.style.left=Math.max(0,Math.min(x-150,w.width-Math.min(300,w.width*.8)))+'px';pop.style.top=y+'px';
+if(y+pop.offsetHeight>w.height){pop.style.top=(r.top-w.top-pop.offsetHeight-8)+'px';}
+pop.classList.add('on');}
+function hide(){pop.classList.remove('on');}
+[].forEach.call(svg.querySelectorAll('.soa-tn'),function(g){var n=g.querySelector('text').textContent.trim();if(!D[n])return;
+g.setAttribute('tabindex','0');g.setAttribute('role','button');g.setAttribute('aria-label',n+': '+D[n][0]);g.setAttribute('aria-describedby','soa-pop');
+g.addEventListener('mouseenter',function(){show(g)});g.addEventListener('mouseleave',hide);g.addEventListener('focus',function(){show(g)});g.addEventListener('blur',hide);
+g.addEventListener('click',function(){show(g)});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});})();
 </script>
