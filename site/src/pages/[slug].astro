@@ -69,6 +69,12 @@ const jsonLd = {
       author: { '@id': absolute('/about/') + '#gary' },
       publisher: { '@id': absolute('/') + '#site' },
       isPartOf: { '@type': 'CollectionPage', name: section.name, url: absolute(hub) },
+      // Book posts: say which book the page is about
+      about: article.data.book ? {
+        '@type': 'Book',
+        name: article.data.book,
+        author: article.data.author ? { '@type': 'Person', name: article.data.author } : undefined,
+      } : undefined,
     },
     ...(((faqData as Record<string, unknown>)[article.data.slug] as string[][] | undefined) ? [{
       '@type': 'FAQPage',
