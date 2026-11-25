@@ -265,115 +265,65 @@ status: "pulled"
 <details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The Song of Achilles is generally considered appropriate for mature teenagers (14+). While it contains some mature themes including violence and romantic relationships, these are handled tastefully and within historical context. Parents should be aware that the book includes battle scenes, some intimate moments (though not explicitly detailed), and discussions of death and war.</p></div></details>
 <h3>Is The Song of Achilles based on The Iliad?</h3>
 <p>Yes. It retells events from Homer's Iliad but begins with Patroclus and Achilles's childhood and continues past the end of the Iliad, narrated by Patroclus.</p>
-<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>Yes, The Song of Achilles is based on Homer's Iliad, but it expands significantly beyond the original epic poem. While The Iliad primarily focuses on a few weeks during the Trojan War, The Song of Achilles tells a broader story, beginning with Patroclus and Achilles' childhood and continuing through the events of The Iliad.</p>
-<ul>
-<ul></ul>
-</ul>
+<details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>Yes, The Song of Achilles is based on Homer's Iliad, but it expands significantly beyond the original epic poem. While The Iliad covers about fifty days in the tenth year of the Trojan War, The Song of Achilles tells a broader story, beginning with Patroclus and Achilles' childhood and continuing through the events of The Iliad.</p>
 <p>Key differences from The Iliad include:</p>
 <ul>
-<ul>
-<ul></ul>
 <li>The novel is narrated from Patroclus's perspective rather than using The Iliad's third-person narrative.</li>
 <li>It provides extensive background on the characters' early lives and relationship development.</li>
 <li>The story incorporates elements from other ancient Greek sources beyond The Iliad.</li>
 <li>It expands on characters and relationships that receive less attention in Homer's work.</li>
-<ul></ul>
-</ul>
 </ul>
 <p>While Miller stays faithful to the major events and outcomes of The Iliad, she reimagines the story through a more intimate lens, focusing on the personal relationships and emotional journeys of the characters rather than the epic's emphasis on warfare and divine intervention.</p></div></details>
 <h3>Why is it called The Song of Achilles?</h3>
 <p>Epic heroes were sung by bards. This book is Patroclus's song about Achilles: the hero's story told by the person who loved him most.</p>
 <details class="soa-faq soa-faq--longer"><summary>Read the longer answer</summary><div class="soa-faq__body"><p>The title "The Song of Achilles" references several aspects of the novel:</p>
 <ul>
-<ul></p>
 <li><strong>Classical tradition:</strong> It evokes the tradition of epic poetry, like The Iliad, where heroes' stories were sung by bards.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Narrative perspective:</strong> The novel serves as Patroclus's "song" about Achilles, telling the hero's story through the eyes of the one who loved him most.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Poetic style:</strong> The lyrical, flowing prose style of the novel resembles a song in its beauty and rhythm.</li>
 <li>The title also carries a touch of irony, as this "song" is not the traditional glorification of Achilles's martial prowess, but rather an intimate portrait that reveals his humanity through his relationship with Patroclus.</li>
-</ul>
 </ul></div></details><h3 class="soa-faq__head">More questions readers ask</h3>
 <div class="soa-faq__list">
 <details class="soa-faq"><summary>Why is The Song of Achilles so popular?</summary><div class="soa-faq__body"><p>The Song of Achilles has achieved remarkable popularity for several key reasons:</p>
 <ul>
-<ul></p>
 <li><strong>Accessible retelling of classics:</strong> Miller makes ancient Greek mythology accessible to modern readers while maintaining the story's epic scope and emotional depth.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Beautiful prose:</strong> The novel is celebrated for its lyrical writing style and poetic language that captures both tender moments and tragic events with equal grace.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Universal themes:</strong> The story explores timeless themes like love, destiny, loyalty, and sacrifice that resonate deeply with readers across different backgrounds and ages.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Character development:</strong> The novel provides rich psychological depth to mythological figures, making them feel deeply human and relatable to modern readers.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Social media influence:</strong> The book gained significant popularity through platforms like TikTok and Instagram, where readers enthusiastically shared their emotional responses to the story.</li>
-</ul>
 </ul>
 <p>The novel's success also stems from its unique narrative approach:</p>
 <ul>
-<ul></p>
 <li><strong>Fresh perspective:</strong> By telling the story through Patroclus's eyes, Miller offers a fresh take on a well-known myth, providing intimate insights into the characters' motivations and emotions.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Love story focus:</strong> While maintaining historical accuracy, the book prioritizes the love story between Achilles and Patroclus, appealing to readers who appreciate character-driven narratives.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Emotional impact:</strong> The novel's ability to create deep emotional investment in its characters, leading to a powerful and moving conclusion, has generated strong word-of-mouth recommendations.</li>
-</ul>
 </ul>
 <p>Additionally, the book's timing and cultural relevance have contributed to its popularity:</p>
 <ul>
-<ul></p>
 <li><strong>LGBTQ+ representation:</strong> The novel's sensitive and dignified portrayal of a same-sex relationship in classical literature has resonated with many readers seeking diverse perspectives in historical fiction.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Cultural moment:</strong> The book's themes of identity, love, and acceptance align with contemporary social discussions, making it particularly relevant to modern audiences.</li>
-</ul>
 </ul></div></details>
 <details class="soa-faq"><summary>Was Achilles actually shot in the heel?</summary><div class="soa-faq__body"><p>In the later myths, yes: an arrow struck him in the heel, his one weak spot. According to the most common version of the myth, Paris shot Achilles in his vulnerable heel with an arrow guided by the god Apollo.</p>
 <p>The story of Achilles' heel vulnerability comes from the legend that when he was born, his mother Thetis dipped him in the River Styx to make him invulnerable. However, she held him by his heel, which didn't touch the water, leaving that spot as his only weak point. This is where we get the phrase "Achilles' heel" to describe a person's weak spot despite overall strength.</p>
-<p>Interestingly, this particular detail about his heel vulnerability doesn't appear in Homer's Iliad. The story of Achilles' heel and his death by Paris's arrow emerged in later Greek and Roman myths, particularly in Ovid's Metamorphoses. In the Iliad, while Achilles' death is prophesied, the specific method isn't described in detail.</p>
+<p>Interestingly, this particular detail about his heel vulnerability doesn't appear in Homer's Iliad. The story of Achilles' heel and his death by Paris's arrow emerged in later Greek and Roman myths, particularly in Statius's Achilleid. In the Iliad, while Achilles' death is prophesied, the specific method isn't described in detail.</p>
 <p>The myth of Achilles' death highlights important themes about fate and hubris - even the greatest warrior had a weakness, and despite his near-invulnerability, he was still mortal and subject to the will of the gods. Paris, considered a lesser warrior, was able to defeat him through divine intervention, demonstrating that even the mightiest heroes could fall.</p></div></details>
 <details class="soa-faq"><summary>Who is Achilles girlfriend?</summary><div class="soa-faq__body"><p>In The Song of Achilles, Achilles does not have a girlfriend in the traditional sense. His primary romantic relationship is with Patroclus. While he does have a brief relationship with Princess Deidameia during his time on Skyros (which results in the birth of his son Neoptolemus), this is not portrayed as a love match but rather a relationship of circumstance while he was hiding from the war.</p>
 <p>In the original Greek mythology, Achilles has several romantic associations, including:</p>
 <ul>
-<ul></p>
 <li><strong>Deidameia:</strong> The princess of Skyros who becomes the mother of his son.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Briseis:</strong> A war prize captured during the Trojan War, though their relationship is more complex and varies depending on the source material.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Patroclus:</strong> While ancient sources vary in their explicit description of their relationship, many classical writers interpreted their bond as romantic, a view that The Song of Achilles fully embraces.</li>
-</ul>
 </ul></div></details>
 <details class="soa-faq"><summary>How old are Achilles and Patroclus in The Song of Achilles?</summary><div class="soa-faq__body"><p>In The Song of Achilles, Patroclus and Achilles first meet when they are young boys around 8-9 years old. The story follows them through their childhood, adolescence, and into early adulthood. When they join the Trojan War, they are young men in their late teens or early twenties. The exact ages aren't always explicitly stated, but their relationship develops over approximately a decade before the events of the Trojan War.</p></div></details>
 <details class="soa-faq"><summary>Are Achilles and Patroclus lovers in Song of Achilles?</summary><div class="soa-faq__body"><p>Yes, in The Song of Achilles, Achilles and Patroclus are explicitly portrayed as lovers. Their relationship develops from childhood friendship into a deep romantic and physical partnership. The novel presents their love story as the central narrative, depicting their relationship with tenderness and emotional depth. While they begin as close friends during their youth, their bond gradually evolves into romantic love during their teenage years, particularly during their time training with Chiron. Their relationship continues to deepen throughout the story, becoming one of profound devotion that ultimately shapes both characters' destinies.</p>
@@ -383,24 +333,13 @@ status: "pulled"
 <p>The novel ends with Patroclus's spirit finally being able to join Achilles in the underworld after their ashes are combined, symbolizing their eternal reunion. This conclusion reinforces the central theme that their love transcends death itself. The fact that Thetis, a goddess who had opposed their relationship in life, becomes the advocate for their love in death adds a powerful layer of recognition and acceptance to their story.</p></div></details>
 <details class="soa-faq"><summary>What is the target audience of The Song of Achilles?</summary><div class="soa-faq__body"><p>The Song of Achilles is primarily targeted at:</p>
 <ul>
-<ul></p>
 <li><strong>Young Adult and Adult readers:</strong> While marketed as adult fiction, it appeals strongly to mature young adult readers (14+).</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Lovers of mythology:</strong> Readers interested in Greek mythology and classical retellings.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>Literary fiction readers:</strong> Those who appreciate character-driven narratives and lyrical prose.</li>
-</ul>
-</ul>
-<ul>
-<ul>
+
 <li><strong>LGBTQ+ readers:</strong> People seeking well-crafted queer representation in historical/mythological contexts.</li>
-</ul>
 </ul>
 <p>While the book contains mature themes and some violence, it's written in an accessible style that makes it suitable for most readers who can handle emotional complexity and moderate adult content. The novel bridges the gap between young adult and adult literature, making it appealing to a broad age range of mature readers.</p></div></details>
 </div>
@@ -463,7 +402,7 @@ status: "pulled"
 <span class="soa-chapter__shape soa-shape soa-shape--circle soa-shape--ink" aria-hidden="true"></span>
 <div class="soa-chapter__head">
 <div class="soa-chapter__title"><p class="soa-chapter__num">07</p>
-<h2>My take</h2></div>
+<h2>Achilles and Priam: my take on the ending</h2></div>
 <div class="soa-quick"><p class="soa-quick__label">Quick answer</p><p>Near the end of the Iliad, King Priam crosses the battlefield at night to beg Achilles for his son Hector's body. Both men weep, and the poem's rage finally breaks.</p></div>
 </div>
 <figure class="soa-art soa-art--wide"><img src="/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/art-hamilton.jpg" alt="Achilles Lamenting the Death of Patroclus, painting by Gavin Hamilton" loading="lazy"><figcaption><p class="soa-art__title"><i>Achilles Lamenting the Death of Patroclus</i></p><p class="soa-art__by">Gavin Hamilton, 1760–63. National Galleries of Scotland.</p><p class="soa-art__why">Achilles over Patroclus's body: the grief that turns the war, and the book.</p><p class="soa-art__credit">Public domain. <a href="https://commons.wikimedia.org/wiki/File:Gavin_Hamilton_(1723-1798)_-_Achilles_Lamenting_the_Death_of_Patroclus_-_NG_2339_-_National_Galleries_of_Scotland.jpg">Source: Wikimedia Commons</a>.</p></figcaption></figure>
