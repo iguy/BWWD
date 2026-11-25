@@ -1053,6 +1053,34 @@ card.insertBefore(im,card.firstChild);}).observe(stage,{childList:true,subtree:t
 </script>
 
 <script>
+/* Quiz result: newsletter signup right under the result card */
+(function(){var stage=document.querySelector('.soa-quiz__stage');if(!stage)return;
+var ACTION='https://studio.us20.list-manage.com/subscribe/post-json?u=2ffed8266e34371a186f845d0&id=75cbd5c6de&f_id=00447eeaf0';
+var GUIDE='/media/books/the-song-of-achilles-deep-dive-characters-relationships-and-modern-relevance/beyond-the-battlefield-discussion-guide.pdf';
+function joined(){try{return localStorage.getItem('bwwd_joined')==='1';}catch(e){return false;}}
+new MutationObserver(function(){var res=stage.querySelector('.soa-result');
+if(!res||res.querySelector('.soa-signup')||!res.querySelector('.soa-share')||joined())return;
+var hero=res.querySelector('.soa-card__name').textContent;
+var box=document.createElement('div');box.className='soa-signup soa-signup--quiz';
+box.innerHTML='<p class="soa-signup__label">You got '+hero+'</p><p class="soa-signup__title">Get the next book deep dive by email, plus the free discussion guide.</p>'+
+'<form class="soa-signup__form" novalidate><label for="soa-quiz-email">Email address</label><div class="soa-signup__row"><input type="email" id="soa-quiz-email" required autocomplete="email" placeholder="you@example.com"><button type="submit">Sign me up</button></div>'+
+'<p class="soa-signup__note">You’re joining the Better World With Design newsletter. Unsubscribe any time.</p><p class="soa-signup__msg" role="status"></p></form>';
+res.appendChild(box);
+var f=box.querySelector('form'),em=f.querySelector('input'),btn=f.querySelector('button'),out=f.querySelector('.soa-signup__msg');
+f.addEventListener('submit',function(e){e.preventDefault();
+if(!em.value||!em.checkValidity()){out.textContent='Please enter a valid email address.';em.focus();return;}
+var cb='soaQz'+Date.now(),s=document.createElement('script');btn.disabled=true;out.textContent='Signing you up…';
+window[cb]=function(r){btn.disabled=false;delete window[cb];s.remove();
+if(r&&r.result==='success'){f.querySelector('.soa-signup__row').hidden=true;try{localStorage.setItem('bwwd_joined','1');}catch(x){}
+out.innerHTML='You’re in. Check your inbox to confirm. Meanwhile, here’s the guide: <a href="'+GUIDE+'">download Beyond the Battlefield (PDF)</a>.';
+if(window.gtag)gtag('event','newsletter_signup',{form:'achilles_quiz_result',result:hero.toLowerCase()});}
+else{var m=(r&&r.msg||'').replace(/<[^>]+>/g,'');out.textContent=/already subscribed/i.test(m)?'You’re already on the list. Thank you!':'That didn’t work. Please try again.';}};
+s.src=ACTION+'&EMAIL='+encodeURIComponent(em.value)+'&c='+cb;s.onerror=function(){btn.disabled=false;out.textContent='That didn’t work. Please try again.';};document.body.appendChild(s);});
+}).observe(stage,{childList:true,subtree:true});})();
+</script>
+<style>.soa-signup--quiz { margin-top: 1.4rem; border-left: 6px solid #c79d4f; } .soa-signup--quiz .soa-signup__label { color: #c79d4f; }</style>
+
+<script>
 (function(){var imgs=[].slice.call(document.querySelectorAll('.soa-art img, .soa-finale img'));if(!imgs.length)return;
 var box=document.createElement('div');box.className='soa-lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Enlarged painting');box.hidden=true;
 box.innerHTML='<button type="button" class="soa-lb__close" aria-label="Close">\u2715</button><figure class="soa-lb__fig"><img alt=""><figcaption></figcaption></figure>';
